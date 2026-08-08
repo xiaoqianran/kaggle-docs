@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hosting a Competition from the CLI · Kaggle Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/competition_creation.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/competition_creation.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+      <a class="brand" href="/kaggle-docs/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle Docs</span>
+        <span class="brand-v">mirror</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn active" href="/kaggle-docs/cli/competition_creation.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn" href="/kaggle-docs/zh/cli/competition_creation.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">Official ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
+        </div>
+        <div class="side-label">Learning path · docs</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
+<li><a class="leaf active" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          
+          <h1>Hosting a Competition from the CLI</h1>
+<p>This page documents the host-facing commands added in kaggle-cli for the new
+public competition-creation API endpoints (kagglesdk 0.1.31+):</p>
+<ul>
+<li><a href="#kaggle-competitions-init"><code>kaggle competitions init</code></a></li>
+<li><a href="#kaggle-competitions-create"><code>kaggle competitions create</code></a></li>
+<li><a href="#kaggle-competitions-pages-create"><code>kaggle competitions pages create</code></a></li>
+<li><a href="#kaggle-competitions-hosts"><code>kaggle competitions hosts</code></a></li>
+<li><a href="#kaggle-competitions-settings-get"><code>kaggle competitions settings get</code></a></li>
+<li><a href="#kaggle-competitions-settings-update"><code>kaggle competitions settings update</code></a></li>
+<li><a href="#kaggle-competitions-data-update"><code>kaggle competitions data update</code></a></li>
+<li><a href="#kaggle-competitions-solution-create"><code>kaggle competitions solution create</code></a></li>
+<li><a href="#kaggle-competitions-solution-status"><code>kaggle competitions solution status</code></a></li>
+<li><a href="#kaggle-competitions-launch"><code>kaggle competitions launch</code></a></li>
+</ul>
+<p>All of these commands require an authenticated session
+(<code>kaggle config set username/password</code> or an API token).</p>
+<p>A typical end-to-end host workflow looks like:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># 1. Scaffold a metadata file.
+kaggle competitions init ./my-comp
+
+# 2. Edit ./my-comp/competition-metadata.json (fill in the INSERT_* placeholders).
+
+# 3. Create the (unlaunched) competition.
+kaggle competitions create -p ./my-comp
+# → Competition created: https://www.kaggle.com/competitions/my-comp-slug
+
+# 4. Author the description and rules pages.
+kaggle competitions pages create my-comp-slug --name description -f ./description.md --publish
+kaggle competitions pages create my-comp-slug --name rules -f ./rules.md --publish
+
+# 5. Update the competition data (train.csv, test.csv, sample_submission.csv, ...).
+kaggle competitions data update my-comp-slug -p ./data -m &quot;Initial release&quot;
+
+# 6. Upload the private solution CSV, then poll until scoring is ready.
+kaggle competitions solution create my-comp-slug -p ./solution.csv
+kaggle competitions solution status my-comp-slug
+# → Ready: true
+
+# 7. Optionally tune host-only settings not covered by competition-metadata.json
+#    (deadlines, runtime caps, leaderboard behavior, etc.).
+kaggle competitions settings get my-comp-slug
+kaggle competitions settings update my-comp-slug -f ./settings.json
+
+# 8. Launch the competition (now, or schedule a future UTC time).
+kaggle competitions launch my-comp-slug --at 2027-01-01T00:00:00Z
+</code></pre></div>
+<p>These commands are independent — for example, you can call <code>pages create</code>
+on a competition that already exists, or use <code>launch</code> on a competition created
+via the host wizard.</p>
+<hr>
+<h2><code>kaggle competitions init</code></h2>
+<p>Writes a <code>competition-metadata.json</code> template into a folder.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions init [folder]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>folder</code> (optional): Where to write <code>competition-metadata.json</code>. Defaults to
+the current directory.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions init ./my-comp
+</code></pre></div>
+<p>The generated file:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">json</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-json">{
+  &quot;title&quot;: &quot;INSERT_TITLE_HERE&quot;,
+  &quot;slug&quot;: &quot;INSERT_SLUG_HERE&quot;,
+  &quot;briefDescription&quot;: &quot;INSERT_BRIEF_DESCRIPTION_HERE&quot;,
+  &quot;privacy&quot;: &quot;PUBLIC&quot;,
+  &quot;disableKernels&quot;: false,
+  &quot;hackathon&quot;: false,
+  &quot;cloneCompetitionId&quot;: null,
+  &quot;cloneExcludeCompetitionData&quot;: null,
+  &quot;clonePageNames&quot;: null,
+  &quot;licenseId&quot;: null,
+  &quot;organizationId&quot;: null,
+  &quot;numPrizes&quot;: null,
+  &quot;restrictLinkToEmailList&quot;: null,
+  &quot;reward&quot;: null
+}
+</code></pre></div>
+<p>See <a href="#competition-metadata-reference">Metadata reference</a> below for what each
+field means.</p>
+<hr>
+<h2><code>kaggle competitions create</code></h2>
+<p>Creates a new competition from <code>competition-metadata.json</code>. The competition is
+created in an unlaunched (staged) state — use
+<a href="#kaggle-competitions-launch"><code>kaggle competitions launch</code></a> to publish it.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions create [-p folder]
+</code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-p, --path &lt;folder&gt;</code>: Folder containing <code>competition-metadata.json</code>. Defaults
+to the current directory.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions create -p ./my-comp
+# → Competition created: https://www.kaggle.com/competitions/my-comp-slug
+</code></pre></div>
+<p><strong>Errors you might see:</strong></p>
+<ul>
+<li><code>Default title detected, please update competition-metadata.json before creating</code>
+— you forgot to replace one of the <code>INSERT_*_HERE</code> placeholders.</li>
+<li><code>Invalid privacy &#39;...&#39;</code> — <code>privacy</code> must be one of <code>PUBLIC</code>, <code>LIMITED</code>, <code>PRIVATE</code>.</li>
+<li><code>Metadata file not found: competition-metadata.json</code> — run <code>init</code> first, or pass
+<code>-p</code> pointing at the folder that contains the file.</li>
+</ul>
+<h3>Competition metadata reference</h3>
+<p>All fields go in <code>competition-metadata.json</code> (camelCase keys).</p>
+<p><strong>Required:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>title</code></td>
+<td>string</td>
+<td>Display title shown on the competition page.</td>
+</tr>
+<tr>
+<td><code>slug</code></td>
+<td>string</td>
+<td>URL slug; lowercase, hyphens, must be unique site-wide and must not be all digits or all hyphens.</td>
+</tr>
+<tr>
+<td><code>briefDescription</code></td>
+<td>string</td>
+<td>One-line subtitle under the title.</td>
+</tr>
+<tr>
+<td><code>privacy</code></td>
+<td>string</td>
+<td>One of <code>PUBLIC</code>, <code>LIMITED</code>, <code>PRIVATE</code>.</td>
+</tr>
+</tbody></table>
+<p><strong>Optional:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>disableKernels</code></td>
+<td>bool</td>
+<td>If <code>true</code>, notebook submissions are disabled.</td>
+</tr>
+<tr>
+<td><code>hackathon</code></td>
+<td>bool</td>
+<td>Create as a hackathon competition.</td>
+</tr>
+<tr>
+<td><code>restrictLinkToEmailList</code></td>
+<td>bool</td>
+<td>Restrict invite-link joiners to a host-maintained allowlist.</td>
+</tr>
+<tr>
+<td><code>cloneCompetitionId</code></td>
+<td>int</td>
+<td>If set, clone configuration / pages / data / evaluation setup from this competition.</td>
+</tr>
+<tr>
+<td><code>cloneExcludeCompetitionData</code></td>
+<td>bool</td>
+<td>If cloning, skip copying the data (solution, sandbox submissions, images, databundles).</td>
+</tr>
+<tr>
+<td><code>clonePageNames</code></td>
+<td>string[]</td>
+<td>If cloning, copy only these page names. Omit/null to copy all.</td>
+</tr>
+<tr>
+<td><code>licenseId</code></td>
+<td>int</td>
+<td>License ID for the competition data.</td>
+</tr>
+<tr>
+<td><code>organizationId</code></td>
+<td>int</td>
+<td>Tie this competition to an organization (read-only access for all org members).</td>
+</tr>
+<tr>
+<td><code>numPrizes</code></td>
+<td>int</td>
+<td>Number of leaderboard prize positions.</td>
+</tr>
+<tr>
+<td><code>reward</code></td>
+<td>object</td>
+<td>See below.</td>
+</tr>
+</tbody></table>
+<p><strong><code>reward</code> object:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">json</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-json">{
+  &quot;id&quot;: &quot;USD&quot;,
+  &quot;quantity&quot;: 25000,
+  &quot;clarification&quot;: &quot;Total prize pool split across the top 5 teams.&quot;
+}
+</code></pre></div>
+<p><code>reward.id</code> is one of: <code>USD</code>, <code>KUDOS</code>, <code>AUD</code>, <code>EUR</code>, <code>JOBS</code>, <code>SWAG</code>, <code>GBP</code>,
+<code>KNOWLEDGE</code>, <code>PRIZES</code>. <code>clarification</code> is optional free-form text shown next to
+the prize.</p>
+<hr>
+<h2><code>kaggle competitions pages create</code></h2>
+<p>Creates a new page (description, rules, evaluation, data-description, etc.) on a
+competition you host.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions pages create &lt;competition&gt; --page-name &lt;page-name&gt; -f &lt;path&gt; \
+    [--mime-type &lt;type&gt;] [--post-title &quot;&lt;title&gt;&quot;] [--publish]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--page-name &lt;page-name&gt;</code> (required): Page name (e.g. <code>description</code>, <code>rules</code>,
+<code>evaluation</code>, <code>data-description</code>, <code>prizes</code>). Conventional names are
+recognized by the competition page UI; new names are allowed but won&#39;t be
+shown in the standard tabs.</li>
+<li><code>-f, --file &lt;path&gt;</code> (required): Path to a file whose contents become the page
+body.</li>
+<li><code>--mime-type &lt;type&gt;</code> (optional): MIME type of the content. Defaults to
+<code>text/html</code> server-side.</li>
+<li><code>--post-title &quot;&lt;title&gt;&quot;</code> (optional): Title shown above the page body.
+Defaults to the page name.</li>
+<li><code>--publish</code> (optional): Publish the page immediately. Without this flag the
+page is created in a staged (unpublished) state so you can review it before
+going live.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Create the rules page in a staged (not-yet-published) state.
+kaggle competitions pages create my-comp --page-name rules -f ./rules.md \
+    --mime-type text/markdown --post-title &quot;Competition Rules&quot;
+
+# When you&#39;re ready to make it visible to participants:
+kaggle competitions pages update my-comp --page-name rules --publish
+</code></pre></div>
+<p>Each page exists as a single record; <code>--publish</code> / <code>--unpublish</code> toggles its
+visibility rather than creating separate draft and live copies. To swap in new
+content later, use
+<a href="#kaggle-competitions-pages-update"><code>kaggle competitions pages update</code></a> — a
+second <code>create</code> for the same page name will be rejected.</p>
+<p>You can list and inspect existing pages with <code>kaggle competitions pages</code>
+(or the explicit <code>kaggle competitions pages list</code>), modify one in place with
+<a href="#kaggle-competitions-pages-update"><code>kaggle competitions pages update</code></a>, or
+remove one with <a href="#kaggle-competitions-pages-delete"><code>kaggle competitions pages delete</code></a>.</p>
+<hr>
+<h2><code>kaggle competitions pages update</code></h2>
+<p>Updates fields on an existing competition page. Only the flags you supply are
+sent (the FieldMask is built from which arguments are non-default), so this is
+also how you publish or unpublish a page in place.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions pages update &lt;competition&gt; --page-name &lt;current-name&gt; \
+    [-f &lt;path&gt;] [--new-name &lt;name&gt;] [--mime-type &lt;type&gt;] \
+    [--post-title &quot;&lt;title&gt;&quot;] [--publish | --unpublish]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--page-name &lt;current-name&gt;</code> (required): The page&#39;s current name (used as the
+identifier; rename via <code>--new-name</code>).</li>
+<li><code>-f, --file &lt;path&gt;</code> (optional): Path to a file with the new page body.</li>
+<li><code>--new-name &lt;name&gt;</code> (optional): Rename the page.</li>
+<li><code>--mime-type &lt;type&gt;</code> (optional): New MIME type of the content.</li>
+<li><code>--post-title &quot;&lt;title&gt;&quot;</code> (optional): New title shown above the page content.</li>
+<li><code>--publish</code> / <code>--unpublish</code> (optional, mutually exclusive): Publish or
+unpublish the page.</li>
+</ul>
+<p>At least one update flag is required.</p>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Publish a staged page without changing its content.
+kaggle competitions pages update my-comp --page-name rules --publish
+
+# Swap in new content and update the visible title in one call.
+kaggle competitions pages update my-comp --page-name rules \
+    -f ./rules-v2.md --post-title &quot;Competition Rules (v2)&quot;
+
+# Rename a page.
+kaggle competitions pages update my-comp --page-name evaluation \
+    --new-name scoring
+</code></pre></div>
+<p><strong>Note:</strong> a small set of pages is reserved by the backend and cannot be
+renamed; attempting to rename one returns an error from the server.</p>
+<hr>
+<h2><code>kaggle competitions pages delete</code></h2>
+<p>Deletes a page from a competition you host. Prompts for confirmation unless
+<code>-y/--yes</code> is passed (matches the existing <code>kaggle datasets delete</code> /
+<code>kaggle kernels delete</code> patterns).</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions pages delete &lt;competition&gt; --page-name &lt;name&gt; [-y]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--page-name &lt;name&gt;</code> (required): Name of the page to delete.</li>
+<li><code>-y, --yes</code> (optional): Skip the confirmation prompt — useful for scripts.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Interactive: prompts &quot;Are you sure you want to delete the page &#39;faq&#39; ...?&quot;
+kaggle competitions pages delete my-comp --page-name faq
+
+# Scripted: skip the prompt.
+kaggle competitions pages delete my-comp --page-name faq -y
+</code></pre></div>
+<p><strong>Note:</strong> a small set of pages is protected by the backend and cannot be
+deleted; attempting to delete one returns an error from the server.</p>
+<p>Deletion is not recoverable — there is no &quot;undelete&quot;. List pages first with
+<code>kaggle competitions pages list &lt;competition&gt;</code> if you&#39;re unsure of the name.</p>
+<hr>
+<h2><code>kaggle competitions hosts</code></h2>
+<p>Lists the hosts (users with host access) for a competition. Useful for
+confirming who can edit settings, upload data, or launch — especially after
+adding or removing collaborators via the web UI.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions hosts &lt;competition&gt; [-v | --format json]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Table output.
+kaggle competitions hosts my-comp
+
+# CSV — useful for piping into other tools.
+kaggle competitions hosts my-comp -v
+
+# JSON.
+kaggle competitions hosts my-comp --format json
+</code></pre></div>
+<p>Output columns: <code>userName</code>, <code>displayName</code>, <code>id</code>, <code>profileUrl</code>.</p>
+<hr>
+<h2><code>kaggle competitions settings get</code></h2>
+<p>Shows the unified settings blob for a competition you host — the same set of
+fields the &quot;Settings&quot; tab exposes in the web UI, covering general info,
+access &amp; teams, key dates, submissions &amp; leaderboard behavior, code
+competition parameters, and host attribution.</p>
+<p>By default the output is grouped by UI section and hides fields left at their
+type default (unset strings, <code>false</code> booleans, zero ints). Pass <code>--json</code> for
+the raw blob (camelCase keys, matching the update payload format).</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings get &lt;competition&gt; [--json]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Grouped, human-readable summary.
+kaggle competitions settings get my-comp
+
+# Machine-readable dump — pipe into jq, or save + edit + feed back to update.
+kaggle competitions settings get my-comp --json &gt; settings.json
+</code></pre></div>
+<hr>
+<h2><code>kaggle competitions settings update</code></h2>
+<p>Applies a partial update to a competition&#39;s settings. You author a JSON or
+YAML file containing only the fields you want to change; the CLI builds the
+server-side FieldMask from the keys present in the file, so unspecified
+fields are left alone.</p>
+<p>The typical loop is:</p>
+<ol>
+<li><code>kaggle competitions settings get my-comp --json &gt; settings.json</code> — pull
+the current values.</li>
+<li>Edit the file down to just the fields you want to change (delete the rest).</li>
+<li><code>kaggle competitions settings update my-comp -f ./settings.json</code>.</li>
+</ol>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings update &lt;competition&gt; -f &lt;path&gt; [--json]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-f, --from-file &lt;path&gt;</code> (required): JSON or YAML file with the fields to
+update. Extension picks the parser (<code>.yaml</code>/<code>.yml</code> → YAML, anything else →
+JSON). Keys may be <code>snake_case</code> (matches the SDK) or <code>camelCase</code> (matches
+the <code>--json</code> output of <code>settings get</code>).</li>
+<li><code>--json</code> (optional): After the update, print the returned settings as JSON
+instead of the grouped text view.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<p>Toggle a single boolean:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">json</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-json">// disable-leaderboard.json
+{ &quot;has_leaderboard&quot;: false }
+</code></pre></div>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings update my-comp -f ./disable-leaderboard.json
+</code></pre></div>
+<p>Set the competition deadline:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">json</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-json">// deadline.json
+{ &quot;deadline&quot;: &quot;2027-02-01T23:59:00Z&quot; }
+</code></pre></div>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings update my-comp -f ./deadline.json
+</code></pre></div>
+<p>Bump the code-competition runtime caps and set the competition and team-merger
+deadlines (YAML, mixing types):</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">yaml</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-yaml"># tune.yaml
+max_cpu_runtime_minutes: 540
+max_gpu_runtime_minutes: 720
+deadline: 2027-02-01T23:59:00Z
+team_merger_explicit_deadline: 2027-01-15T00:00:00Z
+rules_required: true
+</code></pre></div>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings update my-comp -f ./tune.yaml
+</code></pre></div>
+<p><strong>Type notes:</strong></p>
+<ul>
+<li>Booleans → JSON <code>true</code>/<code>false</code> (or YAML equivalents).</li>
+<li>Numeric fields → plain numbers (<code>240</code>, <code>1.5</code>).</li>
+<li>Datetime fields → ISO-8601 strings (<code>&quot;2027-01-01T00:00:00Z&quot;</code> or with an
+explicit offset).</li>
+<li>Enum fields (<code>host_segment</code>, <code>publicly_cloneable</code>) → the enum member name
+as a string; either the full name (<code>&quot;HOST_SEGMENT_FEATURED&quot;</code>) or the short
+suffix (<code>&quot;FEATURED&quot;</code>) works.</li>
+</ul>
+<p><strong>Common errors:</strong></p>
+<ul>
+<li><code>Unknown competition setting: &#39;&lt;name&gt;&#39;</code> — the field name isn&#39;t in
+<code>CompetitionSettings</code>. Check <code>settings get --json</code> for the exact keys.</li>
+<li><code>Field &#39;&lt;name&gt;&#39; expects a bool, got str</code> — the file has a string where a
+boolean is required (e.g. <code>&quot;true&quot;</code> instead of <code>true</code>).</li>
+<li><code>not a valid HostSegment. Allowed: ...</code> — the enum value you passed isn&#39;t
+a member; the error lists the accepted names.</li>
+<li>Some settings are gated to Kaggle admins (marked &quot;ADMIN ONLY&quot; in the
+proto — e.g. <code>host_segment</code>, <code>directly_responsible_user_id</code>) and the server
+will reject writes to them for non-admin hosts.</li>
+</ul>
+<hr>
+<h2><code>kaggle competitions launch</code></h2>
+<p>Launches a competition you host. Without <code>--at</code>, the competition is launched
+immediately. With <code>--at</code>, the backend schedules the launch for the given UTC
+instant.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions launch &lt;competition&gt; [--at &lt;ISO-8601 UTC&gt;]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--at &lt;iso&gt;</code>: Schedule launch for a future UTC time. Accepts ISO-8601
+(e.g. <code>2027-01-01T00:00:00Z</code> or <code>2027-01-01T00:00:00+00:00</code>). The competition
+is launched immediately if omitted.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Launch right now.
+kaggle competitions launch my-comp
+
+# Schedule the launch for midnight UTC on 2027-01-01.
+kaggle competitions launch my-comp --at 2027-01-01T00:00:00Z
+</code></pre></div>
+<p>A competition can only be launched once. Subsequent calls will be rejected by
+the backend.</p>
+<hr>
+<h2><code>kaggle competitions data update</code></h2>
+<p>Creates a new version of the data files for a competition you host. Uploads
+via the standard blob-upload pipeline, then sends a single request bundling
+the uploaded tokens. Each update <strong>replaces the prior version&#39;s file set in
+full</strong> — there is no per-file &quot;keep from previous&quot; mode in v1, so list every
+file you want in the new version.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions data update &lt;competition&gt; -p &lt;path&gt; -m &quot;&lt;version notes&gt;&quot; \
+    [--rerun] [--include-hidden] [--ignore-patterns &lt;patterns&gt;]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-p, --path &lt;path&gt;</code> (required): Either a <strong>directory</strong> (walked recursively —
+every file becomes an upload with its relative path preserved in the API&#39;s
+<code>name</code> field, e.g. <code>train/images/img1.jpg</code>), or a <strong>single archive file</strong>
+(e.g. a pre-packed <code>.zip</code> or <code>.tar</code>) uploaded as-is. Sub-directories are
+always traversed; hidden entries (see <code>--include-hidden</code>) are the only files
+skipped by default.</li>
+<li><code>-m, --message &quot;&lt;notes&gt;&quot;</code> (required): Notes describing this version
+(e.g. <code>&quot;Added test set&quot;</code>).</li>
+<li><code>--rerun</code> (optional): Update the RERUN databundle — the private host-only
+data swapped in during rerun scoring. Requires Kaggle admin access for now.
+Without this flag, the update targets the PUBLIC databundle (what
+participants download).</li>
+<li><code>--include-hidden</code> (optional): Upload hidden files and traverse hidden
+sub-directories (names starting with <code>.</code> — e.g. <code>.DS_Store</code>, <code>.git/</code>,
+<code>.gitignore</code>). Skipped by default so you don&#39;t accidentally publish OS
+metadata or version-control detritus.</li>
+<li><code>--ignore-patterns &lt;patterns&gt;</code> (optional): Patterns to ignore when uploading files/dirs. Can be specified multiple times. Note that default ignore patterns (like <code>.git/</code>, <code>.cache/</code>, <code>.huggingface/</code>) are bypassed when <code>--include-hidden</code> is True.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Update using a directory tree (recurses into sub-folders).
+kaggle competitions data update my-comp -p ./data -m &quot;Initial release&quot;
+
+# Update using a pre-packed archive as a single file (useful when you already
+# need a zip for other purposes, or for directory-shaped file formats like
+# Zarr).
+kaggle competitions data update my-comp -p ./data.zip -m &quot;Initial release&quot;
+
+# New version with a bug-fix.
+kaggle competitions data update my-comp -p ./data -m &quot;Fix label encoding in train.csv&quot;
+
+# Update the private rerun-scoring data.
+kaggle competitions data update my-comp -p ./rerun-data \
+    -m &quot;Held-out test set&quot; --rerun
+</code></pre></div>
+<p><strong>A note on directory-shaped file formats:</strong> some formats (Zarr, some
+TensorFlow SavedModel layouts, etc.) are on-disk directories that are logically
+a single unit. If you pass a directory containing such a format, the recursive
+walk uploads each internal chunk as its own file — often what you want for
+Zarr, since participants can then stream individual chunks. If you&#39;d rather
+keep the format as an opaque single upload, pre-pack it into a <code>.zip</code> or
+<code>.tar</code> and pass that file to <code>-p</code> instead.</p>
+<p>The command prints the public URL plus the new <code>databundle_id</code> and
+<code>databundle_version_id</code> on success.</p>
+<hr>
+<h2><code>kaggle competitions solution create</code></h2>
+<p>Uploads the private solution CSV for a competition you host. The solution is
+what the backend scores submissions against — one row per row in the sample
+submission, with the same column shape. After uploading, the backend runs
+preprocessing / sampling; poll
+<a href="#kaggle-competitions-solution-status"><code>kaggle competitions solution status</code></a>
+until it&#39;s <code>ready</code> before opening submissions.</p>
+<p>The file is uploaded via the standard blob-upload pipeline, then the resulting
+token is passed to <code>CreateCompetitionSolution</code>.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions solution create &lt;competition&gt; -p &lt;path&gt; [-q]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-p, --path &lt;path&gt;</code> (required): Path to a single CSV file. Must be a single
+file — directories are rejected. The CSV shape must match a submission
+file (same columns as <code>sample_submission.csv</code>).</li>
+<li><code>-q, --quiet</code> (optional): Suppress per-file upload progress lines.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions solution create my-comp -p ./solution.csv
+# → Solution uploaded for &quot;my-comp&quot;. Run &#39;kaggle competitions solution status my-comp&#39; to check readiness.
+</code></pre></div>
+<p>Re-uploading a solution replaces the prior one. Note that this only works
+pre-launch; after launch the solution file is frozen.</p>
+<hr>
+<h2><code>kaggle competitions solution status</code></h2>
+<p>Shows the setup status for a competition&#39;s solution file — whether
+preprocessing/sampling has finished, any errors reported by the backend, and
+(for legacy C# metrics) the auto-inferred column mapping and required metric
+columns.</p>
+<p>Poll this after <code>solution create</code> (and after <code>data update</code> — some setup steps
+run against the databundle) until <code>Ready: true</code>. If <code>Setup error:</code> is set,
+stop polling and fix the underlying issue.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions solution status &lt;competition&gt; [--json]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>: The competition slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--json</code> (optional): Emit the raw status as JSON instead of the
+human-readable view.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Human-readable summary.
+kaggle competitions solution status my-comp
+# → Ready: true
+#   Solution file: solution.csv — 12.3KB — uploaded 2027-01-01T00:00:00+00:00
+#     total=1000, public=300, private=700
+
+# Machine-readable — useful in a polling loop.
+kaggle competitions solution status my-comp --json
+</code></pre></div>
+<p><strong>Fields you might see (human view):</strong></p>
+<ul>
+<li><code>Ready: true|false</code> — whether scoring is unblocked.</li>
+<li><code>Setup error: &lt;msg&gt;</code> — populated if preprocessing failed. Surfaced
+prominently; stop polling when it appears.</li>
+<li><code>Kernels metric: true</code> — the competition&#39;s scoring metric is a Kernels
+metric. Kernels metrics auto-detect their column mapping; the host only
+needs to wait for <code>Ready</code> to flip true.</li>
+<li><code>Row ID column: &lt;name&gt;</code> — for Kernels metrics, the auto-detected row-id
+column.</li>
+<li><code>Solution file: &lt;name&gt; — &lt;size&gt; — uploaded &lt;timestamp&gt;</code> and
+<code>total=..., public=..., private=...</code> — solution file metadata once the
+upload is processed.</li>
+<li><code>Column mapping:</code> — for legacy C# metrics, the current mapping from metric
+column name to CSV column name.</li>
+<li><code>Required columns:</code> — for legacy C# metrics, the metric column slots the
+host needs to fill (name + expected data type).</li>
+</ul>
+
+          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

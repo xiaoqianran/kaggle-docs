@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-locale="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>内核命令 · Kaggle 文档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/kernels.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/kernels.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="菜单">菜单</button>
+      <a class="brand" href="/kaggle-docs/zh/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle 文档</span>
+        <span class="brand-v">镜像</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn" href="/kaggle-docs/cli/kernels.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn active" href="/kaggle-docs/zh/cli/kernels.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">官方 ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="搜索文档…" autocomplete="off" />
+        </div>
+        <div class="side-label">学习路径 · 文档</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-rel="platform/packages.md"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-rel="platform/api.md"><span class="num">4</span><span class="leaf-title">公共API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-rel="platform/models.md"><span class="num">5</span><span class="leaf-title">型号</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">8</span><span class="leaf-title">数据集</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">9</span><span class="leaf-title">比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">11</span><span class="leaf-title">组织</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf active" href="/kaggle-docs/zh/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-rel="cli/models.md"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-rel="cli/forums.md"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/cli/kernels.html">查看英文</a></div>
+          <h1>内核命令</h1>
+<p>用于与 Kaggle Kernels（笔记本和脚本）交互的命令。</p>
+<h2><code>kaggle kernels list</code></h2>
+<p>列出可用的内核。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels list [options]
+</code></pre></div>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>-m, --mine</code>：仅显示您的内核。</li>
+<li><code>-p, --page &lt;PAGE&gt;</code>：结果页码（默认值：1）。</li>
+<li><code>--page-size &lt;SIZE&gt;</code>：每页的项目数（默认值：20）。</li>
+<li><code>-s, --search &lt;SEARCH_TERM&gt;</code>：搜索词。</li>
+<li><code>-v, --csv</code>：以 CSV 格式打印结果。</li>
+<li><code>--parent &lt;PARENT_KERNEL&gt;</code>：按父内核过滤（格式：<code>owner/kernel-slug</code>）。</li>
+<li><code>--competition &lt;COMPETITION_SLUG&gt;</code>：按比赛过滤。</li>
+<li><code>--dataset &lt;DATASET_SLUG&gt;</code>：按数据集过滤（格式：<code>owner/dataset-slug</code>）。</li>
+<li><code>--user &lt;USER&gt;</code>：按特定用户过滤。</li>
+<li><code>--language &lt;LANGUAGE&gt;</code>：按语言过滤（<code>all</code>、<code>python</code>、<code>r</code>、<code>sqlite</code>、<code>julia</code>）。</li>
+<li><code>--kernel-type &lt;TYPE&gt;</code>：按内核类型过滤（<code>all</code>、<code>script</code>、<code>notebook</code>）。</li>
+<li><code>--output-type &lt;TYPE&gt;</code>：按输出类型过滤（<code>all</code>、<code>visualizations</code>、<code>data</code>）。</li>
+<li><code>--sort-by &lt;SORT_BY&gt;</code>：对结果进行排序（<code>hotness</code>、<code>commentCount</code>、<code>dateCreated</code>、<code>dateRun</code>、<code>relevance</code>、<code>scoreAscending</code>、<code>scoreDescending</code>、<code>viewCount</code>、<code>voteCount</code>）。默认值：<code>hotness</code>。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<ol>
+<li><p>列出您自己的标题中包含“Exercise”的内核，第 2 页，每页 5 项，采用 CSV 格式，按运行日期排序：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels list -m -s Exercise --page-size 5 -p 2 -v --sort-by dateRun
+</code></pre></div>
+</li>
+<li><p>列出 <code>$KAGGLE_DEVELOPER/exercise-lists</code> 子级的内核（将 <code>$KAGGLE_DEVELOPER</code> 替换为您的用户名）：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels list --parent $KAGGLE_DEVELOPER/exercise-lists
+</code></pre></div>
+</li>
+<li><p>列出“房价高级回归技术”竞赛的前 5 个内核：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels list --competition house-prices-advanced-regression-techniques --page-size 5
+```4. 列出与数据集 `dansbecker/home-data-for-ml-course` 关联的前 5 个内核：
+
+```bash
+kaggle kernels list --dataset dansbecker/home-data-for-ml-course --page-size 5
+</code></pre></div>
+</li>
+<li><p>按用户<code>$KAGGLE_DEVELOPER</code>列出输出数据的Python笔记本：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels list --user $KAGGLE_DEVELOPER --language python --kernel-type notebook --output-type data
+</code></pre></div>
+</li>
+</ol>
+<p><strong>目的：</strong></p>
+<p>此命令允许您根据各种过滤器（例如所有权、相关竞争/数据集、语言或类型）查找内核。</p>
+<h2><code>kaggle kernels files</code></h2>
+<p>列出特定内核的输出文件。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels files &lt;KERNEL&gt; [options]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;KERNEL&gt;</code>：内核URL后缀（格式：<code>owner/kernel-slug</code>，例如<code>kerneler/sqlite-global-default</code>）。</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>-v, --csv</code>：以 CSV 格式打印结果。</li>
+<li><code>--page-token &lt;PAGE_TOKEN&gt;</code>：结果分页的页面令牌。</li>
+<li><code>--page-size &lt;PAGE_SIZE&gt;</code>：页面上显示的项目数（默认：20，最大：200）。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>以 CSV 格式列出内核 <code>kerneler/sqlite-global-default</code> 的第一个输出文件：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels files kerneler/sqlite-global-default -v --page-size=1
+</code></pre></div>
+<p><strong>目的：</strong></p>
+<p>使用此命令可以查看内核运行生成的文件。</p>
+<h2><code>kaggle kernels init</code></h2>
+<p>为新的或现有的内核初始化元数据文件 (<code>kernel-metadata.json</code>)。参见<a href="/kaggle-docs/zh/cli/kernels_metadata.html">metadata file format</a>。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels init -p &lt;FOLDER_PATH&gt;
+</code></pre></div>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>-p, --path &lt;FOLDER_PATH&gt;</code>：将创建<code>kernel-metadata.json</code>文件的文件夹路径（默认为当前目录）。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>在<code>tests/kernel</code>文件夹中初始化内核元数据文件：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels init -p tests/kernel
+</code></pre></div>
+<p>**目的：**此命令创建一个模板 <code>kernel-metadata.json</code> 文件。在将其推送到 Kaggle 之前，您需要编辑此文件，其中包含内核标题、ID (slug)、语言、内核类型和数据源等详细信息。</p>
+<h2><code>kaggle kernels push</code></h2>
+<p>将新代码/笔记本和元数据推送到内核，然后运行内核。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels push -p &lt;FOLDER_PATH&gt; [options]
+</code></pre></div>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>--accelerator &lt;ACCELERATOR_ID&gt;</code>：运行时使用的加速器的ID名称。例如。 “NvidiaTeslaP100”（又名默认 GPU）、“NvidiaTeslaT4”、“TpuV6E8”。</li>
+<li><code>-p, --path &lt;FOLDER_PATH&gt;</code>：包含内核文件（例如，<code>.ipynb</code>、<code>.Rmd</code>、<code>.py</code>）和<code>kernel-metadata.json</code>文件的文件夹路径（默认为当前目录）。</li>
+<li><code>-t, --timeout &lt;SECONDS&gt;</code>：最大运行时间（以秒为单位）。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>从<code>tests/kernel</code>文件夹中推送内核（假设它包含内核文件和<code>kernel-metadata.json</code>）：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels push -p tests/kernel
+</code></pre></div>
+<p><strong>目的：</strong></p>
+<p>此命令将本地内核文件及其元数据上传到 Kaggle。如果元数据中指定的内核存在于您的帐户下，它将被更新。否则，将创建一个新内核。上传后，Kaggle 将尝试运行内核。</p>
+<p>截至 2026 年 2 月可用的加速器：* NvidiaTeslaP100
+*TpuV38</p>
+<ul>
+<li>英伟达特斯拉T4</li>
+<li>NvidiaTeslaT4Highmem</li>
+<li>Tpu1VmV38</li>
+<li>NvidiaTeslaA100</li>
+<li>英伟达L4</li>
+<li>TpuV5E8</li>
+<li>NvidiaL4X1</li>
+<li>TpuV6E8</li>
+<li>英伟达H100</li>
+<li>NvidiaRtxPro6000</li>
+</ul>
+<p>其中一些仅适用于特定比赛的参与者，有些仅适用于 Kaggle 管理员。</p>
+<blockquote>
+<p>[!警告]
+<code>NvidiaTeslaP100</code> 不适用于默认 Kaggle 图像的 GPU 计算。其 PyTorch 版本 (cu128) 不包含 Pascal (<code>sm_60</code>) 内核，因此 <code>torch.cuda.is_available()</code> 返回 <code>True</code>，但第一个 CUDA 操作失败并显示 <code>cudaErrorNoKernelImageForDevice</code>。请使用<code>NvidiaTeslaT4</code>，或者如果您需要 P100，请安装 Pascal 兼容的火炬版本。</p>
+</blockquote>
+<h2><code>kaggle kernels pull</code></h2>
+<p>获取内核的代码/笔记本和元数据。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels pull &lt;KERNEL&gt; [options]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;KERNEL&gt;</code>：内核 URL 后缀（格式：<code>owner/kernel-slug</code> 或 <code>owner/kernel-slug/version</code>，例如 <code>$KAGGLE_DEVELOPER/exercise-as-with</code> 或 <code>$KAGGLE_DEVELOPER/exercise-as-with/2</code>）。</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>-p, --path &lt;PATH&gt;</code>：下载文件的文件夹（默认为当前目录）。</li>
+<li><code>-w, --wp</code>：下载文件到当前工作路径。</li>
+<li><code>-m, --metadata</code>：与内核代码一起生成<code>kernel-metadata.json</code> 文件。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<ol>
+<li><p>将内核<code>$KAGGLE_DEVELOPER/exercise-as-with</code>及其元数据拉入<code>tests/kernel</code>文件夹中：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels pull -p tests/kernel $KAGGLE_DEVELOPER/exercise-as-with -m
+</code></pre></div>
+</li>
+<li><p>将内核<code>$KAGGLE_DEVELOPER/exercise-as-with</code>拉入当前工作目录：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels pull --wp $KAGGLE_DEVELOPER/exercise-as-with
+```3. 将版本 2 的内核`$KAGGLE_DEVELOPER/exercise-as-with`拉入当前工作目录：
+
+```bash
+kaggle kernels pull --wp $KAGGLE_DEVELOPER/exercise-as-with/2
+</code></pre></div>
+</li>
+</ol>
+<p><strong>目的：</strong></p>
+<p>此命令允许您将内核的源代码和元数据（可选）从 Kaggle 下载到本地计算机。</p>
+<h2><code>kaggle kernels output</code></h2>
+<p>获取最新运行的内核的数据输出。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels output &lt;KERNEL&gt; [options]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;KERNEL&gt;</code>：内核 URL 后缀（例如，<code>kerneler/using-google-bird-vocalization-model</code>）。</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>-p, --path &lt;PATH&gt;</code>：将输出文件下载到的文件夹（默认为当前目录）。</li>
+<li><code>-w, --wp</code>：下载文件到当前工作路径。</li>
+<li><code>-o, --force</code>：强制下载，覆盖现有文件。</li>
+<li><code>-q, --quiet</code>：抑制详细输出。</li>
+<li><code>--file-pattern &lt;REGEX&gt;</code>：与文件名匹配的正则表达式模式。仅下载与模式匹配的文件。</li>
+<li><code>--page-size &lt;SIZE&gt;</code>：每页请求的输出文件数。默认大小为 20，最大为 200。</li>
+<li><code>--page-token &lt;TOKEN&gt;</code>：从特定输出页面下载文件。如果 Kaggle 返回另一个页面令牌，则会在下载后打印它。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>下载内核<code>kerneler/using-google-bird-vocalization-model</code>的输出，强制覆盖：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels output kerneler/sqlite-global-default -o
+</code></pre></div>
+<p>仅下载 PNG 文件：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels output &lt;kernel&gt; --file-pattern &quot;.*\.png$&quot;  # Only PNG files
+</code></pre></div>
+<p>在所有输出页面下载匹配的 PNG 文件：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels output &lt;kernel&gt; --file-pattern &quot;.*\.png$&quot;
+</code></pre></div>
+<p>从特定输出页面下载文件：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels output &lt;kernel&gt; --page-token &lt;TOKEN&gt;
+```以较小的页面下载文件：
+
+```bash
+kaggle kernels output &lt;kernel&gt; --page-size 50
+</code></pre></div>
+<p><strong>目的：</strong></p>
+<p>使用此命令检索内核运行生成的文件，例如提交文件、处理的数据或可视化。默认情况下，输出下载会扫描每个可用的输出页面，因此 <code>--file-pattern</code> 可以匹配第一页以外的文件。使用<code>--page-size</code>控制每个页面请求多少个文件，当您只想从一个特定页面下载文件时使用<code>--page-token</code>。</p>
+<h2><code>kaggle kernels status</code></h2>
+<p>显示内核最新运行的状态。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels status &lt;KERNEL&gt;
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;KERNEL&gt;</code>：内核 URL 后缀（例如，<code>kerneler/sqlite-global-default</code>）。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>获取内核<code>kerneler/sqlite-global-default</code>的状态：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels status kerneler/sqlite-global-default
+</code></pre></div>
+<p><strong>目的：</strong></p>
+<p>此命令告诉您最新运行的内核是否仍在运行、成功完成还是失败。</p>
+<h2><code>kaggle kernels delete</code></h2>
+<p>从 Kaggle 中删除内核。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels delete &lt;KERNEL&gt; [options]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;KERNEL&gt;</code>：内核URL后缀（格式：<code>owner/kernel-slug</code>，例如<code>$KAGGLE_DEVELOPER/exercise-delete</code>）。</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>-y, --yes</code>：自动确认删除，不提示。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>删除内核<code>$KAGGLE_DEVELOPER/exercise-delete</code>并自动确认：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels delete $KAGGLE_DEVELOPER/exercise-delete --yes
+</code></pre></div>
+<p><strong>目的：</strong></p>
+<p>此命令将从 Kaggle 中永久删除您的内核之一。谨慎使用。</p>
+<h2><code>kaggle kernels topics list</code>列出内核的讨论主题。</h2>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels topics list &lt;KERNEL&gt; [options]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;KERNEL&gt;</code>：格式为 <code>&lt;owner&gt;/&lt;kernel-slug&gt;</code> 的内核引用（例如，<code>owner/kernel-slug</code>）。</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>--sort-by &lt;SORT_BY&gt;</code>：排序顺序。有效选项：<code>hot</code>、<code>top</code>、<code>new</code>、<code>recent</code>、<code>active</code>、<code>relevance</code>。</li>
+<li><code>-s, --search &lt;SEARCH_TERM&gt;</code>：搜索查询以过滤主题。</li>
+<li><code>--page-size &lt;PAGE_SIZE&gt;</code>：每页的项目数。</li>
+<li><code>--page-token &lt;PAGE_TOKEN&gt;</code>：用于分页的页面标记。</li>
+<li><code>-v, --csv</code>：以 CSV 格式打印结果。</li>
+<li><code>-q, --quiet</code>：抑制详细输出。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>列出 <code>owner/kernel-slug</code> 内核的最新主题：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels topics list owner/kernel-slug --sort-by recent
+</code></pre></div>
+<p><strong>目的：</strong></p>
+<p>此命令允许您浏览特定内核的讨论主题。</p>
+<h2><code>kaggle kernels topics show</code></h2>
+<p>以树形形式显示内核讨论主题以及所有评论。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels topics show &lt;TOPIC_REF&gt; [options]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;TOPIC_REF&gt;</code>：主题参考，可以是：<ul>
+<li><code>&lt;kernel&gt;/&lt;topic-id&gt;</code>（例如，<code>owner/kernel-slug/12345</code>）</li>
+<li><code>&lt;kernel&gt; &lt;topic-id&gt;</code>（两个单独的参数，其中 <code>&lt;topic-id&gt;</code> 作为第二个参数传递）</li>
+<li><code>&lt;topic-id&gt;</code>（裸数字 ID）</li>
+</ul>
+</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>--page-size &lt;PAGE_SIZE&gt;</code>：每页显示的评论数。</li>
+<li><code>--page-token &lt;PAGE_TOKEN&gt;</code>：评论分页的页面标记。</li>
+<li><code>-v, --csv</code>：以 CSV 格式打印结果。</li>
+<li><code>-q, --quiet</code>：抑制详细输出。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels topics show owner/kernel-slug/12345
+</code></pre></div>
+<p>**目的：**此命令显示完整的讨论主题及其以缩进树结构呈现的所有注释。</p>
+<h2>在内核中使用 Secret</h2>
+<p>如果您的内核需要访问敏感信息（例如 API 密钥或密码）而不在代码中公开它们，您应该使用 <strong>Kaggle Secrets</strong>。</p>
+<h3>1. 在 Kaggle.com 上定义 Secret（不支持 CLI）</h3>
+<ol>
+<li>在 Kaggle 笔记本编辑器中打开您的笔记本。</li>
+<li>在菜单中，选择 <strong>附加组件</strong> -&gt; <strong>秘密</strong>。</li>
+<li>将您的机密添加为键值对（例如，标签：<code>MY_API_KEY</code>，值：<code>your-actual-key-value</code>）。</li>
+</ol>
+<h3>2. 在 Kaggle.com 上运行的代码中使用 Secrets</h3>
+<p>使用 <code>kaggle_secrets</code> 包中的 <code>UserSecretsClient</code> 在运行时检索您的机密：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">from kaggle_secrets import UserSecretsClient
+
+# Retrieve the secret value using the label you defined
+secret_value = UserSecretsClient().get_secret(&quot;MY_API_KEY&quot;)
+</code></pre></div>
+<p><strong>注意：</strong> <code>kaggle_secrets</code> 软件包是预安装的，并且仅在 Kaggle 笔记本执行环境中起作用。在本地运行脚本时它将不起作用。</p>
+
+          <p class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaggle Benchmarks CLI Reference · Kaggle Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/skills/references/benchmarks.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/skills/references/benchmarks.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+      <a class="brand" href="/kaggle-docs/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle Docs</span>
+        <span class="brand-v">mirror</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn active" href="/kaggle-docs/skills/references/benchmarks.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">Official ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
+        </div>
+        <div class="side-label">Learning path · docs</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
+<li><a class="leaf active" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          
+          <h1>Kaggle Benchmarks CLI Reference</h1>
+<p>This reference covers how to use the <code>kaggle</code> CLI to manage Kaggle Benchmark tasks — pushing task files, running them against LLM models, checking status, and downloading results.</p>
+<h2>Prerequisites</h2>
+<ul>
+<li>Python 3.11+</li>
+<li><code>kaggle</code> CLI installed (<code>pip install kaggle</code>)</li>
+<li>Valid Kaggle credentials: <code>KAGGLE_API_TOKEN</code> env var, <code>~/.kaggle/access_token</code> file, or OAuth via <code>kaggle auth login</code></li>
+</ul>
+<h2>Command Hierarchy</h2>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>kaggle benchmarks (alias: kaggle b)
+├── auth              — Fetch Model Proxy credentials
+├── init              — Fetch credentials + setup local dev environment
+├── tasks (alias: t)  — Manage benchmark tasks
+│   ├── push          — Upload a task from a .py file
+│   ├── run           — Run a task against model(s)
+│   ├── list          — List your benchmark tasks
+│   ├── status        — Show task details and per-model run status
+│   ├── download      — Download completed run outputs
+│   ├── log / logs    — View execution logs for runs
+│   ├── models        — List available benchmark models
+│   ├── delete        — Delete a task (not yet supported by server)
+│   └── publish       — Publish a task (make it public)
+└── topics            — List or show benchmark discussion topics
+</code></pre></div>
+<h2>Setup &amp; Authentication</h2>
+<h3><code>kaggle benchmarks init</code></h3>
+<p>The <code>init</code> command fetches Model Proxy credentials, writes default environment variables, generates a starter example task file, and a syntax reference document.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks init [options]
+</code></pre></div>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Initialize with defaults (always writes .env, example_task.py, kaggle_benchmarks_reference.md)
+kaggle b init -y
+
+# Use custom paths for env file and/or example file:
+# kaggle b init -y --env-file my_project/.env --example-file my_project/my_task.py
+</code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-y, --yes</code>: Skip confirmation prompt</li>
+<li><code>--env-file &lt;FILE&gt;</code>: Path to write env vars (default: <code>.env</code>)</li>
+<li><code>--example-file &lt;FILE&gt;</code>: Path to write example task (default: <code>example_task.py</code>)</li>
+</ul>
+<p><strong>Purpose:</strong> Prepare a local benchmark project with Model Proxy credentials,
+default env vars, and starter benchmark files.</p>
+<p><strong>Environment variables written (appended to the env file):</strong></p>
+<ul>
+<li><code>MODEL_PROXY_URL</code> — Model Proxy endpoint</li>
+<li><code>MODEL_PROXY_API_KEY</code> — Short-lived API key</li>
+<li><code>MODEL_PROXY_EXPIRY_TIME</code> — Token expiry</li>
+<li><code>LLM_DEFAULT</code> — Default model slug (e.g. <code>google/gemini-3-flash-preview</code>)</li>
+<li><code>LLM_DEFAULT_EVAL</code> — Default eval model slug</li>
+<li><code>LLMS_AVAILABLE</code> — Comma-separated list of available model slugs</li>
+</ul>
+<p><strong>⚠ Note:</strong> <code>LLMS_AVAILABLE</code> is a curated subset of models for local development and testing — it is <strong>not</strong> the full model list, and the Model Proxy token (<code>MODEL_PROXY_API_KEY</code>) works for all models, not just those listed. Use <code>kaggle b t models</code> to list every available model and <code>kaggle b t run</code> to execute against any of them on Kaggle&#39;s infrastructure (same models available in notebooks).</p>
+<p><strong>⚠ Note:</strong> Environment variables are <strong>appended</strong> to the env file. When loaded via <code>dotenv</code>, the last value wins, so re-running <code>init</code> or <code>auth</code> is safe. The file may accumulate duplicate entries over time; clean up manually if desired.</p>
+<p><strong>Files generated in the same directory as the example file:</strong></p>
+<ul>
+<li><code>example_task.py</code> — Starter benchmark task using <code>@task</code> decorator</li>
+<li><code>kaggle_benchmarks_reference.md</code> — Syntax reference for the <code>kaggle-benchmarks</code> Python library</li>
+</ul>
+<p>If either file already exists, it is skipped without overwriting.</p>
+<h3><code>kaggle benchmarks auth</code></h3>
+<p>If you just need the Model Proxy token (without the extra env vars and example files):</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks auth [options]
+</code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-y, --yes</code>: Skip confirmation prompt.</li>
+<li><code>--env-file &lt;FILE&gt;</code>: Path to append Model Proxy credential variables.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Refresh only the 3 credential variables (MODEL_PROXY_URL, MODEL_PROXY_API_KEY, MODEL_PROXY_EXPIRY_TIME)
+kaggle b auth -y
+
+# Or write to a custom env file:
+# kaggle b auth -y --env-file custom.env
+</code></pre></div>
+<p><strong>Purpose:</strong> Refresh only the Model Proxy credential variables without creating
+starter task files.</p>
+<h2>Core Workflow: Push → Run → Status → Download</h2>
+<h3>Step 1: Write a Task File</h3>
+<p>Task files are Python scripts using the <code>kaggle-benchmarks</code> library. They must:</p>
+<ul>
+<li>Import <code>kaggle_benchmarks as kbench</code></li>
+<li>Define at least one function decorated with <code>@kbench.task(...)</code></li>
+<li>Call <code>.run(kbench.llm)</code> on the task function</li>
+<li>Use <code># %%</code> cell markers to separate notebook cells (percent format)</li>
+</ul>
+<p><strong>⚠ Important:</strong> The <code>.run()</code> call is what triggers execution and produces a <code>.run.json</code> output file. Without invoking <code>.run()</code> (or <code>.evaluate()</code>), no run file is produced and nothing is recorded. The push will still succeed (since push validation only checks for <code>@task</code> decorators), but the task will silently produce no results when executed on the server.</p>
+<p><strong>Minimal example:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python"># %%
+import kaggle_benchmarks as kbench
+
+# %%
+@kbench.task(name=&quot;sample-task&quot;)
+def sample_task(llm):
+    response = llm.prompt(&quot;What is 2 + 2?&quot;)
+    kbench.assertions.assert_in(&quot;4&quot;, response, expectation=&quot;Should contain 4&quot;)
+
+sample_task.run(kbench.llm)
+</code></pre></div>
+<p><strong>Task name defaults:</strong> If you omit the <code>name=</code> argument from <code>@kbench.task()</code>, the task name defaults to the function name, title-cased with underscores replaced by spaces. For example, <code>@kbench.task()</code> on a function named <code>my_eval</code> produces the task name <code>&quot;My Eval&quot;</code>, which is slugified to <code>my-eval</code>.</p>
+<p><strong>Task file format rules:</strong></p>
+<ul>
+<li>Must be a <code>.py</code> file</li>
+<li>Uses &quot;percent format&quot; — <code># %%</code> cell markers separate notebook cells. Each <code># %%</code> starts a new cell. The CLI converts the file to <code>.ipynb</code> using <code>jupytext</code> with this format.</li>
+<li>IPython magics (<code>%</code>, <code>!</code>, <code>%%</code>) are stripped during AST validation but kept in the final notebook for server execution</li>
+<li>The task name is normalized to a URL-safe slug (e.g. <code>&quot;My Test Task&quot;</code> → <code>my-test-task</code>)</li>
+<li>The slug used in the CLI must match a <code>@task</code> decorator in the file</li>
+</ul>
+<h3><code>kaggle benchmarks tasks push</code></h3>
+<p>Pushes a benchmark task file to Kaggle.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks push &lt;TASK&gt; -f &lt;FILE&gt; [options]
+</code></pre></div>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Push and wait for server-side creation to complete (recommended)
+kaggle b t push my-task -f task.py --wait
+
+# Push with timeout (60s) and custom poll interval (5s)
+kaggle b t push my-task -f task.py --wait 60 --poll-interval 5
+
+# Push with Kaggle datasets attached
+kaggle b t push my-task -f task.py --wait -d kaggle/titanic -d user/my-dataset
+
+# Push without waiting (fire-and-forget; check status with `kaggle b t status`)
+# kaggle b t push my-task -f task.py
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TASK&gt;</code> (positional, required): Task name/slug (e.g. <code>my-task</code>)</li>
+<li><code>-f, --file &lt;FILE&gt;</code> (required): Path to the <code>.py</code> source file</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--wait [TIMEOUT]</code>: Wait for creation to complete. <code>--wait</code> alone = wait indefinitely. <code>--wait 60</code> = timeout after 60s.</li>
+<li><code>--poll-interval &lt;SECONDS&gt;</code>: Maximum seconds between status polls (default: <code>60</code>). Polling starts at 5s and increases by 50% each iteration until reaching this value.</li>
+<li><code>-v, --verbose</code>: Enable verbose polling logs.</li>
+<li><code>-d, --kaggle-dataset &lt;DATASET&gt;</code>: Attach Kaggle dataset to the task&#39;s backing notebook (format: <code>owner/dataset-slug</code>). Repeat for multiple datasets (e.g. <code>-d kaggle/titanic -d user/my-dataset</code>). Mounted at <code>/kaggle/input/&lt;dataset-slug&gt;/</code> by default. If a naming conflict occurs, the fully qualified mount path <code>/kaggle/input/&lt;owner&gt;/&lt;dataset-slug&gt;/</code> is used instead.</li>
+</ul>
+<p><strong>Purpose:</strong> Create or version a benchmark task from a local <code>.py</code> file.</p>
+<p><strong>What happens:</strong></p>
+<ol>
+<li>Validates the file is a <code>.py</code> file and exists</li>
+<li>Parses the file AST to verify it contains a <code>@task</code> decorator matching the task name</li>
+<li>If the task name differs from its slug form, prints a warning (e.g. <code>&quot;My Task&quot;</code> → <code>&quot;my-task&quot;</code>)</li>
+<li>Converts the <code>.py</code> file to <code>.ipynb</code> notebook format via <code>jupytext</code></li>
+<li>Uploads to Kaggle as a benchmark task (creates new or new version if exists)</li>
+<li>Prints the Task URL and a hint to run</li>
+</ol>
+<p><strong>Error scenarios:</strong></p>
+<ul>
+<li>File not found: <code>ValueError: File task.py does not exist</code></li>
+<li>Non-<code>.py</code> file: <code>ValueError: File task.txt must be a .py file</code></li>
+<li>Missing <code>@task</code> decorator: <code>ValueError: No @task decorators found in file task.py. The file must define at least one task.</code></li>
+<li>Task name mismatch: <code>ValueError: Task &#39;wrong-name&#39; not found in file task.py. Found tasks: real-task</code></li>
+<li>Re-push while previous is still processing (without <code>--wait</code>): <code>ValueError: Task &#39;my-task&#39; is currently being created (pending). Cannot push now. Use --wait to monitor the existing creation.</code></li>
+<li>Re-push with <code>--wait</code>: Waits for existing creation to complete, then pushes new version automatically</li>
+<li>Re-push without <code>-d</code> when previous version had datasets: Prints yellow warning to stderr: <code>⚠ Warning: The previous version of &#39;my-task&#39; had attached Kaggle datasets: ...</code> and detaches them (re-specify <code>-d</code> to keep them).</li>
+<li>Invalid or inaccessible Kaggle dataset: <code>Failed to push task: Failed to attach the following data sources (not found or inaccessible): &lt;dataset&gt;</code></li>
+</ul>
+<h3><code>kaggle benchmarks tasks run</code></h3>
+<p>Runs a benchmark task against one or more models.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks run &lt;TASK&gt; [options]
+</code></pre></div>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Run with interactive model selection (paginated picker)
+kaggle b t run my-task
+
+# Run against specific models
+kaggle b t run my-task -m gemini-2.5-pro -m claude-sonnet-4
+
+# Run against a model and wait for completion
+kaggle b t run my-task -m gemini-2.5-pro --wait
+
+# Run with timeout and custom poll interval
+kaggle b t run my-task -m gemini-2.5-pro --wait 30 --poll-interval 5
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TASK&gt;</code> (positional, required): Task name/slug (e.g. <code>my-task</code>)</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-m, --model &lt;MODEL&gt;</code> (e.g. <code>gemini-2.5-pro</code>): Model slug. Repeat for multiple models (e.g. <code>-m gemini-2.5-pro -m claude-sonnet-4</code>). If omitted, shows interactive picker.</li>
+<li><code>--wait [TIMEOUT]</code>: Wait for runs to complete. <code>0</code> or omit value = indefinite.</li>
+<li><code>--poll-interval &lt;SECONDS&gt;</code>: Maximum seconds between status polls (default: <code>60</code>). Polling starts at 5s and increases by 50% each iteration until reaching this value.</li>
+<li><code>-v, --verbose</code>: Enable verbose polling logs.</li>
+</ul>
+<p><strong>Purpose:</strong> Schedule benchmark runs and optionally wait for completion.</p>
+<p><strong>Interactive model selection:</strong></p>
+<ul>
+<li>Shows numbered list of available models</li>
+<li>Enter comma-separated numbers (e.g. <code>1,3,5</code>) to select specific models</li>
+<li>Enter <code>all</code> to select every available model</li>
+<li>Pagination: <code>n</code> = next page, <code>p</code> = previous page (when &gt; 20 models)</li>
+</ul>
+<p><strong>Error scenarios:</strong></p>
+<ul>
+<li>Non-existent task: <code>ValueError: Task &#39;no-such-task&#39; not found. Check the task name and try again. Use &#39;kaggle b t list&#39; to see your tasks.</code></li>
+<li>Invalid model: <code>ValueError: Failed to schedule runs. One or more model names may be invalid: [&#39;nonexistent-model&#39;]. Use &#39;kaggle b t run my-task&#39; (without -m) to select from available models.</code></li>
+<li>Task not ready: <code>ValueError: Task &#39;my-task&#39; is not ready to run (status: QUEUED). Only completed tasks can be run.</code></li>
+<li>Timeout: <code>Timed out waiting for runs after 30 seconds.</code></li>
+</ul>
+<h3><code>kaggle benchmarks tasks status</code></h3>
+<p>Shows task details and per-model run status.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks status &lt;TASK&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TASK&gt;</code> (positional, required): Task name/slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-m, --model &lt;MODEL&gt;</code>: Filter status to a specific model. Repeat for
+multiple models.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Full status for a task
+kaggle b t status my-task
+
+# Filter to specific models
+kaggle b t status my-task -m gemini-2.5-pro
+kaggle b t status my-task -m gemini-2.5-pro -m claude-sonnet-4
+</code></pre></div>
+<p><strong>Purpose:</strong> Check task creation state and model run progress or errors.</p>
+<p><strong>Output format:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>Task:     my-task
+Status:   Completed
+Created:  2026-04-28 18:13:04
+Task URL: https://www.kaggle.com/...
+
+Model                     Status      Started               Ended
+--------------------------------------------------------------------------
+gemini-2.5-pro            Completed   2026-04-28 18:13:04   2026-04-28 18:14:00
+claude-sonnet-4           Errored     2026-04-28 18:13:04   2026-04-28 18:13:04
+
+Errors:
+  [claude-sonnet-4]
+    Traceback (most recent call last):
+      ...
+    ValueError: some error
+</code></pre></div>
+<p>If no runs exist: <code>No runs yet. Use &#39;kaggle b t run my-task&#39; to start one.</code></p>
+<p><strong>Task creation failures:</strong> When the task itself failed to be created
+(e.g. <code>KERNEL_WITHOUT_RUN</code>, <code>NO_MODEL_SPECIFIED</code>, <code>VALIDATION_FAILED</code>,
+<code>ERRORED</code>), the <code>Status:</code> line shows the failure <em>kind</em> (titlecased
+enum) and an <code>Error:</code> line is appended below it with the server-provided
+<code>creation_error_message</code> — for example:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>Status:   Kernel_Without_Run
+Error:    Notebook finished but produced no output. Did you forget to call .run() or .evaluate()?
+</code></pre></div>
+<p>The <code>kaggle b t run</code> command applies the same pattern when refusing to
+schedule runs against a non-completed task: the raised error includes
+<code>status: &lt;KIND&gt;</code> and, if present, an <code>Error: &lt;message&gt;</code> line with the
+server&#39;s explanation.</p>
+<h3><code>kaggle benchmarks tasks download</code></h3>
+<p>Downloads completed or errored run outputs.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks download &lt;TASK&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TASK&gt;</code> (positional, required): Task name/slug.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Download all terminal run outputs (completed and errored)
+kaggle b t download my-task
+
+# Download for specific model(s)
+kaggle b t download my-task -m gemini-2.5-pro
+
+# Download to a custom directory
+kaggle b t download my-task -o ./results
+
+# Download with source notebooks included
+kaggle b t download my-task --include-source
+</code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-m, --model &lt;MODEL&gt;</code> (e.g. <code>gemini-2.5-pro</code>): Download only for a specific model. Repeat for multiple models.</li>
+<li><code>-o, --output &lt;DIRECTORY&gt;</code>: Output directory (default: current directory)</li>
+<li><code>-s, --include-source</code>: Also download the kernel session&#39;s source notebooks (<code>__notebook__.ipynb</code>, <code>__notebook_source__.ipynb</code>)</li>
+<li><code>-f, --force</code>: Force re-download of already completed runs, overwriting local files</li>
+</ul>
+<p><strong>Purpose:</strong> Retrieve benchmark output artifacts for local inspection.</p>
+<p><strong>Output directory structure:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>&lt;output&gt;/&lt;task&gt;/&lt;version&gt;/&lt;model&gt;/&lt;run_id&gt;/    (version is &quot;unset&quot; if unavailable)
+   ├── output files...
+</code></pre></div>
+<p><strong>Behavior details:</strong></p>
+<ul>
+<li>Downloads outputs for all runs in a <strong>terminal state</strong> — this includes both <code>COMPLETED</code> and <code>ERRORED</code> runs (errored runs may still have partial output)</li>
+<li>Downloads zip archives and extracts them automatically</li>
+<li>Progress is rendered as a table with <code>Model | File | Size | Progress</code> columns. <code>Size</code> is the extracted on-disk size of the run&#39;s output directory.</li>
+<li>Already-downloaded runs are skipped (use <code>--force</code> to re-download) and shown as a <code>Cached</code> row in the table</li>
+<li>Corrupt zips show as a <code>Bad zip</code> row; the raw <code>.zip</code> is kept on disk and the next run is processed</li>
+<li>If <code>-s</code> is passed but a cached run&#39;s directory lacks source notebooks (<code>__notebook__.ipynb</code> / <code>__notebook_source__.ipynb</code>), the cached row is left untouched and a tip is printed after the summary: <code>Tip: N cached run(s) lack source notebooks. Re-run with -f -s to fetch them.</code> — use <code>-f -s</code> together to backfill source notebooks into existing cached runs.</li>
+<li>No downloadable runs (all still in progress): <code>No downloadable runs yet — N run(s) still in progress. Use &#39;kaggle b t status my-task&#39; to check progress.</code></li>
+<li>No runs at all: <code>No runs found for task &#39;my-task&#39;. Use &#39;kaggle b t run my-task&#39; to start one.</code></li>
+</ul>
+<h3><code>kaggle benchmarks tasks log</code></h3>
+<p>Views logs for benchmark task runs.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks log &lt;TASK&gt; [options]
+</code></pre></div>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Show logs for all runs of a task
+kaggle b t log my-task
+
+# Show logs for a specific model&#39;s run(s)
+kaggle b t log my-task -m gemini-2.5-pro
+
+# Show logs for multiple models
+kaggle b t logs my-task -m gemini-2.5-pro -m claude-sonnet-4
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TASK&gt;</code> (positional, required): Task name/slug (e.g. <code>my-task</code>)</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-m, --model &lt;MODEL&gt;</code> (e.g. <code>gemini-2.5-pro</code>): Filter logs to a specific model. Repeat for multiple models. If omitted, logs for all runs are shown.</li>
+</ul>
+<p><strong>Aliases:</strong> <code>log</code>, <code>logs</code></p>
+<p><strong>Purpose:</strong> Inspect per-run execution logs for debugging.</p>
+<p><strong>Behavior details:</strong></p>
+<ul>
+<li>Each run&#39;s logs are printed with a header including run state: <code>═══ Logs for gemini-2.5-pro (Run 456) [COMPLETED] ═══</code></li>
+<li>Each run ends with a line count footer: <code>═══ (42 lines) ═══</code></li>
+<li>A summary is printed at the end: <code>Showed logs for N run(s) across N model(s).</code></li>
+<li>Runs are logged <strong>sequentially</strong> in the loop: If the first run is active, the CLI blocks and streams it in real-time until completion before printing or streaming the next run&#39;s logs. This prevents terminal log interleaving.</li>
+<li>Active runs: Logs are streamed in real-time via Server-Sent Events (SSE)</li>
+<li>Completed runs: The persisted log file is returned and printed</li>
+<li>No runs found: <code>No runs found for task &#39;my-task&#39;. Use &#39;kaggle b t run my-task&#39; to start one.</code></li>
+</ul>
+<h2>Additional Commands</h2>
+<h3><code>kaggle benchmarks tasks list</code></h3>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks list [options]
+</code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--name-regex &lt;REGEX&gt;</code>: Filter task names by regular expression.</li>
+<li><code>--status &lt;STATUS&gt;</code>: Filter by creation status: <code>queued</code>, <code>running</code>, <code>completed</code>, <code>errored</code>.</li>
+<li><code>--page-size &lt;SIZE&gt;</code>: Tasks per page in the interactive pager. Defaults to 20.</li>
+<li><code>--all</code>: Print every task at once and skip the interactive pager.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># List all your tasks
+kaggle b t list
+
+# Filter by name (regex)
+kaggle b t list --name-regex &quot;^math&quot;
+
+# Filter by status
+kaggle b t list --status completed
+
+# Combine filters
+kaggle b t list --name-regex &quot;^math&quot; --status errored
+
+# Use a smaller interactive page size
+kaggle b t list --page-size 5
+
+# Print all tasks without the pager
+kaggle b t list --all
+</code></pre></div>
+<p><strong>Purpose:</strong> Review owned benchmark tasks and filter by task name or creation state.</p>
+<p><strong>Output:</strong> Aligned table with columns: Task, Version (or <code>unset</code>), Status, Created.</p>
+<h3><code>kaggle benchmarks tasks models</code></h3>
+<p>Lists available benchmark models.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks models
+</code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li>No visible options.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle b t models
+</code></pre></div>
+<p><strong>Purpose:</strong> Find model slugs accepted by <code>kaggle benchmarks tasks run</code>.</p>
+<p><strong>Output:</strong> Table with columns: Slug, Display Name</p>
+<h3><code>kaggle benchmarks tasks delete</code></h3>
+<p>Deletes a benchmark task when server support is available.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks delete &lt;TASK&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TASK&gt;</code> (positional, required): Task name/slug.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-y, --yes</code>: Skip confirmation.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle b t delete my-task
+kaggle b t delete my-task -y   # skip confirmation
+</code></pre></div>
+<p><strong>Purpose:</strong> Request task deletion. Current server behavior does not support it.</p>
+<p><strong>Note:</strong> Delete is not yet supported by the server. Currently prints: <code>Delete is not supported by the server yet.</code></p>
+<h3><code>kaggle benchmarks tasks publish</code></h3>
+<p>Publishes a benchmark task.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks tasks publish &lt;TASK&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TASK&gt;</code> (positional, required): Task name/slug.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Publish a task and its backing notebook (default)
+kaggle b t publish my-task
+
+# Publish without the backing notebook
+kaggle b t publish my-task --no-publish-backing-notebook
+</code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--no-publish-backing-notebook</code>: Do not publish the backing notebook (it is published by default).</li>
+</ul>
+<p><strong>Purpose:</strong> Make a benchmark task public, optionally without publishing its
+backing notebook.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Idempotent: re-publishing an already-public task prints a message and returns successfully.</li>
+<li>Unpublishing is not supported through this command.</li>
+<li>If task not found, raises <code>ValueError: Task &#39;my-task&#39; not found. Check the task name and try again. Use &#39;kaggle b t list&#39; to see your tasks.</code></li>
+</ul>
+<h3><code>kaggle benchmarks topics list</code></h3>
+<p>Lists discussion topics for a benchmark.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks topics list [BENCHMARK] [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>[BENCHMARK]</code>: Benchmark reference.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--sort-by &lt;SORT&gt;</code>: One of <code>hot</code>, <code>top</code>, <code>new</code>, <code>recent</code>, <code>active</code>, <code>relevance</code>.</li>
+<li><code>-s, --search &lt;TERM&gt;</code>: Search text.</li>
+<li><code>--page-size &lt;SIZE&gt;</code>: Number of topics to return.</li>
+<li><code>--page-token &lt;TOKEN&gt;</code>: Page token.</li>
+<li><code>-v, --csv</code>: Print CSV.</li>
+<li><code>-q, --quiet</code>: Suppress extra output.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks topics list my-benchmark
+kaggle b topics list my-benchmark --sort-by recent --page-size 50
+</code></pre></div>
+<p><strong>Purpose:</strong> Browse benchmark discussions before opening a specific topic.</p>
+<p><code>kaggle benchmarks topics</code> without <code>list</code> works as a shortcut for
+listing topics.</p>
+<h3><code>kaggle benchmarks topics show</code></h3>
+<p>Shows a benchmark discussion topic and comments in tree form.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks topics show &lt;TOPIC_REF&gt; [TOPIC_ID] [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TOPIC_REF&gt;</code>: Topic reference, or benchmark reference when using the
+two-argument form.</li>
+<li><code>[TOPIC_ID]</code>: Optional topic ID for the two-argument form.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--page-size &lt;SIZE&gt;</code>: Number of comments to return.</li>
+<li><code>--page-token &lt;TOKEN&gt;</code>: Page token.</li>
+<li><code>-v, --csv</code>: Print CSV.</li>
+<li><code>-q, --quiet</code>: Suppress extra output.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle benchmarks topics show my-benchmark/12345
+kaggle benchmarks topics show my-benchmark 12345
+</code></pre></div>
+<p><strong>Purpose:</strong> Read a benchmark discussion topic and its comments.</p>
+<h2>Task Name Normalization</h2>
+<p>Task names are automatically normalized to URL-safe slugs:</p>
+<ul>
+<li><code>my_task</code> → <code>my-task</code></li>
+<li><code>My Test Task</code> → <code>my-test-task</code></li>
+<li><code>My Task</code> → <code>my-task</code></li>
+</ul>
+<p>When the CLI normalizes a name, it prints a yellow warning:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>⚠ Warning: task name &#39;My Test Task&#39; was normalized to slug &#39;my-test-task&#39;.
+  Use &#39;my-test-task&#39; in future commands.
+</code></pre></div>
+<p>The slug must match between the <code>@task(name=...)</code> decorator in the file and the CLI command. Comparison is done on slugified names, so <code>@task(name=&quot;My Task&quot;)</code> matches <code>kaggle b t push my-task -f file.py</code>.</p>
+<h2>Model Slug Normalization</h2>
+<p>Benchmark model names are automatically normalized on both input and output. This makes it easy to pass various formats interchangeably while keeping displays and directories clean.</p>
+<ul>
+<li><strong>Flexible Inputs</strong>: The CLI accepts model names in several formats:<ul>
+<li><strong>Canonical Slugs (recommended)</strong>: <code>gemini-2.5-pro</code> or <code>claude-sonnet-4</code></li>
+<li><strong>With Provider Prefix</strong>: <code>google/gemini-2.5-pro</code> or <code>anthropic/claude-sonnet-4</code></li>
+<li><strong>With Version/Proxy <code>@</code> symbols</strong>: <code>anthropic/claude-haiku-4-5@20251001</code> or <code>claude-sonnet-4-6@default</code></li>
+</ul>
+</li>
+<li><strong>Unified Normalization</strong>: The client automatically strips any provider prefix (e.g., <code>google/</code> or <code>anthropic/</code>) and replaces <code>@</code> characters with <code>-</code> to match the server&#39;s canonical database slug format.</li>
+<li><strong>Clean Outputs</strong>:<ul>
+<li><strong>Status Display</strong>: Tables and error logs display the canonical, hyphenated slugs (e.g., <code>claude-haiku-4-5-20251001</code> and <code>gemini-2.0-flash-lite-001</code>) for readability.</li>
+<li><strong>Hierarchical Downloads</strong>: Run outputs are extracted into clean folders using the canonical slugs (e.g., <code>./&lt;task&gt;/&lt;version&gt;/claude-haiku-4-5-20251001/&lt;run_id&gt;/</code>), with no <code>@</code> or <code>/</code> symbols in folder names.</li>
+</ul>
+</li>
+</ul>
+<h2>Common Workflows</h2>
+<h3>Full End-to-End Workflow</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># 1. Setup
+kaggle b init -y
+
+# 2. Write your task in task.py (see task file format above)
+
+# 3. Push
+kaggle b t push my-task -f task.py --wait
+
+# 4. Run against models
+kaggle b t run my-task -m gemini-2.5-pro -m claude-sonnet-4 --wait
+
+# 5. Check status
+kaggle b t status my-task
+
+# 6. Download results
+kaggle b t download my-task -o ./results
+</code></pre></div>
+<h3>Local Iteration Loop</h3>
+<p>Before pushing to the server, you can test your task locally against the Model Proxy to catch errors early. This avoids the push → run → wait → download round-trip for every change.</p>
+<p><strong>1. Get credentials:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle b init -y
+# or just: kaggle b auth -y
+</code></pre></div>
+<p><strong>2. Load env vars and run locally:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Source the .env file to set MODEL_PROXY_URL, MODEL_PROXY_API_KEY, etc.
+set -a &amp;&amp; source .env &amp;&amp; set +a
+
+# Run your task file directly with Python
+python task.py
+</code></pre></div>
+<p><strong>3. Check the output:</strong></p>
+<ul>
+<li>A successful run produces a <code>.run.json</code> file in the current directory</li>
+<li>Assertions print pass/fail inline so you can iterate on prompts and thresholds</li>
+<li>Errors surface immediately in your terminal — no need to wait for server execution</li>
+</ul>
+<p><strong>4. Once satisfied, push to the server:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle b t push my-task -f task.py --wait &amp;&amp; \
+kaggle b t run my-task -m gemini-2.5-pro --wait &amp;&amp; \
+kaggle b t download my-task -o ./results
+</code></pre></div>
+<p><strong>⚠ Note:</strong> Local runs are limited to the models listed in <code>LLMS_AVAILABLE</code> (and use <code>LLM_DEFAULT</code> by default) — a curated subset for local development. Server runs via <code>kaggle b t run</code> have access to the full model catalog (use <code>kaggle b t models</code> to list them) and run on Kaggle&#39;s infrastructure. Behavior may differ between models, so always validate against your target model(s) on the server after local iteration.</p>
+<h3>Quick Push-Run-Download</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Push and wait, then run and wait, all in sequence
+kaggle b t push my-task -f task.py --wait &amp;&amp; \
+kaggle b t run my-task -m gemini-2.5-pro --wait &amp;&amp; \
+kaggle b t download my-task -o ./results
+</code></pre></div>
+<h3>Testing a Task That Intentionally Errors</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python"># t.py
+# %%
+import kaggle_benchmarks as kbench
+
+# %%
+@kbench.task()
+def d(llm):
+    raise ValueError(&quot;intentional error&quot;)
+
+# %%
+d.run(kbench.llm)
+</code></pre></div>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Push succeeds (error only triggers at run time)
+kaggle b t push d -f t.py --wait
+
+# Run — will complete with ERRORED status
+kaggle b t run d -m gemini-3-flash-preview --wait
+
+# Status shows clean table + separate Errors section
+kaggle b t status d
+</code></pre></div>
+
+          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

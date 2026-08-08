@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-locale="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaggle CLI 教程 · Kaggle 文档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/tutorials.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/tutorials.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="菜单">菜单</button>
+      <a class="brand" href="/kaggle-docs/zh/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle 文档</span>
+        <span class="brand-v">镜像</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn" href="/kaggle-docs/cli/tutorials.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn active" href="/kaggle-docs/zh/cli/tutorials.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">官方 ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="搜索文档…" autocomplete="off" />
+        </div>
+        <div class="side-label">学习路径 · 文档</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-rel="platform/packages.md"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-rel="platform/api.md"><span class="num">4</span><span class="leaf-title">公共API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-rel="platform/models.md"><span class="num">5</span><span class="leaf-title">型号</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">8</span><span class="leaf-title">数据集</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">9</span><span class="leaf-title">比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">11</span><span class="leaf-title">组织</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf active" href="/kaggle-docs/zh/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-rel="cli/models.md"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-rel="cli/forums.md"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/cli/tutorials.html">查看英文</a></div>
+          <h1>Kaggle CLI 教程</h1>
+<p>这些教程说明了如何使用一系列 Kaggle CLI 命令来完成常见任务。</p>
+<h2>简介</h2>
+<p>在开始这些教程之前，请确保您拥有：</p>
+<ol>
+<li>按照说明 <a href="/kaggle-docs/zh/cli/README.html#installation">here</a> 安装 Kaggle CLI。</li>
+<li>按照说明设置您的 API 凭据 <a href="/kaggle-docs/zh/cli/README.html#authentication">here</a></li>
+<li>在 Web 浏览器中登录 Kaggle。这将允许您验证 Kaggle 配置文件的 <a href="https://www.kaggle.com/work">⟦T29⟧</a> 部分中 CLI 命令的结果。</li>
+</ol>
+<h2>教程：创建数据集</h2>
+<p>本教程将引导您在 Kaggle 上创建新数据集。</p>
+<ol>
+<li><p><strong>从空目录开始。</strong> 为数据集文件创建一个新目录并导航到其中。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">mkdir my-new-dataset
+cd my-new-dataset
+</code></pre></div>
+</li>
+<li><p><strong>创建示例数据文件。</strong> 对于本示例，创建一个名为 <code>sample_data.csv</code> 的 CSV 文件，其中包含一个索引列和三个随机数据列以及几行数据。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">echo &quot;id,col_a,col_b,col_c&quot; &gt; sample_data.csv
+echo &quot;1,0.5,0.2,0.8&quot; &gt;&gt; sample_data.csv
+echo &quot;2,0.1,0.7,0.3&quot; &gt;&gt; sample_data.csv
+echo &quot;3,0.9,0.4,0.6&quot; &gt;&gt; sample_data.csv
+</code></pre></div>
+</li>
+<li><p><strong>初始化数据集元数据。</strong> 这会在当前目录中创建一个 <code>dataset-metadata.json</code> 文件。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle datasets init
+```4. **编辑元数据文件。** 在文本编辑器中打开 `dataset-metadata.json` 并进行以下更改：
+* 将 `&quot;INSERT_TITLE_HERE&quot;` 替换为您想要的数据集标题，例如 `&quot;My Sample Dataset&quot;`。
+* 将 `&quot;INSERT_SLUG_HERE&quot;` 替换为您的标题的 URL 友好版本，例如 `&quot;my-sample-dataset&quot;`。 URL 友好版本是通过将标题转换为小写并将空格更改为破折号来制作的。
+* 您还可以添加许可证、描述和其他相关信息。
+</code></pre></div>
+</li>
+<li><p><strong>创建数据集。</strong> 此命令将您的 <code>sample_data.csv</code> 和 <code>dataset-metadata.json</code> 上传到 Kaggle。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle datasets create -p .
+</code></pre></div>
+<p> 您可以添加<code>--public</code>立即公开。</p>
+</li>
+<li><p><strong>在 Kaggle.com 上验证。</strong> 刷新 <a href="https://www.kaggle.com/work/datasets">⟦T40⟧ tab in ⟦T41⟧</a>。您应该看到“我的示例数据集”。</p>
+</li>
+</ol>
+<h2>教程：查找并下载数据集</h2>
+<p>本教程介绍如何使用 CLI 查找和下载。</p>
+<ol>
+<li><p><strong>搜索数据集（可选）。</strong></p>
+<ul>
+<li>如果您知道所需的数据集，则可以跳过此步骤。否则，您可以搜索数据集。例如，要搜索与“iris”相关的数据集：<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle datasets list -s iris
+</code></pre></div>
+</li>
+<li>此命令将列出与您的搜索查询匹配的数据集。请注意您将用于下载的数据集的“id”（例如，<code>uciml/iris</code>）。2. <strong>选择数据集并创建目录。</strong></li>
+<li>在本教程中，我们将使用经典的“Iris”数据集，其 ID 为<code>uciml/iris</code>。</li>
+<li>为您的数据集创建一个新目录并导航到其中：<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">mkdir iris-dataset-analysis
+cd iris-dataset-analysis
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li><p><strong>下载数据集。</strong></p>
+<ul>
+<li>使用<code>kaggle datasets download</code>命令和数据集的id。<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle datasets download -d uciml/iris
+</code></pre></div>
+</li>
+<li>这会将数据集文件（通常为 ZIP 存档（例如 <code>iris.zip</code>））下载到当前目录 (<code>iris-dataset-analysis</code>)。</li>
+</ul>
+</li>
+<li><p><strong>解压缩数据集。</strong></p>
+<ul>
+<li>注意：您可以通过在上一个命令中使用 <code>--unzip</code> 标志来跳过此步骤。</li>
+<li>大多数数据集以 ZIP 文件形式下载。您需要解压缩存档才能访问数据文件（例如 CSV 文件）。<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Make sure you have unzip installed, or use your OS&#39;s GUI to extract
+# The actual zip file name might vary based on the dataset.
+# For uciml/iris, it&#39;s iris.zip
+unzip iris.zip
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li><p><strong>验证结果。</strong></p>
+<ul>
+<li>解压后，您应该看到数据文件（例如，<code>Iris.csv</code>、<code>database.sqlite</code>）。</li>
+</ul>
+</li>
+</ol>
+<h2>教程：更新内核（笔记本）</h2>
+<p>本教程展示了如何下载现有内核、修改它并将更改推送回 Kaggle。1. <strong>在 Kaggle.com 上创建或识别内核。</strong>
+    * 登录 kaggle.com。
+    * 找到您拥有的现有笔记本（或创建一个）。对于本教程，我们假设其标题是“我的 CLI 测试内核”。
+    * 注意浏览器地址栏中的内核 slug。类似于<code>YOUR_USERNAME/my-cli-test-kernel</code>。</p>
+<ol start="2">
+<li><p><strong>为您的内核创建一个新的本地目录。</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">mkdir my-kernel-project
+cd my-kernel-project
+</code></pre></div>
+</li>
+<li><p><strong>拉取内核。</strong> 使用 <code>kaggle kernels pull</code> 命令以及您的用户名和内核 slug。 <code>-m</code> 标志包含推送更新所需的<code>kernel-metadata.json</code> 文件。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Replace YOUR_USERNAME with your actual Kaggle username
+kaggle kernels pull YOUR_USERNAME/my-cli-test-kernel -m
+</code></pre></div>
+<p> 这将下载<code>my-cli-test-kernel.ipynb</code>（或<code>.py</code>/<code>.Rmd</code>）和<code>kernel-metadata.json</code>。</p>
+</li>
+<li><p><strong>编辑内核或元数据。</strong></p>
+<ul>
+<li>打开下载的笔记本文件（例如<code>my-cli-test-kernel.ipynb</code>）并对代码或内容进行一些更改。</li>
+<li>打开<code>kernel-metadata.json</code>。让我们在关键字中添加“基准”。找到<code>&quot;keywords&quot;: []</code>行并将其更改为<code>&quot;keywords&quot;: [&quot;benchmark&quot;]</code>。</li>
+<li><em>注意：虽然您可以在此处编辑关键字，但通常最好在 kaggle.com 上管理它们，因为允许的关键字有限制列表。</em></li>
+</ul>
+</li>
+<li><p><strong>推送内核。</strong> 这会上传您的更改和更新的元数据，然后在 Kaggle 上运行内核。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle kernels push -p .
+```6. **在 Kaggle.com 上验证。** 刷新 [⟦T62⟧ tab in ⟦T63⟧](https://www.kaggle.com/work/code)。您应该会看到代码更改以及“基准”标签添加到内核设置中。
+</code></pre></div>
+</li>
+</ol>
+<h2>教程：创建模型</h2>
+<p>本教程将指导您在 Kaggle 上创建新模型。</p>
+<ol>
+<li><p><strong>从空目录开始。</strong> 为模型文件创建一个新目录并导航到其中。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">mkdir my-new-model
+cd my-new-model
+</code></pre></div>
+</li>
+<li><p><strong>复制模型定义文件（此步骤可选）。</strong> 如果您有定义模型的文件（例如 Python 脚本、模型权重），请将它们复制到此目录中。对于 <code>kaggle models create</code> 步骤，仅严格需要元数据，但在创建模型变体时将需要文件。</p>
+</li>
+<li><p><strong>初始化模型元数据。</strong> 这将创建一个 <code>model-metadata.json</code> 文件。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle models init
+</code></pre></div>
+</li>
+<li><p><strong>编辑元数据文件。</strong> 打开 <code>model-metadata.json</code> 并进行以下更改：</p>
+<ul>
+<li>将 <code>&quot;INSERT_OWNER_SLUG_HERE&quot;</code> 替换为您的 Kaggle 用户名（例如 <code>&quot;YOUR_USERNAME&quot;</code>）。</li>
+<li>将 <code>&quot;INSERT_TITLE_HERE&quot;</code> 替换为您的模型标题（例如 <code>&quot;My Awesome AI Model&quot;</code>）。</li>
+<li>将 <code>&quot;INSERT_SLUG_HERE&quot;</code> 替换为 URL 友好版本的标题（例如，<code>&quot;my-awesome-ai-model&quot;</code>）。</li>
+<li>填写<code>&quot;description&quot;</code>字段和其他相关部分，例如<code>&quot;licenses&quot;</code>。</li>
+</ul>
+</li>
+<li><p><strong>创建模型。</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle models create -p .
+</code></pre></div>
+</li>
+<li><p><strong>在 Kaggle.com 上验证。</strong> 刷新 <a href="https://www.kaggle.com/work/models">⟦T75⟧ tab in ⟦T76⟧</a>。您应该看到“我很棒的 AI 模型”。## 教程：创建模型变体</p>
+</li>
+</ol>
+<p>本教程展示如何在现有模型下创建变体。模型变体通常表示在特定框架（如 TensorFlow、PyTorch、JAX 等）中实现的模型，并包含实际的模型文件。</p>
+<ol>
+<li><p><strong>确保您有一个父模型。</strong> 如果您还没有，请按照“创建模型”教程进行操作。假设您的模型 slug 是 <code>my-awesome-ai-model</code>，您的用户名是 <code>YOUR_USERNAME</code>。</p>
+</li>
+<li><p><strong>准备模型变体文件。</strong> 在模型目录（例如，<code>my-new-model</code>）中，创建或放置此特定变体的文件。例如，JAX 模型可能有一个 <code>flax_model.params</code> 文件。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># In the my-new-model directory
+echo &quot;This is a placeholder for JAX model parameters&quot; &gt; flax_model.params
+</code></pre></div>
+</li>
+<li><p><strong>初始化模型变体元数据。</strong> 这将创建 <code>model-instance-metadata.json</code>。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Still in the my-new-model directory
+kaggle models variations init
+</code></pre></div>
+</li>
+<li><p><strong>编辑变体元数据文件。</strong> 打开 <code>model-instance-metadata.json</code> 并进行更改：</p>
+<ul>
+<li>将 <code>&quot;INSERT_OWNER_SLUG_HERE&quot;</code> 替换为您的 Kaggle 用户名（例如 <code>&quot;YOUR_USERNAME&quot;</code>）。</li>
+<li>将 <code>&quot;INSERT_EXISTING_MODEL_SLUG_HERE&quot;</code> 替换为您的父模型的 slug（例如 <code>&quot;my-awesome-ai-model&quot;</code>）。</li>
+<li>对于此变体，将 <code>&quot;INSERT_INSTANCE_SLUG_HERE&quot;</code> 替换为 slug（例如 <code>&quot;jax-implementation&quot;</code>）。</li>
+<li>将<code>&quot;INSERT_FRAMEWORK_HERE&quot;</code>替换为模型框架（例如，<code>&quot;jax&quot;</code>、<code>&quot;tensorflow&quot;</code>、<code>&quot;pytorch&quot;</code>、<code>&quot;sklearn&quot;</code>）。</li>
+<li>更新<code>&quot;instance_size_bytes&quot;</code>（如果已知），并添加<code>&quot;description&quot;</code>。5. <strong>创建模型变体。</strong> 这会上传当前目录中的文件（例如，<code>flax_model.params</code>）以及变体元数据。</li>
+</ul>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle models variations create -p .
+</code></pre></div>
+</li>
+<li><p><strong>在 Kaggle.com 上验证。</strong> 通过单击 <a href="https://www.kaggle.com/work/models">⟦T97⟧ tab on ⟦T98⟧</a> 中的模型转到 Kaggle 上的模型页面。您应该会看到列出了一个新的“jax-implementation”变体，并且它将有一个包含 <code>flax_model.params</code> 的版本。</p>
+</li>
+</ol>
+<h2>教程：创建模型变体版本</h2>
+<p>本教程介绍如何向现有模型变体添加新版本，例如，当您更新模型权重或文件时。</p>
+<ol>
+<li><p><strong>确保您有模型变体。</strong> 按照“创建模型变体”教程进行操作。假设您的变体是 <code>YOUR_USERNAME/my-awesome-ai-model/jax/jax-implementation</code>。</p>
+</li>
+<li><p><strong>准备更新的文件。</strong> 在模型变体目录（例如<code>my-new-model</code>）中，更新或添加此版本的新文件。例如，创建<code>flax_model_v2.params</code>。</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># In the my-new-model directory
+echo &quot;Updated JAX model parameters for V2&quot; &gt; flax_model_v2.params
+# You might also remove or update flax_model.params if it&#39;s being replaced
+</code></pre></div>
+</li>
+<li><p><strong>创建新的模型变体版本。</strong> 您需要指定父模型变体并提供版本说明。 <code>-p</code> 路径中的文件将构成此新版本的内容。```bash</p>
+<h1>Replace YOUR_USERNAME and the slugs for model and variation accordingly</h1>
+<p> kaggle models variations versions create YOUR_USERNAME/my-awesome-ai-model/jax/jax-implementation -p . -n &quot;Second version with updated parameters&quot;</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>*注意：`-p .`表示当前目录中的所有文件都将作为新版本的一部分上传。如果您只想上传 `flax_model_v2.params`，请确保只有它（以及任何其他 V2 文件）位于目录中并将 `-p` 指向该目录，或者小心管理您的文件。*
+</code></pre></div>
+</li>
+<li><p><strong>在 Kaggle.com 上验证。</strong> 单击 <a href="https://www.kaggle.com/work/models">⟦T108⟧ tab on ⟦T109⟧</a> 前往 Kaggle 上的模型变体页面（例如 <code>YOUR_USERNAME/my-awesome-ai-model/jax/jax-implementation</code>）。您应该会看到一个新版本（例如版本 2），其中列出了您的注释和新文件。</p>
+</li>
+</ol>
+<h2>教程：如何提交比赛</h2>
+<p>本教程将引导您完成使用 CLI 提交 Kaggle 竞赛的过程。</p>
+<ol>
+<li><p><strong>查找竞赛并接受规则。</strong></p>
+<ul>
+<li>首先，你需要找到一个竞争者。您可以使用<code>kaggle competitions list</code>列出正在进行的比赛。</li>
+<li>在本教程中，我们将使用“泰坦尼克号”竞赛，这是一个常见的起点。您可以在<a href="https://www.kaggle.com/c/titanic">⟦T111⟧</a>找到它。</li>
+<li><strong>重要</strong>：在下载数据或提交之前，您<em>必须</em>加入竞赛并接受 Kaggle 网站上的竞赛规则。导航至 kaggle.com 上的竞赛即可执行此操作。2. <strong>创建目录并下载竞赛文件。</strong></li>
+<li>为您的竞赛文件创建一个新目录并导航到其中。<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">mkdir titanic-competition
+cd titanic-competition
+</code></pre></div>
+</li>
+<li>下载比赛文件。这通常包括训练数据、测试数据和样本提交文件。<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions download -c titanic
+</code></pre></div>
+</li>
+<li>这将下载<code>titanic.zip</code>。您需要解压缩它才能查看文件（例如，<code>train.csv</code>、<code>test.csv</code>、<code>gender_submission.csv</code>）。<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Make sure you have unzip installed, or use your OS&#39;s GUI to extract
+# The actual zip file name might vary based on the competition.
+unzip titanic.zip
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li><p><strong>创建您的提交文件。</strong></p>
+<ul>
+<li>提交文件所需的格式因每个比赛而异。您可以在竞赛的“评估”页面上或通过检查样本提交文件（例如，泰坦尼克号竞赛的<code>gender_submission.csv</code>）找到此信息。</li>
+<li>对于泰坦尼克号比赛，提交文件需要两栏：<code>PassengerId</code>和<code>Survived</code>。 <code>Survived</code> 列应包含您的预测（0 表示已故，1 表示幸存）。</li>
+<li>让我们根据<code>gender_submission.csv</code>（根据性别预测生存率）创建一个非常简单的提交文件。对于本教程，我们将复制它并将其用作我们的提交。在真实场景中，您可以根据模型对 <code>test.csv</code> 数据的预测生成此文件。<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">cp gender_submission.csv my_submission.csv
+```* 你的 `my_submission.csv` 应该看起来像这样：
+</code></pre></div>
+  PassengerId,Survived
+  892,0
+  893,1
+  894,0
+  ...<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li><p><strong>提交竞赛。</strong></p>
+<ul>
+<li>使用<code>kaggle competitions submit</code>命令。您需要指定：<ul>
+<li>比赛ID（<code>titanic</code>）。</li>
+<li>您提交文件的路径（<code>-f my_submission.csv</code>）。</li>
+<li>描述您提交内容的消息 (<code>-m &quot;My first submission via CLI&quot;</code>)。</li>
+</ul>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submit titanic -f my_submission.csv -m &quot;My first submission via CLI&quot;
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li><p><strong>检查您的提交状态。</strong></p>
+<ul>
+<li>提交后，您将收到一条指示成功或失败的消息。</li>
+<li>您可以在 Kaggle.com 竞赛页面的“我的提交”选项卡上查看您提交的分数和状态（例如，<a href="https://www.kaggle.com/c/titanic/submissions">⟦T127⟧</a>）。</li>
+<li>您还可以通过 CLI 列出您最近提交的内容及其分数：<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submissions -c titanic
+</code></pre></div>
+</li>
+<li>此命令将显示您提交的内容、其状态（例如，<code>complete</code>、<code>error</code>）以及您的公共/私人分数（如果有）。</li>
+</ul>
+</li>
+</ol>
+<h2>教程：如何提交代码竞赛</h2>
+<p>本教程将引导您完成在 Kaggle 上提交代码竞赛的过程。</p>
+<ol>
+<li><p><strong>寻找代码竞赛。</strong></p>
+<ul>
+<li>首先，您需要找到一个可以参加的代码竞赛。您可以在<a href="https://www.kaggle.com/competitions">Kaggle competitions page</a>上浏览可用的竞赛。许多特色竞赛都是代码竞赛。</li>
+</ul>
+</li>
+<li><p><strong>下载数据集。</strong>* 选择比赛后，您需要下载数据集。您可以使用 <code>kaggle competitions download</code> 命令执行此操作：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions download -c &lt;competition-name&gt;
+</code></pre></div>
+<ul>
+<li>将<code>&lt;competition-name&gt;</code>替换为您要参加的比赛名称。</li>
+</ul>
+</li>
+<li><p><strong>创建一个笔记本。</strong></p>
+<ul>
+<li>接下来，您需要创建一个 Kaggle Notebook 来处理您提交的内容。 Kaggle Notebook 包含 Kaggle 运行和评估您提交的代码和环境设置。  如果您不确定如何执行此操作，请按照 <a href="#tutorial-update-a-kernel-notebook">Creating / Updating Notebooks</a> 上的教程进行操作。</li>
+</ul>
+</li>
+<li><p><strong>编写您的代码。</strong></p>
+<ul>
+<li>现在是时候编写代码了！您可以使用 Kaggle 支持的任何编程语言或框架。目标是创建一个可以对测试集进行预测的模型。</li>
+</ul>
+</li>
+<li><p><strong>提交您的预测。</strong>* 一旦您对模型感到满意，您就可以将您的预测提交给竞赛。您可以使用 <code>kaggle competitions submit</code> 命令执行此操作：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submit &lt;competition-name&gt; -k &lt;username&gt;/&lt;notebook-slug&gt; -f &lt;output-filename&gt; -v &lt;notebook-version&gt; -m &lt;message&gt;
+</code></pre></div>
+<ul>
+<li>替换：<ul>
+<li><code>&lt;competition-name&gt;</code> 与比赛名称</li>
+<li><code>&lt;username&gt;/&lt;notebook-slug&gt;</code> 与您笔记本的标识符</li>
+<li><code>&lt;output-filename&gt;</code> 与您的笔记本生成的提交文件的名称（例如<code>submission.csv</code>）。</li>
+<li><code>&lt;notebook-version&gt;</code> 以及要提交的版本（例如 <code>3</code> 提交笔记本的第三个版本）。</li>
+<li><code>&lt;message&gt;</code> 包含您提交内容的简要说明。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>检查你的分数。</strong></p>
+<ul>
+<li>提交预测后，您可以在比赛排行榜上查看您的得分。排行榜显示了所有参赛者在比赛中的得分。  您可以使用<code>kaggle competitions leaderboard</code>命令下载排行榜：</li>
+</ul>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions leaderboard &lt;competition-name&gt;
+</code></pre></div>
+</li>
+</ol>
+
+          <p class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+[
+  {
+    "id": "home",
+    "name": "Home",
+    "badge": "·",
+    "groups": [
+      {
+        "name": "Home",
+        "items": [
+          {
+            "title": "Kaggle documentation mirror",
+            "href": "/kaggle-docs/index.html",
+            "rel": "index.md"
+          }
+        ]
+      }
+    ],
+    "count": 1
+  },
+  {
+    "id": "platform",
+    "name": "Platform Docs",
+    "badge": "①",
+    "groups": [
+      {
+        "name": "Platform",
+        "items": [
+          {
+            "title": "Benchmarks",
+            "href": "/kaggle-docs/platform/benchmarks.html",
+            "rel": "platform/benchmarks.md"
+          },
+          {
+            "title": "Competitions",
+            "href": "/kaggle-docs/platform/competitions.html",
+            "rel": "platform/competitions.md"
+          },
+          {
+            "title": "Datasets",
+            "href": "/kaggle-docs/platform/datasets.html",
+            "rel": "platform/datasets.md"
+          },
+          {
+            "title": "Efficient GPU Usage Tips",
+            "href": "/kaggle-docs/platform/efficient-gpu-usage.html",
+            "rel": "platform/efficient-gpu-usage.md"
+          },
+          {
+            "title": "Getting Started on Kaggle",
+            "href": "/kaggle-docs/platform/getting-started.html",
+            "rel": "platform/getting-started.md"
+          },
+          {
+            "title": "Kaggle Packages",
+            "href": "/kaggle-docs/platform/packages.html",
+            "rel": "platform/packages.md"
+          },
+          {
+            "title": "Models",
+            "href": "/kaggle-docs/platform/models.html",
+            "rel": "platform/models.md"
+          },
+          {
+            "title": "Notebooks",
+            "href": "/kaggle-docs/platform/notebooks.html",
+            "rel": "platform/notebooks.md"
+          },
+          {
+            "title": "Organizations",
+            "href": "/kaggle-docs/platform/organizations.html",
+            "rel": "platform/organizations.md"
+          },
+          {
+            "title": "Public API",
+            "href": "/kaggle-docs/platform/api.html",
+            "rel": "platform/api.md"
+          },
+          {
+            "title": "Tensor Processing Units (TPUs)",
+            "href": "/kaggle-docs/platform/tpu.html",
+            "rel": "platform/tpu.md"
+          }
+        ]
+      }
+    ],
+    "count": 11
+  },
+  {
+    "id": "cli",
+    "name": "CLI & API",
+    "badge": "②",
+    "groups": [
+      {
+        "name": "Getting started",
+        "items": [
+          {
+            "title": "Changelog",
+            "href": "/kaggle-docs/cli/changelog.html",
+            "rel": "cli/changelog.md"
+          },
+          {
+            "title": "Kaggle CLI",
+            "href": "/kaggle-docs/cli/intro.html",
+            "rel": "cli/intro.md"
+          },
+          {
+            "title": "Kaggle CLI Configuration",
+            "href": "/kaggle-docs/cli/configuration.html",
+            "rel": "cli/configuration.md"
+          },
+          {
+            "title": "Kaggle CLI Documentation",
+            "href": "/kaggle-docs/cli/README.html",
+            "rel": "cli/README.md"
+          },
+          {
+            "title": "Kaggle CLI Output Formatting Documentation",
+            "href": "/kaggle-docs/cli/output_format.html",
+            "rel": "cli/output_format.md"
+          },
+          {
+            "title": "Kaggle CLI Tutorials",
+            "href": "/kaggle-docs/cli/tutorials.html",
+            "rel": "cli/tutorials.md"
+          },
+          {
+            "title": "Search Command",
+            "href": "/kaggle-docs/cli/search.html",
+            "rel": "cli/search.md"
+          }
+        ]
+      },
+      {
+        "name": "Commands",
+        "items": [
+          {
+            "title": "Benchmarks Commands",
+            "href": "/kaggle-docs/cli/benchmarks.html",
+            "rel": "cli/benchmarks.md"
+          },
+          {
+            "title": "Competitions Commands",
+            "href": "/kaggle-docs/cli/competitions.html",
+            "rel": "cli/competitions.md"
+          },
+          {
+            "title": "Datasets Commands",
+            "href": "/kaggle-docs/cli/datasets.html",
+            "rel": "cli/datasets.md"
+          },
+          {
+            "title": "Forums Commands",
+            "href": "/kaggle-docs/cli/forums.html",
+            "rel": "cli/forums.md"
+          },
+          {
+            "title": "Hosting a Competition from the CLI",
+            "href": "/kaggle-docs/cli/competition_creation.html",
+            "rel": "cli/competition_creation.md"
+          },
+          {
+            "title": "Kernels Commands",
+            "href": "/kaggle-docs/cli/kernels.html",
+            "rel": "cli/kernels.md"
+          },
+          {
+            "title": "Model Variation Commands",
+            "href": "/kaggle-docs/cli/model_variations.html",
+            "rel": "cli/model_variations.md"
+          },
+          {
+            "title": "Model Variation Versions Commands",
+            "href": "/kaggle-docs/cli/model_variations_versions.html",
+            "rel": "cli/model_variations_versions.md"
+          },
+          {
+            "title": "Models Commands",
+            "href": "/kaggle-docs/cli/models.html",
+            "rel": "cli/models.md"
+          },
+          {
+            "title": "Tutorial: Simulation Competitions",
+            "href": "/kaggle-docs/cli/simulation_competitions.html",
+            "rel": "cli/simulation_competitions.md"
+          }
+        ]
+      },
+      {
+        "name": "Metadata schemas",
+        "items": [
+          {
+            "title": "Datasets Metadata",
+            "href": "/kaggle-docs/cli/datasets_metadata.html",
+            "rel": "cli/datasets_metadata.md"
+          },
+          {
+            "title": "Kernels Metadata",
+            "href": "/kaggle-docs/cli/kernels_metadata.html",
+            "rel": "cli/kernels_metadata.md"
+          },
+          {
+            "title": "Models Metadata",
+            "href": "/kaggle-docs/cli/models_metadata.html",
+            "rel": "cli/models_metadata.md"
+          }
+        ]
+      }
+    ],
+    "count": 20
+  },
+  {
+    "id": "skills",
+    "name": "Agent Skills",
+    "badge": "③",
+    "groups": [
+      {
+        "name": "Overview",
+        "items": [
+          {
+            "title": "Kaggle CLI",
+            "href": "/kaggle-docs/skills/SKILL.html",
+            "rel": "skills/SKILL.md"
+          }
+        ]
+      },
+      {
+        "name": "References",
+        "items": [
+          {
+            "title": "Authentication CLI Reference",
+            "href": "/kaggle-docs/skills/references/auth.html",
+            "rel": "skills/references/auth.md"
+          },
+          {
+            "title": "Competitions CLI Reference",
+            "href": "/kaggle-docs/skills/references/competitions.html",
+            "rel": "skills/references/competitions.md"
+          },
+          {
+            "title": "Configuration CLI Reference",
+            "href": "/kaggle-docs/skills/references/configuration.html",
+            "rel": "skills/references/configuration.md"
+          },
+          {
+            "title": "Datasets CLI Reference",
+            "href": "/kaggle-docs/skills/references/datasets.html",
+            "rel": "skills/references/datasets.md"
+          },
+          {
+            "title": "Files CLI Reference",
+            "href": "/kaggle-docs/skills/references/files.html",
+            "rel": "skills/references/files.md"
+          },
+          {
+            "title": "Forums CLI Reference",
+            "href": "/kaggle-docs/skills/references/forums.html",
+            "rel": "skills/references/forums.md"
+          },
+          {
+            "title": "Kaggle Benchmarks CLI Reference",
+            "href": "/kaggle-docs/skills/references/benchmarks.html",
+            "rel": "skills/references/benchmarks.md"
+          },
+          {
+            "title": "Kernels CLI Reference",
+            "href": "/kaggle-docs/skills/references/kernels.html",
+            "rel": "skills/references/kernels.md"
+          },
+          {
+            "title": "Model Variation Versions CLI Reference",
+            "href": "/kaggle-docs/skills/references/model_variations_versions.html",
+            "rel": "skills/references/model_variations_versions.md"
+          },
+          {
+            "title": "Model Variations CLI Reference",
+            "href": "/kaggle-docs/skills/references/model_variations.html",
+            "rel": "skills/references/model_variations.md"
+          },
+          {
+            "title": "Models CLI Reference",
+            "href": "/kaggle-docs/skills/references/models.html",
+            "rel": "skills/references/models.md"
+          },
+          {
+            "title": "Quota CLI Reference",
+            "href": "/kaggle-docs/skills/references/quota.html",
+            "rel": "skills/references/quota.md"
+          },
+          {
+            "title": "Search CLI Reference",
+            "href": "/kaggle-docs/skills/references/search.html",
+            "rel": "skills/references/search.md"
+          }
+        ]
+      }
+    ],
+    "count": 14
+  },
+  {
+    "id": "kagglehub",
+    "name": "KaggleHub",
+    "badge": "④",
+    "groups": [
+      {
+        "name": "Library",
+        "items": [
+          {
+            "title": "Changelog",
+            "href": "/kaggle-docs/kagglehub/CHANGELOG.html",
+            "rel": "kagglehub/CHANGELOG.md"
+          },
+          {
+            "title": "Contributing to kagglehub",
+            "href": "/kaggle-docs/kagglehub/CONTRIBUTING.html",
+            "rel": "kagglehub/CONTRIBUTING.md"
+          },
+          {
+            "title": "kagglehub",
+            "href": "/kaggle-docs/kagglehub/intro.html",
+            "rel": "kagglehub/intro.md"
+          }
+        ]
+      }
+    ],
+    "count": 3
+  }
+]

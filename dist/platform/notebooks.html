@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notebooks · Kaggle Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/platform/notebooks.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/platform/notebooks.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+      <a class="brand" href="/kaggle-docs/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle Docs</span>
+        <span class="brand-v">mirror</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn active" href="/kaggle-docs/platform/notebooks.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn" href="/kaggle-docs/zh/platform/notebooks.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">Official ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
+        </div>
+        <div class="side-label">Learning path · docs</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
+<li><a class="leaf active" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          
+          <h1>Notebooks</h1>
+<hr>
+<!--Types of Notebooks-->
+
+<h3>Types of Notebooks</h3>
+<p>There are multiple different types of Notebooks on Kaggle.</p>
+<h4>Notebooks</h4>
+<p>The most common type is Jupyter notebooks (usually just “notebooks”). Jupyter notebooks consist of a sequence of cells, where each cell is formatted in either Markdown (for writing text) or in a programming language of your choice (for writing code). To start a notebook, click on <code>Create &gt; New Notebook</code>. This will open the Notebooks editing interface.</p>
+<p>Notebooks may be written in either R or Python. The language can be changed under the <code>File &gt; Language</code> menu.</p>
+<h4>Scripts</h4>
+<p>It&#39;s also possible to create a script. Scripts are files that execute everything as code sequentially. To start a script, create a new notebook, and then change the type to Script under <code>File &gt; Editor Type</code>.</p>
+<p>Also under the <code>File</code> menu, you can select what type of script you would like to execute. You may write scripts in R or in Python.</p>
+<p>You can also execute selected lines of code by highlighting the code in the editor interface and clicking the “Run” button or hitting shift-enter. Any results will be printed to the console.</p>
+<h5>RMarkdown Scripts</h5>
+<p>RMarkdown scripts are a special type of script that executes not just R code, but RMarkdown code. This is a combination of R code and Markdown editing syntax that is prefered by many R authors in our community.</p>
+<p>The RMarkdown editor is the same one used for basic R or Python scripts, except that it uses the special RMarkdown syntax. To start editing an RMarkdown script, create a new notebook, change the file type to &quot;Script&quot; under <code>File &gt; Editor Type</code> and then change the language under <code>File &gt; Language</code></p>
+<hr>
+<!--Searching for Notebooks-->
+
+<h3>Searching for Notebooks</h3>
+<p>In addition to being an interactive editing platform, you can find and use code that others in the community have shared public. Kagglers working with data across both the Datasets and Competitions platforms are constantly building cool things. Exploring and reading other Kagglers’ code is a great way to both learn new techniques and stay involved in the community.</p>
+<p>There’s no better place than Kaggle Notebooks to discover such a huge repository of public, open-sourced, and reproducible code for data science and machine learning.</p>
+<p>The latest and greatest from Notebooks is surfaced on Kaggle in several different places.</p>
+<h4>Site Search</h4>
+<p>You can use the site search in the top bar of the website while on any page to look for not only Notebooks but Datasets, Competitions, Users, and more across Kaggle. Start typing a search query to get quick results and hit &quot;Enter&quot; to see a full page of results that you can drill down into. From the full page search results, you can filter just to &quot;Notebooks&quot; and add even more filter criteria using the filter options on the left hand side of the page.</p>
+<h4>Homepage</h4>
+<p>When you’re logged into your Kaggle account, the <a href="https://kaggle.com">Kaggle homepage</a> provides a live newsfeed of what people are doing on the platform. While Discussion forum posts and new Datasets make up some of the contents of the home page, most of it is dedicated to hot new Notebooks activity. By browsing down the page you can check out all the latest updates from your fellow Kagglers.</p>
+<p>You can tweak your newsfeed to your liking by following other Kagglers. To follow someone, go to their profile page and click on “Follow User”. Content posted and upvotes made by users you have followed will show up more prominently.</p>
+<p>The same is true of other users who choose to follow you. Post high-quality notebooks and datasets and you will soon find other users following along with what you are doing!</p>
+<h4>Notebook Listing</h4>
+<p>A more structured way of accessing Notebooks is <a href="https://www.kaggle.com/notebooks">the Notebook listing</a>, accessible from the “Notebooks” tab in the main menu bar.</p>
+<p>The Notebook listing is sorted by “<a href="https://www.kaggle.com/notebooks?sortBy=hotness&amp;group=everyone&amp;pageSize=20">Hotness</a>” by default. “Hotness” is what it sounds like: a way of measuring the interestingness of Notebooks on the platform. Notebooks which score highly in Hotness, and thus appear highly in this list, are usually either recently written Notebooks that are scoring highly in things like upvotes and views, or “all-time” greats that have been consistently popular on the platform for a long time.</p>
+<p>Other methods of sorting are by</p>
+<ul>
+<li><a href="https://www.kaggle.com/code?sortBy=voteCount">Most Votes</a>: Surfaces the most popular notebooks of all time</li>
+<li><a href="https://www.kaggle.com/code?sortBy=commentCount">Most Comments</a>: Returns the most discussed notebooks of all time</li>
+<li><a href="https://www.kaggle.com/code?sortBy=dateCreated">Recently Created</a>: A real-time stream of new Notebooks</li>
+<li><a href="https://www.kaggle.com/code?sortBy=dateRun">Recently Run</a>: A real-time stream of activity</li>
+<li><a href="https://www.kaggle.com/code?sortBy=relevance">Relevance</a>: Sorts the results based on their relevance to the query</li>
+</ul>
+<p>Other filtering options, available from the navigation bar, are Categories (Datasets or Competitions?), Outputs, Languages (R or Python?), and Types (Script or Notebook?).</p>
+<p>You can also use the Notebook listing to sort through your own Notebooks (“Your Work”), find Notebooks that others have shared with you (&quot;Shared With You&quot;), or to look at Notebooks you have previously upvoted (“Favorites”).</p>
+<p>Finally, a Notebooks-specific search bar is available here. This is often the fastest way to find a specific Notebook that you are looking for.</p>
+<h4>Datasets and Competitions</h4>
+<p>Data on Kaggle is available through either Datasets or our Competitions. Both prominently feature the best community-created Notebooks on the “Notebooks” tab. Browsing Notebooks on Datasets and Competitions provides a way to quickly get acquainted with a specific dataset. You can fork any existing public Notebook to make a copy of the code and start experimenting with changes.</p>
+<p>The <a href="https://www.kaggle.com/uciml/iris">Iris Species dataset</a> and the <a href="https://www.kaggle.com/c/titanic/notebooks">Titanic competition</a> are two classic examples of Datasets and Competitions, respectively, hosting great Notebooks on their content.</p>
+<h4>Tags and Tag Pages</h4>
+<p>Tags are the most advanced of the searching options available in the Notebook listing page. Tags are added by Notebook owners to indicate the topic of the Notebook, techniques you can use (e.g., “classification”), or the type of the data itself (e.g., “text data”). You can navigate to tag pages to browse more content sharing a tag either by clicking on a tag on a Notebook, or by searching by tag using the tag-specific search syntax: <code>tag:[TAG NAME]</code>.</p>
+<p>Searching by tags allow you to search for Notebooks by topical area or technique. For example, if you are interested in learning new techniques for tackling classification problems you might try a search with the tag “classification” (<code>tag:classification</code>); if you are interested in an analysis of police records maybe a search with “crime” (<code>tag:crime</code>) would do the trick.</p>
+<p>Alternatively, you can achieve the same thing by visiting the related tag pages. For example, the crime and classification tags live at <a href="https://www.kaggle.com/tags/crime">https://www.kaggle.com/tags/crime</a> and <a href="https://www.kaggle.com/tags/classification">https://www.kaggle.com/tags/classification</a>, respectively.</p>
+<p>Tag pages include a section listing the most popular pages with the given tag, making them a great way of searching for Notebooks by content.</p>
+<hr>
+<!--Using the Notebook Editor-->
+
+<h3>Using the Notebook Editor</h3>
+<p>Kaggle Notebooks may be created and edited via the Notebook editor. On larger screens, the Notebook editor consists of three parts:</p>
+<ul>
+<li>An editing window</li>
+<li>A console</li>
+<li>A settings window</li>
+</ul>
+<p>The Notebook editor allows you to write and execute both traditional Scripts (for code-only files ideal for batch execution or Rmarkdown scripts) and Notebooks (for interactive code and markdown editor ideal for narrative analyses, visualizations, and sharing work).</p>
+<p>The main difference between Scripts and Notebooks is the editing pane and how you experience editing and executing code.</p>
+<h4>Editing</h4>
+<p>Whether you use Scripts or Notebooks might depend on your choice of language and what your use case is. R users tend to prefer the Scripts, while Python users prefer the Notebooks. For more on why that is, refer to the <a href="https://www.kaggle.com/docs/notebooks#types-of-notebooks">“Types of Notebooks” section</a>. Scripts are also favored for making competition submissions where the code is the focus, whereas Notebooks are popular for sharing EDAs (exploratory data analysis), tutorials, and other share-worthy insights.</p>
+<p>Both editing interfaces are organized around the concept of “Versions”. This is a collection consisting of a Notebook version, the output it generates, and the associated metadata about the environment.</p>
+<p>In the Script editor, the code you write is executed all at once, whenever you generate a new version. For finer-grained control, it’s also possible to specifically execute only a single line or selection of lines of code.</p>
+<p>Notebooks are built on Jupyter notebooks. Notebooks consist of individual cells, each of which may be a Markdown (text) cell or a code cell. Code can be run (and the resulting variables saved) by running individual code cells, and cells can be added or deleted from the notebook at any time.</p>
+<h4>Console</h4>
+<p>The console tab provides an alternative interface to the same Python or R container running in the Notebook. Commands you input into the console will not change the content of your version. However, any variables you create in the console will persist throughout the session (unless you delete them). Additionally, any code that you execute in the editor will also execute in the console pane.</p>
+<h4>Settings</h4>
+<p>In the expanded editor, the Settings pane takes up the right side of the screen. In the compact editor (where you hide the settings pane), it is folded into tabs above the Editor tab. In either case the Settings pane contains the following main tabs:</p>
+<ul>
+<li><strong>Input</strong>: add and remove data sources attached to the Notebook. See more info in the Adding Data Sources section below.</li>
+<li><strong>Output</strong>: view output files created by the Notebook.</li>
+<li><strong>Table of contents</strong>: see and navigate the headings of the Notebook.</li>
+<li><strong>Session options</strong>: configure how the Notebook will run, including language, internet, acccelerator, and docker image settings.  See more info in the The Notebook Environment section below.</li>
+<li><strong>Scheduling options</strong>: a notebook may be configured to run automatically.  See more info in the <a href="scheduling-notebooks">Scheduling Notebooks</a> section below.</li>
+</ul>
+<p>Other sections may also be available, depending on the Notebook&#39;s configurations.</p>
+<hr>
+<!--Adding Data Sources-->
+
+<h3>Adding Data Sources</h3>
+<p>One of the advantages to using Notebooks as your data science workbench is that you can easily add data sources from thousands of publicly available data sources or even upload your own. You can also use output files from another Notebook as a data source. You can add multiple data sources to your Notebook’s environment, allowing you to join them together and produce new insights.</p>
+<h4>Models</h4>
+<p>Kaggle Models contain many of the latest models from leading researchers and the Kaggle community.</p>
+<p>There are two ways of loading a Model in a Notebook. The first is to navigate to a chosen model&#39;s detail page, click on the &quot;Code&quot; button, and select &quot;New Notebook&quot;. When the Notebook Editor loads, you will be able to select a framework and variation, and then the model will be attached automatically.</p>
+<p>Alternatively, you may wish to add models after creating your Notebook. To do that, navigate to the “Input” pane in a Notebook editor and click the “Add Input” button. From here, you can search and add any models you have access to.</p>
+<p>Note that some models require you to accept licenses, which you&#39;ll have to do before you can add them to your Notebook.</p>
+<h4>Datasets</h4>
+<p>Kaggle Datasets provides a rich variety of interesting datasets for any kind of data science project.</p>
+<p>Similar to models, there are two ways of loading a Dataset in a Notebook. The first is to navigate to a chosen dataset’s detail page, click on the &quot;Code&quot; button, and select &quot;Create a notebook&quot; at the bottom. This will launch a new Notebook session with the dataset in question spun up and ready to go.</p>
+<p>Alternatively, you may wish to add datasets after creating your Notebook. To do that, navigate to the “Input” pane in a Notebook editor and click the “Add Input” button. From here, you can search and add any datasets you have access to.</p>
+<h4>Competitions</h4>
+<p>You can also add Competition data sources to your Notebook environment using the same steps as above.</p>
+<p>The main difference is that you need to accept the rules for any Competition data sources you add to your Notebook. Whether you start a new Notebook from the “Notebooks” tab of a Competition or add a Competition data source from an existing Notebook editor, you’ll be prompted to read and accept the rules first.</p>
+<p>You can mix Competitions and Datasets data sources in the same Notebook, but please be sure to abide by the rules of the specific Competition with respect to using external data sources. If you don’t, you risk consequences for rule-breaking in the Competition.</p>
+<h4>Notebooks</h4>
+<p>Up to 20 GBs of output from a Notebook may be saved to disk in /kaggle/working. This data is saved automatically and you can then reuse that data in any future Notebook: just navigate to the “Input” pane in a Notebook editor, click on “Add Input”, and search for any Notebook with output files, just as with Models, Datasets, and Competitions.</p>
+<p>By chaining Notebooks as data sources in this way, it’s possible to build pipelines and generate more and better content than you could in a single notebook alone.</p>
+<p>“<a href="https://www.kaggle.com/code/minimal-lstm-nb-svm-baseline-ensemble/notebook">Minimal LSTM + NB-SVM baseline ensemble</a>”, written by Jeremy Howard, is one example of a great Notebook using this feature. Click on the “Input” tab to view the data sources he uses.</p>
+<hr>
+<!--Collaborating on Notebooks-->
+
+<h3>Collaborating on Notebooks</h3>
+<p>Notebooks collaboration is a powerful feature. It allows multiple users to co-own and edit a Notebook. For example, you can work with Competition teammates to iterate on a model or collaborate with classmates on a data science project.</p>
+<h4>Inviting Collaborators</h4>
+<p>From your Notebook editor or viewer, public or private, you may navigate to the &#39;Share&#39; or &#39;Sharing&#39; button in the Notebook’s menu to expose, among other settings, the Collaborators options. There, use the search box to find and add other users as Notebook collaborators.</p>
+<p>If your Notebook is private, you may choose between giving Collaborators either viewing privileges (“Can view”) or editing privileges (“Can edit”). If your Notebook is public, Collaborators can only be added with editing privileges (“Can edit”), as anyone can view it already.</p>
+<p>When you add a collaborator, they will receive a notification via email.</p>
+<p>“<a href="https://www.kaggle.com/residentmario/creating-reading-writing-data">Creating, Reading &amp; Writing Data</a>”, a Notebook from the <a href="https://www.kaggle.com/learn/overview">Advanced Pandas Kaggle Learn track</a>, is one example of great collaborative Notebook.</p>
+<h4>Collaborating on Datasets</h4>
+<p>Using Notebooks is a powerful way to work with your collaborators on Datasets, too.</p>
+<p>Datasets created on Kaggle also have privacy settings, and these settings are distinct from the sharing settings on your Notebook meaning each can be shared with a different group of users. That is, your Notebook collaborators won’t automatically have the same access to any private Datasets as you unless they are explicitly invited to collaborate on the Dataset. Anyone has access to Datasets shared publicly.</p>
+<p>To learn more about how to use Datasets collaboratively, read more <a href="https://www.kaggle.com/docs/datasets#collaborating-on-datasets">here.</a></p>
+<hr>
+<!--The Notebook Environment-->
+
+<h3>The Notebook Environment</h3>
+<p>Notebooks is more than just a code editor. It’s a versioned computational environment designed to make it easy to reproduce data science work. In the Notebooks IDE, you have access to an interactive session running in a Docker container with pre-installed packages, the ability to mount versioned data sources, customizable compute resources like GPUs, and more.</p>
+<h4>Notebook Versions and Containers</h4>
+<p>When you create a Notebook version using &#39;Save &amp; Run All&#39;, you execute the Notebook from top to bottom in a separate session from your interactive session. Once it finishes, you will have generated a new Notebook version. A Notebook version is a snapshot of your work including your compiled code, log files, output files, data sources, and more. The latest Notebook version of your Notebook is what is shown to users in the Notebook viewer.</p>
+<p>Every Notebook version you create is associated with a specific Docker image version as well. Docker is a containerization technology which provides an isolated environment in which to do your work. Docker specifies the contents of this environment including installed Python and R packages using what is known as an image.</p>
+<p>By default for new notebooks, this will be the latest version of the default Python or R images that we maintain at Kaggle. The contents of this image is publicly available on GitHub. You may view it at <a href="https://github.com/Kaggle/docker-rstats">https://github.com/Kaggle/docker-rstats</a> for the R container, or <a href="https://github.com/Kaggle/docker-python">https://github.com/Kaggle/docker-python</a> for the Python container.</p>
+<h4>Dockerfiles and Notebook Versions</h4>
+<p>Even if you are using one of the default Kaggle containers, the number, names, and versions of the packages that you’re using are still a moving target as our team continually updates them to ensure the latest and greatest packages are available. We update the images about every two weeks, mainly to upgrade to the latest versions of the packages we provide but also occasionally to add or remove certain packages. <a href="https://www.kaggle.com/product-feedback/161327">You can subscribe to notifications when we release a new Docker image on GitHub</a>.</p>
+<p>It is also possible to pin a specific Docker image for use in a Notebook if there are multiple custom images available. This can be done by accessing the “Settings” pane in the Notebook editor. Under the &quot;Session options&quot; section, look for the selection for &quot;Environment&quot;. This will enable you to select the original environment that the Notebook was created with or the latest environment. Using the original environment helps ensure that the Notebook is reproducible, while using the latest environment ensures that the Notebook receives the latest package updates.</p>
+<p>In order to ensure that Notebooks remain reproducible, we publicly share the Docker image that the Notebook version was created in. You find a link to this by visiting the &quot;Logs&quot; tab in the Notebook Viewer and looking under the &quot;Environment&quot; header.</p>
+<h4>Modifying the Default Environment</h4>
+<p>You can request a modification to the default environment by submitting a pull request or an issue to the <a href="https://github.com/Kaggle/docker-rstats">R</a> or <a href="https://github.com/Kaggle/docker-python">Python</a> container on GitHub. This is also a good way to let us know if something in our image is broken, which we try to prevent but can happen occasionally.</p>
+<p>If you think a package would be beneficial to the majority of Kaggle users, feel free to let us know in our GitHub container repos. Be sure to explain why you think a package would be useful to a majority of Kaggle users. Note that we add packages selectively to avoid increasing the size of our image drastically. Also note that even if approved, it may take several days before the image is updated on the website.</p>
+<p>On the other hand, if you need to install a particular dependency for just one notebook, read on below.</p>
+<h4>Modifying a Notebook-specific Environment</h4>
+<p>It is also possible to modify the Docker container associated with the current Notebook image.</p>
+<h6>Using a standard package installer</h6>
+<p>In the Notebook Editor, make sure &quot;Internet&quot; is enabled in the Settings pane (it will be by default if it&#39;s a new notebook).</p>
+<p>For Python, you can run arbitrary shell commands by prepending ! to a code cell. For instance, to install a new package using pip, run <code>!pip install my-new-package</code>. You can also upgrade or downgrade an existing package by running <code>!pip install my-existing-package==X.Y.Z</code>.</p>
+<p>To install packages from GitHub in R, load the devtools package by running <code>library(devtools)</code>. Then, you can run commands such as <code>install_github(&quot;some_user/some_package&quot;)</code> to install a new package from GitHub.</p>
+<h6>Using Dependency Manager for package installation</h6>
+<p>Configure your notebooks to perform offline pip installs using the Dependency Manager editor. Configured notebooks are then able to be submitted to internet disabled competitions.</p>
+<p>In the Dependency Manager editor, enter pip install commands like <code>pip install my-new-package</code>. You can also upgrade existing packages by adding <code>pip install -U my-existing-package</code>. You may also use pip to install packages from github using  <code>pip install git+https://github.com/author/package.git</code>.</p>
+<p>During every notebook commit, a Dependency Installation Notebook will be shared with you and automatically attached to your notebook. This notebook contains python wheels and an installation script that is executed before the start of your notebook to install your packages.</p>
+<p>If the Dependency Installation Notebook fails to download packages, the notebook will contain logs that can be used for debugging.</p>
+<p>Note: Notebooks still need to have internet disabled to be submitted into select competitions.</p>
+<h5>Adding a free GPU</h5>
+<p>You can add a single NVIDIA Tesla P100 to your Notebook for free. GPU environments have lower CPU and main memory, but are a great way to achieve significant speed-ups for certain types of work like training neural networks on image data. One of the major benefits to using Notebooks as opposed to a local machine or your own VM is that the Notebook environment is already pre-configured with GPU-ready software and packages which can be time consuming and frustrating to set-up. Free GPU availability is limited: in busy times, you might be placed in a queue.</p>
+<p>To add a GPU, navigate to the “Settings” pane from the Notebook editor and click the “Accelerator&quot; &gt; GPU option. Your session will restart which may take a few moments to several minutes if you don’t need to wait in a queue to access a GPU-enabled machine.</p>
+<p>To learn more about getting the most out of using a GPU in Notebooks, check out this <a href="https://www.kaggle.com/dansbecker/running-kaggle-kernels-with-a-gpu">tutorial Notebook by Dan Becker</a>.</p>
+<h5>Adding a free TPU</h5>
+<p>You can add a TPU v3-8 to your Notebook for free. TPUs are hardware accelerators specialized in deep learning tasks. They are supported in Tensorflow 2.1 both through the Keras high-level API and, at a lower level, in models using a custom training loop. Free TPU availability is limited: in busy times, you might be placed in a queue. To learn more about getting the most out of using a TPU in Notebooks, check out this <a href="https://www.kaggle.com/docs/tpu">in depth guide</a>.</p>
+<p>To add a TPU, navigate to the “Settings” pane from the Notebook editor and click the “Accelerator&quot; &gt; TPU v3-8 option. Your session will restart which may take a few moments to several minutes if you don’t need to wait in a queue to access a TPU-enabled machine.</p>
+<hr>
+<!--Connecting Kaggle Notebooks to Google Cloud Services-->
+
+<h3>Connecting Kaggle Notebooks to Google Cloud Services</h3>
+<p><strong>Some of these services incur charges to attached GCP accounts. Please review pricing for each of the following products before you begin to use them in your notebook.</strong></p>
+<p>Kaggle currently has integrations with the Google Cloud Storage, BigQuery, and AutoML products.  To enable these integrations, click on the “Add-ons” menu in the notebook editor and select “Google Cloud Services”.  Once on the “Google Cloud Services” page you will need to attach your account to your notebook and you will need to select which of the integrations you want to enable.  After enabling these integrations, you will be provided with a code snippet that can be copied and pasted into your notebook.</p>
+<p>Each line of this code snippet corresponds to a different Google Cloud Services Integration where <code>PROJECT_ID</code> should be an existing Google Cloud Project. Per AutoML docs (linked below), AutoML currently requires that the location (<code>COMPUTE_REGION</code>) must be <code>us-central1</code> for your GCS Bucket.</p>
+<p>For more information on how to use these services, please refer to <a href="https://cloud.google.com/docs/">Google Cloud Documentation</a> or any of the specific product documentation.</p>
+<h4>BigQuery</h4>
+<ul>
+<li><strong><a href="https://cloud.google.com/bigquery/docs/">BQ Documentation</a>, <a href="https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro">BQML Documentation</a></strong></li>
+</ul>
+<p>Google BigQuery is a fully managed, petabyte scale, low cost analytics data warehouse. There is no management required for users—instead, users can focus solely on analyzing data through queries and BigQuery ML to find meaningful insights in a pay-as-you-go billing model.</p>
+<p>Google BigQuery can be accessed using Kaggle’s free-tier account to query <a href="https://console.cloud.google.com/marketplace/browse?filter=solution-type:dataset&_ga=2.188761902.446093747.1583860775-118720642.1583860775">public data</a> but requires a <a href="https://cloud.google.com/billing/docs/how-to/modify-project">billing-enabled</a> GCP account to query any data that isn’t publicly released by BigQuery. You should carefully review the prices of BigQuery before trying the integration in Kaggle Notebooks, as it can be easy to incur charges.</p>
+<p><code># Set your own project id here PROJECT_ID = &#39;your-google-cloud-project&#39; from google.cloud import bigquery bigquery_client = bigquery.Client(project=PROJECT_ID)</code>  </p>
+<p>For a more in-depth walkthrough of using the integration, please refer to the following notebooks:</p>
+<ul>
+<li><a href="https://www.kaggle.com/jessicali9530/tutorial-how-to-use-bigquery-in-kaggle-kernels">BigQuery in Kaggle Notebooks</a></li>
+<li><a href="https://www.kaggle.com/rtatman/bigquery-machine-learning-tutorial">BigQuery Machine Learning Tutorial</a></li>
+</ul>
+<h4>Google Cloud Storage (GCS)</h4>
+<ul>
+<li><strong><a href="https://cloud.google.com/storage/docs/">GCS Documentation</a></strong></li>
+</ul>
+<p>Google Cloud Storage allows for storage and retrieval of data at any time across the globe. Users are able to use the storage space for any type of data and only pay for used storage space (per GB per month).</p>
+<p>Google Cloud Storage is a paid service and requires a <a href="https://cloud.google.com/billing/docs/how-to/modify-project">billing-enabled</a> GCP account. You should carefully review the prices of GCS before trying the integration in Kaggle Notebooks, as it can be easy to incur charges.</p>
+<p><code># Set your own project id here PROJECT_ID = &#39;your-google-cloud-project&#39; from google.cloud import storage storage_client = storage.Client(project=PROJECT_ID)</code>  </p>
+<p>For a more in-depth walkthrough of using the integration, please refer to the following notebooks:</p>
+<ul>
+<li><a href="https://www.kaggle.com/paultimothymooney/how-to-move-data-from-kaggle-to-gcs-and-back">Moving Data to/from GCS</a></li>
+</ul>
+<h4>AutoML</h4>
+<ul>
+<li><strong><a href="https://cloud.google.com/automl/docs/">AutoML Documentation</a></strong></li>
+</ul>
+<p>Google AutoML is a suite of products that enables users to train custom machine learning models for tasks on structured data, vision and language. It is currently in <a href="https://cloud.google.com/products/#product-launch-stages">Beta</a>, so you may encounter usability frictions or known issues. We welcome all feedback from the community. User feedback will help us improve documentation and be shared  directly with the AutoML team to help improve the product.</p>
+<p>Google AutoML is a paid service and requires a <a href="https://cloud.google.com/billing/docs/how-to/modify-project">billing-enabled</a> GCP account. You should carefully review the prices of AutoML before trying the integration in Kaggle Notebooks, as it can be easy to incur charges. You can see the pricing for each of the offerings in beta here:</p>
+<ul>
+<li><a href="https://cloud.google.com/automl-tables/pricing">AutoML Tables Pricing</a></li>
+<li><a href="https://cloud.google.com/vision/automl/pricing">AutoML Vision Pricing</a></li>
+<li><a href="https://cloud.google.com/natural-language/automl/pricing">AutoML Natural Language Pricing</a></li>
+</ul>
+<p><code># Set your own project id and compute region here PROJECT_ID = &#39;your-google-cloud-project&#39; COMPUTE_REGION = &#39;us-central1&#39;  # must be </code>us-central1<code> to use AutoML (see docs) from google.cloud import automl_v1beta1 as automl automl_client = automl.AutoMlClient() project_location = automl_client.location_path(PROJECT_ID, COMPUTE_REGION)</code>  </p>
+<p>For a more in-depth walkthrough of using the integration, please refer to the following notebooks:</p>
+<ul>
+<li><a href="https://www.kaggle.com/devvret/automl-tables-tutorial-notebook">AutoML Tables Tutorial</a></li>
+</ul>
+<h4>Google Cloud AI Notebooks</h4>
+<p>If you run into compute constraints while using notebooks on Kaggle, you can consider upgrading to Google Cloud AI Notebooks. These notebooks run under your project in Google Cloud, and can be configured to use your choice of virtual machine, accelerators and run without limits</p>
+<p>To export your notebook to Google Cloud, you can go to the  <strong>File</strong>  menu and select &quot;Upgrade to Google Cloud AI Notebooks&quot; from within the Notebooks Editor. You can also upgrade a notebook from the Viewer by clicking on the three-dot menu on the top right.</p>
+<p>For a more detailed description of how to export your Kaggle Notebooks to Google Cloud AI Notebooks, check out the announcement post here:</p>
+<ul>
+<li><a href="https://www.kaggle.com/product-feedback/159602">[Feature Launch] Upgrade to Notebooks on Google Cloud for more compute!</a></li>
+</ul>
+<hr>
+<!-- Scheduling Notebooks -->
+
+<h3>Scheduling Notebooks</h3>
+<p>Notebooks can be set to re-run automatically based different criteria:</p>
+<ul>
+<li>Time-based (Frequency): set the notebook to run daily, weekly, or monthly.</li>
+<li>Dataset update: have the notebook run whenever the datasets it uses change. This will happen at most once per day, even if the data changes multiple times.</li>
+</ul>
+<p>A Notebook can be scheduled in either the Editor or the Viewer.  In the Notebook Editor, under the right-hand Settings menu, find the section called &quot;Schedule a notebook to run&quot;.  In that section, there are options for each of the configurations described above.  The same options are also available in the Settings tab of the Notebook Viewer.</p>
+<p>Note that there are limits to the number of notebooks you can have scheduled.  See the Active Events pane for a listing of all your scheduled notebooks.</p>
+<hr>
+<!--Kaggle Jupyter Server-->
+
+<h3>[EXPERIMENTAL] Kaggle Jupyter Server</h3>
+<p>Notebook workloads are executed on a backing <em>Kaggle Jupyter Server</em>,
+  sometimes referred to as a <em>Session</em>.</p>
+<p><em>Kaggle Jupyter Servers</em> are highly optimized for accessing Kaggle resources - like large Datasets, Models, and Competition data - on Kaggle’s backing hardware. While Kaggle Notebooks are the primary way to execute workloads on Kaggle, users can also connect to a <em>Kaggle Jupyter Server</em> from a variety of notebook editors like Colab or VS Code. By connecting Colab or VS Code to the a <em>Kaggle Jupyter Server</em>, users can take advantage of these optimizations within those environments.</p>
+<p>We are continually working on deeper integrations with external notebook environments. We welcome your feedback and suggestions to help us improve. If you have any comments or need assistance, please create a post in the Kaggle <a href="https://www.kaggle.com/discussions/product-feedback">Product Feedback</a> forum.</p>
+<h4></h4>
+<p>  Open a Notebook in Colab and automatically connect to a Kaggle Jupyter Server</p>
+<p>Within the Kaggle notebook editor, the <strong>Run &gt; Kaggle Jupyter Server</strong>  menu item opens a side panel titled <em>Kaggle Jupyter Server</em>.</p>
+<p><img src="/static/images/docs/notebooks/kaggle-jupyter-server-panel.png" alt="..."></p>
+<p>This panel includes an <em>&quot;Open in Colab&quot;</em> button. The <em>&quot;Open in Colab&quot;</em> button is enabled only when a <em>Kaggle Jupyter Server</em> session is active; <strong>users need to start a Kaggle session before the button becomes clickable</strong>. Clicking the <em>&quot;Open in Colab&quot;</em> button initiates the following: the current Kaggle notebook (.ipynb file) is copied to a new tab in Colab, and is automatically configured to connect the new Colab notebook to the user&#39;s running <em>Kaggle Jupyter Server</em> session.</p>
+<p>When opening and connecting Colab notebooks in a new tab, the notebook file (.ipynb) is <string>copied</string>, not synchronized. Modifications made in Colab will <em>not</em> be reflected in the original Kaggle notebook, and vice versa. Only the backend Jupyter Server and its execution environment are shared between Kaggle and Colab.</p>
+<p>The notebook in your newly opened Colab tab will not save automatically. To avoid losing your work, be sure to backup your Colab notebook - for example, using Colab’s <strong>File &gt; Save a copy in Drive</strong> menu option.</p>
+<p><strong>If your Kaggle Jupyter Server shuts down</strong> - for example, due to inactivity - <strong>then your connected Colab editor will silently disconnect</strong> from that backing session. The next section will show how to reconnect those disconnected sessions to a new <em>Kaggle Jupyter Server</em>.</p>
+<h4></h4>
+<p>  Reconnect an existing Colab notebook to your <em>Kaggle Jupyter Server</em></p>
+<p>The <em>Kaggle Jupyter Server</em> panel provides a &quot;Manually Connect&quot; section. This section displays a &quot;Colab Compatible URL&quot; that users can copy to their clipboard. To reconnect an existing Colab notebook to Kaggle:</p>
+<ol>
+<li>begin by starting a <em>Kaggle Jupyter Server</em> session,</li>
+<li>copy the &quot;Colab Compatible URL&quot; from the <em>Kaggle Jupyter Server</em> panel,</li>
+<li>in the Colab notebook navigate to
+ <strong>Reconnect &gt; Connect to a local runtime</strong>,
+<img src="/static/images/docs/notebooks/colab-connect-to-local-runtime.png" alt="...">4. paste the copied URL into the provided text field, and click the &quot;Connect&quot; button.
+<img src="/static/images/docs/notebooks/colab-backend-url.png" alt="..."></li>
+</ol>
+<p>This process connects the Colab notebook to the <em>Kaggle Jupyter Server</em>. Click <a href="https://research.google.com/colaboratory/local-runtimes.html">here</a> to learn more about Colab’s local runtimes feature.</p>
+<p>Users can use these same steps to connect any existing Colab notebook to Kaggle Jupyter Server, even if that Colab notebook was never opened from Kaggle.</p>
+<h4></h4>
+<p>  Connect from VS Code or Jupyter <code>/tree</code></p>
+<p>The &quot;Manually Connect&quot; section also provides a &quot;VS Code Compatible URL.&quot; Users can utilize this URL to connect a VS Code-powered .ipynb editor to the Kaggle backend. See VSCode&#39;s documentation <em><a href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks#_connect-to-a-remote-jupyter-server">Connect to Jupyter Server</a></em> for more info.</p>
+<p>Users can also paste the &quot;Colab Compatible URL&quot; into their browser&#39;s address bar to access the Jupyter Server&#39;s <code>/tree</code> interface directly.</p>
+<hr>
+<!--Technical Specifications-->
+
+<h3>Technical Specifications</h3>
+<p>Kaggle Notebooks run in a remote computational environment. We provide the hardware—you need only worry about the code.</p>
+<p>At time of writing, each Notebook editing session is provided with the following resources:</p>
+<ul>
+<li>12 hours execution time for CPU and GPU notebook sessions and 9 hours for TPU notebook sessions</li>
+<li>20 Gigabytes of auto-saved disk space (/kaggle/working)</li>
+<li>Additional scratchpad disk space (outside /kaggle/working) that will not be saved outside of the current session</li>
+</ul>
+<p>CPU Specifications</p>
+<ul>
+<li>4 CPU cores</li>
+<li>30 Gigabytes of RAM</li>
+</ul>
+<p>P100 GPU Specifications</p>
+<ul>
+<li>1 Nvidia Tesla P100 GPU</li>
+<li>4 CPU cores</li>
+<li>29 Gigabytes of RAM</li>
+</ul>
+<p>T4 x2 GPU Specifications</p>
+<ul>
+<li>2 Nvidia Tesla T4 GPUs</li>
+<li>4 CPU cores</li>
+<li>29 Gigabytes of RAM</li>
+</ul>
+<p>TPU 1VM Specifications</p>
+<ul>
+<li>96 CPU cores</li>
+<li>330 Gigabytes of RAM</li>
+</ul>
+<p>NOTE: CPU Platforms (ex. Intel Skylake, Broadwell, AMD) may be variable during regular notebook runs, however submissions
+runs (for code competitions or when submissions are rerun in bulk) are always run on Intel Skylake CPUs.</p>
+<p>CPU Specifications</p>
+<p>While editing a Notebook, you are provided with 20 minutes of idle time for your interactive session. If the code is not modified or executed in that time the current interactive session will end. If this happens, you will need to click the Edit button again to continue editing. If you want to run a computation that takes longer, you can Save a Version of your Notebook from top to bottom by selecting the &quot;Save &amp; Run All&quot; option in the &quot;Save Version&quot; menu (see below).</p>
+<p>Once you are satisfied with the contents of the Notebook you can click &quot;Save Version&quot; to save your changes. From there you will have two options for creating a new version:</p>
+<ul>
+<li><strong>Quick Save</strong> skips the top-to-bottom notebook execution and just takes a snapshot of your notebook exactly as it’s displayed in the editor. This is a great option for taking a bunch of versions while you’re still actively experimenting. Quick Save is a brand new way of saving work on Kaggle.</li>
+<li><strong>Save &amp; Run All</strong> creates a new session with a completely clean state and runs your notebook from top to bottom. This is perfect for major milestones or when you want to share your work, as it gives you (and anyone else who reads your notebook) the confidence that your notebook can be run reproducibly. In order to save successfully, the entire Notebook must execute within 12 hours (9 hours for TPU notebooks). Save &amp; Run All is identical to the “Commit” behavior you may have used previously on Kaggle.</li>
+</ul>
+<h3>[EXPERIMENTAL] Increase GPU compute with Colab Pro</h3>
+<p>We&#39;re introducing an experimental feature that gives you access to additional GPU hours on Kaggle
+    if you are a Colab Pro customer. This is a limited time promotion and we expect it to modify and graduate to a sustainable, long term pay to scale feature on Kaggle.</p>
+<p><strong>How it works</strong></p>
+<ul>
+<li>You may link your Colab Account in the Notebook editor via the <code>File</code> menu and clicking the <code>Link to Colab</code> option. User who have linked their account previously are automatically enrolled into this promotion.</li>
+<li>Colab Pro and Pro+ users will get <strong>15 and 30 hours of extra GPU hours per week</strong> respectively on Kaggle. To claim this benefit, you will verify your Colab subscription by <strong>linking</strong> your Kaggle account with an active Colab Pro account.</li>
+<li>These extra GPU hours don&#39;t consume your Colab compute units.</li>
+<li>You&#39;ll be using the same Kaggle hardware you&#39;re accustomed to (CPUs, T4s, P100s, TPUv3-8).</li>
+<li>Once the account is verified to have an active Colab subscription, you will be granted additional GPU hours and you can see them in quotas in your Kaggle account settings.</li>
+<li>You may unlink your Colab Account via the settings page at any time.</li>
+</ul>
+<p><strong>Legal Terms</strong></p>
+<ul>
+<li>Kaggle reserves the right to end or suspend the Promotion at any time, with or without notice, at its sole discretion. The end date of the Promotion may not be publicly announced and can occur without prior warning.</li>
+<li>Kaggle reserves the right to modify the amount of extra GPU hours offered or the terms of the Promotion at any time without prior notice.</li>
+<li>Kaggle shall not be liable for any loss or inconvenience resulting from the termination or modification of the Promotion.</li>
+<li>This Promotion is limited to one linked Kaggle account for each Colab Pro subscriber.</li>
+<li>If a Kaggle user cancels their Colab Pro account, Kaggle may terminate the extra GPU hours for their linked Kaggle account.</li>
+<li>The extra GPU hours are non-transferable and cannot be exchanged for cash or any other goods or services.</li>
+<li>The use of Kaggle&#39;s GPU resources is subject to Kaggle&#39;s Terms of Use and other applicable policies. Abuse or misuse of GPU resources may result in the suspension or termination of your Kaggle account.</li>
+<li>Kaggle reserves the right to disqualify any user who violates these Terms or engages in fraudulent or abusive activity related to the Promotion.</li>
+</ul>
+
+          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

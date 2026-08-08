@@ -1,0 +1,327 @@
+[
+  {
+    "id": "home",
+    "name": "Home",
+    "badge": "·",
+    "groups": [
+      {
+        "name": "Home",
+        "items": [
+          {
+            "title": "Kaggle 文档镜像",
+            "href": "/kaggle-docs/zh/index.html",
+            "rel": "index.md"
+          }
+        ]
+      }
+    ],
+    "count": 1
+  },
+  {
+    "id": "platform",
+    "name": "Platform Docs",
+    "badge": "①",
+    "groups": [
+      {
+        "name": "Platform",
+        "items": [
+          {
+            "title": "Kaggle 入门",
+            "href": "/kaggle-docs/zh/platform/getting-started.html",
+            "rel": "platform/getting-started.md"
+          },
+          {
+            "title": "Kaggle 包",
+            "href": "/kaggle-docs/zh/platform/packages.html",
+            "rel": "platform/packages.md"
+          },
+          {
+            "title": "公共API",
+            "href": "/kaggle-docs/zh/platform/api.html",
+            "rel": "platform/api.md"
+          },
+          {
+            "title": "型号",
+            "href": "/kaggle-docs/zh/platform/models.html",
+            "rel": "platform/models.md"
+          },
+          {
+            "title": "基准测试",
+            "href": "/kaggle-docs/zh/platform/benchmarks.html",
+            "rel": "platform/benchmarks.md"
+          },
+          {
+            "title": "张量处理单元 (TPU)",
+            "href": "/kaggle-docs/zh/platform/tpu.html",
+            "rel": "platform/tpu.md"
+          },
+          {
+            "title": "数据集",
+            "href": "/kaggle-docs/zh/platform/datasets.html",
+            "rel": "platform/datasets.md"
+          },
+          {
+            "title": "比赛",
+            "href": "/kaggle-docs/zh/platform/competitions.html",
+            "rel": "platform/competitions.md"
+          },
+          {
+            "title": "笔记本",
+            "href": "/kaggle-docs/zh/platform/notebooks.html",
+            "rel": "platform/notebooks.md"
+          },
+          {
+            "title": "组织",
+            "href": "/kaggle-docs/zh/platform/organizations.html",
+            "rel": "platform/organizations.md"
+          },
+          {
+            "title": "高效 GPU 使用技巧",
+            "href": "/kaggle-docs/zh/platform/efficient-gpu-usage.html",
+            "rel": "platform/efficient-gpu-usage.md"
+          }
+        ]
+      }
+    ],
+    "count": 11
+  },
+  {
+    "id": "cli",
+    "name": "CLI & API",
+    "badge": "②",
+    "groups": [
+      {
+        "name": "Getting started",
+        "items": [
+          {
+            "title": "Changelog",
+            "href": "/kaggle-docs/zh/cli/changelog.html",
+            "rel": "cli/changelog.md"
+          },
+          {
+            "title": "Kaggle CLI",
+            "href": "/kaggle-docs/zh/cli/intro.html",
+            "rel": "cli/intro.md"
+          },
+          {
+            "title": "Kaggle CLI 教程",
+            "href": "/kaggle-docs/zh/cli/tutorials.html",
+            "rel": "cli/tutorials.md"
+          },
+          {
+            "title": "Kaggle CLI 文档",
+            "href": "/kaggle-docs/zh/cli/README.html",
+            "rel": "cli/README.md"
+          },
+          {
+            "title": "Kaggle CLI 输出格式文档",
+            "href": "/kaggle-docs/zh/cli/output_format.html",
+            "rel": "cli/output_format.md"
+          },
+          {
+            "title": "Kaggle CLI 配置",
+            "href": "/kaggle-docs/zh/cli/configuration.html",
+            "rel": "cli/configuration.md"
+          },
+          {
+            "title": "搜索命令",
+            "href": "/kaggle-docs/zh/cli/search.html",
+            "rel": "cli/search.md"
+          }
+        ]
+      },
+      {
+        "name": "Commands",
+        "items": [
+          {
+            "title": "内核命令",
+            "href": "/kaggle-docs/zh/cli/kernels.html",
+            "rel": "cli/kernels.md"
+          },
+          {
+            "title": "基准测试命令",
+            "href": "/kaggle-docs/zh/cli/benchmarks.html",
+            "rel": "cli/benchmarks.md"
+          },
+          {
+            "title": "教程：模拟比赛",
+            "href": "/kaggle-docs/zh/cli/simulation_competitions.html",
+            "rel": "cli/simulation_competitions.md"
+          },
+          {
+            "title": "数据集命令",
+            "href": "/kaggle-docs/zh/cli/datasets.html",
+            "rel": "cli/datasets.md"
+          },
+          {
+            "title": "模型变体版本命令",
+            "href": "/kaggle-docs/zh/cli/model_variations_versions.html",
+            "rel": "cli/model_variations_versions.md"
+          },
+          {
+            "title": "模型变化命令",
+            "href": "/kaggle-docs/zh/cli/model_variations.html",
+            "rel": "cli/model_variations.md"
+          },
+          {
+            "title": "模型命令",
+            "href": "/kaggle-docs/zh/cli/models.html",
+            "rel": "cli/models.md"
+          },
+          {
+            "title": "竞赛命令",
+            "href": "/kaggle-docs/zh/cli/competitions.html",
+            "rel": "cli/competitions.md"
+          },
+          {
+            "title": "论坛命令",
+            "href": "/kaggle-docs/zh/cli/forums.html",
+            "rel": "cli/forums.md"
+          },
+          {
+            "title": "通过 CLI 举办竞赛",
+            "href": "/kaggle-docs/zh/cli/competition_creation.html",
+            "rel": "cli/competition_creation.md"
+          }
+        ]
+      },
+      {
+        "name": "Metadata schemas",
+        "items": [
+          {
+            "title": "Datasets Metadata",
+            "href": "/kaggle-docs/zh/cli/datasets_metadata.html",
+            "rel": "cli/datasets_metadata.md"
+          },
+          {
+            "title": "Kernels Metadata",
+            "href": "/kaggle-docs/zh/cli/kernels_metadata.html",
+            "rel": "cli/kernels_metadata.md"
+          },
+          {
+            "title": "Models Metadata",
+            "href": "/kaggle-docs/zh/cli/models_metadata.html",
+            "rel": "cli/models_metadata.md"
+          }
+        ]
+      }
+    ],
+    "count": 20
+  },
+  {
+    "id": "skills",
+    "name": "Agent Skills",
+    "badge": "③",
+    "groups": [
+      {
+        "name": "Overview",
+        "items": [
+          {
+            "title": "Kaggle CLI",
+            "href": "/kaggle-docs/zh/skills/SKILL.html",
+            "rel": "skills/SKILL.md"
+          }
+        ]
+      },
+      {
+        "name": "References",
+        "items": [
+          {
+            "title": "Kaggle 基准 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/benchmarks.html",
+            "rel": "skills/references/benchmarks.md"
+          },
+          {
+            "title": "内核 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/kernels.html",
+            "rel": "skills/references/kernels.md"
+          },
+          {
+            "title": "型号变体 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/model_variations.html",
+            "rel": "skills/references/model_variations.md"
+          },
+          {
+            "title": "型号变体版本 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/model_variations_versions.html",
+            "rel": "skills/references/model_variations_versions.md"
+          },
+          {
+            "title": "搜索 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/search.html",
+            "rel": "skills/references/search.md"
+          },
+          {
+            "title": "数据集 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/datasets.html",
+            "rel": "skills/references/datasets.md"
+          },
+          {
+            "title": "文件 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/files.html",
+            "rel": "skills/references/files.md"
+          },
+          {
+            "title": "模型 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/models.html",
+            "rel": "skills/references/models.md"
+          },
+          {
+            "title": "竞赛 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/competitions.html",
+            "rel": "skills/references/competitions.md"
+          },
+          {
+            "title": "论坛 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/forums.html",
+            "rel": "skills/references/forums.md"
+          },
+          {
+            "title": "身份验证 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/auth.html",
+            "rel": "skills/references/auth.md"
+          },
+          {
+            "title": "配置 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/configuration.html",
+            "rel": "skills/references/configuration.md"
+          },
+          {
+            "title": "配额 CLI 参考",
+            "href": "/kaggle-docs/zh/skills/references/quota.html",
+            "rel": "skills/references/quota.md"
+          }
+        ]
+      }
+    ],
+    "count": 14
+  },
+  {
+    "id": "kagglehub",
+    "name": "KaggleHub",
+    "badge": "④",
+    "groups": [
+      {
+        "name": "Library",
+        "items": [
+          {
+            "title": "Download the latest version.",
+            "href": "/kaggle-docs/zh/kagglehub/intro.html",
+            "rel": "kagglehub/intro.md"
+          },
+          {
+            "title": "为 kagglehub 做出贡献",
+            "href": "/kaggle-docs/zh/kagglehub/CONTRIBUTING.html",
+            "rel": "kagglehub/CONTRIBUTING.md"
+          },
+          {
+            "title": "变更日志",
+            "href": "/kaggle-docs/zh/kagglehub/CHANGELOG.html",
+            "rel": "kagglehub/CHANGELOG.md"
+          }
+        ]
+      }
+    ],
+    "count": 3
+  }
+]

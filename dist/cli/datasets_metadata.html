@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datasets Metadata · Kaggle Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/datasets_metadata.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/datasets_metadata.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+      <a class="brand" href="/kaggle-docs/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle Docs</span>
+        <span class="brand-v">mirror</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn active" href="/kaggle-docs/cli/datasets_metadata.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">Official ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
+        </div>
+        <div class="side-label">Learning path · docs</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf active" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          
+          <p>The Kaggle API follows the <a href="https://frictionlessdata.io/specs/data-package/">Data Package specification</a> for specifying metadata when creating new Datasets and Dataset versions. Next to your files, you have to put a special <code>dataset-metadata.json</code> file in your upload folder alongside the files for each new Dataset (version). </p>
+<p>Here&#39;s a basic example for <code>dataset-metadata.json</code>:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>{
+  &quot;title&quot;: &quot;My Awesome Dataset&quot;, 
+  &quot;id&quot;: &quot;timoboz/my-awesome-dataset&quot;, 
+  &quot;licenses&quot;: [{&quot;name&quot;: &quot;CC0-1.0&quot;}]
+}
+</code></pre></div>
+<p>You can also use the API command <code>kaggle datasets init -p /path/to/dataset</code> to have the API create this file for you.</p>
+<p>Here&#39;s an example containing file metadata:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>{
+  &quot;title&quot;: &quot;My Awesome Dataset&quot;, 
+  &quot;subtitle&quot;: &quot;My awesomer subtitle&quot;,
+  &quot;description&quot;: &quot;My awesomest description&quot;,
+  &quot;id&quot;: &quot;timoboz/my-awesome-dataset&quot;, 
+  &quot;id_no&quot;: 12345,
+  &quot;licenses&quot;: [{&quot;name&quot;: &quot;CC0-1.0&quot;}],
+  &quot;resources&quot;: [
+    {
+      &quot;path&quot;: &quot;my-awesome-data.csv&quot;,
+      &quot;description&quot;: &quot;This is my awesome data!&quot;,
+      &quot;schema&quot;: {
+        &quot;fields&quot;: [
+          {
+            &quot;name&quot;: &quot;StringField&quot;,
+            &quot;description&quot;: &quot;String field description&quot;,
+            &quot;type&quot;: &quot;string&quot;
+          },
+          {
+            &quot;name&quot;: &quot;NumberField&quot;,
+            &quot;description&quot;: &quot;Number field description&quot;,
+            &quot;type&quot;: &quot;number&quot;
+          },
+          {
+            &quot;name&quot;: &quot;DateTimeField&quot;,
+            &quot;description&quot;: &quot;Date time field description&quot;,
+            &quot;type&quot;: &quot;datetime&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;path&quot;: &quot;my-awesome-extra-file.txt&quot;,
+      &quot;description&quot;: &quot;This is my awesome extra file!&quot;
+    }
+  ],
+  &quot;keywords&quot;: [
+    &quot;beginner&quot;,
+    &quot;tutorial&quot;
+  ],
+  &quot;expectedUpdateFrequency&quot;: &quot;monthly&quot;,
+  &quot;userSpecifiedSources&quot;: &quot;World Bank and OECD ([link](http://data.worldbank.org/indicator/NY.GDP.MKTP.CD))&quot;,
+  &quot;image&quot;: &quot;relative/path/to/new/image.png&quot;
+}
+</code></pre></div>
+<h2>Contents</h2>
+<p>The following metadata is currently supported:</p>
+<ul>
+<li><code>kaggle datasets create</code> (create a new Dataset):<ul>
+<li><code>title</code>: Title of the dataset, must be between 6 and 50 characters in length.</li>
+<li><code>subtitle</code>: Subtitle of the dataset, must be between 20 and 80 characters in length.</li>
+<li><code>description</code>: Description of the dataset. </li>
+<li><code>id</code>: The URL slug of your new dataset, a combination of:<ol>
+<li>Your username or organization slug (if you are a member of an organization).</li>
+<li>A unique Dataset slug, must be between 3 and 50 characters in length.</li>
+</ol>
+</li>
+<li><code>licenses</code>: Must have exactly one entry that specifies the license. Only <code>name</code> is evaluated, all other information is ignored. See below for options.</li>
+<li><code>resources</code>: Contains an array of files that are being uploaded.  (Note - this is not required, nor if included, does it need to include all of the files to be uploaded.):<ul>
+<li><code>path</code>: File path.</li>
+<li><code>description</code>: File description.</li>
+<li><code>schema</code>: File schema (definition below):<ul>
+<li><code>fields</code>: Array of fields in the dataset.  Please note that this needs to include ALL of the fields in the data in order or they will not be matched up correctly.  A later version of the API will fix this bug.<ul>
+<li><code>name</code>: Field name</li>
+<li><code>description</code>: Field description (Note: <code>title</code> is also accepted for backward compatibility, but <code>description</code> is preferred)</li>
+<li><code>type</code>: Field type. A best-effort list of types will be kept at the bottom of this page, but new types may be added that are not documented here.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>keywords</code>: Contains an array of strings that correspond to an existing tag on Kaggle.  If a specified tag doesn&#39;t exist, the upload will continue, but that specific tag won&#39;t be added.</li>
+</ul>
+</li>
+<li><code>kaggle datasets version</code> (create a new version for an existing Dataset):<ul>
+<li><code>subtitle</code>: Subtitle of the dataset, must be between 20 and 80 characters in length.</li>
+<li><code>description</code>: Description of the dataset. </li>
+<li><code>id</code>: The URL slug of the dataset you want to update (see above). You must be the owner or otherwise have edit rights for this dataset. One of <code>id</code> or <code>id_no</code> must be specified. If both are, <code>id_no</code> will be preferred.</li>
+<li><code>id_no</code>: The ID of the dataset. One of <code>id</code> or <code>id_no</code> must be specified. You must be the owner or otherwise have edit rights for this dataset. If both are, <code>id_no</code> will be preferred.</li>
+<li><code>resources</code>: Contains an array of files that are being uploaded.  (Note - this is not required, nor if included, does it need to include all of the files to be uploaded.):<ul>
+<li><code>path</code>: File path.</li>
+<li><code>description</code>: File description.</li>
+<li><code>schema</code>: File schema (definition below):<ul>
+<li><code>fields</code>: Array of fields in the dataset.  Please note that this needs to include ALL of the fields in the data in order or they will not be matched up correctly.  A later version of the API will fix this bug.<ul>
+<li><code>name</code>: Field name</li>
+<li><code>description</code>: Field description (Note: <code>title</code> is also accepted for backward compatibility, but <code>description</code> is preferred)</li>
+<li><code>type</code>: Field type. A best-effort list of types will be kept at the bottom of this page, but new types may be added that are not documented here.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>keywords</code>: Contains an array of strings that correspond to an existing tag on Kaggle.  If a specified tag doesn&#39;t exist, the upload will continue, but that specific tag won&#39;t be added.</li>
+</ul>
+</li>
+<li><code>kaggle datasets metadata --update</code> (update metadata for an existing Dataset) supports all fields mentioned above for <code>kaggle datasets version</code>, and additionally:<ul>
+<li><code>expectedUpdateFrequency</code>: How often you expect to update your dataset with new versions. See <a href="#expected-update-frequencies">section below</a> for possible values.</li>
+<li><code>userSpecifiedSources</code>: An explanation of the source(s) of your dataset. Most basic markdown features are supported for this string.</li>
+<li><code>image</code>: A relative file path to a new image file you want to use for your dataset. The path should be relative to the location of the dataset-metadata.json file. See <a href="#images">section below</a> for more specifics about file types and expected image size.</li>
+</ul>
+</li>
+</ul>
+<p>We will add further metadata processing in upcoming versions of the API.</p>
+<h2>Licenses</h2>
+<p>You can specify the following licenses for your datasets:</p>
+<ul>
+<li><code>CC0-1.0</code>: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: Public Domain</a></li>
+<li><code>CC-BY-SA-3.0</code>: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li>
+<li><code>CC-BY-SA-4.0</code>: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+<li><code>CC-BY-NC-SA-4.0</code>: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
+<li><code>GPL-2.0</code>: <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">GPL 2</a></li>
+<li><code>ODbL-1.0</code>: Database: <a href="http://opendatacommons.org/licenses/odbl/1.0/">Open Database</a>, Contents: © Original Authors</li>
+<li><code>DbCL-1.0</code>: Database: <a href="http://opendatacommons.org/licenses/odbl/1.0/">Open Database</a>, Contents: <a href="http://opendatacommons.org/licenses/dbcl/1.0/">Database Contents</a></li>
+<li><code>copyright-authors</code>: Data files © Original Authors</li>
+<li><code>other</code>: Other (specified in description)</li>
+<li><code>unknown</code>: Unknown</li>
+<li><code>CC-BY-4.0</code>: 	
+<a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></li>
+<li><code>CC-BY-NC-4.0</code>: <a href="https://creativecommons.org/licenses/by-nc/4.0/">https://creativecommons.org/licenses/by-nc/4.0/</a></li>
+<li><code>PDDL</code>: <a href="https://opendatacommons.org/licenses/pddl/1.0/">https://opendatacommons.org/licenses/pddl/1.0/</a></li>
+<li><code>CC-BY-3.0</code>: 	
+<a href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</a></li>
+<li><code>CC-BY-3.0-IGO</code>: 	
+<a href="https://creativecommons.org/licenses/by/3.0/igo/">https://creativecommons.org/licenses/by/3.0/igo/</a></li>
+<li><code>US-Government-Works</code>: 	
+<a href="https://www.usa.gov/government-works/">https://www.usa.gov/government-works/</a></li>
+<li><code>CC-BY-NC-SA-3.0-IGO</code>: 	
+<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/">https://creativecommons.org/licenses/by-nc-sa/3.0/igo/</a></li>
+<li><code>CDLA-Permissive-1.0</code>: 	
+<a href="https://cdla.io/permissive-1-0/">https://cdla.io/permissive-1-0/</a></li>
+<li><code>CDLA-Sharing-1.0</code>: 	
+<a href="https://cdla.io/sharing-1-0/">https://cdla.io/sharing-1-0/</a></li>
+<li><code>CC-BY-ND-4.0</code>: 	
+<a href="https://creativecommons.org/licenses/by-nd/4.0/">https://creativecommons.org/licenses/by-nd/4.0/</a></li>
+<li><code>CC-BY-NC-ND-4.0</code>: 	
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">https://creativecommons.org/licenses/by-nc-nd/4.0/</a></li>
+<li><code>ODC-BY-1.0</code>: 	
+<a href="https://opendatacommons.org/licenses/by/1-0/index.html">https://opendatacommons.org/licenses/by/1-0/index.html</a></li>
+<li><code>LGPL-3.0</code>: 	
+<a href="http://www.gnu.org/licenses/lgpl-3.0.html">http://www.gnu.org/licenses/lgpl-3.0.html</a></li>
+<li><code>AGPL-3.0</code>: 	
+<a href="http://www.gnu.org/licenses/agpl-3.0.html">http://www.gnu.org/licenses/agpl-3.0.html</a></li>
+<li><code>FDL-1.3</code>: 	
+<a href="http://www.gnu.org/licenses/fdl-1.3.html">http://www.gnu.org/licenses/fdl-1.3.html</a></li>
+<li><code>EU-ODP-Legal-Notice</code>: <a href="https://ec.europa.eu/info/legal-notice_en">https://ec.europa.eu/info/legal-notice_en</a></li>
+<li><code>apache-2.0</code>: 	
+<a href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a></li>
+<li><code>GPL-3.0</code>: <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL 2</a></li>
+</ul>
+<h2>Data types</h2>
+<p>You can specify the following data types</p>
+<ul>
+<li><code>string</code></li>
+<li><code>boolean</code></li>
+<li><code>numeric</code></li>
+<li><code>datetime</code></li>
+<li><code>id</code></li>
+<li><code>uuid</code></li>
+<li><code>latitude</code></li>
+<li><code>longitude</code></li>
+<li><code>coordinates</code></li>
+<li><code>country</code></li>
+<li><code>province</code> (these are states in the US)</li>
+<li><code>postalcode</code></li>
+<li><code>address</code></li>
+<li><code>email</code></li>
+<li><code>url</code></li>
+<li><code>integer</code></li>
+<li><code>decimal</code></li>
+<li><code>city</code></li>
+</ul>
+<h2>Expected update frequencies</h2>
+<p>You can specify the following values for <code>expectedUpdateFrequency</code>:</p>
+<ul>
+<li><code>not specified</code></li>
+<li><code>never</code></li>
+<li><code>annually</code></li>
+<li><code>quarterly</code></li>
+<li><code>monthly</code></li>
+<li><code>weekly</code></li>
+<li><code>daily</code></li>
+<li><code>hourly</code></li>
+</ul>
+<h2>Images</h2>
+<p>The recommended way to update your dataset&#39;s image is by placing a file named <code>dataset-cover-image.png</code> (or <code>.jpg</code>, <code>.jpeg</code>, <code>.webp</code>), as a sibling file to your <code>datasets-metadata.json</code>.</p>
+<p>Example:</p>
+<ul>
+<li><code>/some/path/dataset-metadata.json</code></li>
+<li><code>/some/path/dataset-cover-image.png</code></li>
+</ul>
+<p>The image file will only be used for dataset metadata, and not be uploaded as a file within your dataset.</p>
+<h3>Specifying an image with a relative path</h3>
+<p>As an alternative, you can update your dataset image by providing a relative path from your <code>datasets-metadata.json</code> to an image file, using the <code>image</code> property.</p>
+<p>If your files were located at:</p>
+<ul>
+<li><code>/some/path/dataset-metadata.json</code></li>
+<li><code>/some/path/to/my-image.jpg</code></li>
+</ul>
+<p>This property should be specified as:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>&quot;image&quot;: &quot;to/my-image.jpg&quot;
+</code></pre></div>
+<h3>Supported image file types and expected dimensions</h3>
+<p>The following file types are supported:</p>
+<ul>
+<li><code>.png</code></li>
+<li><code>.jpg</code></li>
+<li><code>.jpeg</code></li>
+<li><code>.webp</code></li>
+</ul>
+<p>The image needs to have a minimum width of 560px and a minimum height of 280px.</p>
+<p>The same image file will be used for two different crops:</p>
+<ul>
+<li>Header, 2:1 ratio<ul>
+<li>Crop rectangle: width: 560px, height: 280px, top: 0, left: 0</li>
+<li>For an image with dimensions 560px x 280px, this will be the entire rectangular image.</li>
+</ul>
+</li>
+<li>Thumbnail, 1:1 ratio<ul>
+<li>Crop rectangle: width: 280px, height: 280px, top: 0, left: 140px</li>
+<li>For an image with dimensions 560px x 280px, this will be a centered 280px square.</li>
+</ul>
+</li>
+</ul>
+<p>While you can upload a larger image than 560px x 280px, the crops as specified above will be applied, and this may not look good. These crops can always be edited in the UI on kaggle.com on the settings page for your dataset.</p>
+
+          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

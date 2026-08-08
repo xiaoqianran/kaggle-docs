@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>kagglehub · Kaggle Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/kagglehub/intro.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/kagglehub/intro.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+      <a class="brand" href="/kaggle-docs/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle Docs</span>
+        <span class="brand-v">mirror</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn active" href="/kaggle-docs/kagglehub/intro.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn" href="/kaggle-docs/zh/kagglehub/intro.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">Official ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
+        </div>
+        <div class="side-label">Learning path · docs</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
+<li><a class="leaf active" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          
+          <h1>kagglehub</h1>
+<p>The <code>kagglehub</code> library provides a simple way to interact with Kaggle resources such as datasets, models, notebook outputs in Python.</p>
+<p>This library also integrates natively with the Kaggle notebook environment. This means the behavior differs when you download a Kaggle resource with <code>kagglehub</code> in the Kaggle notebook environment:</p>
+<ul>
+<li>In a Kaggle notebook:<ul>
+<li>The resource is automatically attached to your Kaggle notebook.</li>
+<li>The resource will be shown under the &quot;Input&quot; panel in the Kaggle notebook editor.</li>
+<li>The resource files are served from the shared Kaggle resources cache (not using the VM&#39;s disk).</li>
+</ul>
+</li>
+<li>Outside a Kaggle notebook:<ul>
+<li>The resource files are downloaded to a local <a href="#change-the-default-cache-folder">cache folder</a>.</li>
+</ul>
+</li>
+</ul>
+<h2>Installation</h2>
+<p>Install the <code>kagglehub</code> package with pip:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>pip install kagglehub
+</code></pre></div>
+<h2>Usage</h2>
+<h3>Authenticate</h3>
+<blockquote>
+<p>[!NOTE]
+<code>kagglehub</code> is authenticated by default when running in a Kaggle notebook.</p>
+</blockquote>
+<p>Authenticating is <strong>only</strong> needed to access public resources requiring user consent or private resources.</p>
+<p>First, you will need a Kaggle account. You can sign up <a href="https://www.kaggle.com/account/login">here</a>.</p>
+<p>After login, you can download your Kaggle API token at <a href="https://www.kaggle.com/settings/api">https://www.kaggle.com/settings/api</a> by clicking on the &quot;Generate New Token&quot; button.</p>
+<p>You have several options to authenticate. Note that if you use <code>kaggle-api</code> (the <code>kaggle</code> command-line tool) you have
+already configured authentication and can skip this.</p>
+<h4>Option 1: kagglehub.login()</h4>
+<p>This will prompt you to enter your Kaggle API token:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+
+kagglehub.login()
+</code></pre></div>
+<h4>Option 2: Environment variable</h4>
+<p>You can also choose to export your Kaggle token to the environment:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh">export KAGGLE_API_TOKEN=xxxxxxxxxxxxxx # Copied from the settings UI
+</code></pre></div>
+<h4>Option 3: API token file</h4>
+<p>Store your Kaggle API token obtained from your <a href="https://www.kaggle.com/settings/api">Kaggle account API tokens settings page</a> in a file at <code>~/.kaggle/access_token</code>.</p>
+<h4>Option 4: Google Colab secret</h4>
+<p>Store your Kaggle API token obtained from your <a href="https://www.kaggle.com/settings/api">Kaggle account API tokens settings page</a> in a Colab secret named <code>KAGGLE_API_TOKEN</code>.</p>
+<p>Instructions on adding secrets in both Colab and Colab Enterprise can be found in <a href="https://www.googlecloudcommunity.com/gc/Cloud-Hub/How-do-I-add-secrets-in-Google-Colab-Enterprise/m-p/784866">this article</a>.</p>
+<h4>Option 5: Legacy API credentials file</h4>
+<p>From your <a href="https://www.kaggle.com/settings/api">Kaggle account API tokens settings page</a>, under &quot;Legacy API Credentials&quot;, click on the &quot;Create Legacy API Key&quot; button to generate a <code>kaggle.json</code> file and store it at <code>~/.kaggle/kaggle.json</code>.</p>
+<h3>Download Model</h3>
+<p>The following examples download the <code>answer-equivalence-bem</code> variation of this Kaggle model: <a href="https://www.kaggle.com/models/google/bert/tensorFlow2/answer-equivalence-bem">https://www.kaggle.com/models/google/bert/tensorFlow2/answer-equivalence-bem</a></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+
+# Download the latest version.
+kagglehub.model_download(&#39;google/bert/tensorFlow2/answer-equivalence-bem&#39;)
+
+# Download a specific version.
+kagglehub.model_download(&#39;google/bert/tensorFlow2/answer-equivalence-bem/1&#39;)
+
+# Download a single file.
+kagglehub.model_download(&#39;google/bert/tensorFlow2/answer-equivalence-bem&#39;, path=&#39;variables/variables.index&#39;)
+
+# Download a model or file, even if previously downloaded to cache.
+kagglehub.model_download(&#39;google/bert/tensorFlow2/answer-equivalence-bem&#39;, force_download=True)
+
+# Download to a custom local directory.
+kagglehub.model_download(&#39;google/bert/tensorFlow2/answer-equivalence-bem&#39;, output_dir=&#39;./models&#39;)
+
+# Overwrite an existing output directory.
+kagglehub.model_download(&#39;google/bert/tensorFlow2/answer-equivalence-bem&#39;, output_dir=&#39;./models&#39;, force_download=True)
+</code></pre></div>
+<h3>Upload Model</h3>
+<p>Uploads a new variation (or a new variation&#39;s version if it already exists).</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+
+# For example, to upload a new variation to this model:
+# - https://www.kaggle.com/models/google/bert/tensorFlow2/answer-equivalence-bem
+# 
+# You would use the following handle: `google/bert/tensorFlow2/answer-equivalence-bem`
+handle = &#39;&lt;KAGGLE_USERNAME&gt;/&lt;MODEL&gt;/&lt;FRAMEWORK&gt;/&lt;VARIATION&gt;&#39;
+local_model_dir = &#39;path/to/local/model/dir&#39;
+
+kagglehub.model_upload(handle, local_model_dir)
+
+# You can also specify some version notes (optional)
+kagglehub.model_upload(handle, local_model_dir, version_notes=&#39;improved accuracy&#39;)
+
+# You can also specify a license (optional)
+kagglehub.model_upload(handle, local_model_dir, license_name=&#39;Apache 2.0&#39;)
+
+# You can also specify a list of patterns for files/dirs to ignore.
+# These patterns are combined with `kagglehub.models.DEFAULT_IGNORE_PATTERNS` 
+# to determine which files and directories to exclude. 
+# To ignore entire directories, include a trailing slash (/) in the pattern.
+kagglehub.model_upload(handle, local_model_dir, ignore_patterns=[&quot;original/&quot;, &quot;*.tmp&quot;])
+</code></pre></div>
+<h3>Load Dataset</h3>
+<p>Loads a file from a Kaggle Dataset into a python object based on the selected <code>KaggleDatasetAdapter</code>:</p>
+<ul>
+<li><code>KaggleDatasetAdapter.PANDAS</code> &rarr; <a href="https://pandas.pydata.org/docs/reference/frame.html">pandas DataFrame</a>
+(or multiple given certain files/settings)</li>
+<li><code>KaggleDatasetAdapter.HUGGING_FACE</code>&rarr; 
+<a href="https://huggingface.co/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset">Hugging Face Dataset</a></li>
+<li><code>KaggleDatasetAdapter.POLARS</code> &rarr; polars <a href="https://docs.pola.rs/api/python/stable/reference/lazyframe/index.html">LazyFrame</a> or <a href="https://docs.pola.rs/api/python/stable/reference/dataframe/index.html">DataFrame</a>
+(or multiple given certain files/settings)</li>
+</ul>
+<p><strong>NOTE: To use these adapters, you must install the optional dependencies (or already have them available in your environment)</strong></p>
+<ul>
+<li><code>KaggleDatasetAdapter.PANDAS</code> &rarr; <code>pip install kagglehub[pandas-datasets]</code></li>
+<li><code>KaggleDatasetAdapter.HUGGING_FACE</code>&rarr; <code>pip install kagglehub[hf-datasets]</code></li>
+<li><code>KaggleDatasetAdapter.POLARS</code>&rarr; <code>pip install kagglehub[polars-datasets]</code></li>
+</ul>
+<h4><code>KaggleDatasetAdapter.PANDAS</code></h4>
+<p>This adapter supports the following file types, which map to a corresponding <code>pandas.read_*</code> method:</p>
+<table>
+<thead>
+<tr>
+<th>File Extension</th>
+<th><code>pandas</code> Method</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.csv, .tsv[^1]</td>
+<td><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"><code>pandas.read_csv</code></a></td>
+</tr>
+<tr>
+<td>.json, .jsonl[^2]</td>
+<td><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_json.html"><code>pandas.read_json</code></a></td>
+</tr>
+<tr>
+<td>.xml</td>
+<td><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_xml.html"><code>pandas.read_xml</code></a></td>
+</tr>
+<tr>
+<td>.parquet</td>
+<td><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_parquet.html"><code>pandas.read_parquet</code></a></td>
+</tr>
+<tr>
+<td>.feather</td>
+<td><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_feather.html"><code>pandas.read_feather</code></a></td>
+</tr>
+<tr>
+<td>.sqlite, .sqlite3, .db, .db3, .s3db, .dl3[^3]</td>
+<td><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_sql_query.html"><code>pandas.read_sql_query</code></a></td>
+</tr>
+<tr>
+<td>.xls, .xlsx, .xlsm, .xlsb, .odf, .ods, .odt[^4]</td>
+<td><a href="https://pandas.pydata.org/docs/reference/api/pandas.read_excel.html"><code>pandas.read_excel</code></a></td>
+</tr>
+</tbody></table>
+<p>[^1]: For TSV files, <code>\t</code> is automatically supplied for the <code>sep</code> parameter, but may be overridden with <code>pandas_kwargs</code></p>
+<p>[^2]: For JSONL files, <code>True</code> is supplied for the <code>lines</code> parameter</p>
+<p>[^3]: For SQLite files, a <code>sql_query</code> must be provided to generate the <code>DataFrame</code>(s)</p>
+<p>[^4]: The specific file extension will dictate which optional <code>engine</code> dependency needs to be installed to read the file</p>
+<p><code>dataset_load</code> also supports <code>pandas_kwargs</code> which will be passed as keyword arguments to the <code>pandas.read_*</code> method. Some examples include:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+from kagglehub import KaggleDatasetAdapter
+
+# Load a DataFrame with a specific version of a CSV
+df = kagglehub.dataset_load(
+    KaggleDatasetAdapter.PANDAS,
+    &quot;unsdsn/world-happiness/versions/1&quot;,
+    &quot;2016.csv&quot;,
+)
+
+# Load a DataFrame with specific columns from a parquet file
+df = kagglehub.dataset_load(
+    KaggleDatasetAdapter.PANDAS,
+    &quot;robikscube/textocr-text-extraction-from-images-dataset&quot;,
+    &quot;annot.parquet&quot;,
+    pandas_kwargs={&quot;columns&quot;: [&quot;image_id&quot;, &quot;bbox&quot;, &quot;points&quot;, &quot;area&quot;]}
+)
+
+# Load a dictionary of DataFrames from an Excel file where the keys are sheet names 
+# and the values are DataFrames for each sheet&#39;s data. NOTE: As written, this requires 
+# installing the default openpyxl engine.
+df_dict = kagglehub.dataset_load(
+    KaggleDatasetAdapter.PANDAS,
+    &quot;theworldbank/education-statistics&quot;,
+    &quot;edstats-excel-zip-72-mb-/EdStatsEXCEL.xlsx&quot;,
+    pandas_kwargs={&quot;sheet_name&quot;: None},
+)
+
+# Load a DataFrame using an XML file (with the natively available etree parser)
+df = dataset_load(
+    KaggleDatasetAdapter.PANDAS,
+    &quot;parulpandey/covid19-clinical-trials-dataset&quot;,
+    &quot;COVID-19 CLinical trials studies/COVID-19 CLinical trials studies/NCT00571389.xml&quot;,
+    pandas_kwargs={&quot;parser&quot;: &quot;etree&quot;},
+)
+
+# Load a DataFrame by executing a SQL query against a SQLite DB
+df = kagglehub.dataset_load(
+    KaggleDatasetAdapter.PANDAS,
+    &quot;wyattowalsh/basketball&quot;,
+    &quot;nba.sqlite&quot;,
+    sql_query=&quot;SELECT person_id, player_name FROM draft_history&quot;,
+)
+</code></pre></div>
+<h4><code>KaggleDatasetAdapter.HUGGING_FACE</code></h4>
+<p>The Hugging Face <code>Dataset</code> provided by this adapater is built exclusively using 
+<a href="https://huggingface.co/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.from_pandas"><code>Dataset.from_pandas</code></a>. 
+As a result, all of the file type and <code>pandas_kwargs</code> support is the same as 
+<a href="#kaggledatasetadapterpandas"><code>KaggleDatasetAdapter.PANDAS</code></a>. Some important things to note about this:</p>
+<ol>
+<li>Because <code>Dataset.from_pandas</code> cannot accept a collection of <code>DataFrame</code>s, any attempts to load a file with <code>pandas_kwargs</code>
+that produce a collection of <code>DataFrame</code>s will result in a raised exception</li>
+<li><code>hf_kwargs</code> may be provided, which will be passed as keyword arguments to <code>Dataset.from_pandas</code></li>
+<li>Because the use of <code>pandas</code> is transparent when <code>pandas_kwargs</code> are not needed, we default to <code>False</code> for <code>preserve_index</code>&mdash;this 
+can be overridden using <code>hf_kwargs</code></li>
+</ol>
+<p>Some examples include:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+from kagglehub import KaggleDatasetAdapter
+# Load a Dataset with a specific version of a CSV, then remove a column
+dataset = kagglehub.dataset_load(
+    KaggleDatasetAdapter.HUGGING_FACE,
+    &quot;unsdsn/world-happiness/versions/1&quot;,
+    &quot;2016.csv&quot;,
+)
+dataset = dataset.remove_columns(&#39;Region&#39;)
+
+# Load a Dataset with specific columns from a parquet file, then split into test/train splits
+dataset = kagglehub.dataset_load(
+    KaggleDatasetAdapter.HUGGING_FACE,
+    &quot;robikscube/textocr-text-extraction-from-images-dataset&quot;,
+    &quot;annot.parquet&quot;,
+    pandas_kwargs={&quot;columns&quot;: [&quot;image_id&quot;, &quot;bbox&quot;, &quot;points&quot;, &quot;area&quot;]}
+)
+dataset_with_splits = dataset.train_test_split(test_size=0.8, train_size=0.2)
+
+# Load a Dataset by executing a SQL query against a SQLite DB, then rename a column
+dataset = kagglehub.dataset_load(
+    KaggleDatasetAdapter.HUGGING_FACE,
+    &quot;wyattowalsh/basketball&quot;,
+    &quot;nba.sqlite&quot;,
+    sql_query=&quot;SELECT person_id, player_name FROM draft_history&quot;,
+)
+dataset = dataset.rename_column(&#39;season&#39;, &#39;year&#39;)
+</code></pre></div>
+<h4><code>KaggleDatasetAdapter.POLARS</code></h4>
+<p>This adapter supports the following file types, which map to a corresponding <code>polars.scan_*</code> or <code>polars.read_*</code> method:</p>
+<table>
+<thead>
+<tr>
+<th>File Extension</th>
+<th><code>polars</code> Method</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.csv, .tsv[^1]</td>
+<td><a href="https://docs.pola.rs/api/python/stable/reference/api/polars.scan_csv.html#polars.scan_csv"><code>polars.scan_csv</code></a> or <a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_csv.html"><code>polars.read_csv</code></a></td>
+</tr>
+<tr>
+<td>.json</td>
+<td><a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_json.html"><code>polars.read_json</code></a></td>
+</tr>
+<tr>
+<td>.jsonl</td>
+<td><a href="https://docs.pola.rs/api/python/stable/reference/api/polars.scan_ndjson.html"><code>polars.scan_ndjson</code></a> or <a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_ndjson.html"><code>polars.read_ndjson</code></a></td>
+</tr>
+<tr>
+<td>.parquet</td>
+<td><a href="https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html"><code>polars.scan_parquet</code></a> or <a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_parquet.html"><code>polars.read_parquet</code></a></td>
+</tr>
+<tr>
+<td>.feather</td>
+<td><a href="https://docs.pola.rs/api/python/stable/reference/api/polars.scan_ipc.html"><code>polars.scan_ipc</code></a> or <a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_ipc.html"><code>polars.read_ipc</code></a></td>
+</tr>
+<tr>
+<td>.sqlite, .sqlite3, .db, .db3, .s3db, .dl3[^2]</td>
+<td><a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_database.html"><code>polars.read_database</code></a></td>
+</tr>
+<tr>
+<td>.xls, .xlsx, .xlsm, .xlsb, .odf, .ods, .odt[^3]</td>
+<td><a href="https://docs.pola.rs/api/python/stable/reference/api/polars.read_excel.html"><code>polars.read_excel</code></a></td>
+</tr>
+</tbody></table>
+<p>[^1]: For TSV files, <code>\t</code> is automatically supplied for the <code>separator</code> parameter, but may be overridden with <code>polars_kwargs</code></p>
+<p>[^2]: For SQLite files, a <code>sql_query</code> must be provided to generate the <code>DataFrame</code>(s)</p>
+<p>[^3]: The specific file extension may dictate which optional <code>engine</code> dependency needs to be installed to read the file</p>
+<p><code>dataset_load</code> also supports <code>polars_kwargs</code> which will be passed as keyword arguments to the <code>polars.scan_*</code> or <code>polars_read_*</code> method.</p>
+<h5><code>LazyFrame</code> vs <code>DataFrame</code></h5>
+<p>Per polars documentation, <a href="https://docs.pola.rs/api/python/stable/reference/lazyframe/index.html">LazyFrame</a> &quot;allows for whole-query optimisation in addition to parallelism, and is the preferred (and highest-performance) mode of operation for polars.&quot; As such, <code>scan_*</code> methods are used by default whenever possible--and when not possible the result of the <code>read_*</code> method is returned after calling <a href="https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.lazy.html"><code>.lazy()</code></a>. If a <a href="https://docs.pola.rs/api/python/stable/reference/dataframe/index.html">DataFrame</a> is preferred, <code>dataset_load</code> supports an optional <code>polars_frame_type</code> and <code>PolarsFrameType.DATA_FRAME</code> may be passed in. This will force a <code>read_*</code> method to be used with no <code>.lazy()</code> call. <strong>NOTE:</strong> For file types that support <code>scan_*</code>, changing the <code>polars_frame_type</code> may affect which <code>polars_kwargs</code> are acceptable to the underlying method since it will force a <code>read_*</code> method to be used rather than a <code>scan_*</code> method.</p>
+<p>Some examples include:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+from kagglehub import KaggleDatasetAdapter, PolarsFrameType
+
+# Load a LazyFrame with a specific version of a CSV
+lf = kagglehub.dataset_load(
+    KaggleDatasetAdapter.POLARS,
+    &quot;unsdsn/world-happiness/versions/1&quot;,
+    &quot;2016.csv&quot;,
+)
+
+# Load a LazyFramefrom a parquet file, then select specific columns
+lf = kagglehub.dataset_load(
+    KaggleDatasetAdapter.POLARS,
+    &quot;robikscube/textocr-text-extraction-from-images-dataset&quot;,
+    &quot;annot.parquet&quot;,
+)
+lf.select([&quot;image_id&quot;, &quot;bbox&quot;, &quot;points&quot;, &quot;area&quot;]).collect()
+
+# Load a DataFrame with specific columns from a parquet file
+df = kagglehub.dataset_load(
+    KaggleDatasetAdapter.POLARS,
+    &quot;robikscube/textocr-text-extraction-from-images-dataset&quot;,
+    &quot;annot.parquet&quot;,
+    polars_frame_type=PolarsFrameType.DATA_FRAME,
+    polars_kwargs={&quot;columns&quot;: [&quot;image_id&quot;, &quot;bbox&quot;, &quot;points&quot;, &quot;area&quot;]}
+)
+
+# Load a dictionary of LazyFrames from an Excel file where the keys are sheet names 
+# and the values are LazyFrames for each sheet&#39;s data. NOTE: As written, this requires 
+# installing the default fastexcel engine.
+lf_dict = kagglehub.dataset_load(
+    KaggleDatasetAdapter.POLARS,
+    &quot;theworldbank/education-statistics&quot;,
+    &quot;edstats-excel-zip-72-mb-/EdStatsEXCEL.xlsx&quot;,
+    # sheet_id of 0 returns all sheets
+    polars_kwargs={&quot;sheet_id&quot;: 0},
+)
+
+# Load a LazyFrame by executing a SQL query against a SQLite DB
+lf = kagglehub.dataset_load(
+    KaggleDatasetAdapter.POLARS,
+    &quot;wyattowalsh/basketball&quot;,
+    &quot;nba.sqlite&quot;,
+    sql_query=&quot;SELECT person_id, player_name FROM draft_history&quot;,
+)
+</code></pre></div>
+<h3>Download Dataset</h3>
+<p>The following examples download the <code>Spotify Recommendation</code> Kaggle dataset: <a href="https://www.kaggle.com/datasets/bricevergnou/spotify-recommendation">https://www.kaggle.com/datasets/bricevergnou/spotify-recommendation</a></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+
+# Download the latest version.
+kagglehub.dataset_download(&#39;bricevergnou/spotify-recommendation&#39;)
+
+# Download a specific version.
+kagglehub.dataset_download(&#39;bricevergnou/spotify-recommendation/versions/1&#39;)
+
+# Download a single file.
+kagglehub.dataset_download(&#39;bricevergnou/spotify-recommendation&#39;, path=&#39;data.csv&#39;)
+
+# Download one directory while preserving its nested structure.
+kagglehub.dataset_download(
+    &#39;moltean/fruits/versions/99&#39;,
+    path=&#39;fruits-360_meta/fruits-360-meta/Papers&#39;,
+)
+
+# Download a dataset, directory, or file, even if previously downloaded to cache.
+kagglehub.dataset_download(&#39;bricevergnou/spotify-recommendation&#39;, force_download=True)
+
+# Download a dataset to a custom output directory.
+kagglehub.dataset_download(&#39;bricevergnou/spotify-recommendation&#39;, output_dir=&#39;./data&#39;)
+
+# Download a single file to a custom output directory.
+kagglehub.dataset_download(&#39;bricevergnou/spotify-recommendation&#39;, path=&#39;data.csv&#39;, output_dir=&#39;./data&#39;)
+
+# Overwrite an existing output directory.
+kagglehub.dataset_download(&#39;bricevergnou/spotify-recommendation&#39;, output_dir=&#39;./data&#39;, force_download=True)
+</code></pre></div>
+<h3>Upload Dataset</h3>
+<p>Uploads a new dataset (or a new version if it already exists).</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+
+# For example, to upload a new dataset (or version) at:
+# - https://www.kaggle.com/datasets/bricevergnou/spotify-recommendation
+# 
+# You would use the following handle: `bricevergnou/spotify-recommendation`
+handle = &#39;&lt;KAGGLE_USERNAME&gt;/&lt;DATASET&gt;&#39;
+local_dataset_dir = &#39;path/to/local/dataset/dir&#39;
+
+# Create a new dataset
+kagglehub.dataset_upload(handle, local_dataset_dir)
+
+# You can then create a new version of this existing dataset and include version notes (optional).
+kagglehub.dataset_upload(handle, local_dataset_dir, version_notes=&#39;improved data&#39;)
+
+# You can also specify a list of patterns for files/dirs to ignore.
+# These patterns are combined with `kagglehub.datasets.DEFAULT_IGNORE_PATTERNS` 
+# to determine which files and directories to exclude. 
+# To ignore entire directories, include a trailing slash (/) in the pattern.
+kagglehub.dataset_upload(handle, local_dataset_dir, ignore_patterns=[&quot;original/&quot;, &quot;*.tmp&quot;])
+</code></pre></div>
+<h3>Download Competition</h3>
+<p>The following examples download the <code>Digit Recognizer</code> Kaggle competition: <a href="https://www.kaggle.com/competitions/digit-recognizer">https://www.kaggle.com/competitions/digit-recognizer</a></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+
+# Download the latest version.
+kagglehub.competition_download(&#39;digit-recognizer&#39;)
+
+# Download a single file.
+kagglehub.competition_download(&#39;digit-recognizer&#39;, path=&#39;train.csv&#39;)
+
+# Download a competition or file, even if previously downloaded to cache. 
+kagglehub.competition_download(&#39;digit-recognizer&#39;, force_download=True)
+
+# Download competition data to a custom output directory.
+kagglehub.competition_download(&#39;digit-recognizer&#39;, output_dir=&#39;./competition&#39;)
+
+# Overwrite an existing output directory.
+kagglehub.competition_download(&#39;digit-recognizer&#39;, output_dir=&#39;./competition&#39;, force_download=True)
+</code></pre></div>
+<h3>Download Notebook Outputs</h3>
+<p>The following examples download the <code>Titanic Tutorial</code> notebook output: <a href="https://www.kaggle.com/code/alexisbcook/titanic-tutorial">https://www.kaggle.com/code/alexisbcook/titanic-tutorial</a></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+
+# Download the latest version.
+kagglehub.notebook_output_download(&#39;alexisbcook/titanic-tutorial&#39;)
+
+# Download a specific version of the notebook output.
+kagglehub.notebook_output_download(&#39;alexisbcook/titanic-tutorial/versions/1&#39;)
+
+# Download a single file.
+kagglehub.notebook_output_download(&#39;alexisbcook/titanic-tutorial&#39;, path=&#39;submission.csv&#39;)
+
+# Download notebook output to a custom output directory.
+kagglehub.notebook_output_download(&#39;alexisbcook/titanic-tutorial&#39;, output_dir=&#39;./output&#39;)
+
+# Overwrite an existing output directory.
+kagglehub.notebook_output_download(&#39;alexisbcook/titanic-tutorial&#39;, output_dir=&#39;./output&#39;, force_download=True)
+</code></pre></div>
+<h3>Install Utility Script</h3>
+<p>The following example installs the utility script <code>Physionet Challenge Utility Script</code> Utility Script: <a href="https://www.kaggle.com/code/bjoernjostein/physionet-challenge-utility-script">https://www.kaggle.com/code/bjoernjostein/physionet-challenge-utility-script</a>. Using this command allows the code from this script to be available in your python environment.</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">python</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-python">import kagglehub
+
+# Install the latest version.
+kagglehub.utility_script_install(&#39;bjoernjostein/physionet-challenge-utility-script&#39;)
+</code></pre></div>
+<h3>Options</h3>
+<h4>Change the default cache folder</h4>
+<p>By default, <code>kagglehub</code> downloads files to your home folder at <code>~/.cache/kagglehub/</code>.</p>
+<p>You can override this path by setting the <code>KAGGLEHUB_CACHE</code> environment variable.</p>
+<h2>Development</h2>
+<h3>Prequisites</h3>
+<p>We use <a href="https://hatch.pypa.io">hatch</a> to manage this project.</p>
+<p>Follow these <a href="https://hatch.pypa.io/latest/install/">instructions</a> to install it.</p>
+<h3>Tests</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh"># Run all tests for current Python version.
+hatch test
+
+# Run all tests for all Python versions.
+hatch test --all
+
+# Run all tests for a specific Python version.
+hatch test -py 3.11
+
+# Run a single test file
+hatch test tests/test_&lt;SOME_FILE&gt;.py
+</code></pre></div>
+<h3>Integration Tests</h3>
+<p>To run integration tests on your local machine, you need to set up your Kaggle API credentials. You can do this in one of these two ways described in the earlier sections of this document. Refer to the sections: </p>
+<ul>
+<li><a href="#option-2-read-credentials-from-environment-variables">Using environment variables</a></li>
+<li><a href="#option-3-read-credentials-from-kagglejson">Using credentials file</a></li>
+</ul>
+<p>After setting up your credentials by any of these methods, you can run the integration tests as follows:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh"># Run all tests
+hatch test integration_tests
+</code></pre></div>
+<h3>Run <code>kagglehub</code> from source</h3>
+<h4>Option 1: Execute a one-liner of code from the command line</h4>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh"># Download a model &amp; print the path
+hatch run python -c &quot;import kagglehub; print(&#39;path: &#39;, kagglehub.model_download(&#39;google/bert/tensorFlow2/answer-equivalence-bem&#39;))&quot;
+</code></pre></div>
+<h4>Option 2: Run a saved script from the /tools/scripts directory</h4>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh"># This runs the same code as the one-liner above, but reads it from a 
+# checked in script located at tool/scripts/download_model.py
+hatch run python tools/scripts/download_model.py
+</code></pre></div>
+<h4>Option 3: Run a temporary script from the root of the repo</h4>
+<p>Any script created at the root of the repo is gitignore&#39;d, so they&#39;re
+just temporary scripts for testing in development. Placing temporary 
+scripts at the root makes the run command easier to use during local 
+development.</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh"># Test out some new changes
+hatch run python test_new_feature.py
+</code></pre></div>
+<h3>Lint / Format</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh"># Lint check
+hatch run lint:style
+hatch run lint:typing
+hatch run lint:all     # for both
+
+# Format
+hatch run lint:fmt
+</code></pre></div>
+<h3>Coverage report</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh">hatch test --cover
+</code></pre></div>
+<h3>Build</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">sh</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-sh">hatch build
+</code></pre></div>
+<h3>Running <code>hatch</code> commands inside Docker</h3>
+<p>This is useful to run in a consistent environment and easily switch between Python versions.</p>
+<p>The following shows how to run <code>hatch run lint:all</code> but this also works for any other hatch commands:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code># Use default Python version
+./docker-hatch run lint:all
+
+# Use specific Python version (Must be a valid tag from: https://hub.docker.com/_/python)
+./docker-hatch -v 3.10 run lint:all
+
+# Run test in docker with specific Python version
+./docker-hatch -v 3.10 test
+
+# Run python from specific environment (e.g. one with optional dependencies installed)
+./docker-hatch run extra-deps-env:python -c &quot;print(&#39;hello world&#39;)&quot;
+
+# Run commands with other root-level hatch options (everything after -- gets passed to hatch)
+./docker-hatch -v 3.10 -- -v env create debug-env-with-verbose-logging
+</code></pre></div>
+<h2>VS Code setup</h2>
+<h3>Prerequisites</h3>
+<p>Install the recommended extensions.</p>
+<h3>Instructions</h3>
+<p>Configure hatch to create virtual env in project folder.</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>hatch config set dirs.env.virtual .env
+</code></pre></div>
+<p>After, create all the python environments needed by running <code>hatch test --all</code>.</p>
+<p>Finally, configure vscode to use one of the selected environments:
+<code>cmd + shift + p</code> -&gt; <code>python: Select Interpreter</code> -&gt; Pick one of the folders in <code>./.env</code></p>
+<h2>Support</h2>
+<p>The kagglehub library has configured automatic logging for console. For file based logging, setting the <code>KAGGLE_LOGGING_ENABLED=1</code> environment variable will output logs to a directory. The default log destination is resolved via the <a href="https://docs.python.org/3/library/os.path.html#os.path.expanduser">os.path.expanduser</a></p>
+<p>The table below contains possible locations:</p>
+<table>
+<thead>
+<tr>
+<th>os</th>
+<th>log path</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>osx</td>
+<td>/user/$USERNAME/.kaggle/logs/kagglehub.log</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>~/.kaggle/logs/kagglehub.log</td>
+</tr>
+<tr>
+<td>windows</td>
+<td>C:\Users\%USERNAME%\.kaggle\logs\kagglehub.log</td>
+</tr>
+</tbody></table>
+<p>If needed, the root log directory can be overriden using the following environment variable: <code>KAGGLE_LOGGING_ROOT_DIR</code></p>
+<p>Please include the log to help troubleshoot issues.</p>
+<h2>Contributing</h2>
+<p>If you&#39;d like to contribute to <code>kagglehub</code>, please make sure to take a look at <a href="/kaggle-docs/kagglehub/CONTRIBUTING.html">CONTRIBUTING.md</a>.</p>
+
+          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

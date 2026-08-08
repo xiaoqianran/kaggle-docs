@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-locale="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>通过 CLI 举办竞赛 · Kaggle 文档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/competition_creation.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/competition_creation.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="菜单">菜单</button>
+      <a class="brand" href="/kaggle-docs/zh/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle 文档</span>
+        <span class="brand-v">镜像</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn" href="/kaggle-docs/cli/competition_creation.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn active" href="/kaggle-docs/zh/cli/competition_creation.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">官方 ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="搜索文档…" autocomplete="off" />
+        </div>
+        <div class="side-label">学习路径 · 文档</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-rel="platform/packages.md"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-rel="platform/api.md"><span class="num">4</span><span class="leaf-title">公共API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-rel="platform/models.md"><span class="num">5</span><span class="leaf-title">型号</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">8</span><span class="leaf-title">数据集</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">9</span><span class="leaf-title">比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">11</span><span class="leaf-title">组织</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-rel="cli/models.md"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-rel="cli/forums.md"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li>
+<li><a class="leaf active" href="/kaggle-docs/zh/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/cli/competition_creation.html">查看英文</a></div>
+          <h1>通过 CLI 举办竞赛</h1>
+<p>本页记录了在 kaggle-cli 中为新版本添加的面向主机的命令
+公共竞赛创建 API 端点（kagglesdk 0.1.31+）：</p>
+<ul>
+<li><a href="#kaggle-competitions-init">⟦T32⟧</a></li>
+<li><a href="#kaggle-competitions-create">⟦T33⟧</a></li>
+<li><a href="#kaggle-competitions-pages-create">⟦T34⟧</a></li>
+<li><a href="#kaggle-competitions-hosts">⟦T35⟧</a></li>
+<li><a href="#kaggle-competitions-settings-get">⟦T36⟧</a></li>
+<li><a href="#kaggle-competitions-settings-update">⟦T37⟧</a></li>
+<li><a href="#kaggle-competitions-data-update">⟦T38⟧</a></li>
+<li><a href="#kaggle-competitions-solution-create">⟦T39⟧</a></li>
+<li><a href="#kaggle-competitions-solution-status">⟦T40⟧</a></li>
+<li><a href="#kaggle-competitions-launch">⟦T41⟧</a></li>
+</ul>
+<p>所有这些命令都需要经过身份验证的会话
+（<code>kaggle config set username/password</code> 或 API 令牌）。</p>
+<p>典型的端到端主机工作流程如下所示：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># 1. Scaffold a metadata file.
+kaggle competitions init ./my-comp
+
+# 2. Edit ./my-comp/competition-metadata.json (fill in the INSERT_* placeholders).
+
+# 3. Create the (unlaunched) competition.
+kaggle competitions create -p ./my-comp
+# → Competition created: https://www.kaggle.com/competitions/my-comp-slug
+
+# 4. Author the description and rules pages.
+kaggle competitions pages create my-comp-slug --name description -f ./description.md --publish
+kaggle competitions pages create my-comp-slug --name rules -f ./rules.md --publish
+
+# 5. Update the competition data (train.csv, test.csv, sample_submission.csv, ...).
+kaggle competitions data update my-comp-slug -p ./data -m &quot;Initial release&quot;
+
+# 6. Upload the private solution CSV, then poll until scoring is ready.
+kaggle competitions solution create my-comp-slug -p ./solution.csv
+kaggle competitions solution status my-comp-slug
+# → Ready: true
+
+# 7. Optionally tune host-only settings not covered by competition-metadata.json
+#    (deadlines, runtime caps, leaderboard behavior, etc.).
+kaggle competitions settings get my-comp-slug
+kaggle competitions settings update my-comp-slug -f ./settings.json
+
+# 8. Launch the competition (now, or schedule a future UTC time).
+kaggle competitions launch my-comp-slug --at 2027-01-01T00:00:00Z
+</code></pre></div>
+<p>这些命令是独立的 - 例如，您可以调用 <code>pages create</code>
+在已经存在的竞赛上，或在创建的竞赛上使用<code>launch</code>
+通过主机向导。</p>
+<hr>
+<h2><code>kaggle competitions init</code></h2>
+<p>将 <code>competition-metadata.json</code> 模板写入文件夹。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions init [folder]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>folder</code>（可选）：在哪里写<code>competition-metadata.json</code>。默认为
+当前目录。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions init ./my-comp
+</code></pre></div>
+<p>生成的文件：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">json</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-json">{
+  &quot;title&quot;: &quot;INSERT_TITLE_HERE&quot;,
+  &quot;slug&quot;: &quot;INSERT_SLUG_HERE&quot;,
+  &quot;briefDescription&quot;: &quot;INSERT_BRIEF_DESCRIPTION_HERE&quot;,
+  &quot;privacy&quot;: &quot;PUBLIC&quot;,
+  &quot;disableKernels&quot;: false,
+  &quot;hackathon&quot;: false,
+  &quot;cloneCompetitionId&quot;: null,
+  &quot;cloneExcludeCompetitionData&quot;: null,
+  &quot;clonePageNames&quot;: null,
+  &quot;licenseId&quot;: null,
+  &quot;organizationId&quot;: null,
+  &quot;numPrizes&quot;: null,
+  &quot;restrictLinkToEmailList&quot;: null,
+  &quot;reward&quot;: null
+}
+</code></pre></div>
+<p>请参阅下面的<a href="#competition-metadata-reference">Metadata reference</a>了解每个内容的含义
+场的意思。</p>
+<hr>
+<h2><code>kaggle competitions create</code></h2>
+<p>从 <code>competition-metadata.json</code> 创建一个新的竞赛。比赛是
+在未启动（暂存）状态下创建 - 使用
+<a href="#kaggle-competitions-launch">⟦T51⟧</a> 发布。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions create [-p folder]
+</code></pre></div>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>-p, --path &lt;folder&gt;</code>：包含<code>competition-metadata.json</code>的文件夹。默认值
+到当前目录。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions create -p ./my-comp
+# → Competition created: https://www.kaggle.com/competitions/my-comp-slug
+</code></pre></div>
+<p><strong>您可能会看到的错误：</strong>- <code>Default title detected, please update competition-metadata.json before creating</code>
+  — 您忘记替换其中一个 <code>INSERT_*_HERE</code> 占位符。</p>
+<ul>
+<li><code>Invalid privacy &#39;...&#39;</code> — <code>privacy</code> 必须是 <code>PUBLIC</code>、<code>LIMITED</code>、<code>PRIVATE</code> 之一。</li>
+<li><code>Metadata file not found: competition-metadata.json</code> — 首先运行<code>init</code>，或者通过
+<code>-p</code> 指向包含该文件的文件夹。</li>
+</ul>
+<h3>竞赛元数据参考</h3>
+<p>所有字段均采用 <code>competition-metadata.json</code>（驼峰式键）。</p>
+<p><strong>必填：</strong></p>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>类型</th>
+<th>笔记</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>title</code></td>
+<td>字符串</td>
+<td>显示比赛页面上显示的标题。</td>
+</tr>
+<tr>
+<td><code>slug</code></td>
+<td>字符串</td>
+<td>网址段；小写字母、连字符必须在站点范围内唯一，并且不能全部是数字或连字符。</td>
+</tr>
+<tr>
+<td><code>briefDescription</code></td>
+<td>字符串</td>
+<td>标题下的一行副标题。</td>
+</tr>
+<tr>
+<td><code>privacy</code></td>
+<td>字符串</td>
+<td><code>PUBLIC</code>、<code>LIMITED</code>、<code>PRIVATE</code> 之一。</td>
+</tr>
+</tbody></table>
+<p><strong>选修的：</strong>|领域|类型 |笔记|
+|---|---|---|
+| <code>disableKernels</code> |布尔 |如果<code>true</code>，笔记本提交将被禁用。 |
+| <code>hackathon</code> |布尔 |创建为黑客马拉松竞赛。 |
+| <code>restrictLinkToEmailList</code> |布尔 |将邀请链接加入者限制在主机维护的允许列表中。 |
+| <code>cloneCompetitionId</code> |整数 |如果设置，则克隆本次竞赛的配置/页面/数据/评估设置。 |
+| <code>cloneExcludeCompetitionData</code> |布尔 |如果是克隆，请跳过复制数据（解决方案、沙箱提交、图像、数据包）。 |
+| <code>clonePageNames</code> |字符串[] |如果是克隆，则仅复制这些页面名称。省略/null 以复制全部。 |
+| <code>licenseId</code> |整数 |竞赛数据的许可证 ID。 |
+| <code>organizationId</code> |整数 |将此竞赛与一个组织联系起来（所有组织成员的只读访问权限）。 |
+| <code>numPrizes</code> |整数 |排行榜奖励位置的数量。 |
+| <code>reward</code> |对象|见下文。 |</p>
+<p><strong><code>reward</code>对象：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">json</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-json">{
+  &quot;id&quot;: &quot;USD&quot;,
+  &quot;quantity&quot;: 25000,
+  &quot;clarification&quot;: &quot;Total prize pool split across the top 5 teams.&quot;
+}
+</code></pre></div>
+<p><code>reward.id</code> 是以下之一：<code>USD</code>、<code>KUDOS</code>、<code>AUD</code>、<code>EUR</code>、<code>JOBS</code>、<code>SWAG</code>、<code>GBP</code>、
+<code>KNOWLEDGE</code>、<code>PRIZES</code>。 <code>clarification</code> 是可选的自由格式文本，显示在旁边
+奖品。</p>
+<hr>
+<h2><code>kaggle competitions pages create</code></h2>
+<p>在 a 上创建一个新页面（描述、规则、评估、数据描述等）
+您主办的比赛。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions pages create &lt;competition&gt; --page-name &lt;page-name&gt; -f &lt;path&gt; \
+    [--mime-type &lt;type&gt;] [--post-title &quot;&lt;title&gt;&quot;] [--publish]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛子弹。</li>
+</ul>
+<p><strong>选项：</strong>- <code>--page-name &lt;page-name&gt;</code>（必填）：页面名称（例如<code>description</code>、<code>rules</code>、
+  <code>evaluation</code>、<code>data-description</code>、<code>prizes</code>）。常规名称有
+  被大赛页面UI识别；允许使用新名称，但不会
+  显示在标准选项卡中。</p>
+<ul>
+<li><code>-f, --file &lt;path&gt;</code>（必需）：内容成为页面的文件的路径
+身体。</li>
+<li><code>--mime-type &lt;type&gt;</code>（可选）：内容的 MIME 类型。默认为
+<code>text/html</code> 服务器端。</li>
+<li><code>--post-title &quot;&lt;title&gt;&quot;</code>（可选）：标题显示在页面正文上方。
+默认为页面名称。</li>
+<li><code>--publish</code>（可选）：立即发布页面。如果没有这个标志
+页面是在暂存（未发布）状态下创建的，因此您可以在之前查看它
+上线了。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Create the rules page in a staged (not-yet-published) state.
+kaggle competitions pages create my-comp --page-name rules -f ./rules.md \
+    --mime-type text/markdown --post-title &quot;Competition Rules&quot;
+
+# When you&#39;re ready to make it visible to participants:
+kaggle competitions pages update my-comp --page-name rules --publish
+</code></pre></div>
+<p>每个页面作为单个记录存在； <code>--publish</code> / <code>--unpublish</code> 切换其
+可见性，而不是创建单独的草稿和实时副本。换新的
+稍后内容，使用
+<a href="#kaggle-competitions-pages-update">⟦T110⟧</a> — 一个
+相同页面名称的第二个<code>create</code>将被拒绝。</p>
+<p>您可以使用 <code>kaggle competitions pages</code> 列出和检查现有页面
+（或显式的<code>kaggle competitions pages list</code>），用以下命令修改一个
+<a href="#kaggle-competitions-pages-update">⟦T114⟧</a>，或
+用 <a href="#kaggle-competitions-pages-delete">⟦T115⟧</a> 删除一个。</p>
+<hr>
+<h2><code>kaggle competitions pages update</code>更新现有竞赛页面上的字段。只有您提供的标志是</h2>
+<p>已发送（FieldMask 是根据非默认参数构建的），所以这是
+以及如何就地发布或取消发布页面。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions pages update &lt;competition&gt; --page-name &lt;current-name&gt; \
+    [-f &lt;path&gt;] [--new-name &lt;name&gt;] [--mime-type &lt;type&gt;] \
+    [--post-title &quot;&lt;title&gt;&quot;] [--publish | --unpublish]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛蛞蝓。</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>--page-name &lt;current-name&gt;</code>（必填）：页面的当前名称（用作
+标识符；通过<code>--new-name</code>重命名）。</li>
+<li><code>-f, --file &lt;path&gt;</code>（可选）：包含新页面正文的文件的路径。</li>
+<li><code>--new-name &lt;name&gt;</code>（可选）：重命名页面。</li>
+<li><code>--mime-type &lt;type&gt;</code>（可选）：内容的新 MIME 类型。</li>
+<li><code>--post-title &quot;&lt;title&gt;&quot;</code>（可选）：新标题显示在页面内容上方。</li>
+<li><code>--publish</code> / <code>--unpublish</code>（可选，互斥）：发布或
+取消发布页面。</li>
+</ul>
+<p>至少需要一个更新标志。</p>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Publish a staged page without changing its content.
+kaggle competitions pages update my-comp --page-name rules --publish
+
+# Swap in new content and update the visible title in one call.
+kaggle competitions pages update my-comp --page-name rules \
+    -f ./rules-v2.md --post-title &quot;Competition Rules (v2)&quot;
+
+# Rename a page.
+kaggle competitions pages update my-comp --page-name evaluation \
+    --new-name scoring
+</code></pre></div>
+<p>**注意：**一小部分页面是后端保留的，无法修改
+更名；尝试重命名会从服务器返回错误。</p>
+<hr>
+<h2><code>kaggle competitions pages delete</code></h2>
+<p>从您主办的竞赛中删除页面。提示确认，除非
+<code>-y/--yes</code> 已通过（匹配现有的 <code>kaggle datasets delete</code> /
+<code>kaggle kernels delete</code> 模式）。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions pages delete &lt;competition&gt; --page-name &lt;name&gt; [-y]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛子弹。</li>
+</ul>
+<p><strong>选项：</strong>- <code>--page-name &lt;name&gt;</code>（必填）：要删除的页面的名称。</p>
+<ul>
+<li><code>-y, --yes</code>（可选）：跳过确认提示 — 对于脚本很有用。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Interactive: prompts &quot;Are you sure you want to delete the page &#39;faq&#39; ...?&quot;
+kaggle competitions pages delete my-comp --page-name faq
+
+# Scripted: skip the prompt.
+kaggle competitions pages delete my-comp --page-name faq -y
+</code></pre></div>
+<p>**注意：**一小部分页面受后端保护，无法修改
+已删除；尝试删除一个会从服务器返回一个错误。</p>
+<p>删除是不可恢复的——不存在“恢复删除”。首先列出页面
+<code>kaggle competitions pages list &lt;competition&gt;</code> 如果您不确定名字。</p>
+<hr>
+<h2><code>kaggle competitions hosts</code></h2>
+<p>列出竞赛的主机（具有主机访问权限的用户）。有用于
+确认谁可以编辑设置、上传数据或启动 - 尤其是在之后
+通过 Web UI 添加或删除协作者。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions hosts &lt;competition&gt; [-v | --format json]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛子弹。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Table output.
+kaggle competitions hosts my-comp
+
+# CSV — useful for piping into other tools.
+kaggle competitions hosts my-comp -v
+
+# JSON.
+kaggle competitions hosts my-comp --format json
+</code></pre></div>
+<p>输出列：<code>userName</code>、<code>displayName</code>、<code>id</code>、<code>profileUrl</code>。</p>
+<hr>
+<h2><code>kaggle competitions settings get</code></h2>
+<p>显示您主办的比赛的统一设置 blob — 同一组
+“设置”选项卡在 Web UI 中公开的字段，涵盖一般信息，
+访问和团队、关键日期、提交和排行榜行为、代码
+竞争参数和主持人归因。默认情况下，输出按 UI 部分分组，并隐藏其左侧的字段
+输入默认值（未设置字符串、<code>false</code>布尔值、零整数）。通过<code>--json</code>
+原始 blob（驼峰式键，匹配更新负载格式）。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings get &lt;competition&gt; [--json]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛子弹。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Grouped, human-readable summary.
+kaggle competitions settings get my-comp
+
+# Machine-readable dump — pipe into jq, or save + edit + feed back to update.
+kaggle competitions settings get my-comp --json &gt; settings.json
+</code></pre></div>
+<hr>
+<h2><code>kaggle competitions settings update</code></h2>
+<p>对比赛设置进行部分更新。您编写 JSON 或
+仅包含您要更改的字段的 YAML 文件； CLI 构建
+服务器端 FieldMask 来自文件中存在的密钥，因此未指定
+字段被保留。</p>
+<p>典型的循环是：</p>
+<ol>
+<li><code>kaggle competitions settings get my-comp --json &gt; settings.json</code> — 拉
+当前值。</li>
+<li>编辑文件，仅保留要更改的字段（删除其余字段）。
+3.<code>kaggle competitions settings update my-comp -f ./settings.json</code>。</li>
+</ol>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings update &lt;competition&gt; -f &lt;path&gt; [--json]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛鼻涕虫。</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>-f, --from-file &lt;path&gt;</code>（必需）：包含字段的 JSON 或 YAML 文件
+更新。扩展选择解析器（<code>.yaml</code>/<code>.yml</code>→YAML，其他任何→
+JSON）。密钥可能是 <code>snake_case</code> （匹配 SDK）或 <code>camelCase</code> （匹配
+<code>settings get</code> 的<code>--json</code> 输出）。</li>
+<li><code>--json</code>（可选）：更新后，将返回的设置打印为JSON
+而不是分组文本视图。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>切换单个布尔值：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">json</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-json">// disable-leaderboard.json
+{ &quot;has_leaderboard&quot;: false }
+``````bash
+kaggle competitions settings update my-comp -f ./disable-leaderboard.json
+</code></pre></div>
+<p>设定比赛截止日期：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">json</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-json">// deadline.json
+{ &quot;deadline&quot;: &quot;2027-02-01T23:59:00Z&quot; }
+</code></pre></div>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings update my-comp -f ./deadline.json
+</code></pre></div>
+<p>突破代码竞争运行时间上限并设置竞争和团队合并
+截止日期（YAML，混合类型）：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">yaml</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-yaml"># tune.yaml
+max_cpu_runtime_minutes: 540
+max_gpu_runtime_minutes: 720
+deadline: 2027-02-01T23:59:00Z
+team_merger_explicit_deadline: 2027-01-15T00:00:00Z
+rules_required: true
+</code></pre></div>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions settings update my-comp -f ./tune.yaml
+</code></pre></div>
+<p><strong>键入注释：</strong></p>
+<ul>
+<li>布尔值 → JSON <code>true</code>/<code>false</code>（或 YAML 等效项）。</li>
+<li>数字字段→普通数字（<code>240</code>，<code>1.5</code>）。</li>
+<li>日期时间字段 → ISO-8601 字符串（<code>&quot;2027-01-01T00:00:00Z&quot;</code> 或带有
+显式偏移）。</li>
+<li>枚举字段 (<code>host_segment</code>, <code>publicly_cloneable</code>) → 枚举成员名称
+作为字符串；全名 (<code>&quot;HOST_SEGMENT_FEATURED&quot;</code>) 或缩写
+后缀（<code>&quot;FEATURED&quot;</code>）有效。</li>
+</ul>
+<p><strong>常见错误：</strong></p>
+<ul>
+<li><code>Unknown competition setting: &#39;&lt;name&gt;&#39;</code> — 字段名称不在
+<code>CompetitionSettings</code>。检查 <code>settings get --json</code> 以获得确切的密钥。</li>
+<li><code>Field &#39;&lt;name&gt;&#39; expects a bool, got str</code> — 文件有一个字符串，其中
+需要布尔值（例如 <code>&quot;true&quot;</code> 而不是 <code>true</code>）。</li>
+<li><code>not a valid HostSegment. Allowed: ...</code> — 您传递的枚举值不是
+会员；该错误列出了接受的名称。</li>
+<li>某些设置仅限于 Kaggle 管理员（在
+原型——例如<code>host_segment</code>、<code>directly_responsible_user_id</code>）和服务器
+将拒绝非管理主机对它们的写入。</li>
+</ul>
+<hr>
+<h2><code>kaggle competitions launch</code></h2>
+<p>发起您主办的竞赛。没有<code>--at</code>，比赛开始
+立即。通过 <code>--at</code>，后端安排给定 UTC 的启动
+瞬间。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions launch &lt;competition&gt; [--at &lt;ISO-8601 UTC&gt;]
+</code></pre></div>
+<p><strong>参数：</strong>- <code>&lt;competition&gt;</code>：比赛鼻涕虫。</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>--at &lt;iso&gt;</code>：安排在未来的 UTC 时间启动。接受 ISO-8601
+（例如 <code>2027-01-01T00:00:00Z</code> 或 <code>2027-01-01T00:00:00+00:00</code>）。比赛
+如果省略则立即启动。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Launch right now.
+kaggle competitions launch my-comp
+
+# Schedule the launch for midnight UTC on 2027-01-01.
+kaggle competitions launch my-comp --at 2027-01-01T00:00:00Z
+</code></pre></div>
+<p>一场比赛只能发起一次。后续调用将被拒绝
+后端。</p>
+<hr>
+<h2><code>kaggle competitions data update</code></h2>
+<p>为您主办的比赛创建新版本的数据文件。上传
+通过标准 blob 上传管道，然后发送单个请求捆绑
+上传的令牌。每次更新<strong>都会替换先前版本的文件集
+full</strong> — v1 中没有每个文件的“保留上一个”模式，因此列出每个文件
+新版本中您想要的文件。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions data update &lt;competition&gt; -p &lt;path&gt; -m &quot;&lt;version notes&gt;&quot; \
+    [--rerun] [--include-hidden] [--ignore-patterns &lt;patterns&gt;]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛子弹。</li>
+</ul>
+<p><strong>选项：</strong>- <code>-p, --path &lt;path&gt;</code>（必需）：要么是一个<strong>目录</strong>（递归地遍历 -
+  每个文件都会上传，其相对路径保留在 API 中
+  <code>name</code> 字段，例如<code>train/images/img1.jpg</code>)，或<strong>单个存档文件</strong>
+  （例如预打包的<code>.zip</code>或<code>.tar</code>）按原样上传。子目录是
+  总是经过；隐藏条目（参见<code>--include-hidden</code>）是唯一的文件
+  默认跳过。</p>
+<ul>
+<li><code>-m, --message &quot;&lt;notes&gt;&quot;</code>（必填）：描述此版本的注释
+（例如<code>&quot;Added test set&quot;</code>）。</li>
+<li><code>--rerun</code>（可选）：更新 RERUN 数据包 — 仅私有主机
+重新运行评分期间交换数据。目前需要 Kaggle 管理员访问权限。
+如果没有此标志，更新将针对 PUBLIC 数据包（什么
+参与者下载）。</li>
+<li><code>--include-hidden</code>（可选）：上传隐藏文件并遍历隐藏
+子目录（名称以 <code>.</code> 开头 — 例如 <code>.DS_Store</code>、<code>.git/</code>、
+<code>.gitignore</code>）。默认情况下会跳过，这样您就不会意外发布操作系统
+元数据或版本控制碎片。</li>
+<li><code>--ignore-patterns &lt;patterns&gt;</code>（可选）：上传文件/目录时要忽略的模式。可以指定多次。请注意，当 <code>--include-hidden</code> 为 True 时，将绕过默认忽略模式（如 <code>.git/</code>、<code>.cache/</code>、<code>.huggingface/</code>）。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Update using a directory tree (recurses into sub-folders).
+kaggle competitions data update my-comp -p ./data -m &quot;Initial release&quot;
+
+# Update using a pre-packed archive as a single file (useful when you already
+# need a zip for other purposes, or for directory-shaped file formats like
+# Zarr).
+kaggle competitions data update my-comp -p ./data.zip -m &quot;Initial release&quot;
+
+# New version with a bug-fix.
+kaggle competitions data update my-comp -p ./data -m &quot;Fix label encoding in train.csv&quot;
+
+# Update the private rerun-scoring data.
+kaggle competitions data update my-comp -p ./rerun-data \
+    -m &quot;Held-out test set&quot; --rerun
+```**关于目录形文件格式的注释：** 某些格式（Zarr、某些
+TensorFlow SavedModel 布局等）是磁盘上的目录，逻辑上是
+一个单元。如果您传递包含这种格式的目录，则递归
+walk 将每个内部块作为自己的文件上传 - 通常是您想要的
+Zarr，因为参与者可以流式传输各个块。如果你愿意
+保持格式为不透明的单个上传，将其预先打包成`.zip`或
+`.tar` 并将该文件传递给`-p`。
+
+该命令打印公共 URL 以及新的 `databundle_id` 和
+`databundle_version_id` 成功。
+
+---
+
+## `kaggle competitions solution create`
+
+上传您主办的竞赛的专用解决方案 CSV。解决办法是
+后端对提交进行评分的依据是什么 - 示例中每行一行
+提交，具有相同的柱形。上传后，后台运行
+预处理/采样；民意调查
+[⟦T208⟧](#kaggle-competitions-solution-status)
+直到`ready`才开始提交。
+
+文件通过标准 blob 上传管道上传，然后生成结果
+令牌被传递到`CreateCompetitionSolution`。
+
+**用途：**
+
+```bash
+kaggle competitions solution create &lt;competition&gt; -p &lt;path&gt; [-q]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛子弹。</li>
+</ul>
+<p><strong>选项：</strong>- <code>-p, --path &lt;path&gt;</code>（必需）：单个 CSV 文件的路径。必须是单身
+  file — 目录被拒绝。 CSV 形状必须与提交的内容匹配
+  文件（与<code>sample_submission.csv</code>相同的列）。</p>
+<ul>
+<li><code>-q, --quiet</code>（可选）：抑制每个文件上传进度线。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions solution create my-comp -p ./solution.csv
+# → Solution uploaded for &quot;my-comp&quot;. Run &#39;kaggle competitions solution status my-comp&#39; to check readiness.
+</code></pre></div>
+<p>重新上传解决方案会替换之前的解决方案。请注意，这仅适用于
+启动前；启动后解决方案文件被冻结。</p>
+<hr>
+<h2><code>kaggle competitions solution status</code></h2>
+<p>显示竞赛解决方案文件的设置状态 - 是否
+预处理/采样已完成，后端报告的任何错误，以及
+（对于旧版 C# 指标）自动推断的列映射和所需指标
+列。</p>
+<p>在 <code>solution create</code> 之后（以及在 <code>data update</code> 之后进行轮询 — 一些设置步骤
+针对数据包运行）直到 <code>Ready: true</code>。如果设置了<code>Setup error:</code>，
+停止轮询并解决根本问题。</p>
+<p><strong>用途：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions solution status &lt;competition&gt; [--json]
+</code></pre></div>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;competition&gt;</code>：比赛子弹。</li>
+</ul>
+<p><strong>选项：</strong></p>
+<ul>
+<li><code>--json</code>（可选）：以 JSON 形式发出原始状态，而不是
+人类可读的视图。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash"># Human-readable summary.
+kaggle competitions solution status my-comp
+# → Ready: true
+#   Solution file: solution.csv — 12.3KB — uploaded 2027-01-01T00:00:00+00:00
+#     total=1000, public=300, private=700
+
+# Machine-readable — useful in a polling loop.
+kaggle competitions solution status my-comp --json
+</code></pre></div>
+<p><strong>您可能看到的字段（人类视图）：</strong>- <code>Ready: true|false</code> — 计分是否畅通。</p>
+<ul>
+<li><code>Setup error: &lt;msg&gt;</code> — 如果预处理失败则填充。浮出水面
+显着地；当它出现时停止轮询。</li>
+<li><code>Kernels metric: true</code> — 比赛的评分指标是 Kernels
+公制。内核指标自动检测其列映射；仅主机
+需要等待<code>Ready</code>翻转为真。</li>
+<li><code>Row ID column: &lt;name&gt;</code> — 对于内核指标，自动检测到的 row-id
+列。</li>
+<li><code>Solution file: &lt;name&gt; — &lt;size&gt; — uploaded &lt;timestamp&gt;</code> 和
+<code>total=..., public=..., private=...</code> — 解决方案文件元数据
+上传已处理。</li>
+<li><code>Column mapping:</code> — 对于旧版 C# 指标，指标的当前映射
+列名称到 CSV 列名称。</li>
+<li><code>Required columns:</code> — 对于旧版 C# 指标，指标列将
+主机需要填写（名称+期望的数据类型）。</li>
+</ul>
+
+          <p class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

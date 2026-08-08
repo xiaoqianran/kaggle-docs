@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-locale="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Changelog · Kaggle 文档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/changelog.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/changelog.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="菜单">菜单</button>
+      <a class="brand" href="/kaggle-docs/zh/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle 文档</span>
+        <span class="brand-v">镜像</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn" href="/kaggle-docs/cli/changelog.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn active" href="/kaggle-docs/zh/cli/changelog.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">官方 ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="搜索文档…" autocomplete="off" />
+        </div>
+        <div class="side-label">学习路径 · 文档</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-rel="platform/packages.md"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-rel="platform/api.md"><span class="num">4</span><span class="leaf-title">公共API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-rel="platform/models.md"><span class="num">5</span><span class="leaf-title">型号</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">8</span><span class="leaf-title">数据集</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">9</span><span class="leaf-title">比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">11</span><span class="leaf-title">组织</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf active" href="/kaggle-docs/zh/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-rel="cli/models.md"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-rel="cli/forums.md"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/cli/changelog.html">查看英文</a></div>
+          <h1>变更日志</h1>
+<h3>下一步</h3>
+<ul>
+<li>添加<code>kaggle benchmarks quota</code>以显示模型代理（AI推理）支出配额，并将<code>kagglesdk</code>提升至<code>&gt;= 0.1.37</code></li>
+<li>单次提交添加<code>kaggle competitions submission-download &lt;id&gt;</code>下载已提交文件（需要<code>kagglesdk &gt;= 0.1.36</code>）</li>
+<li>在比赛设置命令中添加<code>deadline</code>（比赛截止日期）并将<code>kagglesdk</code>更改为<code>&gt;= 0.1.36</code></li>
+<li>记录 <code>NvidiaTeslaP100</code> 无法用于默认 Kaggle 图像的 GPU 计算（PyTorch cu128 忽略 Pascal <code>sm_60</code> 内核）</li>
+<li>跨竞赛、数据集、笔记本、模型、用户和讨论添加统一的<code>kaggle search</code>命令</li>
+<li><code>kaggle competitions submit</code>添加<code>--wait</code>/<code>--poll-interval</code>等待评分，添加<code>kaggle competitions submission &lt;ref&gt;</code>查询单次提交状态及评分</li>
+</ul>
+<h3>2.2.4</h3>
+<ul>
+<li>修复（基准）：支持基准命令中的所有者/任务分隔符（#1146）</li>
+<li>壮举/竞赛提交限制 (#1144)</li>
+<li>添加竞赛解决方案创建/状态命令 (#1141)
+*修复（cli）：防止恢复下载时陈旧的文件损坏（＃1142）</li>
+<li>修复（cli）：修复数据集元数据更新中的协作者角色处理（#1138）</li>
+<li>重构分页以使用协议 (#1137)</li>
+<li>修复(cli): 重试 with_retry 中的瞬时连接错误 (#1132)</li>
+<li>添加 Kaggle Secrets 文档 (#1131)</li>
+<li>修复模型和所有者 slug 验证 (#1134)* 在上传中实现ignore_patterns（组合）（#1130）</li>
+<li>重构解析器装置（#1118）</li>
+<li>修复（auth）：避免跳过程序导入的验证（#1117）</li>
+<li>修复(cli): 零字节上传时断点续传的起始偏移量 (#1113)</li>
+<li>重构(cli)：在 dataset_status 中重用 _resolve_projection (#1116)</li>
+<li>更新支持的型号列表 (#1115)</li>
+<li>修复(cli): 处理主题显示中删除的评论 (#1114)</li>
+<li>将排行榜子命令添加到 Kaggle 基准测试中 (#1112)</li>
+<li>feat(cli): 添加竞赛设置更新命令 (#1104)</li>
+<li>feat(cli): 添加比赛主机列表命令 (#1107)</li>
+<li>feat(cli)：添加竞赛设置获取命令(#1103)</li>
+<li>feat(cli): 支持 --page-token 和 --page-size，保留 --page (#1098)</li>
+<li>feat(cli)：在比赛列表输出中公开 userRank (#1094)</li>
+<li>修复(cli): 在 kernels_push 中使用 UTF-8 读取内核元数据和源文件 (#1093)</li>
+<li>修复使用无效凭据运行 kaggle 命令时崩溃的问题 (#1092)</li>
+<li>feat(cli): 添加比赛数据推送命令 (#1085)</li>
+<li>修复（cli）：恢复 kernels_pull 中未知内核语言/类型的回退（#1091）</li>
+<li>修复（auth）：优先考虑 OAuth 凭据而不是匿名后备（#1089）* feat(cli): 添加竞赛页面更新命令 (#1083)</li>
+<li>修复(cli): 停止将子命令 -v 视为版本标志 (#1082)</li>
+<li>修复（cli）：honor --unzip 用于缓存数据集下载（#1086）</li>
+<li>feat(cli): 添加竞赛页面删除命令 (#1084)</li>
+<li>feat(cli)：添加竞赛初始化和创建命令(#1080)</li>
+<li>文档(competitions)：为新主机命令添加competition_creation.md (#1081)</li>
+<li>feat(cli): 添加竞赛启动命令 (#1079)</li>
+<li>feat(cli): 添加竞赛页面创建命令 (#1078)</li>
+<li>修复(cli): 取消模型删除后避免出现成功消息 (#1077)</li>
+<li>修复(cli): 取消数据集删除后避免出现成功消息 (#1073)</li>
+</ul>
+<h3>2.2.3</h3>
+<p>*更新--format帮助文本以引用output_format.md (#1074)</p>
+<ul>
+<li>使用版本示例更新内核拉取文档 (#1072)</li>
+<li>重新组织测试并将 unit_tests.py 重命名为 backend_tests.py (#1071)</li>
+<li>添加对格式化投影的支持 (#1068)</li>
+<li>重写 <code>kaggle kernels logs --follow</code> 以使用 SSE 日志流 (#999)</li>
+<li>将 --format 选项添加到支持 --csv 的 CLI 命令中 (#1062)</li>
+</ul>
+<h3>2.2.2</h3>
+<ul>
+<li>澄清 LLMS_AVAILABLE 与基准文档中的完整模型集 (#1061)</li>
+<li>添加内核主题命令 (#1056)* 改进 kaggle CLI 中的基准测试任务错误消息 (#1057)</li>
+<li>修复数据集元数据列/文件描述更新和文档 (#1055)</li>
+<li>扩展 Kaggle CLI 技能参考 (#1054)</li>
+<li>使用 CLI 源标记基准令牌请求以进行分析 (#1050)</li>
+<li>将 machine_shape 添加到 kernels_initialize 元数据模板和文档 (#1048)</li>
+<li>修复数据集、模型和基准主题列表的 403 (#1051)</li>
+<li>修复 test_benchmarks_cli.py 断言 (#1049)</li>
+<li>为内核输出文件添加分页下载 (#1046)</li>
+<li>修复（测试）：解决 test_kernels_d_status 中的无限循环问题（#1043）</li>
+</ul>
+<h3>2.2.1</h3>
+<ul>
+<li>添加<code>kaggle competitions team-submissions</code>命令(#1036)</li>
+<li>添加 <code>kaggle quota</code> 命令用于 GPU/TPU 加速器配额 (#1029)</li>
+<li>支持说明符中可选的内核版本 (#1035)</li>
+<li>feat(benchmarks)：添加日志并下载源文件(#1019)</li>
+<li>修复基准 CLI 错误处理和 UX 改进（#1024、#1026、#1028、#1030、#1032、#1037、#1039）</li>
+<li>修复 JSON 序列化和下载标签显示（#1038、#1040、#1042）</li>
+<li>对 auth 文件设置适当的权限 (#1033)</li>
+</ul>
+<h3>2.2.0</h3>
+<ul>
+<li>添加测试运行工作流程</li>
+<li>补丁讨论代码 (#1018)</li>
+<li>修复（基准）：规范化提供者前缀和包含 @ 的模型… (#1016)* 修复（基准测试）：选择不带 -m 的模型时处理 EOF (#1013)</li>
+<li>修复（基准）：双层速率限制（#1014）</li>
+<li>改进调试的小改动 (#1008)</li>
+<li>壮举：添加用于浏览 Kaggle 讨论的论坛命令 (#993)</li>
+<li>添加竞赛主题 CLI 命令 (#982)</li>
+</ul>
+<h3>2.1.2</h3>
+<ul>
+<li>更新kagglesdk版本</li>
+</ul>
+<h3>2.1.1</h3>
+<ul>
+<li>添加有关 kagglesdk 的说明 (#1000)</li>
+<li>修复（benchmarks cli）：错误和附加功能（#997）</li>
+<li>将提交参考添加到竞赛提交输出中（#989）</li>
+<li>为 Benchmarks CLI 添加 Gemini Agent 技能 (#994)
+*（Off Platform SDK）添加新模型（#991）</li>
+<li>修复 (cli)：kaggle 基准测试任务 (#988)</li>
+<li>更新 <code>kaggle b init</code> 以包含示例和参考 (#990)</li>
+<li>更新 API 令牌页面 URL (#987)
+*更新<code>b auth</code>和<code>b init</code>确认（#986）</li>
+<li>启用并记录 OAuth 身份验证流程。 (#983)</li>
+<li>为 JSON 输出添加 <code>--format</code> 标志到 <code>datasets status</code> (#972)</li>
+</ul>
+<h3>2.1.0</h3>
+<ul>
+<li>添加<code>kaggle benchmarks init</code>命令(#981)</li>
+<li>修复 mypy 类型检查 (#979)</li>
+<li>壮举：实施 Kaggle 基准测试客户端 (#955)</li>
+<li>更新 CICD CB 配置中的默认 Python 版本</li>
+<li>列一个清单（#978）</li>
+</ul>
+<h3>2.0.2</h3>
+<ul>
+<li>添加<code>kaggle benchmarks auth</code>命令(#976)</li>
+<li>创建 Cloud Build 脚本来运行 linter (#974)* 添加 <code>kaggle kernels logs</code> CLI 命令 (#966)</li>
+<li>修复（基准任务推送）：处理 403 (#971)</li>
+<li>修复：尊重 HTTP 429 响应上的 Retry-After 标头 (#938) (#940)</li>
+<li>将 kagglesdk 依赖版本更新为 0.1.19 (#970)</li>
+<li>支持<code>dataset-cover-image.png</code>上传<code>datasets metadata --update</code> (#969)</li>
+<li>添加用于模拟剧集和比赛页面的 CLI 命令 (#968)</li>
+<li>功能（基准）：实现 Kaggle 客户端（推送/运行功能）(#960)</li>
+</ul>
+<h3>2.0.1</h3>
+<ul>
+<li>将 <code>--sandbox</code> 标志添加到 <code>kaggle competitions submit</code> 以进行沙箱提交（仅限竞赛主办方/管理员） (#932)</li>
+<li>优化大数据集下载功能（#936，s/o katoue）</li>
+<li>修复列出内核会话输出时的 403 和空文件处理（#951，s/o 4kaws）</li>
+<li>支持通过<code>datasets metadata --update</code>更新更多类型的数据集元数据：<ul>
+<li>预期更新频率，用户指定来源 (#958)</li>
+<li>数据集图像 (#959)</li>
+</ul>
+</li>
+</ul>
+<h3>2.0.0</h3>
+<ul>
+<li>正式发布</li>
+<li>将更多的“实例”改为“变体”</li>
+<li>更新集成测试授权说明的链接 (#926)</li>
+<li>修复升级提示消息中的字符串格式 (#928) 感谢 PythonicVarun！</li>
+</ul>
+<h3>1.8.4</h3>
+<ul>
+<li>将<code>kaggle-api</code>重命名为<code>kaggle-cli</code></li>
+<li>允许多次验证 (#922)* 添加 --acc 来设置加速器：kaggle kernels push ... (#907)</li>
+<li>添加自动重试和恢复到download_file (#905) 谢谢katoue！</li>
+<li>恢复模型验证检查（#902）</li>
+<li>在输出下载中添加文件模式匹配 (#901) 感谢 piotr-ginal！</li>
+</ul>
+<h3>1.8.3</h3>
+<ul>
+<li>添加包装部门 (#883)</li>
+<li>添加针对服务器已知版本的版本检查 (#880)</li>
+<li>修复编辑错误(#876)</li>
+<li>使用 pypi 中的 kagglesdk (#875)</li>
+<li>修复未设置 KAGGLE_API_TOKEN 时 Kaggle 访问令牌身份验证 KeyError (#874)</li>
+</ul>
+<h3>1.8.2</h3>
+<ul>
+<li>构建脚本的更改</li>
+</ul>
+<h3>1.8.1</h3>
+<ul>
+<li>修复下载大文件时内存耗尽的问题 (#869)</li>
+<li>将 python-dateutil 添加到 pyproject.toml 依赖项 (#866)</li>
+</ul>
+<h3>1.8.0</h3>
+<ul>
+<li>修复断点续传错误 (#865)</li>
+<li>修复数据集版本规范 (#862)</li>
+<li>将 machine_shape 添加到 kaggle kernels pull 的元数据中 (#856)</li>
+<li>为模型添加分页选项</li>
+<li>添加提交的分页选项 (#832)</li>
+<li>为列表命令添加分页选项 (#815)</li>
+<li>添加推/拉的规范别名 (#787)</li>
+<li>添加镶木地板作为过滤器选项 (#786)</li>
+<li>添加变体作为实例的 alt (#784)</li>
+<li>启用（并重命名）同义词 i 和 v (#782)</li>
+</ul>
+<h3>1.7.5.0（未发布）* 需要 Python 3.11。</h3>
+<ul>
+<li>添加内核执行类型 (#775)</li>
+<li>输出 docker_image 作为拉取元数据的一部分 (#773)</li>
+<li>允许用户在内核推送期间指定 docker_image (#774)</li>
+<li>添加内核版本类型以保存请求 (#771)</li>
+<li>添加删除和去片状测试 (#769)</li>
+<li>重命名“yes”参数并使确认一致（#765）</li>
+<li>修复导致双重序列化的错误 (#764)</li>
+<li>添加 Kaggle 内核删除 (#762)</li>
+<li>添加对 dataset_delete() 的测试并使脚本更加健壮 (#760)</li>
+<li>上传前检查数据集状态 (#759)</li>
+<li>添加kaggle数据集删除（#755）</li>
+<li>修复对 download_file() 的调用 (#752)</li>
+<li>为 mypy 添加类型注释 (#746)</li>
+<li>在原始文件中使用Optional[...] (#744)</li>
+<li>改进一些类型提示并修复一个错误 (#741)</li>
+<li>用黑色重新格式化所有内容 (#737)</li>
+<li>添加更多类型提示 (#736)</li>
+<li>在主文件中添加类型注释（#735）</li>
+<li>批量重新格式化文档字符串 (#732)</li>
+<li>在发送请求之前合并 envars (#729)</li>
+<li>如果没有指定环境，则使用 PROD。 (#726)</li>
+<li>添加无响应操作来自动关闭问题 (#723)</li>
+</ul>
+<h3>1.7.4.2</h3>
+<ul>
+<li>修复下载内核输出文件的问题。</li>
+</ul>
+<h3>1.7.4.1* 修复数据集下载问题。具有许可证的数据集无法下载。</h3>
+<ul>
+<li>更新文档以包含代码竞赛提交。</li>
+</ul>
+<h3>1.7.4</h3>
+<p>1.7.3 版本从未发布。版本控制中出现错误
+test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
+这是自 1.6.17 以来的第一个版本。</p>
+<p>实际的变化在 1.7.3 中描述。</p>
+<h3>1.7.3</h3>
+<p>版本控制中出现错误。我们从 1.6.17 转到 1.7.3。</p>
+<ul>
+<li>添加了提交代码竞赛的功能。一些必需的参数已变为可选的。</li>
+<li>为<code>kaggle kernels push</code>添加了<code>--timeout</code>选项，以将运行时间限制为指定秒数。</li>
+<li>删除了招摇。使用<code>kaggle/api/kaggle_api.py</code>的项目可能会受到影响。该文件已被弃用，并将被
+已删除。它的大部分功能仍然有效，但那些涉及上传文件的功能不再工作。
+命令行工具使用更高级别的抽象来进行上传，客户端代码需要
+转换为使用它。</li>
+</ul>
+<h3>1.7.3b2</h3>
+<ul>
+<li>添加了提交代码竞赛的功能。一些必需的参数已变为可选的。* 为<code>kaggle kernels push</code>添加了<code>--timeout</code>选项，以将运行时间限制为指定秒数。</li>
+</ul>
+<h3>1.7.3b1</h3>
+<ul>
+<li>修复 HTTP 请求中的转义引号问题。</li>
+</ul>
+<h3>1.7.3b0</h3>
+<ul>
+<li>删除招摇。对命令行工具没有用户可见的更改。然而，项目
+使用<code>kaggle/api/kaggle_api.py</code>可能会受到影响。该文件已被弃用并将被删除。
+它的大部分功能仍然有效，但那些涉及上传文件的功能不再工作。
+命令行工具使用更高级别的抽象来满足上传和客户端代码需求 
+转换为使用它。</li>
+</ul>
+<h3>17.6.1</h3>
+<ul>
+<li>没有变化； 1.6.16 版尚未完成。</li>
+</ul>
+<h3>16.6.1</h3>
+<ul>
+<li>没有变化；版本 1.6.15 不可用。我们正在努力更新流程，以防止这种情况再次发生。</li>
+</ul>
+<h3>15.6.1</h3>
+<ul>
+<li>支持Linux上的XDG基目录规范</li>
+<li>使用 -W 禁用过时的 API 版本警告</li>
+<li>上传 .ipynb 文件时允许“source”中包含字符串数组（感谢 GitHub 用户 mgallifrey 的贡献！）</li>
+<li>为模型添加triton框架</li>
+<li>更新型号许可证</li>
+</ul>
+<h3>14.6.1</h3>
+<ul>
+<li>没有变化；版本 1.6.13 不可用。</li>
+</ul>
+<h3>13.6.1* 将 --page-size 和 --page-token CLI 选项添加到显示文件列表的所有命令。</h3>
+<h3>12.6.1</h3>
+<ul>
+<li>重新发布1.6.11，软件包中不再包含<code>src</code>目录。</li>
+</ul>
+<h3>11.6.1</h3>
+<ul>
+<li>允许未经身份验证使用“数据集下载”、“数据集文件”。<ul>
+<li>此功能仅在 2024 年 4 月 8 日之后有效。更多详细信息，请参阅：
+<a href="https://www.kaggle.com/discussions/product-feedback/485439">https://www.kaggle.com/discussions/product-feedback/485439</a></li>
+</ul>
+</li>
+<li>允许“help”和“version”用于所有命令，未经身份验证。</li>
+<li>修复：“dataset download -f”可接受特定数据集版本。</li>
+</ul>
+<h3>1.6.10</h3>
+<p>将 1.6.8 重新打包为新版本，以修复有问题的 1.6.9 版本。</p>
+<h3>1.6.9</h3>
+<p>*请勿使用。有问题的发布会导致错误：
+  <code>ModuleNotFoundError: No module named &#39;kaggle.api&#39;</code></p>
+<h3>1.6.8</h3>
+<ul>
+<li>添加“gguf”</li>
+</ul>
+<h3>1.6.7</h3>
+<ul>
+<li>添加“TensorRtLlm”模型框架。</li>
+</ul>
+<h3>1.6.6</h3>
+<ul>
+<li>添加“GemmaCpp”和“GGML”模型框架。</li>
+</ul>
+<h3>1.6.5</h3>
+<ul>
+<li>添加“MaxText”模型框架。</li>
+</ul>
+<h3>1.6.4</h3>
+<ul>
+<li>添加“变形金刚”模型框架。</li>
+</ul>
+<h3>1.6.3</h3>
+<p>发布日期：24 年 1 月 11 日</p>
+<ul>
+<li>添加“Flax”和“Pax”模型框架。</li>
+</ul>
+<h3>1.6.2</h3>
+<p>发布日期：24年1月9日</p>
+<ul>
+<li>添加“其他”模型框架。</li>
+</ul>
+<h3>1.6.1</h3>
+<p>发布日期：24 年 1 月 8 日</p>
+<ul>
+<li>修复数据集/模型上传。</li>
+</ul>
+<h3>1.6.0</h3>
+<p>发布日期：24 年 1 月 4 日* 发布带有模型端点的预发布分支。</p>
+<h4>1.6.0a7</h4>
+<p>发布日期：23年11月22日</p>
+<ul>
+<li>将model_instance_type和base_model_instance_id添加到ModelInstance中</li>
+</ul>
+<h4>1.6.0a6</h4>
+<p>发布日期：2023 年 9 月 19 日</p>
+<ul>
+<li>在 model-instance-metadata.json 文件中包含 version_number 和 version_id</li>
+</ul>
+<h4>1.6.0a5</h4>
+<p>发布日期：2023 年 8 月 2 日</p>
+<ul>
+<li>添加Keras模型框架。</li>
+</ul>
+<p>####16.5.1
+发布日期：2023 年 7 月 17 日</p>
+<ul>
+<li>修复数据集下载与区域设置的错误</li>
+<li>可断点续传</li>
+<li>重试一些失败的请求</li>
+</ul>
+<h4>1.6.0a4</h4>
+<p>发布日期：2023 年 7 月 7 日</p>
+<ul>
+<li>可断点续传</li>
+<li>重试一些失败的请求
+*标记<code>-y</code>删除模型/实例/版本而不确认</li>
+</ul>
+<h4>1.6.0a3</h4>
+<p>发布日期：23 年 7 月 6 日</p>
+<ul>
+<li>删除模型、实例或版本的确认</li>
+<li>合并 1.5.14 和 1.5.15 的更改</li>
+</ul>
+<p>####15.5.1
+发布日期：2023 年 6 月 30 日</p>
+<ul>
+<li>添加缺少的数据集许可证</li>
+<li>重新添加选项以通过<code>-d</code>传递数据集</li>
+<li>下载/列出特定版本数据集的文件</li>
+<li>文档改进</li>
+</ul>
+<p>####14.5.1
+发布日期：2023 年 6 月 29 日</p>
+<ul>
+<li>显示来自 API 的完整错误消息</li>
+<li>改进和修复文档</li>
+<li>修复内核数据源bug，添加模型数据源push/pull* 实现断点续传下载</li>
+<li>修复无法访问代码的bug</li>
+<li>提出一些必需的参数</li>
+<li>将enable_tpu添加到内核的push/pull中</li>
+</ul>
+<h4>1.6.0a2</h4>
+<p>发布日期：2023 年 6 月 12 日</p>
+<ul>
+<li>添加端点以获取modelInstance</li>
+<li>简化modelInstanceVersion创建</li>
+<li>修复模型文件压缩问题</li>
+</ul>
+<h4>1.6.0a0</h4>
+<p>发布日期：2023 年 6 月 7 日</p>
+<ul>
+<li>添加模型端点</li>
+</ul>
+<h4>1.5.13</h4>
+<p>发布日期：2023 年 2 月 27 日</p>
+<ul>
+<li>添加将模型添加到内核的功能</li>
+</ul>
+<h3>12.5.1</h3>
+<p>发布日期：21年3月12日</p>
+<ul>
+<li>没有变化</li>
+</ul>
+<h3>11.5.1</h3>
+<p>发布日期：21年3月12日</p>
+<ul>
+<li>为内核添加对非 ASCII 字符的支持。</li>
+</ul>
+<h3>10.5.1</h3>
+<p>发布日期：2020 年 11 月 30 日</p>
+<ul>
+<li>删除对 slugify 的依赖。</li>
+</ul>
+<h3>1.5.9</h3>
+<p>发布日期：2020年10月21日</p>
+<ul>
+<li>删除 setup.py 中对 urllib3 的版本限制。</li>
+</ul>
+<h3>1.5.8</h3>
+<p>发布日期：2020年9月3日</p>
+<ul>
+<li>没有面向用户的更改</li>
+</ul>
+<h4>1.5.7</h4>
+<p>发布日期：2020 年 8 月 31 日</p>
+<ul>
+<li>添加指定内核 docker 镜像固定类型的功能</li>
+<li>内核默认启用互联网</li>
+<li>各种比赛修复</li>
+</ul>
+<h4>1.5.6</h4>
+<p>发布日期：2019 年 9 月 19 日</p>
+<ul>
+<li>下载比赛的所有文件会下载 zip 文件，而不是单个文件</li>
+</ul>
+<h4>1.5.5</h4>
+<p>发布日期：2019 年 8 月 30 日</p>
+<ul>
+<li>在数据集列表中添加投票计数和可用性评级* 将最小和最大数据集大小过滤器添加到数据集列表中</li>
+<li>向数据集元数据API添加附加信息</li>
+<li>允许更新数据集元数据</li>
+</ul>
+<h4>1.5.4</h4>
+<p>发布日期：2019 年 5 月 28 日</p>
+<ul>
+<li>使内核初始化更加友好</li>
+<li>如果需要内核输出，则创建目录</li>
+</ul>
+<h4>1.5.3</h4>
+<p>发布日期：2019 年 2 月 20 日</p>
+<ul>
+<li>凹凸urllib3版本</li>
+</ul>
+<h4>1.5.2</h4>
+<p>发布日期：2019 年 1 月 28 日</p>
+<ul>
+<li>打印表格时不要出现编码错误</li>
+<li>捕获异常时退出并返回错误代码</li>
+</ul>
+<h4>1.5.1.1</h4>
+<p>发布日期：2018 年 12 月 5 日</p>
+<ul>
+<li>为数据集子文件夹添加缺少的 cli 选项</li>
+</ul>
+<h4>1.5.1</h4>
+<p>发布日期：2018 年 12 月 5 日</p>
+<ul>
+<li>允许自定义 ca_cert 文件</li>
+<li>支持上传带子文件夹的数据集</li>
+<li>修复kaggle.json权限警告</li>
+</ul>
+<h4>1.5.0</h4>
+<p>发布日期：2018 年 10 月 19 日</p>
+<ul>
+<li>更新 API 以与新的竞赛提交后端配合使用。  此更改将强制旧的 API 客户端进行更新。</li>
+<li>更新找不到配置文件时的错误消息。</li>
+</ul>
+<h4>1.4.7.1</h4>
+<p>发布日期：2018 年 8 月 28 日</p>
+<ul>
+<li>修复主机</li>
+</ul>
+<h4>1.4.7</h4>
+<p>发布日期：2018 年 8 月 28 日</p>
+<ul>
+<li>使数据集版本<code>-p</code>参数实际上是可选的</li>
+<li>更新数据集时不需要<code>resources</code>字段</li>
+<li>不要自动解压数据集* 为数据集下载添加解压选项</li>
+<li>添加对内核标题和 slug 长度的验证</li>
+<li>如果内核标题未解析为指定的 slug，则发出警告</li>
+<li>推送后显示内核版本号</li>
+<li>拉取内核时尊重内核元数据中的<code>code_file</code>值</li>
+</ul>
+<h4>1.4.6</h4>
+<p>发布日期：2018 年 8 月 7 日</p>
+<ul>
+<li>允许通过环境变量设置配置值</li>
+</ul>
+<h4>1.4.5</h4>
+<p>发布日期：2018 年 8 月 1 日</p>
+<ul>
+<li>如果数据集元数据重复文件，则添加错误</li>
+</ul>
+<h4>1.4.4</h4>
+<p>发布日期：2018 年 7 月 30 日</p>
+<ul>
+<li>修复读取内核元数据的问题</li>
+</ul>
+<h4>1.4.3</h4>
+<p>发布日期：2018 年 7 月 30 日</p>
+<ul>
+<li>添加更多比赛列表选项</li>
+<li>添加更多数据集列表选项</li>
+<li>在内核列表显示中添加更多字段</li>
+<li>添加对内核和数据集 ID 的支持</li>
+<li>允许为现有数据集生成元数据</li>
+<li>修复从标题与 slugs 不匹配的数据集下载的问题</li>
+<li>使用kernel slug作为内核输出的文件名</li>
+<li>上传下载目录默认为当前工作目录</li>
+<li>如果未指定，则在下载内核或数据集数据时使用默认用户名</li>
+<li>支持数据集的扩展数据类型</li>
+<li>不再需要 <code>-c</code>、<code>-d</code> 和 <code>-k</code> 参数* 数据集元数据中不需要<code>resources</code>字段</li>
+</ul>
+<h4>1.4.2</h4>
+<p>发布日期：2018 年 7 月 20 日</p>
+<ul>
+<li>上传前验证数据集slug和标题长度</li>
+<li>修复数据集元数据文件检测问题</li>
+<li>清理键盘中断错误</li>
+<li>上传之前验证数据集中所有指定的文件是否存在</li>
+<li>使 ApiExceptions（稍微）不那么难看</li>
+</ul>
+<h4>1.4.1</h4>
+<p>发布日期：2018 年 7 月 20 日</p>
+<ul>
+<li>添加Python 3.7兼容性</li>
+</ul>
+<h4>1.4.0</h4>
+<p>发布日期：2018 年 7 月 19 日</p>
+<ul>
+<li>添加内核支持
+** 列出和搜索内核
+** 推送内核代码
+** 拉取内核代码
+** 下载内核输出
+** 获取最新的内核运行状态</li>
+</ul>
+<h4>1.3.12</h4>
+<p>发布日期：2018 年 6 月 25 日</p>
+<ul>
+<li>允许设置<code>&#39;KAGGLE_CONFIG_DIR&#39;</code>环境令牌</li>
+<li>创建后返回元数据文件</li>
+<li>提醒用户数据集创建需要时间</li>
+</ul>
+<h4>1.3.11.1</h4>
+<ul>
+<li>修复其他无效标签检查</li>
+</ul>
+<h4>1.3.11</h4>
+<p>发布日期：2018 年 6 月 12 日</p>
+<ul>
+<li>改进版本检查</li>
+<li>修复无效标签检查</li>
+</ul>
+<h4>1.3.10</h4>
+<p>发布日期：2018 年 6 月 10 日</p>
+<ul>
+<li>由于requests依赖问题限制urllib3的版本</li>
+</ul>
+<h4>1.3.9.1</h4>
+<p>发布日期：2018 年 6 月 9 日</p>
+<ul>
+<li>修复竞赛提交的错误。</li>
+</ul>
+<h4>1.3.9</h4>
+<p>发布日期：2018 年 6 月 8 日</p>
+<ul>
+<li>改进封闭式比赛的错误消息* 删除错误的堆栈跟踪</li>
+<li>打印任何无效标签</li>
+<li>如果没有比赛文件可供下载则发出警告</li>
+<li>实现断点续传</li>
+<li>添加字幕元数据到数据集上传</li>
+<li>添加上传和下载进度条</li>
+<li>添加下载比赛排行榜命令</li>
+<li>添加查看排行榜顶部的命令</li>
+</ul>
+<h4>1.3.8</h4>
+<p>发布日期：2018 年 5 月 18 日</p>
+<ul>
+<li>添加删除所有以前的数据集版本的选项</li>
+</ul>
+<h4>1.3.7</h4>
+<p>发布日期：2018 年 5 月 18 日</p>
+<ul>
+<li>为子命令添加别名（例如 <code>kaggle c</code> 与 <code>kaggle competitions</code> 相同）</li>
+<li>添加版本命令</li>
+<li>显示文件的完整下载路径</li>
+<li>取消上传文件大小限制</li>
+</ul>
+<h4>1.3.6</h4>
+<p>发布日期：2018 年 5 月 7 日</p>
+<ul>
+<li>提供向数据集添加标签的选项。<ul>
+<li>已知限制 - 您无法通过 API 删除标签。  这些更改必须通过网站完成。</li>
+</ul>
+</li>
+</ul>
+<h4>1.3.5</h4>
+<p>发布日期：2018 年 5 月 4 日</p>
+<ul>
+<li>修复数据集资源中的模式声明</li>
+</ul>
+<h4>1.3.4</h4>
+<p>发布日期：2018 年 4 月 30 日</p>
+<ul>
+<li>将<code>columns</code>重命名为<code>fields</code></li>
+</ul>
+<h4>1.3.3</h4>
+<p>发布日期：2018 年 4 月 26 日</p>
+<ul>
+<li>修复某些数据集的 UnicodeEncodeError</li>
+<li>包括 Swagger yaml 和配置文件</li>
+</ul>
+<h4>1.3.2.1</h4>
+<p>发布日期：2018 年 4 月 24 日</p>
+<ul>
+<li>修复列元数据的错误</li>
+</ul>
+<h4>1.3.2发布日期：2018 年 4 月 24 日</h4>
+<ul>
+<li>提供为上传的数据集指定模式的选项</li>
+<li>提供在更新期间设置数据集描述的选项</li>
+</ul>
+<h4>1.3.1</h4>
+<p>发布日期：2018 年 4 月 19 日</p>
+<ul>
+<li>提供设置数据集文件描述的选项</li>
+<li>提供不将表格数据集转换为 csv 的选项</li>
+</ul>
+<h4>1.3.0</h4>
+<p>发布日期：2018 年 4 月 18 日</p>
+<ul>
+<li>提供在创建过程中设置数据集描述的选项</li>
+</ul>
+<h4>1.2.1</h4>
+<p>发布日期：2018 年 4 月 17 日</p>
+<ul>
+<li><a href="https://github.com/Kaggle/kaggle-api/issues/5">Issue #5</a> - 重新格式化代码以保持一致性并与 <a href="https://google.github.io/styleguide/pyguide.html">Google&#39;s python coding style</a> 保持一致。  大多数更改都是装饰性的，但除类名之外的大多数 <code>camelCasing</code> 情况已更改为 <code>snake_case</code>。  对于任何直接使用 python 代码而不是简单地使用命令行的人来说，这是一个重大变化。</li>
+</ul>
+
+          <p class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

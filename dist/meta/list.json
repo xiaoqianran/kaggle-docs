@@ -1,0 +1,357 @@
+{
+  "fetchedAt": "2026-08-08T18:57:09.639Z",
+  "sources": {
+    "llms": "https://www.kaggle.com/llms.txt",
+    "platform": "https://www.kaggle.com/docs",
+    "cli": "https://github.com/Kaggle/kaggle-cli",
+    "kagglehub": "https://github.com/Kaggle/kagglehub"
+  },
+  "ok": 49,
+  "failed": 0,
+  "pages": [
+    {
+      "rel": "index.md",
+      "bytes": 943,
+      "source": "mirror",
+      "url": "",
+      "track": "Home"
+    },
+    {
+      "rel": "platform/getting-started.md",
+      "bytes": 496,
+      "source": "stub",
+      "url": "https://www.kaggle.com/docs/getting-started",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/api.md",
+      "bytes": 1816,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/api.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/benchmarks.md",
+      "bytes": 7921,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/benchmarks.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/competitions.md",
+      "bytes": 17600,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/competitions.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/datasets.md",
+      "bytes": 28717,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/datasets.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/efficient-gpu-usage.md",
+      "bytes": 2315,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/efficient-gpu-usage.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/models.md",
+      "bytes": 15383,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/models.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/notebooks.md",
+      "bytes": 40027,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/notebooks.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/organizations.md",
+      "bytes": 11061,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/organizations.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/packages.md",
+      "bytes": 19824,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/packages.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "platform/tpu.md",
+      "bytes": 18512,
+      "source": "kaggle.com",
+      "url": "https://www.kaggle.com/docs/tpu.md",
+      "track": "Platform Docs"
+    },
+    {
+      "rel": "cli/intro.md",
+      "bytes": 4288,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/README.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/changelog.md",
+      "bytes": 21451,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/CHANGELOG.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/README.md",
+      "bytes": 3539,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/README.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/benchmarks.md",
+      "bytes": 24055,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/benchmarks.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/competition_creation.md",
+      "bytes": 22645,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/competition_creation.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/competitions.md",
+      "bytes": 12890,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/competitions.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/configuration.md",
+      "bytes": 2427,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/configuration.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/datasets.md",
+      "bytes": 11311,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/datasets.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/datasets_metadata.md",
+      "bytes": 10415,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/datasets_metadata.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/forums.md",
+      "bytes": 2983,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/forums.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/kernels.md",
+      "bytes": 12752,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/kernels.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/kernels_metadata.md",
+      "bytes": 3257,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/kernels_metadata.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/model_variations.md",
+      "bytes": 6165,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/model_variations.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/model_variations_versions.md",
+      "bytes": 4891,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/model_variations_versions.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/models.md",
+      "bytes": 6609,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/models.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/models_metadata.md",
+      "bytes": 4894,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/models_metadata.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/output_format.md",
+      "bytes": 4368,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/output_format.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/search.md",
+      "bytes": 2734,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/search.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/simulation_competitions.md",
+      "bytes": 6983,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/simulation_competitions.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "cli/tutorials.md",
+      "bytes": 17318,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/tutorials.md",
+      "track": "CLI & API"
+    },
+    {
+      "rel": "skills/SKILL.md",
+      "bytes": 4318,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/SKILL.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/auth.md",
+      "bytes": 3578,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/auth.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/benchmarks.md",
+      "bytes": 25691,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/benchmarks.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/competitions.md",
+      "bytes": 11537,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/competitions.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/configuration.md",
+      "bytes": 2740,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/configuration.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/datasets.md",
+      "bytes": 7720,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/datasets.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/files.md",
+      "bytes": 2041,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/files.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/forums.md",
+      "bytes": 2973,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/forums.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/kernels.md",
+      "bytes": 6180,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/kernels.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/model_variations.md",
+      "bytes": 4283,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/model_variations.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/model_variations_versions.md",
+      "bytes": 3619,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/model_variations_versions.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/models.md",
+      "bytes": 4918,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/models.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/quota.md",
+      "bytes": 1225,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/quota.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "skills/references/search.md",
+      "bytes": 2475,
+      "source": "github:Kaggle/kaggle-cli",
+      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/search.md",
+      "track": "Agent Skills"
+    },
+    {
+      "rel": "kagglehub/intro.md",
+      "bytes": 26231,
+      "source": "github:Kaggle/kagglehub",
+      "url": "https://raw.githubusercontent.com/Kaggle/kagglehub/main/README.md",
+      "track": "KaggleHub"
+    },
+    {
+      "rel": "kagglehub/CHANGELOG.md",
+      "bytes": 12559,
+      "source": "github:Kaggle/kagglehub",
+      "url": "https://raw.githubusercontent.com/Kaggle/kagglehub/main/CHANGELOG.md",
+      "track": "KaggleHub"
+    },
+    {
+      "rel": "kagglehub/CONTRIBUTING.md",
+      "bytes": 1307,
+      "source": "github:Kaggle/kagglehub",
+      "url": "https://raw.githubusercontent.com/Kaggle/kagglehub/main/CONTRIBUTING.md",
+      "track": "KaggleHub"
+    }
+  ],
+  "failures": []
+}

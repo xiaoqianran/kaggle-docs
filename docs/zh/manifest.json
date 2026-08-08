@@ -1,0 +1,207 @@
+{
+  "files": {
+    "cli/README.md": {
+      "hash": "679919f7eb52827ed255267acf68aaa3456593f2",
+      "translatedAt": "2026-08-08T18:57:12.937Z"
+    },
+    "cli/competition_creation.md": {
+      "hash": "601861b94296d43e0d37a76136da30b7adc97431",
+      "translatedAt": "2026-08-08T18:57:18.842Z"
+    },
+    "cli/benchmarks.md": {
+      "hash": "633bc07166448633c5fccc5d369e6ac704cd59d5",
+      "translatedAt": "2026-08-08T18:57:19.485Z"
+    },
+    "cli/changelog.md": {
+      "hash": "6622705224b574726a78c8523774dbe7c616a528",
+      "translatedAt": "2026-08-08T18:57:19.988Z"
+    },
+    "cli/configuration.md": {
+      "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
+      "translatedAt": "2026-08-08T18:57:20.502Z"
+    },
+    "cli/competitions.md": {
+      "hash": "a7afdbd7bd5d9447844faac1cc00936bb3631274",
+      "translatedAt": "2026-08-08T18:57:22.334Z"
+    },
+    "cli/datasets.md": {
+      "hash": "17236ce3187b376dd7fb006694955ab4f0083e08",
+      "translatedAt": "2026-08-08T18:57:22.795Z"
+    },
+    "cli/forums.md": {
+      "hash": "d401f5fe61c99a0e4be9100d27e43bbe62db99d0",
+      "translatedAt": "2026-08-08T18:57:23.148Z"
+    },
+    "cli/datasets_metadata.md": {
+      "hash": "f4aa7d61d9cb52e9027987236976e1ff8d36d7e9",
+      "translatedAt": "2026-08-08T18:57:23.433Z"
+    },
+    "cli/intro.md": {
+      "hash": "0379909f3ccbe2ee0982e5852e3fb4b7ff6f53f2",
+      "translatedAt": "2026-08-08T18:57:23.955Z"
+    },
+    "cli/kernels_metadata.md": {
+      "hash": "de0aeca407520c958983b0b2550e98c44b53c39d",
+      "translatedAt": "2026-08-08T18:57:24.195Z"
+    },
+    "cli/model_variations_versions.md": {
+      "hash": "8e70e408bbf4a496f82cc27c342901d578003560",
+      "translatedAt": "2026-08-08T18:57:25.406Z"
+    },
+    "cli/model_variations.md": {
+      "hash": "94bf0d07cf90db777191995eeff715639c6dfad6",
+      "translatedAt": "2026-08-08T18:57:25.444Z"
+    },
+    "cli/kernels.md": {
+      "hash": "c78ed68fd8183966acffabffb4d846227be83e48",
+      "translatedAt": "2026-08-08T18:57:26.293Z"
+    },
+    "cli/models_metadata.md": {
+      "hash": "68440df72296385d274a63a48b5a5e00e7e6b593",
+      "translatedAt": "2026-08-08T18:57:27.165Z"
+    },
+    "cli/models.md": {
+      "hash": "de6bb4a72353990e9cce26127c9fed20b8e400af",
+      "translatedAt": "2026-08-08T18:57:27.167Z"
+    },
+    "cli/output_format.md": {
+      "hash": "31f301f55ef0bbfd0069eeeb556b8bd8ceba452a",
+      "translatedAt": "2026-08-08T18:57:27.604Z"
+    },
+    "cli/search.md": {
+      "hash": "e5da2492e76c16ee22a056bbf3b4eea22db9545e",
+      "translatedAt": "2026-08-08T18:57:28.257Z"
+    },
+    "cli/simulation_competitions.md": {
+      "hash": "3e19bddf6e2495085aeb8a12d91e55c17f8e8fe2",
+      "translatedAt": "2026-08-08T18:57:28.406Z"
+    },
+    "index.md": {
+      "hash": "e9f95f2a05f9c5b9782234a8cba4352e6b66cb56",
+      "translatedAt": "2026-08-08T18:57:28.618Z"
+    },
+    "kagglehub/CONTRIBUTING.md": {
+      "hash": "aa3418206d7fa890cecb45cff78659448608250f",
+      "translatedAt": "2026-08-08T18:57:29.481Z"
+    },
+    "kagglehub/CHANGELOG.md": {
+      "hash": "0ad0a99bde1494c100e30d7413f097fd4e9f938c",
+      "translatedAt": "2026-08-08T18:57:30.813Z"
+    },
+    "platform/api.md": {
+      "hash": "dd76821276e3cc685de88f3082cd93ec88df53c2",
+      "translatedAt": "2026-08-08T18:57:31.631Z"
+    },
+    "cli/tutorials.md": {
+      "hash": "b843e0de3ba78c5e2faee897344edfc73aad6321",
+      "translatedAt": "2026-08-08T18:57:32.423Z"
+    },
+    "kagglehub/intro.md": {
+      "hash": "c2f3b0b539d228115ae1e0263d1cec197a307e54",
+      "translatedAt": "2026-08-08T18:57:33.051Z"
+    },
+    "platform/benchmarks.md": {
+      "hash": "0fcc152952734111896ea5756bb92a64366d5f09",
+      "translatedAt": "2026-08-08T18:57:33.977Z"
+    },
+    "platform/efficient-gpu-usage.md": {
+      "hash": "13500c39c3777211001b435b18780f1ec6fa17a8",
+      "translatedAt": "2026-08-08T18:57:35.333Z"
+    },
+    "platform/getting-started.md": {
+      "hash": "4d2795b38ff8948213bf46659e010f8acb85669f",
+      "translatedAt": "2026-08-08T18:57:35.715Z"
+    },
+    "platform/competitions.md": {
+      "hash": "66221be22efef3c6625bf764f57e4f2ca0684d3f",
+      "translatedAt": "2026-08-08T18:57:39.310Z"
+    },
+    "platform/models.md": {
+      "hash": "1499c2a7b182a9f02cbe1db4f96f81f96874ce6c",
+      "translatedAt": "2026-08-08T18:57:42.559Z"
+    },
+    "platform/datasets.md": {
+      "hash": "c76d5aa1a7a5a72c8660efdcafd0ed6f4f7a81b2",
+      "translatedAt": "2026-08-08T18:57:43.332Z"
+    },
+    "platform/organizations.md": {
+      "hash": "4713733f42b31ae8d1546c8ef2837842b5659546",
+      "translatedAt": "2026-08-08T18:57:47.475Z"
+    },
+    "platform/packages.md": {
+      "hash": "a1dc6800959f76bcccb73df06e23dcbf244ca746",
+      "translatedAt": "2026-08-08T18:57:51.021Z"
+    },
+    "skills/SKILL.md": {
+      "hash": "b1776a6111514c682576e6530ce0e0a63558cc16",
+      "translatedAt": "2026-08-08T18:57:52.005Z"
+    },
+    "skills/references/auth.md": {
+      "hash": "cd4b2991be68cd4f9279dc41ce075a13ef509967",
+      "translatedAt": "2026-08-08T18:57:53.420Z"
+    },
+    "platform/notebooks.md": {
+      "hash": "99438d0d5a52bc2cccf12f661f6f393927f387eb",
+      "translatedAt": "2026-08-08T18:57:54.239Z"
+    },
+    "platform/tpu.md": {
+      "hash": "474b22e1a2fa3886292790945bdaea2ebf5c318a",
+      "translatedAt": "2026-08-08T18:57:54.267Z"
+    },
+    "skills/references/configuration.md": {
+      "hash": "20c431770e68c64f61f9f14aad59bd29b42a4632",
+      "translatedAt": "2026-08-08T18:57:54.913Z"
+    },
+    "skills/references/datasets.md": {
+      "hash": "d547039b64194e0cec20235cc8cf36d6724483fa",
+      "translatedAt": "2026-08-08T18:57:56.958Z"
+    },
+    "skills/references/competitions.md": {
+      "hash": "91426d793597cb674b18445a20a3f3ad8b787503",
+      "translatedAt": "2026-08-08T18:57:56.960Z"
+    },
+    "skills/references/files.md": {
+      "hash": "95f9e1ba9b1e79dd03e031c68c747b2d909e7989",
+      "translatedAt": "2026-08-08T18:57:57.559Z"
+    },
+    "skills/references/forums.md": {
+      "hash": "fb5e500d2895181496e38c33df58815be852a884",
+      "translatedAt": "2026-08-08T18:57:57.572Z"
+    },
+    "skills/references/model_variations.md": {
+      "hash": "a5d2f63576ce402560457677b7b67e717932c7ed",
+      "translatedAt": "2026-08-08T18:57:58.615Z"
+    },
+    "skills/references/kernels.md": {
+      "hash": "0caefef83e0dd14c08a88b479eeff1e6cb1cc2d0",
+      "translatedAt": "2026-08-08T18:57:59.333Z"
+    },
+    "skills/references/model_variations_versions.md": {
+      "hash": "8a3f8e0c8cc40055cbf7ee4a116614861712ae6f",
+      "translatedAt": "2026-08-08T18:57:59.649Z"
+    },
+    "skills/references/quota.md": {
+      "hash": "81e3eaa397b5ed0cc424cc1d6feff4d204865ced",
+      "translatedAt": "2026-08-08T18:57:59.834Z"
+    },
+    "skills/references/benchmarks.md": {
+      "hash": "7d9ed858a013150f3a8b0539f1580d59b979a43f",
+      "translatedAt": "2026-08-08T18:57:59.925Z"
+    },
+    "skills/references/models.md": {
+      "hash": "17bbeac653ca1dc34b6c8908000cf031a15795a2",
+      "translatedAt": "2026-08-08T18:58:00.375Z"
+    },
+    "skills/references/search.md": {
+      "hash": "f6fcc35b94365d1788d63515a08edbdf71c12794",
+      "translatedAt": "2026-08-08T18:58:00.584Z"
+    }
+  },
+  "updatedAt": "2026-08-08T18:58:00.584Z",
+  "stats": {
+    "translated": 49,
+    "skipped": 0,
+    "failed": 0,
+    "total": 49
+  }
+}

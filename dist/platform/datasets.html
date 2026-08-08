@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datasets · Kaggle Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/platform/datasets.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/platform/datasets.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+      <a class="brand" href="/kaggle-docs/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle Docs</span>
+        <span class="brand-v">mirror</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn active" href="/kaggle-docs/platform/datasets.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn" href="/kaggle-docs/zh/platform/datasets.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">Official ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
+        </div>
+        <div class="side-label">Learning path · docs</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
+<li><a class="leaf active" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          
+          <h1>Datasets</h1>
+<hr>
+<!--Types of Datasets-->
+
+<h3>Types of Datasets</h3>
+<p>Kaggle supports a variety of dataset publication formats, but we strongly encourage dataset publishers to share their data in an accessible, non-proprietary format if possible. Not only are open, accessible data formats better supported on the platform, they are also easier to work with for more people regardless of their tools.</p>
+<p>This page describes the file formats that we recommend using when sharing data on Kaggle Datasets. Plus, learn why and how to make less well-supported file types as accessible as possible to the data science community.</p>
+<h4>Supported File Types</h4>
+<h5>CSVs</h5>
+<p>The simplest and best-supported file type available on Kaggle is the “Comma-Separated List”, or CSV, for tabular data. CSVs uploaded to Kaggle should have a header row consisting of human-readable field names. A CSV representation of a shopping list with a header row, for example, looks like this:</p>
+<p>id,type,quantity</p>
+<p>0,bananas,12</p>
+<p>1,apples,7</p>
+<p>CSVs are the most common of the file formats available on Kaggle and are the best choice for tabular data.</p>
+<p>On the Data tab of a dataset, a preview of the file’s contents is visible in the data explorer. This makes it significantly easier to understand the contents of a dataset, as it eliminates the need to open the data in a Notebook or download it locally.</p>
+<p>CSV files will also have associated column descriptions and column metadata. The column descriptions allows you to assign descriptions to individual columns of the dataset, making it easier for users to understand what each column means. Column metrics, meanwhile, present high-level metrics about individual columns in a graphic format.</p>
+<p>“<a href="https://www.kaggle.com/rounakbanik/pokemon">The Complete Pokemon Dataset</a>” is an example of a great CSV-type Dataset.</p>
+<h5>JSON</h5>
+<p>While CSV is the most common file format for “flat” data, JSON is the most common file format for “tree-like” data that potentially has multiple layers, like the branches on a tree:</p>
+<p>{[{‘id’: 0, ‘type’: ‘bananas’, ‘quantity’: 12}, {‘id’: 1, ‘type’: ‘apples’, ‘quantity’: 7}]}</p>
+<p>For JSON files, the Data tab preview will present an interactive tree with the nodes in the JSON file attached. You can click on individual keys to open and collapse sections of the tree, exploring the structure of the dataset as you go along. JSON files do not support column descriptions or metrics.</p>
+<p>You can filter the Datasets listing by File Type to show <a href="https://www.kaggle.com/datasets?sortBy=hottest&amp;group=public&amp;page=1&amp;pageSize=20&amp;size=all&amp;filetype=json&amp;license=all">all datasets containing JSON files</a>.</p>
+<h5>SQLite</h5>
+<p>Kaggle supports database files using the lightweight SQLite format. SQLite databases consist of multiple tables, each of which contains data in tabular format. These tables support large datasets better than CSV files do, but are otherwise similar in practice.</p>
+<p>The Data tab represents each table in a database separately. Like CSV files, SQLite tables will be fully populated by “Column Metadata” and “Column Metrics” sections.</p>
+<p>“<a href="https://www.kaggle.com/hugomathien/soccer">European Soccer Database</a>” is an example of a great SQLite-type Dataset.</p>
+<h5>Archives</h5>
+<p>Although not technically a file format per se, Kaggle also has first-class support for files compressed using the ZIP file format as well as other common archive formats like 7z.</p>
+<p>Compressed files take up less space on disk than uncompressed ones, making them significantly faster to upload to Kaggle and allowing you to upload datasets that would otherwise exceed the Dataset size limitations.</p>
+<p>Archives are uncompressed on our side so that their contents are accessible in Notebooks without requiring users to unzip them. Archives do not currently populate previews for individual file contents, but you can still browse the contents by file name.</p>
+<p>As a result, we recommend that you only upload your dataset as an archive if the dataset is large enough, is made up of many smaller files, or is organized into subfolders. For instance, ZIPs and other archive formats are a great choice for making image datasets available on Kaggle.</p>
+<p>“<a href="https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia">Chest X-Ray Images (Pneumonia)</a>” is an example of a dataset made of archived images.</p>
+<h5>BigQuery</h5>
+<p>Kaggle also supports special BigQuery Datasets. BigQuery is a “big data” SQL store invented by Google. Many massive public datasets, like all the code in GitHub and the complete history of the Bitcoin blockchain, are available publically through the Google BigQuery Public Datasets initiative. Some of these are in turn also available as Kaggle Datasets!</p>
+<p>BigQuery Datasets are special in many ways. Because they are multi-terabyte datasets hosted on Google’s servers they cannot be uploaded or downloaded. Within Notebooks, instead of loading the files from disk, you interact with the dataset by writing SQL fetch queries within either the Google BigQuery Python library or Kaggle’s bq_helper library. And, due to the large size of the datasets involved, there is a quota of 5 TB of data scanned per user per 30-days.</p>
+<p>Some resources for understanding how to use BigQuery:</p>
+<ul>
+<li><a href="https://www.kaggle.com/sohier/getting-started-with-big-query">Getting Started with Big Query</a></li>
+<li><a href="https://www.kaggle.com/sohier/beyond-queries-exploring-the-bigquery-api">Beyond Queries: Exploring the Bigquery API</a></li>
+</ul>
+<p>“<a href="https://www.kaggle.com/datagov/usa-names">USA Names Data</a>” is an example of a BigQuery-type Dataset. Here are some helpful Notebooks for learning more about BigQuery: “<a href="https://www.kaggle.com/rtatman/sql-scavenger-hunt-handbook/">SQL Scavenger Hunt Handbook</a>, <a href="https://www.kaggle.com/sohier/getting-started-with-big-query">Getting Started with BigQuery</a>”, and “<a href="https://www.kaggle.com/sohier/beyond-queries-exploring-the-bigquery-api">Beyond Queries: Exploring the BigQuery API</a>”.</p>
+<h5>Other File Formats</h5>
+<p>The file formats listed in the section above are the ones best supported and most common on the Kaggle format. This doesn’t mean that other types of files can’t be uploaded; any file you can think of can be uploaded. Other formats are just less well-supported: they may not have previews or any of the other data explorer components available. They will also likely be less familiar with Kaggle users, and hence, less accessible.</p>
+<p>If you can convert your file into one of the formats above (the simpler the better), we highly recommend doing so. For example, Excel spreadsheets are a proprietary format that should be uploaded as CSV files instead. Your users will thank you!</p>
+<p>However, there are nevertheless use cases for alternative data formats. We do encourage uploads in speciality data formats like NPZ, image file formats like PNG, and complex hierarchical data formats like HDF5. But, when doing so, we suggest also uploading a Notebook discussing what and where the files are, how to work with them, and demonstrating how to get started with the dataset. Reproducible code samples can go a long way towards making your data files accessible to the data science world!</p>
+<hr>
+<!--Searching for Datasets-->
+
+<h3>Searching for Datasets</h3>
+<p>Datasets is not just a simple data repository. Each dataset is a community where you can discuss data, discover public code and techniques, and create your own projects in Notebooks. You can find many different interesting datasets of all shapes and sizes if you take the time to look around and find them!</p>
+<p>The latest and greatest from Datasets is surfaced on Kaggle in several different places.</p>
+<h4>Newsfeed</h4>
+<p>When you’re logged into your Kaggle account, the <a href="https://kaggle.com">Kaggle homepage</a> provides a live newsfeed of what people are doing on the platform. New Datasets uploaded by people you follow and hot Datasets with lots of activity will show up here. By browsing down the page you can check out all the latest updates from your fellow Kagglers.</p>
+<p>You can tweak your news feed to your liking by following other Kagglers. To follow someone, go to their profile page and click on “Follow User”. Content posted and upvotes made by users you have followed will show up more prominently.</p>
+<p>The same is true of other users who choose to follow you. Post high-quality content and you will soon find other users following along with what you are doing!</p>
+<h4>Datasets Listing</h4>
+<p>A more structured way of accessing datasets is accessible from the “Datasets” tab in the main menu bar.</p>
+<p>Datasets are grouped by different categories: &quot;Trending Datasets&quot;, &quot;Popular Datasets&quot;, &quot;Recently Viewed Datasets&quot; and a few other rotating categories.</p>
+<p>At the bottom of this page, you can click on the &quot;Explore all public datasets&quot; button to get a list view of all datasets. The list is sorted by “Hotness” by default. “Hotness” is what it sounds like: a way of measuring the interestingness and recency of datasets on the platform. Datasets which score highly in Hotness, and thus appear highly in this list, are usually either recently released Datasets that have been marked Reviewed and are scoring highly in engagement, or “all-time” greats that have been consistently popular on the platform for a long time.</p>
+<p>Other methods of sorting are by Most Votes, New, Updated and Usability.</p>
+<p>Other filtering options, available from the navigation bar, are Sizes (Small, Medium, or Large), File types (CSV, SQLite, JSON, BigQuery), Licenses (Creative Commons, GPL, Other Database, Other), and Tags (described in the next section).</p>
+<p>You can also use the listing to view your own Datasets (“Your Datasets”), or to look at datasets you have previously bookmarked (&quot;Bookmarks&quot;).</p>
+<p>Finally, a Datasets-specific search bar is available here. This is often the fastest way to find a specific dataset that you are looking for.</p>
+<h4>Tags and Tag Pages</h4>
+<p>Tags are the most advanced of the searching options available in the Datasets listing page. Tags are added by dataset owners to indicate the topic of the Dataset, techniques you can use (e.g., “classification”), or the type of the data itself (e.g., “text data”). You can navigate to tag pages to browse more content sharing a tag either by clicking on a tag on a Dataset, or by clicking on the “Tags” dropdown in the site header.</p>
+<p>Searching by tags allow you to search for Datasets by topical area. For example, if you are interested in animal shelter data you might try a search with the tag “animals”; if you are interested in police records a search with “crime” would do the trick.</p>
+<p>Tag pages include a section listing the most popular pages with the given tag, making them a great way of searching for datasets by content.</p>
+<hr>
+<!--Creating a Dataset-->
+
+<h3>Creating a Dataset</h3>
+<p>It’s easy to create a dataset on Kaggle and doing so is a great way to start a data science portfolio, share reproducible research, or work with collaborators on a project for work or school. You have the option to create private datasets to work solo or with invited collaborators or publish a dataset publicly to Kaggle for anyone to view, download, and analyze.</p>
+<h4>Navigating the Dataset Interface</h4>
+<p>To publish a private or public dataset, start by navigating to the <a href="https://www.kaggle.com/datasets">Datasets listing</a>. There you will find a New Dataset button. Click on it to open the New Dataset modal.</p>
+<p>The required “bare minimum” fields for uploading a dataset to Kaggle in descending order are:</p>
+<ul>
+<li><p>The <strong>Title</strong> is the name of the Dataset – e.g. what will appear in the listing when searching or browsing.</p>
+</li>
+<li><p>The <strong>URL</strong> is the link the Dataset will live at. The slug will first auto-populate and mimic your Title. However, you can hover over the slug to change it right away.</p>
+</li>
+<li><p>Finally, you may upload data from one of four sources:</p>
+<ul>
+<li><strong>Your local machine</strong> - upload files/folders via drag and drop or by selecting them in your file browser. To speed up file/folder uploads, try uploading them as a ZIP archive; the contents will be unzipped on our side to make them accessible in Notebooks.</li>
+<li><strong>Remote Files</strong> - enter list of public URL(s) which identify files to be imported into dataset</li>
+<li><strong>Github Repository</strong> - enter URL to github repository whose files will be imported into dataset</li>
+<li><strong>Notebook Outputs</strong> - use inbuilt search to explore publicly available files produced from Kaggle’s large repository of public Notebooks</li>
+</ul>
+</li>
+</ul>
+<p>To make your dataset more useful for your collaborators and the community it is recommended you update the following settings:</p>
+<ul>
+<li>The Sharing menu controls the Dataset’s visibility. Datasets may be Private (visible only to you and your collaborators, and to Kaggle for purposes consistent with the Kaggle Privacy Policy) or Public (visible to everyone). The default setting is Private.</li>
+<li>The Licence is the license the dataset is released under (relevant for public datasets). If the license you need doesn’t appear in the dropdown, select the “Other (specified in description)” option and be sure to provide information on the license when writing the dataset description (in the next step). Below is a list of common licenses.</li>
+</ul>
+<h6>Common Licenses</h6>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>- **Creative Commons**
+    - [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
+    - [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+    - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+    - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+    - [CC BY 4.0 (Attribution 4.0 International)](https://creativecommons.org/licenses/by/4.0/)
+    - [CC BY-NC 4.0 (Attribution-NonCommercial 4.0 International)](https://creativecommons.org/licenses/by-nc/4.0/)
+    - [CC BY 3.0 (Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/)
+    - [CC BY 3.0 IGO (Attribution 3.0 IGO)](https://creativecommons.org/licenses/by/3.0/igo/)
+    - [CC BY-NC-SA 3.0 IGO (Attribution-NonCommercial-ShareAlike 3.0 IGO)](https://creativecommons.org/licenses/by-nc-sa/3.0/igo/)
+    - [CC BY-ND 4.0 (Attribution-NoDerivatives 4.0 International)](https://creativecommons.org/licenses/by-nd/4.0/)
+    - [CC BY-NC-ND 4.0 (Attribution-NonCommercial-NoDerivatives 4.0 International)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+- **GPL**
+    - [GPL 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+    - [LGPL 3.0 (GNU Lesser General Public License 3.0)](http://www.gnu.org/licenses/lgpl-3.0.html)
+    - [AGPL 3.0 (GNU Affero General Public License 3.0)](http://www.gnu.org/licenses/agpl-3.0.html)
+    - [FDL 1.3 (GNU Free Documentation License 1.3)](http://www.gnu.org/licenses/fdl-1.3.html)
+- **Open Data Commons**
+    - [Database: Open Database, Contents: Database Contents](http://opendatacommons.org/licenses/dbcl/1.0/)
+    - [Database: Open Database, Contents: © Original Authors](http://opendatacommons.org/licenses/odbl/1.0/)
+    - [PDDL (ODC Public Domain Dedication and Licence)](https://opendatacommons.org/licenses/pddl/1.0/)
+    - [ODC-BY 1.0 (ODC Attribution License)](https://opendatacommons.org/licenses/by/1-0/index.html)
+- **Community Data License**
+    - [Community Data License Agreement - Permissive - Version 1.0](https://cdla.io/permissive-1-0/)
+    - [Community Data License Agreement - Sharing - Version 1.0](https://cdla.io/sharing-1-0/)
+- **Special**
+    - [World Bank Dataset Terms of Use](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets)
+    - [Reddit API Terms](https://www.reddit.com/wiki/api)
+    - [U.S. Government Works](https://www.usa.gov/government-works/)
+    - [EU ODP Legal Notice](https://ec.europa.eu/info/legal-notice_en)
+</code></pre></div>
+<ul>
+<li>Owner allows you to specify the dataset Owner if you belong to any Organizations. You may assign ownership to yourself or to any Organizations you are a member of (see the section “Creating and using organizations” to learn more about this feature).</li>
+</ul>
+<p>Once you have provided the required information alongside your data source, click on “Create Dataset” and your dataset will start processing. Once the dataset is finished processing, you will be taken to your new dataset’s home page.</p>
+<p>Note that if your dataset is very large (multiple gigabytes in size), processing may take a while, up to several minutes. Feel free to navigate away from the browser window whilst processing is inflight as it will continue in the background.</p>
+<p>Your datasets has now been created! However, for truly great Datasets, the work doesn’t stop there. Once you have specified the required fields there are a few other things you should do in order to maximize your dataset’s usefulness to the community or your collaborators:</p>
+<ul>
+<li>Upload a cover image. We recommend using <a href="http://unsplash.com/">unsplash.com</a> for shareable, high resolution images.</li>
+<li>Add a subtitle to the dataset. This is a short bit of text explaining in slightly more detail what is in it. This subtitle will appear alongside the title in the search listings.</li>
+<li>Add tags. Tags help users find datasets on topics they are interested in by making them easier to find.</li>
+<li>Add a description. The description should explain what the dataset is about in long-form text. A great description is extremely useful to Kaggle community members looking to get started with your data.</li>
+<li>Publish a public Notebook. Use Notebooks to show community members or your collaborators how to get started with the data. This can be something simple like an exploratory data analysis or a more complex project reproducing research using the data.</li>
+</ul>
+<p>A few examples of well-formatted datasets are “<a href="https://www.kaggle.com/skihikingkevin/csgo-matchmaking-damage">CS:GO Competitive Matchmaking Data</a>”, “<a href="https://www.kaggle.com/yelp-dataset/yelp-dataset">Yelp Dataset</a>”, “<a href="https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales">1.6 million UK traffic accidents</a>”, and “<a href="https://www.kaggle.com/zalando-research/fashionmnist">Fashion MNIST</a>”.</p>
+<h4>Creating Datasets from Various Connectors</h4>
+<p>As outlined above, in addition to uploading files from your local machine, you can also create Datasets from various data sources including GitHub, remote URLs (any public file hosted on the web), and Notebook output files. These are each icons that can be found in the Dataset Upload Modal sidebar.</p>
+<h5>GitHub and Remote File Datasets</h5>
+<p>Datasets created from a GitHub repository or hosted (remote) files are downloaded directly from the remote server to Kaggle’s cloud storage and, therefore, will consume none of your local network’s bandwidth. This makes the remote files connector a convenient solution for creating datasets from large files.</p>
+<p>When a dataset is created from a github repository or hosted file, the publisher is able to set up automatic interval updates from the dataset’s Settings tab. Here’s an example <a href="https://www.kaggle.com/timoboz/stock-data-dow-jones">stock market dataset</a> that updates daily.</p>
+<p>Don’t want to wait for a refresh? No problem! Click the Update button within the &quot;...&quot; dropdown in the dataset menu header to sync your dataset immediately.</p>
+<h5>Notebook Output File Datasets</h5>
+<p>Creating a dataset from a Notebook’s output files will let you create reproducible data pipelines. To create a dataset from a Notebook’s output files, click on the icon in the uploader and search for your Notebook. Alternatively, you can click “Create Dataset” from the Output tab on your rendered Notebook. Then, select the files you want to use in your dataset.</p>
+<h5>Limitations</h5>
+<p>It&#39;s worth noting that for user experience and technical simplicity, a dataset can be created and versioned from exclusively one data source. That is, data sources currently can not be mixed and matched in any given dataset (for example, a dataset created from a GitHub repository can&#39;t also include files uploaded from your local machine). If you would like to use various different data sources in a Notebook you can create multiple datasets and add them both to said Notebook.</p>
+<p>The usual technical specifications for dataset creation apply to connectors too. See the <a href="https://www.kaggle.com/docs/datasets#technical-specifications">Technical Specifications</a> section for more information.</p>
+<h4>Using Datasets in Notebooks</h4>
+<ul>
+<li><a href="https://github.com/Kaggle/kagglehub?tab=readme-ov-file#download-dataset">Dowload dataset with kagglehub</a></li>
+<li><a href="https://github.com/Kaggle/kagglehub?tab=readme-ov-file#upload-dataset">Upload dataset with kagglehub</a></li>
+</ul>
+<hr>
+<!--Collaborating on Datasets-->
+<h3>Collaborating on Datasets</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>Dataset collaboration is a powerful feature. It allows multiple users to co-own and co-maintain a private or publicly shared dataset. For example, you can invite collaborators to view and edit a private dataset to work together on preparing it before changing its visibility to public.
+
+When uploading a Dataset you may choose either yourself or any Organization you are a part of as the Owner of that Dataset. If you select yourself, that Dataset will be created with yourself as the Owner. If you select an Organization, that Organization will be the Owner of the dataset, and every other user in the Organization (including yourself) will be added as a Collaborator with editing privileges (if you are unfamiliar with Organizations, you may also want to read the section “Creating and using organizations”).
+
+This means that Organizations are an easy way to manage access to datasets or groups of datasets.
+</code></pre></div>
+<h4>Inviting Collaborators</h4>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>Alternatively, you may manage Collaborators directly. To do so, go to any dataset you own and navigate to Settings &amp;gt; Sharing. There, use the search box to find and add other users as Dataset collaborators.
+
+If your Dataset is private, you may choose between giving Collaborators either viewing privileges (“Can view”) or editing privileges (“Can edit”). If your Dataset is public, Collaborators can only be added with editing privileges (“Can edit”), as anyone can view it already.
+
+When you add a collaborator, they will receive a notification via email.
+
+“[Data Science for Good: Kiva Crowdfunding](https://www.kaggle.com/kiva/data-science-for-good-kiva-crowdfunding)” is a great example of a Collaborative Dataset.
+</code></pre></div>
+<h4>Using Notebooks with Dataset Collaborators</h4>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>Using Notebooks, Kaggle’s interactive code editing and execution environment, is a powerful way to work with your collaborators on a Dataset. You might want to work with collaborators to write public Notebooks that help familiarize other users with your dataset. Or you may want to keep all of your code private among your collaborators as you work on privately shared projects together.
+
+Notebooks you create are private by default, and their sharing settings are distinct from the sharing settings on your Dataset. That is, your Dataset collaborators won’t automatically see your private Notebooks. Here’s what that means and how you can productively use sharing settings on Datasets and Notebooks together:
+- You can make public Notebooks on a private Dataset which will allow anyone to view your Notebook, but not the underlying private data source.
+- If you want to add view or edit collaborators to a private Notebook (whether the dataset is private or public), you can do so by adding users via Options &amp;gt; Sharing on the Notebook.
+</code></pre></div>
+<hr>
+<!--Resources for Starting a Data Project-->
+<h3>Resources for Starting a Data Project</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>There are many resources available online to help you get started working on your open data project.
+</code></pre></div>
+<h4>Using Datasets</h4>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>- [Getting Started on Kaggle video tutorials](https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW): Just started on Kaggle? Not sure what is where and why? Here are our very own Kaggle team tutorials to orient you quickly on navigating the Kaggle platform and creating your own datasets and Notebooks
+- [A Guide to Open Data Publishing](http://blog.kaggle.com/2016/10/21/a-guide-to-open-data-publishing-analytics/): This article includes the key ingredients to an open data project.
+- [Web scraping data in Python](http://blog.kaggle.com/2017/01/31/scraping-for-craft-beers-a-dataset-creation-tutorial/): A tutorial showing you how to scrape data with BeautifulSoup. It goes over the same code used to create the [Craft Beers dataset](https://www.kaggle.com/nickhould/craft-cans) published on Kaggle.
+- [Making Kaggle the Home of Open Data](http://blog.kaggle.com/2016/08/17/making-kaggle-the-home-of-open-data/): Ben’s post shares instructions for publishing your open data project on Kaggle and how you can explore others’ datasets.
+- [Creating an Organization](https://www.kaggle.com/organizations/new): If you’re publishing data from an organization, you can create an organization profile first. Then you just select the organization profile from the dropdown near your avatar when publishing ([https://www.kaggle.com/datasets/new](https://www.kaggle.com/datasets/new)).
+- [Open Data Spotlights](http://blog.kaggle.com/tag/open-data-spotlight/): This series highlights some of the best open data projects on Kaggle.
+- Have requests or want to discuss data collection, cleaning, or other aspects of open data projects? Post away in the [Datasets Discussion forum](https://www.kaggle.com/data) on Kaggle.
+</code></pre></div>
+<h4>Using Notebooks</h4>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>- [Getting Started on Kaggle video tutorials](https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW): Just started on Kaggle? Not sure what is where and why? Here are our very own Kaggle team tutorials to orient you quickly on navigating the Kaggle platform and creating your own datasets and Notebooks
+- [Kaggle Learn](https://www.kaggle.com/learn/overview) is a great place to start getting hands on with data science and machine learning techniques using Notebooks.
+- [Does open data make you happy? An introduction to Kaggle Notebooks](https://medium.com/@meganrisdal/does-open-data-make-you-happy-an-introduction-to-kaggle-kernels-d8cce437d5ff): Learn how to use Notebooks to explore any combination of datasets published on Kaggle.
+- [Seventeen Ways to Map Data in Notebooks](http://blog.kaggle.com/2016/11/30/seventeen-ways-to-map-data-in-kaggle-kernels/): A collection of mini-tutorials by Kaggle users for Python and R users.
+</code></pre></div>
+<h4>Analysis</h4>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>- [How to Get Started with Data Science in Containers](http://blog.kaggle.com/2016/02/05/how-to-get-started-with-data-science-in-containers/): One of our data scientists, Jamie Hall, explains how and why Docker containers are at the heart of Notebooks – reproducible analysis.
+- [Approaching (Almost) Any Machine Learning Problem by Kaggle Grandmaster Abhishek Thakur](http://blog.kaggle.com/2016/07/21/approaching-almost-any-machine-learning-problem-abhishek-thakur/): Exactly what it says – a great tutorial.
+</code></pre></div>
+<h4>Other</h4>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>- [Kaggle Datasets Twitter](https://twitter.com/KaggleDatasets): The new account features newly featured datasets plus open data news.
+- [Collecting &amp; Using Open Data](http://mlwave.com/how-to-produce-and-use-datasets-lessons-learned/): A blog by Kaggler MLWave recommended by Triskelion.
+</code></pre></div>
+<hr>
+<!--Technical Specifications-->
+<h3>Technical Specifications</h3>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>Kaggle Datasets allows you to publish and share datasets privately or publicly. We provide resources for storing and processing datasets, but there are certain technical specifications:
+- 200GB per dataset limit
+- 200GB max private datasets (if you exceed this, either make your datasets public or delete unused datasets)
+- A max of 50 top-level files (if you have more, use a directory structure and upload an archive)
+
+When you upload a dataset we apply certain processing steps to make the dataset more usable.
+- A complete archive is created so the dataset can be easily downloaded later
+- Any archives (e.g., ZIP files) that you upload are uncompressed so that the files are easily accessible in Notebooks (directory structure is preserved)
+- Data types for tabular data files are automatically detected (e.g., geospatial types)
+- Column-level metrics are calculated for tabular data which are viewable on the data explorer on the dataset&#39;s &quot;Data&quot; tab
+
+When publishing datasets, you might also want to consider [the technical specifications of Notebooks](https://www.kaggle.com/docs/notebooks#technical-specifications) if you intend to use (or encourage other Kaggle users to use) Notebooks to analyze the data.
+</code></pre></div>
+
+          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

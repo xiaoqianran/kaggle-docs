@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Competitions Commands · Kaggle Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/competitions.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/competitions.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+      <a class="brand" href="/kaggle-docs/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle Docs</span>
+        <span class="brand-v">mirror</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn active" href="/kaggle-docs/cli/competitions.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn" href="/kaggle-docs/zh/cli/competitions.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">Official ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
+        </div>
+        <div class="side-label">Learning path · docs</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
+<li><a class="leaf active" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          
+          <h1>Competitions Commands</h1>
+<p>Commands for interacting with Kaggle competitions.</p>
+<p>For tutorials on how to submit to competitions :</p>
+<ul>
+<li><a href="/kaggle-docs/cli/tutorials.html#tutorial-how-to-submit-to-a-competition">How to Submit to a Competition</a></li>
+<li><a href="/kaggle-docs/cli/tutorials.html#tutorial-how-to-submit-to-a-code-competition">How to Submit to a Code Competition</a></li>
+</ul>
+<h2><code>kaggle competitions list</code></h2>
+<p>Lists available competitions.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions list [options]
+</code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--group &lt;GROUP&gt;</code>: Filter by competition group. Valid options: <code>general</code>, <code>entered</code>, <code>inClass</code>.</li>
+<li><code>--category &lt;CATEGORY&gt;</code>: Filter by competition category. Valid options: <code>all</code>, <code>featured</code>, <code>research</code>, <code>recruitment</code>, <code>gettingStarted</code>, <code>masters</code>, <code>playground</code>.</li>
+<li><code>--sort-by &lt;SORT_BY&gt;</code>: Sort results. Valid options: <code>grouped</code>, <code>prize</code>, <code>earliestDeadline</code>, <code>latestDeadline</code>, <code>numberOfTeams</code>, <code>recentlyCreated</code> (default: <code>latestDeadline</code>).</li>
+<li><code>-p, --page &lt;PAGE&gt;</code>: Page number for results (default: 1).</li>
+<li><code>-s, --search &lt;SEARCH_TERM&gt;</code>: Search term.</li>
+<li><code>-v, --csv</code>: Print results in CSV format.</li>
+<li><code>--format</code>: Output format (<code>csv</code>, <code>table</code>, <code>json</code>, or a field projection). See <a href="/kaggle-docs/cli/output_format.html">output_format.md</a>.</li>
+</ul>
+<p><strong>Output columns:</strong></p>
+<p><code>ref</code>, <code>deadline</code>, <code>category</code>, <code>reward</code>, <code>teamCount</code>, <code>userHasEntered</code>, <code>userRank</code></p>
+<p><code>userRank</code> is your public leaderboard position when you have entered the competition. It is <code>0</code> when you have not entered, or when no public rank is available yet.</p>
+<p><strong>Example:</strong></p>
+<p>List featured competitions in the general group, sorted by prize:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions list --group general --category featured --sort-by prize
+</code></pre></div>
+<p>List entered competitions with rank in CSV format:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions list --group entered -v
+</code></pre></div>
+<p><strong>Purpose:</strong></p>
+<p>This command helps you discover new competitions or find specific ones based on various criteria. Use <code>--group entered</code> to see your rank across competitions you have joined.</p>
+<h2><code>kaggle competitions files</code></h2>
+<p>Lists files for a specific competition.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions files &lt;COMPETITION&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;COMPETITION&gt;</code>: Competition URL suffix (e.g., <code>titanic</code>).</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-v, --csv</code>: Print results in CSV format.</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+<li><code>--page-token &lt;PAGE_TOKEN&gt;</code>: Page token for results paging.</li>
+<li><code>--page-size &lt;PAGE_SIZE&gt;</code>: Number of items to show on a page (default: 20, max: 200).</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>List the first 3 files for the &quot;titanic&quot; competition in CSV format, quietly:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions files titanic --page-size=3 -v -q
+</code></pre></div>
+<p><strong>Purpose:</strong></p>
+<p>Use this command to see the data files available for a competition before downloading them.</p>
+<h2><code>kaggle competitions download</code></h2>
+<p>Downloads competition files.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions download &lt;COMPETITION&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;COMPETITION&gt;</code>: Competition URL suffix (e.g., <code>titanic</code>).</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-f, --file &lt;FILE_NAME&gt;</code>: Specific file to download (downloads all if not specified).</li>
+<li><code>-p, --path &lt;PATH&gt;</code>: Folder to download files to (defaults to current directory).</li>
+<li><code>-w, --wp</code>: Download files to the current working path (equivalent to <code>-p .</code>).</li>
+<li><code>-o, --force</code>: Force download, overwriting existing files.</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ol>
+<li><p>Download all files for the &quot;titanic&quot; competition to the current directory, overwriting existing files, quietly:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions download titanic -w -o -q
+</code></pre></div>
+</li>
+<li><p>Download the <code>test.csv</code> file from the &quot;titanic&quot; competition to a folder named <code>tost</code>:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions download titanic -f test.csv -p tost
+</code></pre></div>
+</li>
+</ol>
+<p><strong>Purpose:</strong></p>
+<p>This command allows you to get the necessary data files for a competition onto your local machine.</p>
+<h2><code>kaggle competitions submit</code></h2>
+<p>Makes a new submission to a competition.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submit &lt;COMPETITION&gt; -f &lt;FILE_NAME&gt; -m &lt;MESSAGE&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;COMPETITION&gt;</code>: Competition URL suffix (e.g., <code>house-prices-advanced-regression-techniques</code>).</li>
+<li><code>-f, --file &lt;FILE_NAME&gt;</code>: The submission file.</li>
+<li><code>-m, --message &lt;MESSAGE&gt;</code>: The submission message.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-k, --kernel &lt;KERNEL&gt;</code>: Name of the kernel (notebook) to submit (for code competitions).</li>
+<li><code>-v, --version &lt;VERSION&gt;</code>: Version of the kernel to submit (e.g. <code>2</code>).</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+<li><code>--sandbox</code>: Mark submission as a sandbox submission (competition hosts/admins only).</li>
+<li><code>--wait [SECONDS]</code>: Wait for the submission to finish scoring, printing the public score when done. Optionally pass a timeout in seconds (<code>0</code> or no value = wait up to 12 hours, the maximum notebook runtime). Exits non-zero if scoring fails or the timeout is reached.</li>
+<li><code>--poll-interval &lt;SECONDS&gt;</code>: Maximum seconds between status polls while waiting (default: <code>60</code>, minimum: <code>5</code>). Polling starts at 5s and increases automatically.</li>
+</ul>
+<p>On a successful submission the command prints the numeric submission ref, e.g. <code>Submission ref: 12345678</code>. You can look that submission up later with <a href="#kaggle-competitions-submission"><code>kaggle competitions submission</code></a>.</p>
+<p><strong>Example: Standard (not code) competition:</strong></p>
+<p>Submit <code>sample_submission.csv</code> to the &quot;house-prices-advanced-regression-techniques&quot; competition with the message &quot;Test message&quot;:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submit house-prices-advanced-regression-techniques -f sample_submission.csv -m &quot;Test message&quot;
+</code></pre></div>
+<p><strong>Example: Code competition:</strong></p>
+<p>Submit the <code>submission.csv</code> produced by version <code>3</code> of your <code>&lt;YOUR_USERNAME&gt;/rsna-submission</code> for the <code>rsna-2024-lumbar-spine-degenerative-classification</code> competition:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submit rsna-2024-lumbar-spine-degenerative-classification -f submission.csv -k &lt;YOUR_USERNAME&gt;/rsna-submission -v 3 -m &quot;Test message&quot;
+</code></pre></div>
+<p><strong>Example: Submit and wait for the score (useful in CI):</strong></p>
+<p>Submit and block until scoring finishes (up to a 10-minute timeout), then print the public score:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submit house-prices-advanced-regression-techniques -f sample_submission.csv -m &quot;CI run&quot; --wait 600
+</code></pre></div>
+<p>The command exits <code>0</code> once the submission is scored and non-zero if scoring fails or the timeout is reached, so it can gate a pipeline.</p>
+<p><strong>Purpose:</strong></p>
+<p>Use this command to upload your predictions or code to a competition for scoring.</p>
+<h2><code>kaggle competitions submission</code></h2>
+<p>Shows the status and score of a single submission by its numeric ref (as printed by <code>kaggle competitions submit</code>).</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submission &lt;SUBMISSION_REF&gt;
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;SUBMISSION_REF&gt;</code>: The numeric submission ref printed by <code>kaggle competitions submit</code>.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submission 12345678
+</code></pre></div>
+<p>Output:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>Submission Ref:  12345678
+Status:          COMPLETE
+Public Score:    0.98765
+Private Score:
+Description:     Test message
+Submission Date: 2026-07-19 12:00:00
+</code></pre></div>
+<p><strong>Purpose:</strong></p>
+<p>Use this command to check whether a submission has finished scoring and to read its public score — for example, after submitting without <code>--wait</code>, or from a script polling for results.</p>
+<h2><code>kaggle competitions submissions</code></h2>
+<p>Shows your past submissions for a competition.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submissions &lt;COMPETITION&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;COMPETITION&gt;</code>: Competition URL suffix (e.g., <code>house-prices-advanced-regression-techniques</code>).</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-v, --csv</code>: Print results in CSV format.</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Show submissions for &quot;house-prices-advanced-regression-techniques&quot; in CSV format, quietly:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submissions house-prices-advanced-regression-techniques -v -q
+</code></pre></div>
+<p><strong>Purpose:</strong></p>
+<p>This command allows you to review your previous submission attempts and their scores.</p>
+<h2><code>kaggle competitions submission-download</code></h2>
+<p>Downloads the submitted file for a single submission by its numeric id.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submission-download &lt;SUBMISSION_ID&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;SUBMISSION_ID&gt;</code>: The numeric submission id printed by <code>kaggle competitions submit</code>, or listed by <code>kaggle competitions submissions &lt;COMPETITION&gt;</code>.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-p, --path &lt;PATH&gt;</code>: Folder to download the file to. Defaults to the current working directory&#39;s Kaggle download location.</li>
+<li><code>-o, --force</code>: Download even if a local copy already exists (skips the up-to-date check).</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Download the file for submission <code>12345678</code> into <code>./subs</code>:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submission-download 12345678 -p ./subs
+</code></pre></div>
+<p><strong>Purpose:</strong></p>
+<p>Use this command to retrieve the exact file you (or a teammate) submitted — for example, to inspect an old submission or reproduce a scored result.</p>
+<h2><code>kaggle competitions leaderboard</code></h2>
+<p>Gets competition leaderboard information.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions leaderboard &lt;COMPETITION&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;COMPETITION&gt;</code>: Competition URL suffix (e.g., <code>titanic</code>).</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-s, --show</code>: Show the top of the leaderboard in the console.</li>
+<li><code>-d, --download</code>: Download the entire leaderboard to a CSV file.</li>
+<li><code>-p, --path &lt;PATH&gt;</code>: Folder to download the leaderboard to (if <code>-d</code> is used).</li>
+<li><code>-v, --csv</code>: Print results in CSV format (used with <code>-s</code>).</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ol>
+<li><p>Download the &quot;titanic&quot; leaderboard to a folder named <code>leaders</code>, quietly:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions leaderboard titanic -d -p leaders -q
+</code></pre></div>
+</li>
+<li><p>Download the leaderboard and save it to <code>leaderboard.txt</code>:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions leaderboard titanic &gt; leaderboard.txt
+</code></pre></div>
+</li>
+</ol>
+<p><strong>Purpose:</strong></p>
+<p>This command lets you view your ranking and the scores of other participants in a competition.</p>
+<h2><code>kaggle competitions topics list</code></h2>
+<p>Lists discussion topics for a competition.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions topics list [COMPETITION] [options]
+</code></pre></div>
+<p>Note: <code>kaggle competitions topics</code> (without <code>list</code> subcommand) is supported as a shortcut to list topics for the default competition (configured via <code>kaggle config set competition</code>).</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>[COMPETITION]</code>: Competition URL suffix (e.g., <code>titanic</code>). Optional if default competition is configured.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-s, --sort-by &lt;SORT_BY&gt;</code>: Sort order. Valid options: <code>hot</code>, <code>top</code>, <code>new</code>, <code>recent</code>, <code>active</code>, <code>relevance</code>.</li>
+<li><code>--search &lt;SEARCH&gt;</code>: Search query to filter topics.</li>
+<li><code>--page-size &lt;PAGE_SIZE&gt;</code>: Number of items to show on a page. Default is 20, max is 200.</li>
+<li><code>--page-token &lt;PAGE_TOKEN&gt;</code>: Page token for results paging.</li>
+<li><code>-v, --csv</code>: Print results in CSV format.</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>List discussion topics for the &quot;titanic&quot; competition sorted by most recent:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions topics list titanic -s recent
+</code></pre></div>
+<p><strong>Purpose:</strong></p>
+<p>This command lets you browse discussion topics for a specific competition.</p>
+<h2><code>kaggle competitions topics show</code></h2>
+<p>Displays a competition discussion topic with all comments in tree form.</p>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions topics show &lt;TOPIC_REF&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;TOPIC_REF&gt;</code>: A topic reference, which can be:<ul>
+<li><code>&lt;competition&gt;/&lt;topic-id&gt;</code> (e.g., <code>titanic/12345</code>)</li>
+<li><code>&lt;competition&gt; &lt;topic-id&gt;</code> (two separate arguments, where <code>&lt;topic-id&gt;</code> is passed as second argument)</li>
+<li><code>&lt;topic-id&gt;</code> (bare numeric ID)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--page-size &lt;PAGE_SIZE&gt;</code>: Number of comments to show per page.</li>
+<li><code>--page-token &lt;PAGE_TOKEN&gt;</code>: Page token for comment pagination.</li>
+<li><code>-v, --csv</code>: Print results in CSV format.</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Show topic 12345 from the &quot;titanic&quot; competition:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions topics show titanic/12345
+</code></pre></div>
+<p><strong>Purpose:</strong></p>
+<p>This command displays a full discussion topic along with all of its comments rendered in an indented tree structure.</p>
+<h2><code>kaggle competitions topic-messages</code></h2>
+<p>Lists messages within a competition discussion topic.</p>
+<blockquote>
+<p><strong>Deprecated:</strong> This command is deprecated in favor of <code>kaggle competitions topics show</code>. It will be removed in a future release.</p>
+</blockquote>
+<p><strong>Usage:</strong></p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions topic-messages &lt;COMPETITION&gt; &lt;TOPIC_ID&gt; [options]
+</code></pre></div>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>&lt;COMPETITION&gt;</code>: Competition URL suffix (e.g., <code>titanic</code>).</li>
+<li><code>&lt;TOPIC_ID&gt;</code>: The discussion topic id.</li>
+</ul>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-s, --sort-by &lt;SORT_BY&gt;</code>: Sort order. Valid options: <code>best</code>, <code>new</code>, <code>old</code>.</li>
+<li><code>-n, --page-size &lt;PAGE_SIZE&gt;</code>: Max top-level messages to return; <code>-1</code> for all.</li>
+<li><code>-v, --csv</code>: Print results in CSV format.</li>
+<li><code>-q, --quiet</code>: Suppress verbose output.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>List all messages for topic 12345 in the &quot;titanic&quot; competition, sorted by newest first:</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions topic-messages titanic 12345 -s new -n -1
+</code></pre></div>
+<p><strong>Purpose:</strong></p>
+<p>This command displays the messages within a specific competition discussion topic.</p>
+
+          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>

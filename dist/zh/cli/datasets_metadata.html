@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-locale="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datasets Metadata · Kaggle 文档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
+  <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/datasets_metadata.html" />
+  <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/datasets_metadata.html" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="菜单">菜单</button>
+      <a class="brand" href="/kaggle-docs/zh/index.html">
+        <span class="brand-mark">K</span>
+        <span class="brand-text">Kaggle 文档</span>
+        <span class="brand-v">镜像</span>
+      </a>
+      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang-btn" href="/kaggle-docs/cli/datasets_metadata.html" data-lang-set="en" hreflang="en">EN</a>
+        <a class="lang-btn active" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
+      </div>
+      <a class="top-link" href="https://www.kaggle.com/docs" rel="noopener" target="_blank">官方 ↗</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <input class="search" id="search" type="search" placeholder="搜索文档…" autocomplete="off" />
+        </div>
+        <div class="side-label">学习路径 · 文档</div>
+      </div>
+      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/index.html" data-rel="index.md"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="platform" data-open="1" data-active="0">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-rel="platform/getting-started.md"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-rel="platform/packages.md"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-rel="platform/api.md"><span class="num">4</span><span class="leaf-title">公共API</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-rel="platform/models.md"><span class="num">5</span><span class="leaf-title">型号</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-rel="platform/benchmarks.md"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-rel="platform/tpu.md"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-rel="platform/datasets.md"><span class="num">8</span><span class="leaf-title">数据集</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-rel="platform/competitions.md"><span class="num">9</span><span class="leaf-title">比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-rel="platform/notebooks.md"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-rel="platform/organizations.md"><span class="num">11</span><span class="leaf-title">组织</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/changelog.html" data-rel="cli/changelog.md"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-rel="cli/intro.md"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/tutorials.html" data-rel="cli/tutorials.md"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-rel="cli/README.md"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-rel="cli/output_format.md"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-rel="cli/configuration.md"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-rel="cli/search.md"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels.html" data-rel="cli/kernels.md"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-rel="cli/benchmarks.md"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-rel="cli/datasets.md"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-rel="cli/model_variations.md"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-rel="cli/models.md"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-rel="cli/competitions.md"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-rel="cli/forums.md"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/competition_creation.html" data-rel="cli/competition_creation.md"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="1">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf active" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-rel="cli/models_metadata.md"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="skills" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-rel="skills/SKILL.md"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
+</ul></div></div></div>
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-rel="skills/references/kernels.md"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-rel="skills/references/model_variations.md"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-rel="skills/references/search.md"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-rel="skills/references/datasets.md"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-rel="skills/references/files.md"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-rel="skills/references/models.md"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/competitions.html" data-rel="skills/references/competitions.md"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-rel="skills/references/forums.md"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-rel="skills/references/auth.md"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-rel="skills/references/configuration.md"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-rel="skills/references/quota.md"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li>
+</ul></div></div></div>
+</div></div></div></div>
+<div class="track" data-track="kagglehub" data-open="0" data-active="0">
+<button type="button" class="track-btn" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="track-panel"><div class="track-panel-inner"><div class="track-body">
+<div class="group" data-open="1" data-active="0">
+<button type="button" class="group-btn"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-rel="kagglehub/intro.md"><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li>
+<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li>
+</ul></div></div></div>
+</div></div></div></div></nav>
+      <div class="side-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
+    </aside>
+    <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
+    <main class="main">
+      <div class="content-wrap">
+        <article class="content prose">
+          <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/cli/datasets_metadata.html">查看英文</a></div>
+          <p>Kaggle API 遵循 <a href="https://frictionlessdata.io/specs/data-package/">Data Package specification</a> 在创建新数据集和数据集版本时指定元数据。在文件旁边，您必须将一个特殊的 <code>dataset-metadata.json</code> 文件与每个新数据集（版本）的文件一起放入上传文件夹中。 </p>
+<p>这是 <code>dataset-metadata.json</code> 的基本示例：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>{
+  &quot;title&quot;: &quot;My Awesome Dataset&quot;, 
+  &quot;id&quot;: &quot;timoboz/my-awesome-dataset&quot;, 
+  &quot;licenses&quot;: [{&quot;name&quot;: &quot;CC0-1.0&quot;}]
+}
+</code></pre></div>
+<p>您还可以使用 API 命令 <code>kaggle datasets init -p /path/to/dataset</code> 让 API 为您创建此文件。</p>
+<p>这是包含文件元数据的示例：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>{
+  &quot;title&quot;: &quot;My Awesome Dataset&quot;, 
+  &quot;subtitle&quot;: &quot;My awesomer subtitle&quot;,
+  &quot;description&quot;: &quot;My awesomest description&quot;,
+  &quot;id&quot;: &quot;timoboz/my-awesome-dataset&quot;, 
+  &quot;id_no&quot;: 12345,
+  &quot;licenses&quot;: [{&quot;name&quot;: &quot;CC0-1.0&quot;}],
+  &quot;resources&quot;: [
+    {
+      &quot;path&quot;: &quot;my-awesome-data.csv&quot;,
+      &quot;description&quot;: &quot;This is my awesome data!&quot;,
+      &quot;schema&quot;: {
+        &quot;fields&quot;: [
+          {
+            &quot;name&quot;: &quot;StringField&quot;,
+            &quot;description&quot;: &quot;String field description&quot;,
+            &quot;type&quot;: &quot;string&quot;
+          },
+          {
+            &quot;name&quot;: &quot;NumberField&quot;,
+            &quot;description&quot;: &quot;Number field description&quot;,
+            &quot;type&quot;: &quot;number&quot;
+          },
+          {
+            &quot;name&quot;: &quot;DateTimeField&quot;,
+            &quot;description&quot;: &quot;Date time field description&quot;,
+            &quot;type&quot;: &quot;datetime&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;path&quot;: &quot;my-awesome-extra-file.txt&quot;,
+      &quot;description&quot;: &quot;This is my awesome extra file!&quot;
+    }
+  ],
+  &quot;keywords&quot;: [
+    &quot;beginner&quot;,
+    &quot;tutorial&quot;
+  ],
+  &quot;expectedUpdateFrequency&quot;: &quot;monthly&quot;,
+  &quot;userSpecifiedSources&quot;: &quot;World Bank and OECD ([link](http://data.worldbank.org/indicator/NY.GDP.MKTP.CD))&quot;,
+  &quot;image&quot;: &quot;relative/path/to/new/image.png&quot;
+}
+</code></pre></div>
+<h2>内容</h2>
+<p>目前支持以下元数据：</p>
+<ul>
+<li><code>kaggle datasets create</code>（创建一个新的数据集）：<ul>
+<li><code>title</code>：数据集的标题，长度必须在 6 到 50 个字符之间。</li>
+<li><code>subtitle</code>：数据集的副标题，长度必须在20到80个字符之间。</li>
+<li><code>description</code>：数据集的描述。 </li>
+<li><code>id</code>：新数据集的 URL slug，是以下各项的组合：<ol>
+<li>您的用户名或组织名称（如果您是组织的成员）。</li>
+<li>唯一的数据集段的长度必须在 3 到 50 个字符之间。</li>
+</ol>
+</li>
+<li><code>licenses</code>：必须只有一个指定许可证的条目。仅评估<code>name</code>，忽略所有其他信息。请参阅下文了解选项。* <code>resources</code>：包含正在上传的文件数组。  （注意 - 这不是必需的，如果包含，也不需要包含所有要上传的文件。）：<ul>
+<li><code>path</code>：文件路径。</li>
+<li><code>description</code>：文件描述。</li>
+<li><code>schema</code>：文件模式（定义如下）：<ul>
+<li><code>fields</code>：数据集中的字段数组。  请注意，这需要按顺序包含数据中的所有字段，否则它们将无法正确匹配。  更高版本的 API 将修复此错误。<ul>
+<li><code>name</code>: 字段名称</li>
+<li><code>description</code>：字段描述（注意：为了向后兼容，也接受<code>title</code>，但首选<code>description</code>）</li>
+<li><code>type</code>：字段类型。尽力而为的类型列表将保留在本页底部，但可能会添加此处未记录的新类型。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>keywords</code>：包含与 Kaggle 上现有标签相对应的字符串数组。  如果指定的标签不存在，上传将继续，但不会添加该特定标签。</li>
+</ul>
+</li>
+<li><code>kaggle datasets version</code>（为现有数据集创建新版本）：<ul>
+<li><code>subtitle</code>：数据集的副标题，长度必须在20到80个字符之间。</li>
+<li><code>description</code>：数据集的描述。* <code>id</code>：要更新的数据集的 URL slug（见上文）。您必须是该数据集的所有者或具有编辑权限。必须指定 <code>id</code> 或 <code>id_no</code> 之一。如果两者都是，<code>id_no</code> 将是首选。</li>
+<li><code>id_no</code>：数据集的ID。必须指定 <code>id</code> 或 <code>id_no</code> 之一。您必须是该数据集的所有者或具有编辑权限。如果两者都是，<code>id_no</code> 将是首选。</li>
+<li><code>resources</code>：包含正在上传的文件数组。  （注意 - 这不是必需的，如果包含，也不需要包含所有要上传的文件。）：<ul>
+<li><code>path</code>：文件路径。</li>
+<li><code>description</code>：文件描述。</li>
+<li><code>schema</code>：文件模式（定义如下）：<ul>
+<li><code>fields</code>：数据集中的字段数组。  请注意，这需要按顺序包含数据中的所有字段，否则它们将无法正确匹配。  更高版本的 API 将修复此错误。<ul>
+<li><code>name</code>: 字段名称</li>
+<li><code>description</code>：字段描述（注意：为了向后兼容，也接受<code>title</code>，但首选<code>description</code>）</li>
+<li><code>type</code>：字段类型。尽力而为的类型列表将保留在本页底部，但可能会添加此处未记录的新类型。* <code>keywords</code>：包含与 Kaggle 上现有标签相对应的字符串数组。  如果指定的标签不存在，上传将继续，但不会添加该特定标签。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>kaggle datasets metadata --update</code>（更新现有数据集的元数据）支持上面提到的<code>kaggle datasets version</code>的所有字段，此外：<ul>
+<li><code>expectedUpdateFrequency</code>：您期望使用新版本更新数据集的频率。请参阅<a href="#expected-update-frequencies">section below</a>了解可能的值。</li>
+<li><code>userSpecifiedSources</code>：对数据集来源的解释。该字符串支持大多数基本的 Markdown 功能。</li>
+<li><code>image</code>：要用于数据集的新图像文件的相对文件路径。该路径应相对于 dataset-metadata.json 文件的位置。有关文件类型和预期图像大小的更多详细信息，请参阅<a href="#images">section below</a>。</li>
+</ul>
+</li>
+</ul>
+<p>我们将在即将推出的 API 版本中添加进一步的元数据处理。</p>
+<h2>许可证</h2>
+<p>您可以为您的数据集指定以下许可证：</p>
+<ul>
+<li><code>CC0-1.0</code>: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: Public Domain</a></li>
+<li><code>CC-BY-SA-3.0</code>: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li>
+<li><code>CC-BY-SA-4.0</code>: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+<li><code>CC-BY-NC-SA-4.0</code>: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
+<li><code>GPL-2.0</code>: <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">GPL 2</a></li>
+<li><code>ODbL-1.0</code>：数据库：<a href="http://opendatacommons.org/licenses/odbl/1.0/">Open Database</a>，内容：© 原作者</li>
+<li><code>DbCL-1.0</code>: 数据库: <a href="http://opendatacommons.org/licenses/odbl/1.0/">Open Database</a>, 内容: <a href="http://opendatacommons.org/licenses/dbcl/1.0/">Database Contents</a></li>
+<li><code>copyright-authors</code>：数据文件©原作者</li>
+<li><code>other</code>：其他（描述中指定）* <code>unknown</code>：未知</li>
+<li><code>CC-BY-4.0</code>: 	
+<a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></li>
+<li><code>CC-BY-NC-4.0</code>：<a href="https://creativecommons.org/licenses/by-nc/4.0/">https://creativecommons.org/licenses/by-nc/4.0/</a></li>
+<li><code>PDDL</code>：<a href="https://opendatacommons.org/licenses/pddl/1.0/">https://opendatacommons.org/licenses/pddl/1.0/</a>
+*<code>CC-BY-3.0</code>： 	
+<a href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</a>
+*<code>CC-BY-3.0-IGO</code>： 	
+<a href="https://creativecommons.org/licenses/by/3.0/igo/">https://creativecommons.org/licenses/by/3.0/igo/</a></li>
+<li><code>US-Government-Works</code>: 	
+<a href="https://www.usa.gov/government-works/">https://www.usa.gov/government-works/</a></li>
+<li><code>CC-BY-NC-SA-3.0-IGO</code>: 	
+<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/">https://creativecommons.org/licenses/by-nc-sa/3.0/igo/</a>
+*<code>CDLA-Permissive-1.0</code>： 	
+<a href="https://cdla.io/permissive-1-0/">https://cdla.io/permissive-1-0/</a>
+*<code>CDLA-Sharing-1.0</code>： 	
+<a href="https://cdla.io/sharing-1-0/">https://cdla.io/sharing-1-0/</a></li>
+<li><code>CC-BY-ND-4.0</code>: 	
+<a href="https://creativecommons.org/licenses/by-nd/4.0/">https://creativecommons.org/licenses/by-nd/4.0/</a></li>
+<li><code>CC-BY-NC-ND-4.0</code>: 	
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">https://creativecommons.org/licenses/by-nc-nd/4.0/</a></li>
+<li><code>ODC-BY-1.0</code>: 	
+<a href="https://opendatacommons.org/licenses/by/1-0/index.html">https://opendatacommons.org/licenses/by/1-0/index.html</a></li>
+<li><code>LGPL-3.0</code>: 	
+<a href="http://www.gnu.org/licenses/lgpl-3.0.html">http://www.gnu.org/licenses/lgpl-3.0.html</a>
+*<code>AGPL-3.0</code>： 	
+<a href="http://www.gnu.org/licenses/agpl-3.0.html">http://www.gnu.org/licenses/agpl-3.0.html</a>
+*<code>FDL-1.3</code>： 	
+<a href="http://www.gnu.org/licenses/fdl-1.3.html">http://www.gnu.org/licenses/fdl-1.3.html</a></li>
+<li><code>EU-ODP-Legal-Notice</code>：<a href="https://ec.europa.eu/info/legal-notice_en">https://ec.europa.eu/info/legal-notice_en</a>
+*<code>apache-2.0</code>： 	
+<a href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a></li>
+<li><code>GPL-3.0</code>: <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL 2</a></li>
+</ul>
+<h2>数据类型</h2>
+<p>您可以指定以下数据类型</p>
+<ul>
+<li><code>string</code></li>
+<li><code>boolean</code></li>
+<li><code>numeric</code></li>
+<li><code>datetime</code></li>
+<li><code>id</code></li>
+<li><code>uuid</code></li>
+<li><code>latitude</code></li>
+<li><code>longitude</code></li>
+<li><code>coordinates</code></li>
+<li><code>country</code></li>
+<li><code>province</code>（这些是美国的州）</li>
+<li><code>postalcode</code>* <code>address</code></li>
+<li><code>email</code></li>
+<li><code>url</code></li>
+<li><code>integer</code></li>
+<li><code>decimal</code></li>
+<li><code>city</code></li>
+</ul>
+<h2>预期更新频率</h2>
+<p>您可以为 <code>expectedUpdateFrequency</code> 指定以下值：</p>
+<ul>
+<li><code>not specified</code></li>
+<li><code>never</code></li>
+<li><code>annually</code></li>
+<li><code>quarterly</code></li>
+<li><code>monthly</code></li>
+<li><code>weekly</code></li>
+<li><code>daily</code></li>
+<li><code>hourly</code></li>
+</ul>
+<h2>图片</h2>
+<p>更新数据集图像的推荐方法是将名为 <code>dataset-cover-image.png</code>（或 <code>.jpg</code>、<code>.jpeg</code>、<code>.webp</code>）的文件作为 <code>datasets-metadata.json</code> 的同级文件。</p>
+<p>示例：</p>
+<ul>
+<li><code>/some/path/dataset-metadata.json</code></li>
+<li><code>/some/path/dataset-cover-image.png</code></li>
+</ul>
+<p>图像文件将仅用于数据集元数据，不会作为数据集中的文件上传。</p>
+<h3>使用相对路径指定图像</h3>
+<p>作为替代方案，您可以使用 <code>image</code> 属性提供从 <code>datasets-metadata.json</code> 到图像文件的相对路径来更新数据集图像。</p>
+<p>如果您的文件位于：</p>
+<ul>
+<li><code>/some/path/dataset-metadata.json</code></li>
+<li><code>/some/path/to/my-image.jpg</code></li>
+</ul>
+<p>该属性应指定为：</p>
+<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>&quot;image&quot;: &quot;to/my-image.jpg&quot;
+</code></pre></div>
+<h3>支持的图像文件类型和预期尺寸</h3>
+<p>支持以下文件类型：</p>
+<ul>
+<li><code>.png</code></li>
+<li><code>.jpg</code></li>
+<li><code>.jpeg</code></li>
+<li><code>.webp</code></li>
+</ul>
+<p>图像的最小宽度为 560 像素，最小高度为 280 像素。</p>
+<p>相同的图像文件将用于两种不同的作物：</p>
+<ul>
+<li>标头，2:1 比例<ul>
+<li>裁剪矩形：宽度：560px，高度：280px，顶部：0，左侧：0- 对于尺寸为 560 像素 x 280 像素的图像，这将是整个矩形图像。</li>
+</ul>
+</li>
+<li>缩略图，1:1 比例<ul>
+<li>裁剪矩形：宽度：280px，高度：280px，顶部：0，左侧：140px</li>
+<li>对于尺寸为 560 像素 x 280 像素的图像，这将是一个居中的 280 像素正方形。</li>
+</ul>
+</li>
+</ul>
+<p>虽然您可以上传大于 560 像素 x 280 像素的图像，但将应用上面指定的裁剪，这可能看起来不太好。这些裁剪始终可以在 kaggle.com 数据集设置页面的 UI 中进行编辑。</p>
+
+          <p class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
+  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
+</body>
+</html>
