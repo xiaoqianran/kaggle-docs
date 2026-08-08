@@ -150,22 +150,26 @@ function renderNavHtml(tracks, activeRel, locale) {
     parts.push(
       `<div class="track" data-track="${htmlEscape(track.id)}" data-open="${open}" data-active="${trackActive ? "1" : "0"}">`,
     );
+    // data-track-toggle is REQUIRED by site.js for accordion expand
     parts.push(
-      `<button type="button" class="track-btn" aria-expanded="${open === "1"}"><span class="chev">${CHEV_SVG}</span><span class="track-label">${htmlEscape(track.badge)} ${htmlEscape(track.name)}</span><span class="track-count">${track.count}</span></button>`,
+      `<button type="button" class="track-btn" data-track-toggle="${htmlEscape(track.id)}" aria-expanded="${open === "1"}"><span class="chev">${CHEV_SVG}</span><span class="track-label">${htmlEscape(track.badge)} ${htmlEscape(track.name)}</span><span class="track-count">${track.count}</span></button>`,
     );
     parts.push(`<div class="track-panel"><div class="track-panel-inner"><div class="track-body">`);
     for (const g of track.groups) {
       const gActive = g.items.some((it) => it.rel === activeRel);
-      parts.push(`<div class="group" data-open="1" data-active="${gActive ? "1" : "0"}">`);
+      const gKey = g.name;
       parts.push(
-        `<button type="button" class="group-btn"><span class="chev">${CHEV_SVG}</span><span class="group-name">${htmlEscape(g.name)}</span><span class="group-count">${g.items.length}</span></button>`,
+        `<div class="group" data-group="${htmlEscape(gKey)}" data-open="1" data-active="${gActive ? "1" : "0"}">`,
+      );
+      parts.push(
+        `<button type="button" class="group-btn" aria-expanded="true"><span class="chev">${CHEV_SVG}</span><span class="group-name">${htmlEscape(g.name)}</span><span class="group-count">${g.items.length}</span></button>`,
       );
       parts.push(`<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">`);
       for (const it of g.items) {
         num++;
         const active = it.rel === activeRel ? " active" : "";
         parts.push(
-          `<li><a class="leaf${active}" href="${it.href}" data-rel="${htmlEscape(it.rel)}"><span class="num">${num}</span><span class="leaf-title">${htmlEscape(it.title)}</span></a></li>`,
+          `<li><a class="leaf${active}" href="${it.href}" data-rel="${htmlEscape(it.rel)}" data-search="${htmlEscape(it.title)}"><span class="num">${num}</span><span class="leaf-title">${htmlEscape(it.title)}</span></a></li>`,
         );
       }
       parts.push(`</ul></div></div></div>`);

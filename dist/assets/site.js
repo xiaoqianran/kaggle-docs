@@ -11,7 +11,7 @@
   const search = document.getElementById("search");
   const nav = document.getElementById("nav");
   const backdrop = document.getElementById("backdrop");
-  const STORE_KEY = "modal-docs-nav-v2";
+  const STORE_KEY = "kaggle-docs-nav-v1";
 
   function loadState() {
     try {
@@ -70,6 +70,23 @@
         requestAnimationFrame(() => {
           track.scrollIntoView({ block: "nearest", behavior: "smooth" });
         });
+      }
+      persistFromDom();
+      syncChips(id, willOpen);
+    });
+  });
+
+
+  // Fallback: buttons with .track-btn but no data-track-toggle
+  nav?.querySelectorAll(".track-btn:not([data-track-toggle])").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const track = btn.closest(".track");
+      if (!track) return;
+      const id = track.dataset.track;
+      const willOpen = track.dataset.open !== "1";
+      setTrackOpen(track, willOpen);
+      if (willOpen) {
+        track.querySelectorAll(":scope .group").forEach((g) => setGroupOpen(g, true));
       }
       persistFromDom();
       syncChips(id, willOpen);
@@ -169,11 +186,15 @@
       }
     });
     if (!anyRestored) {
-      const guide = nav?.querySelector('.track[data-track="guide"]');
-      if (guide) {
-        setTrackOpen(guide, true);
-        guide.querySelectorAll(":scope .group").forEach((g) => setGroupOpen(g, true));
-        syncChips("guide", true);
+      const preferred =
+        nav?.querySelector('.track[data-track="platform"]') ||
+        nav?.querySelector('.track[data-track="guide"]') ||
+        nav?.querySelector('.track[data-track="home"]') ||
+        nav?.querySelector(".track");
+      if (preferred) {
+        setTrackOpen(preferred, true);
+        preferred.querySelectorAll(":scope .group").forEach((g) => setGroupOpen(g, true));
+        syncChips(preferred.dataset.track, true);
       }
     }
   }
@@ -295,7 +316,7 @@
   document.querySelectorAll("[data-lang-set]").forEach((a) => {
     a.addEventListener("click", () => {
       try {
-        localStorage.setItem("modal-docs-lang", a.getAttribute("data-lang-set") || "en");
+        localStorage.setItem("kaggle-docs-lang", a.getAttribute("data-lang-set") || "en");
       } catch (_) {}
     });
   });
