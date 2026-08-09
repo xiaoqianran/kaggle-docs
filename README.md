@@ -26,3 +26,13 @@ node scripts/serve-pages.mjs
 Daily fetch → hash-cached zh translation → build → GitHub Pages (`/kaggle-docs`).
 
 Bot commits use `[skip ci]` to avoid loops.
+
+## LLM / agent access ([llmstxt.org](https://llmstxt.org/))
+
+| File | Purpose |
+|------|---------|
+| [`/llms.txt`](./llms.txt) | Curated page index (mirror URLs) |
+| [`/llms-full.txt`](./llms-full.txt) | Full markdown corpus for ingestion |
+| `/meta/llms-index.json` | Machine-readable page list |
+
+Generated at build time from scraped pages.

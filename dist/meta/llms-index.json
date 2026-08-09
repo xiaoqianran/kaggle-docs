@@ -1,0 +1,257 @@
+{
+  "brand": "Kaggle Docs",
+  "site": "https://xiaoqianran.github.io/kaggle-docs",
+  "officialUrl": "https://www.kaggle.com/docs",
+  "generatedAt": "2026-08-09T07:54:37.569Z",
+  "pageCount": 48,
+  "fullIncluded": 48,
+  "fullTruncated": false,
+  "files": {
+    "llmsTxt": "https://xiaoqianran.github.io/kaggle-docs/llms.txt",
+    "llmsFull": "https://xiaoqianran.github.io/kaggle-docs/llms-full.txt",
+    "metaLlmsTxt": "https://xiaoqianran.github.io/kaggle-docs/meta/llms.txt",
+    "metaLlmsFull": "https://xiaoqianran.github.io/kaggle-docs/meta/llms-full.txt"
+  },
+  "pages": [
+    {
+      "title": "Benchmarks Commands",
+      "rel": "cli/benchmarks.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/benchmarks.html"
+    },
+    {
+      "title": "Changelog",
+      "rel": "cli/changelog.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/changelog.html"
+    },
+    {
+      "title": "Hosting a Competition from the CLI",
+      "rel": "cli/competition_creation.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/competition_creation.html"
+    },
+    {
+      "title": "Competitions Commands",
+      "rel": "cli/competitions.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/competitions.html"
+    },
+    {
+      "title": "Kaggle CLI Configuration",
+      "rel": "cli/configuration.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/configuration.html"
+    },
+    {
+      "title": "Datasets Metadata",
+      "rel": "cli/datasets_metadata.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/datasets_metadata.html"
+    },
+    {
+      "title": "Datasets Commands",
+      "rel": "cli/datasets.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/datasets.html"
+    },
+    {
+      "title": "Forums Commands",
+      "rel": "cli/forums.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/forums.html"
+    },
+    {
+      "title": "Kaggle CLI",
+      "rel": "cli/intro.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/intro.html"
+    },
+    {
+      "title": "Kernels Metadata",
+      "rel": "cli/kernels_metadata.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/kernels_metadata.html"
+    },
+    {
+      "title": "Kernels Commands",
+      "rel": "cli/kernels.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/kernels.html"
+    },
+    {
+      "title": "Model Variation Versions Commands",
+      "rel": "cli/model_variations_versions.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/model_variations_versions.html"
+    },
+    {
+      "title": "Model Variation Commands",
+      "rel": "cli/model_variations.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/model_variations.html"
+    },
+    {
+      "title": "Models Metadata",
+      "rel": "cli/models_metadata.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/models_metadata.html"
+    },
+    {
+      "title": "Models Commands",
+      "rel": "cli/models.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/models.html"
+    },
+    {
+      "title": "Kaggle CLI Output Formatting Documentation",
+      "rel": "cli/output_format.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/output_format.html"
+    },
+    {
+      "title": "Kaggle CLI Documentation",
+      "rel": "cli/README.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/README.html"
+    },
+    {
+      "title": "Search Command",
+      "rel": "cli/search.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/search.html"
+    },
+    {
+      "title": "Tutorial: Simulation Competitions",
+      "rel": "cli/simulation_competitions.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/simulation_competitions.html"
+    },
+    {
+      "title": "Kaggle CLI Tutorials",
+      "rel": "cli/tutorials.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/cli/tutorials.html"
+    },
+    {
+      "title": "Changelog",
+      "rel": "kagglehub/CHANGELOG.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/kagglehub/CHANGELOG.html"
+    },
+    {
+      "title": "Contributing to kagglehub",
+      "rel": "kagglehub/CONTRIBUTING.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/kagglehub/CONTRIBUTING.html"
+    },
+    {
+      "title": "kagglehub",
+      "rel": "kagglehub/intro.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/kagglehub/intro.html"
+    },
+    {
+      "title": "Public API",
+      "rel": "platform/api.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/api.html"
+    },
+    {
+      "title": "Benchmarks",
+      "rel": "platform/benchmarks.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/benchmarks.html"
+    },
+    {
+      "title": "Competitions",
+      "rel": "platform/competitions.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/competitions.html"
+    },
+    {
+      "title": "Datasets",
+      "rel": "platform/datasets.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/datasets.html"
+    },
+    {
+      "title": "Efficient GPU Usage Tips",
+      "rel": "platform/efficient-gpu-usage.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/efficient-gpu-usage.html"
+    },
+    {
+      "title": "Getting Started on Kaggle",
+      "rel": "platform/getting-started.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/getting-started.html"
+    },
+    {
+      "title": "Models",
+      "rel": "platform/models.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/models.html"
+    },
+    {
+      "title": "Notebooks",
+      "rel": "platform/notebooks.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/notebooks.html"
+    },
+    {
+      "title": "Organizations",
+      "rel": "platform/organizations.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/organizations.html"
+    },
+    {
+      "title": "Kaggle Packages",
+      "rel": "platform/packages.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/packages.html"
+    },
+    {
+      "title": "Tensor Processing Units (TPUs)",
+      "rel": "platform/tpu.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/platform/tpu.html"
+    },
+    {
+      "title": "Authentication CLI Reference",
+      "rel": "skills/references/auth.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/auth.html"
+    },
+    {
+      "title": "Kaggle Benchmarks CLI Reference",
+      "rel": "skills/references/benchmarks.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/benchmarks.html"
+    },
+    {
+      "title": "Competitions CLI Reference",
+      "rel": "skills/references/competitions.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/competitions.html"
+    },
+    {
+      "title": "Configuration CLI Reference",
+      "rel": "skills/references/configuration.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/configuration.html"
+    },
+    {
+      "title": "Datasets CLI Reference",
+      "rel": "skills/references/datasets.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/datasets.html"
+    },
+    {
+      "title": "Files CLI Reference",
+      "rel": "skills/references/files.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/files.html"
+    },
+    {
+      "title": "Forums CLI Reference",
+      "rel": "skills/references/forums.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/forums.html"
+    },
+    {
+      "title": "Kernels CLI Reference",
+      "rel": "skills/references/kernels.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/kernels.html"
+    },
+    {
+      "title": "Model Variation Versions CLI Reference",
+      "rel": "skills/references/model_variations_versions.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/model_variations_versions.html"
+    },
+    {
+      "title": "Model Variations CLI Reference",
+      "rel": "skills/references/model_variations.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/model_variations.html"
+    },
+    {
+      "title": "Models CLI Reference",
+      "rel": "skills/references/models.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/models.html"
+    },
+    {
+      "title": "Quota CLI Reference",
+      "rel": "skills/references/quota.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/quota.html"
+    },
+    {
+      "title": "Search CLI Reference",
+      "rel": "skills/references/search.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/references/search.html"
+    },
+    {
+      "title": "Kaggle CLI",
+      "rel": "skills/SKILL.md",
+      "url": "https://xiaoqianran.github.io/kaggle-docs/skills/SKILL.html"
+    }
+  ]
+}
