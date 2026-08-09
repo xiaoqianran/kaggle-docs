@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Platform docs, CLI/API reference, Agent Skills, and KaggleHub — scraped from official sources." />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#08090c" />
   <title>Changelog · Kaggle Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github-dark.min.css" />
   <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
   <link rel="alternate" hreflang="en" href="/kaggle-docs/cli/changelog.html" />
   <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/cli/changelog.html" />
@@ -25,8 +26,8 @@
         <span class="brand-text">Kaggle Docs</span>
         <span class="brand-v">mirror</span>
       </a>
-      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
-      <div class="lang-switch" role="navigation" aria-label="Language">
+      <nav class="chips" id="trackChips" aria-label="Tracks"><button type="button" class="chip" data-jump-track="platform">Platform Docs</button><button type="button" class="chip active" data-jump-track="cli">CLI &amp; API</button><button type="button" class="chip" data-jump-track="skills">Agent Skills</button><button type="button" class="chip" data-jump-track="kagglehub">KaggleHub</button></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
         <a class="lang-btn active" href="/kaggle-docs/cli/changelog.html" data-lang-set="en" hreflang="en">EN</a>
         <a class="lang-btn" href="/kaggle-docs/zh/cli/changelog.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
       </div>
@@ -37,122 +38,69 @@
     <aside class="sidebar" id="sidebar">
       <div class="side-head">
         <div class="search-wrap">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
           <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
           <span class="search-kbd" aria-hidden="true">/</span>
         </div>
-        <div class="side-label">Learning path · docs</div>
+        <p class="side-label">Learning path · docs</p>
       </div>
-      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="home" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+      <nav class="nav" id="nav" data-active-rel="cli/changelog.md" aria-label="Docs"><section class="track" data-track="home" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="home" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Home</span><span class="track-count">1</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Home" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md" data-search="Kaggle documentation mirror"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="platform" data-open="1" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="platform" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/index.html" data-out="index.md" data-search="kaggle documentation mirror home home" data-track="home"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li></ul>
+</div></div></div></section>
+<section class="track" data-track="platform" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="platform" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Platform Docs</span><span class="track-count">11</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Platform" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md" data-search="Benchmarks"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md" data-search="Competitions"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md" data-search="Datasets"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md" data-search="Efficient GPU Usage Tips"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md" data-search="Getting Started on Kaggle"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md" data-search="Kaggle Packages"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md" data-search="Models"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md" data-search="Notebooks"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md" data-search="Organizations"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md" data-search="Public API"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md" data-search="Tensor Processing Units (TPUs)"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="cli" data-open="1" data-active="1">
-<button type="button" class="track-btn" data-track-toggle="cli" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-out="platform/benchmarks.md" data-search="benchmarks platform docs platform" data-track="platform"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-out="platform/competitions.md" data-search="competitions platform docs platform" data-track="platform"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-out="platform/datasets.md" data-search="datasets platform docs platform" data-track="platform"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-out="platform/efficient-gpu-usage.md" data-search="efficient gpu usage tips platform docs platform" data-track="platform"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-out="platform/getting-started.md" data-search="getting started on kaggle platform docs platform" data-track="platform"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-out="platform/packages.md" data-search="kaggle packages platform docs platform" data-track="platform"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/models.html" data-out="platform/models.md" data-search="models platform docs platform" data-track="platform"><span class="num">8</span><span class="leaf-title">Models</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-out="platform/notebooks.md" data-search="notebooks platform docs platform" data-track="platform"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-out="platform/organizations.md" data-search="organizations platform docs platform" data-track="platform"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/api.html" data-out="platform/api.md" data-search="public api platform docs platform" data-track="platform"><span class="num">11</span><span class="leaf-title">Public API</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-out="platform/tpu.md" data-search="tensor processing units (tpus) platform docs platform" data-track="platform"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li></ul>
+</div></div></div></section>
+<section class="track" data-track="cli" data-open="1" data-active="1">
+<button type="button" class="track-btn" data-track-toggle="cli" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">CLI &amp; API</span><span class="track-count">20</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Getting started" data-open="1" data-active="1">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf active" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md" data-search="Changelog"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md" data-search="Kaggle CLI"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md" data-search="Kaggle CLI Configuration"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md" data-search="Kaggle CLI Documentation"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md" data-search="Kaggle CLI Output Formatting Documentation"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md" data-search="Kaggle CLI Tutorials"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md" data-search="Search Command"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="Commands" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md" data-search="Benchmarks Commands"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md" data-search="Competitions Commands"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md" data-search="Datasets Commands"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md" data-search="Forums Commands"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md" data-search="Hosting a Competition from the CLI"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md" data-search="Kernels Commands"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md" data-search="Model Variation Commands"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md" data-search="Model Variation Versions Commands"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md" data-search="Models Commands"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md" data-search="Tutorial: Simulation Competitions"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="Metadata schemas" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md" data-search="Datasets Metadata"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md" data-search="Kernels Metadata"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md" data-search="Models Metadata"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="skills" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="skills" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="group" data-group="Getting started" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf active" href="/kaggle-docs/cli/changelog.html" data-out="cli/changelog.md" data-search="changelog cli &amp; api getting started" data-track="cli"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-out="cli/intro.md" data-search="kaggle cli cli &amp; api getting started" data-track="cli"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-out="cli/configuration.md" data-search="kaggle cli configuration cli &amp; api getting started" data-track="cli"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/README.html" data-out="cli/README.md" data-search="kaggle cli documentation cli &amp; api getting started" data-track="cli"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-out="cli/output_format.md" data-search="kaggle cli output formatting documentation cli &amp; api getting started" data-track="cli"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-out="cli/tutorials.md" data-search="kaggle cli tutorials cli &amp; api getting started" data-track="cli"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/search.html" data-out="cli/search.md" data-search="search command cli &amp; api getting started" data-track="cli"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="Commands" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-out="cli/benchmarks.md" data-search="benchmarks commands cli &amp; api commands" data-track="cli"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-out="cli/competitions.md" data-search="competitions commands cli &amp; api commands" data-track="cli"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-out="cli/datasets.md" data-search="datasets commands cli &amp; api commands" data-track="cli"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-out="cli/forums.md" data-search="forums commands cli &amp; api commands" data-track="cli"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-out="cli/competition_creation.md" data-search="hosting a competition from the cli cli &amp; api commands" data-track="cli"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-out="cli/kernels.md" data-search="kernels commands cli &amp; api commands" data-track="cli"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-out="cli/model_variations.md" data-search="model variation commands cli &amp; api commands" data-track="cli"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-out="cli/model_variations_versions.md" data-search="model variation versions commands cli &amp; api commands" data-track="cli"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/models.html" data-out="cli/models.md" data-search="models commands cli &amp; api commands" data-track="cli"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-out="cli/simulation_competitions.md" data-search="tutorial: simulation competitions cli &amp; api commands" data-track="cli"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="Metadata schemas" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-out="cli/datasets_metadata.md" data-search="datasets metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-out="cli/kernels_metadata.md" data-search="kernels metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-out="cli/models_metadata.md" data-search="models metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li></ul>
+</div></div></div>
+</div></div></div></section>
+<section class="track" data-track="skills" data-open="0">
+<button type="button" class="track-btn" data-track-toggle="skills" aria-expanded="false"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Agent Skills</span><span class="track-count">14</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Overview" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md" data-search="Kaggle CLI"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="References" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md" data-search="Authentication CLI Reference"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md" data-search="Competitions CLI Reference"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md" data-search="Configuration CLI Reference"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md" data-search="Datasets CLI Reference"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md" data-search="Files CLI Reference"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md" data-search="Forums CLI Reference"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md" data-search="Kaggle Benchmarks CLI Reference"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md" data-search="Kernels CLI Reference"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md" data-search="Model Variation Versions CLI Reference"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md" data-search="Model Variations CLI Reference"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md" data-search="Models CLI Reference"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md" data-search="Quota CLI Reference"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md" data-search="Search CLI Reference"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="kagglehub" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="kagglehub" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="group" data-group="Overview" data-open="0">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-out="skills/SKILL.md" data-search="kaggle cli agent skills overview" data-track="skills"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="References" data-open="0">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-out="skills/references/auth.md" data-search="authentication cli reference agent skills references" data-track="skills"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-out="skills/references/competitions.md" data-search="competitions cli reference agent skills references" data-track="skills"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-out="skills/references/configuration.md" data-search="configuration cli reference agent skills references" data-track="skills"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-out="skills/references/datasets.md" data-search="datasets cli reference agent skills references" data-track="skills"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-out="skills/references/files.md" data-search="files cli reference agent skills references" data-track="skills"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-out="skills/references/forums.md" data-search="forums cli reference agent skills references" data-track="skills"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-out="skills/references/benchmarks.md" data-search="kaggle benchmarks cli reference agent skills references" data-track="skills"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-out="skills/references/kernels.md" data-search="kernels cli reference agent skills references" data-track="skills"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-out="skills/references/model_variations_versions.md" data-search="model variation versions cli reference agent skills references" data-track="skills"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-out="skills/references/model_variations.md" data-search="model variations cli reference agent skills references" data-track="skills"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-out="skills/references/models.md" data-search="models cli reference agent skills references" data-track="skills"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-out="skills/references/quota.md" data-search="quota cli reference agent skills references" data-track="skills"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-out="skills/references/search.md" data-search="search cli reference agent skills references" data-track="skills"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li></ul>
+</div></div></div>
+</div></div></div></section>
+<section class="track" data-track="kagglehub" data-open="0">
+<button type="button" class="track-btn" data-track-toggle="kagglehub" aria-expanded="false"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">KaggleHub</span><span class="track-count">3</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Library" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md" data-search="Changelog"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md" data-search="Contributing to kagglehub"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md" data-search="kagglehub"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
-</ul></div></div></div>
-</div></div></div></div></nav>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-out="kagglehub/CHANGELOG.md" data-search="changelog kagglehub library" data-track="kagglehub"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li><li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-out="kagglehub/CONTRIBUTING.md" data-search="contributing to kagglehub kagglehub library" data-track="kagglehub"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li><li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-out="kagglehub/intro.md" data-search="kagglehub kagglehub library" data-track="kagglehub"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li></ul>
+</div></div></div></section></nav>
       <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
     </aside>
     <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
-    <main class="main" id="main">
+    <div class="main" id="main">
+      
+      <div class="crumb"><a href="/kaggle-docs/index.html">Home</a><span class="sep">/</span><span class="pill">CLI &amp; API</span><span class="sep">/</span><span>Getting started</span><span class="sep">/</span><span class="current">Changelog</span></div>
       <div class="content-wrap">
-        <article class="content prose">
-          
-          <h1>Changelog</h1>
-<h3>Next</h3>
+        <article class="content prose"><h1 id="changelog"><a class="anchor" href="#changelog">#</a>Changelog</h1>
+<h3 id="next"><a class="anchor" href="#next">#</a>Next</h3>
 <ul>
 <li>Add <code>kaggle benchmarks quota</code> to show Model Proxy (AI inference) spend quota, and bump <code>kagglesdk</code> to <code>&gt;= 0.1.37</code></li>
 <li>Add <code>kaggle competitions submission-download &lt;id&gt;</code> to download the submitted file for a single submission (requires <code>kagglesdk &gt;= 0.1.36</code>)</li>
@@ -161,7 +109,7 @@
 <li>Add unified <code>kaggle search</code> command across competitions, datasets, notebooks, models, users, and discussions</li>
 <li>Add <code>--wait</code>/<code>--poll-interval</code> to <code>kaggle competitions submit</code> to wait for scoring, and add <code>kaggle competitions submission &lt;ref&gt;</code> to look up a single submission&#39;s status and score</li>
 </ul>
-<h3>2.2.4</h3>
+<h3 id="224"><a class="anchor" href="#224">#</a>2.2.4</h3>
 <ul>
 <li>fix(benchmarks): support owner/task separator in benchmark commands (#1146)</li>
 <li>Feat/competition submissions limits (#1144)</li>
@@ -201,7 +149,7 @@
 <li>fix(cli): avoid success message after canceled model deletion (#1077)</li>
 <li>fix(cli): avoid success message after canceled dataset deletion (#1073)</li>
 </ul>
-<h3>2.2.3</h3>
+<h3 id="223"><a class="anchor" href="#223">#</a>2.2.3</h3>
 <ul>
 <li>Update --format help text to reference output_format.md (#1074)</li>
 <li>Update kernel pull docs with version example (#1072)</li>
@@ -210,7 +158,7 @@
 <li>Rewrite <code>kaggle kernels logs --follow</code> to use SSE log stream (#999)</li>
 <li>Add --format option to CLI commands supporting --csv (#1062)</li>
 </ul>
-<h3>2.2.2</h3>
+<h3 id="222"><a class="anchor" href="#222">#</a>2.2.2</h3>
 <ul>
 <li>Clarify LLMS_AVAILABLE vs. full model set in benchmarks docs (#1061)</li>
 <li>Add kernels topics command (#1056)</li>
@@ -224,7 +172,7 @@
 <li>Add paginated downloads for kernel output files (#1046)</li>
 <li>fix(tests): resolve infinite loop in test_kernels_d_status (#1043)</li>
 </ul>
-<h3>2.2.1</h3>
+<h3 id="221"><a class="anchor" href="#221">#</a>2.2.1</h3>
 <ul>
 <li>Add <code>kaggle competitions team-submissions</code> command (#1036)</li>
 <li>Add <code>kaggle quota</code> command for GPU/TPU accelerator quota (#1029)</li>
@@ -234,7 +182,7 @@
 <li>Fix JSON serialization and download label display (#1038, #1040, #1042)</li>
 <li>Set proper permissions on auth file (#1033)</li>
 </ul>
-<h3>2.2.0</h3>
+<h3 id="220"><a class="anchor" href="#220">#</a>2.2.0</h3>
 <ul>
 <li>Add test runner workflow</li>
 <li>Patch discussions code (#1018)</li>
@@ -245,11 +193,11 @@
 <li>feat: add forums commands for browsing Kaggle discussions (#993)</li>
 <li>Add competitions topics CLI command (#982)</li>
 </ul>
-<h3>2.1.2</h3>
+<h3 id="212"><a class="anchor" href="#212">#</a>2.1.2</h3>
 <ul>
 <li>Update kagglesdk version</li>
 </ul>
-<h3>2.1.1</h3>
+<h3 id="211"><a class="anchor" href="#211">#</a>2.1.1</h3>
 <ul>
 <li>Add instructions re kagglesdk (#1000)</li>
 <li>fix(benchmarks cli): bugs and additional features (#997)</li>
@@ -263,7 +211,7 @@
 <li>Enable &amp; document OAuth authentication flow. (#983)</li>
 <li>Add <code>--format</code> flag to <code>datasets status</code> for JSON output (#972)</li>
 </ul>
-<h3>2.1.0</h3>
+<h3 id="210"><a class="anchor" href="#210">#</a>2.1.0</h3>
 <ul>
 <li>Add <code>kaggle benchmarks init</code> command (#981)</li>
 <li>Fix mypy typing checks (#979)</li>
@@ -271,7 +219,7 @@
 <li>Update default Python version in cicd CB config</li>
 <li>Make a list (#978)</li>
 </ul>
-<h3>2.0.2</h3>
+<h3 id="202"><a class="anchor" href="#202">#</a>2.0.2</h3>
 <ul>
 <li>Add <code>kaggle benchmarks auth</code> command (#976)</li>
 <li>Create Cloud Build script to run linter (#974)</li>
@@ -283,7 +231,7 @@
 <li>Add CLI commands for simulation episodes and competition pages (#968)</li>
 <li>Feature(benchmarks): implement Kaggle client (push/run functionality) (#960)</li>
 </ul>
-<h3>2.0.1</h3>
+<h3 id="201"><a class="anchor" href="#201">#</a>2.0.1</h3>
 <ul>
 <li>Add <code>--sandbox</code> flag to <code>kaggle competitions submit</code> for sandbox submissions (competition hosts/admins only) (#932)</li>
 <li>Optimize large dataset download functionality (#936, s/o katoue)</li>
@@ -294,14 +242,14 @@
 </ul>
 </li>
 </ul>
-<h3>2.0.0</h3>
+<h3 id="200"><a class="anchor" href="#200">#</a>2.0.0</h3>
 <ul>
 <li>General Availability release</li>
 <li>Change more &quot;instance&quot; to &quot;variation&quot;</li>
 <li>Update link for the integration test auth instructions (#926)</li>
 <li>Fix string formatting in upgrade nudge message (#928) Thanks PythonicVarun!</li>
 </ul>
-<h3>1.8.4</h3>
+<h3 id="184"><a class="anchor" href="#184">#</a>1.8.4</h3>
 <ul>
 <li>Rename <code>kaggle-api</code> to <code>kaggle-cli</code></li>
 <li>Allow auth to happen multiple times (#922)</li>
@@ -310,7 +258,7 @@
 <li>Restore model validation check (#902)</li>
 <li>Add file pattern matching in output download (#901) Thanks piotr-ginal!</li>
 </ul>
-<h3>1.8.3</h3>
+<h3 id="183"><a class="anchor" href="#183">#</a>1.8.3</h3>
 <ul>
 <li>Add packaging dep (#883)</li>
 <li>Add version checking against server known-version (#880)</li>
@@ -318,16 +266,16 @@
 <li>Use kagglesdk from pypi (#875)</li>
 <li>Fix Kaggle access token auth KeyError when KAGGLE_API_TOKEN is unset (#874)</li>
 </ul>
-<h3>1.8.2</h3>
+<h3 id="182"><a class="anchor" href="#182">#</a>1.8.2</h3>
 <ul>
 <li>Changes to build script</li>
 </ul>
-<h3>1.8.1</h3>
+<h3 id="181"><a class="anchor" href="#181">#</a>1.8.1</h3>
 <ul>
 <li>Fix memory exhaustion when downloading large files (#869)</li>
 <li>Add python-dateutil to pyproject.toml dependencies (#866)</li>
 </ul>
-<h3>1.8.0</h3>
+<h3 id="180"><a class="anchor" href="#180">#</a>1.8.0</h3>
 <ul>
 <li>Fix resumable download error (#865)</li>
 <li>Fix dataset version spec (#862)</li>
@@ -340,7 +288,7 @@
 <li>Add variations as alt for instances (#784)</li>
 <li>Enable (and rename) synonyms i and v (#782)</li>
 </ul>
-<h3>1.7.5.0 (not released)</h3>
+<h3 id="1750-not-released"><a class="anchor" href="#1750-not-released">#</a>1.7.5.0 (not released)</h3>
 <ul>
 <li>Require Python 3.11.</li>
 <li>Add KernelExecutionType (#775)</li>
@@ -366,21 +314,21 @@
 <li>Use PROD if no environment is specified. (#726)</li>
 <li>Add a no response action to auto-close issues (#723)</li>
 </ul>
-<h3>1.7.4.2</h3>
+<h3 id="1742"><a class="anchor" href="#1742">#</a>1.7.4.2</h3>
 <ul>
 <li>Fix a problem in downloading kernel output files.</li>
 </ul>
-<h3>1.7.4.1</h3>
+<h3 id="1741"><a class="anchor" href="#1741">#</a>1.7.4.1</h3>
 <ul>
 <li>Fix a dataset download problem. Datasets that had a license were failing to download.</li>
 <li>Update the documentation to include code competition submit.</li>
 </ul>
-<h3>1.7.4</h3>
+<h3 id="174"><a class="anchor" href="#174">#</a>1.7.4</h3>
 <p>Version 1.7.3 was never released. There were errors in versioning on
 test.pypi.org. For consistency, we decided to jump several version numbers.
 This is the first release since 1.6.17.</p>
 <p>The actual changes are described in 1.7.3.</p>
-<h3>1.7.3</h3>
+<h3 id="173"><a class="anchor" href="#173">#</a>1.7.3</h3>
 <p>There was an error in versioning. We went from 1.6.17 to 1.7.3.</p>
 <ul>
 <li>Added the ability to submit to a code competition. Some required arguments have been made optional.</li>
@@ -390,16 +338,16 @@ removed. Most of its functions still work, but those that involve uploading file
 The command-line tool uses a higher-level abstraction for uploading, and client code needs
 to be converted to use that.</li>
 </ul>
-<h3>1.7.3b2</h3>
+<h3 id="173b2"><a class="anchor" href="#173b2">#</a>1.7.3b2</h3>
 <ul>
 <li>Added the ability to submit to a code competition. Some required arguments have been made optional.</li>
 <li>Added a <code>--timeout</code> option to <code>kaggle kernels push</code> to limit the run-time to the specified number of seconds.</li>
 </ul>
-<h3>1.7.3b1</h3>
+<h3 id="173b1"><a class="anchor" href="#173b1">#</a>1.7.3b1</h3>
 <ul>
 <li>Fix escaped-quote issue in HTTP requests.</li>
 </ul>
-<h3>1.7.3b0</h3>
+<h3 id="173b0"><a class="anchor" href="#173b0">#</a>1.7.3b0</h3>
 <ul>
 <li>Remove Swagger. No user-visible changes to the command-line tool. However, projects that
 use <code>kaggle/api/kaggle_api.py</code> may be affected. That file is deprecated and will be removed.
@@ -407,15 +355,15 @@ Most of its functions still work, but those that involve uploading files no long
 The command-line tool uses a higher-level abstraction for uploading and client code needs 
 to be converted to use that.</li>
 </ul>
-<h3>1.6.17</h3>
+<h3 id="1617"><a class="anchor" href="#1617">#</a>1.6.17</h3>
 <ul>
 <li>No changes; release 1.6.16 did not complete.</li>
 </ul>
-<h3>1.6.16</h3>
+<h3 id="1616"><a class="anchor" href="#1616">#</a>1.6.16</h3>
 <ul>
 <li>No changes; release 1.6.15 isn&#39;t usable. We&#39;re working on process updates to prevent this from happening again.</li>
 </ul>
-<h3>1.6.15</h3>
+<h3 id="1615"><a class="anchor" href="#1615">#</a>1.6.15</h3>
 <ul>
 <li>Support XDG base directory specification on Linux</li>
 <li>Disable out-of-date API version warning with -W</li>
@@ -423,19 +371,19 @@ to be converted to use that.</li>
 <li>Add triton framework for models</li>
 <li>Update model licenses</li>
 </ul>
-<h3>1.6.14</h3>
+<h3 id="1614"><a class="anchor" href="#1614">#</a>1.6.14</h3>
 <ul>
 <li>No changes; release 1.6.13 isn&#39;t usable.</li>
 </ul>
-<h3>1.6.13</h3>
+<h3 id="1613"><a class="anchor" href="#1613">#</a>1.6.13</h3>
 <ul>
 <li>Add --page-size and --page-token CLI options to all commands that display lists of files.</li>
 </ul>
-<h3>1.6.12</h3>
+<h3 id="1612"><a class="anchor" href="#1612">#</a>1.6.12</h3>
 <ul>
 <li>Re-release 1.6.11 without the <code>src</code> directory included in the package.</li>
 </ul>
-<h3>1.6.11</h3>
+<h3 id="1611"><a class="anchor" href="#1611">#</a>1.6.11</h3>
 <ul>
 <li>Allow unauthenticated usage of &quot;datasets download&quot;, &quot;datasets files&quot;.<ul>
 <li>This will only work after April 8th, 2024. More more details, see:
@@ -445,89 +393,89 @@ to be converted to use that.</li>
 <li>Allow &quot;help&quot; and &quot;version&quot; to be used for all commands, unauthenticated.</li>
 <li>Fix: &quot;dataset download -f&quot; can accept a specific dataset version.</li>
 </ul>
-<h3>1.6.10</h3>
+<h3 id="1610"><a class="anchor" href="#1610">#</a>1.6.10</h3>
 <p>Repackage of 1.6.8 as a new release, to fix the problematic 1.6.9 release.</p>
-<h3>1.6.9</h3>
+<h3 id="169"><a class="anchor" href="#169">#</a>1.6.9</h3>
 <ul>
 <li>Do not use. Problematic release that causes an error:
 <code>ModuleNotFoundError: No module named &#39;kaggle.api&#39;</code></li>
 </ul>
-<h3>1.6.8</h3>
+<h3 id="168"><a class="anchor" href="#168">#</a>1.6.8</h3>
 <ul>
 <li>Add &quot;gguf&quot;</li>
 </ul>
-<h3>1.6.7</h3>
+<h3 id="167"><a class="anchor" href="#167">#</a>1.6.7</h3>
 <ul>
 <li>Add &quot;TensorRtLlm&quot; model framework.</li>
 </ul>
-<h3>1.6.6</h3>
+<h3 id="166"><a class="anchor" href="#166">#</a>1.6.6</h3>
 <ul>
 <li>Add &quot;GemmaCpp&quot; and &quot;GGML&quot; model frameworks.</li>
 </ul>
-<h3>1.6.5</h3>
+<h3 id="165"><a class="anchor" href="#165">#</a>1.6.5</h3>
 <ul>
 <li>Add &quot;MaxText&quot; model framework.</li>
 </ul>
-<h3>1.6.4</h3>
+<h3 id="164"><a class="anchor" href="#164">#</a>1.6.4</h3>
 <ul>
 <li>Add &quot;Transformers&quot; model framework.</li>
 </ul>
-<h3>1.6.3</h3>
+<h3 id="163"><a class="anchor" href="#163">#</a>1.6.3</h3>
 <p>Release date: 01/11/24</p>
 <ul>
 <li>Add &quot;Flax&quot; and &quot;Pax&quot; model frameworks.</li>
 </ul>
-<h3>1.6.2</h3>
+<h3 id="162"><a class="anchor" href="#162">#</a>1.6.2</h3>
 <p>Release date: 01/09/24</p>
 <ul>
 <li>Add &quot;Other&quot; model framework.</li>
 </ul>
-<h3>1.6.1</h3>
+<h3 id="161"><a class="anchor" href="#161">#</a>1.6.1</h3>
 <p>Release date: 01/08/24</p>
 <ul>
 <li>Fix dataset/model upload.</li>
 </ul>
-<h3>1.6.0</h3>
+<h3 id="160"><a class="anchor" href="#160">#</a>1.6.0</h3>
 <p>Release date: 01/04/24</p>
 <ul>
 <li>Release the pre-release branch with models endpoints.</li>
 </ul>
-<h4>1.6.0a7</h4>
+<h4 id="160a7"><a class="anchor" href="#160a7">#</a>1.6.0a7</h4>
 <p>Release date: 11/22/23</p>
 <ul>
 <li>Add model_instance_type and base_model_instance_id to ModelInstance</li>
 </ul>
-<h4>1.6.0a6</h4>
+<h4 id="160a6"><a class="anchor" href="#160a6">#</a>1.6.0a6</h4>
 <p>Release date: 9/19/23</p>
 <ul>
 <li>Include version_number and version_id in the model-instance-metadata.json file</li>
 </ul>
-<h4>1.6.0a5</h4>
+<h4 id="160a5"><a class="anchor" href="#160a5">#</a>1.6.0a5</h4>
 <p>Release date: 8/02/23</p>
 <ul>
 <li>Add Keras model framework.</li>
 </ul>
-<h4>1.5.16</h4>
+<h4 id="1516"><a class="anchor" href="#1516">#</a>1.5.16</h4>
 <p>Release date: 7/17/23</p>
 <ul>
 <li>Fix dataset download bug with locale</li>
 <li>Resumable uploads</li>
 <li>Retry some failed requests</li>
 </ul>
-<h4>1.6.0a4</h4>
+<h4 id="160a4"><a class="anchor" href="#160a4">#</a>1.6.0a4</h4>
 <p>Release date: 7/07/23</p>
 <ul>
 <li>Resumable uploads</li>
 <li>Retry some failed requests</li>
 <li>Flag <code>-y</code> to delete model/instance/version without confirmation</li>
 </ul>
-<h4>1.6.0a3</h4>
+<h4 id="160a3"><a class="anchor" href="#160a3">#</a>1.6.0a3</h4>
 <p>Release date: 7/06/23</p>
 <ul>
 <li>Confirmation for deleting a model, instance or version</li>
 <li>Merge changes from 1.5.14 and 1.5.15</li>
 </ul>
-<h4>1.5.15</h4>
+<h4 id="1515"><a class="anchor" href="#1515">#</a>1.5.15</h4>
 <p>Release date: 6/30/23</p>
 <ul>
 <li>Add missing licenses for datasets</li>
@@ -535,7 +483,7 @@ to be converted to use that.</li>
 <li>Download / list files for a specific version of a dataset</li>
 <li>Documentation improvements</li>
 </ul>
-<h4>1.5.14</h4>
+<h4 id="1514"><a class="anchor" href="#1514">#</a>1.5.14</h4>
 <p>Release date: 6/29/23</p>
 <ul>
 <li>Show the full error message from the API</li>
@@ -546,61 +494,61 @@ to be converted to use that.</li>
 <li>Make some arguments required</li>
 <li>Add enable_tpu to kernel&#39;s push/pull</li>
 </ul>
-<h4>1.6.0a2</h4>
+<h4 id="160a2"><a class="anchor" href="#160a2">#</a>1.6.0a2</h4>
 <p>Release date: 6/12/23</p>
 <ul>
 <li>Add endpoint to get a modelInstance</li>
 <li>Simplify the modelInstanceVersion creation</li>
 <li>Fix Model files zipping</li>
 </ul>
-<h4>1.6.0a0</h4>
+<h4 id="160a0"><a class="anchor" href="#160a0">#</a>1.6.0a0</h4>
 <p>Release date: 6/07/23</p>
 <ul>
 <li>Add Models endpoints</li>
 </ul>
-<h4>1.5.13</h4>
+<h4 id="1513"><a class="anchor" href="#1513">#</a>1.5.13</h4>
 <p>Release date: 2/27/23</p>
 <ul>
 <li>Add ability to add a model to a kernel</li>
 </ul>
-<h3>1.5.12</h3>
+<h3 id="1512"><a class="anchor" href="#1512">#</a>1.5.12</h3>
 <p>Release date: 03/12/21</p>
 <ul>
 <li>No changes</li>
 </ul>
-<h3>1.5.11</h3>
+<h3 id="1511"><a class="anchor" href="#1511">#</a>1.5.11</h3>
 <p>Release date: 03/12/21</p>
 <ul>
 <li>Add support for non-ASCII characters for kernels.</li>
 </ul>
-<h3>1.5.10</h3>
+<h3 id="1510"><a class="anchor" href="#1510">#</a>1.5.10</h3>
 <p>Release date: 11/30/20</p>
 <ul>
 <li>Remove dependency on slugify.</li>
 </ul>
-<h3>1.5.9</h3>
+<h3 id="159"><a class="anchor" href="#159">#</a>1.5.9</h3>
 <p>Release date: 10/21/20</p>
 <ul>
 <li>Drop version restriction on urllib3 in setup.py.</li>
 </ul>
-<h3>1.5.8</h3>
+<h3 id="158"><a class="anchor" href="#158">#</a>1.5.8</h3>
 <p>Release date: 09/03/20</p>
 <ul>
 <li>No user-facing changes</li>
 </ul>
-<h4>1.5.7</h4>
+<h4 id="157"><a class="anchor" href="#157">#</a>1.5.7</h4>
 <p>Release date: 8/31/20</p>
 <ul>
 <li>Add ability to specify the kernel docker image pinning type</li>
 <li>Kernels have internet enabled by default</li>
 <li>Various competitions fixes</li>
 </ul>
-<h4>1.5.6</h4>
+<h4 id="156"><a class="anchor" href="#156">#</a>1.5.6</h4>
 <p>Release date: 9/19/19</p>
 <ul>
 <li>Downloading all files for a competition downloads a zip instead of individual files</li>
 </ul>
-<h4>1.5.5</h4>
+<h4 id="155"><a class="anchor" href="#155">#</a>1.5.5</h4>
 <p>Release date: 8/30/19</p>
 <ul>
 <li>Add vote count and usability rating to datasets listing</li>
@@ -608,47 +556,47 @@ to be converted to use that.</li>
 <li>Add additional information to dataset metadata API</li>
 <li>Allow updating dataset metdata</li>
 </ul>
-<h4>1.5.4</h4>
+<h4 id="154"><a class="anchor" href="#154">#</a>1.5.4</h4>
 <p>Release date: 5/28/19</p>
 <ul>
 <li>Make kernels init more friendly</li>
 <li>Make directories if needed for kernels output</li>
 </ul>
-<h4>1.5.3</h4>
+<h4 id="153"><a class="anchor" href="#153">#</a>1.5.3</h4>
 <p>Release date: 2/20/19</p>
 <ul>
 <li>Bump urllib3 version</li>
 </ul>
-<h4>1.5.2</h4>
+<h4 id="152"><a class="anchor" href="#152">#</a>1.5.2</h4>
 <p>Release date: 1/28/19</p>
 <ul>
 <li>Don&#39;t error on encoding errors when printing tables</li>
 <li>Exit with error code when an exception is caught</li>
 </ul>
-<h4>1.5.1.1</h4>
+<h4 id="1511-1"><a class="anchor" href="#1511-1">#</a>1.5.1.1</h4>
 <p>Release date: 12/5/18</p>
 <ul>
 <li>Add missing cli option for dataset subfolders</li>
 </ul>
-<h4>1.5.1</h4>
+<h4 id="151"><a class="anchor" href="#151">#</a>1.5.1</h4>
 <p>Release date: 12/5/18</p>
 <ul>
 <li>Allow custom ca_cert files</li>
 <li>Support uplodaing datasets with subfolders</li>
 <li>Fix kaggle.json permissions warning</li>
 </ul>
-<h4>1.5.0</h4>
+<h4 id="150"><a class="anchor" href="#150">#</a>1.5.0</h4>
 <p>Release date: 10/19/18</p>
 <ul>
 <li>Update API to work with new competitions submissions backend.  This change will force old API clients to update.</li>
 <li>Update error message when config file is not found.</li>
 </ul>
-<h4>1.4.7.1</h4>
+<h4 id="1471"><a class="anchor" href="#1471">#</a>1.4.7.1</h4>
 <p>Release date: 8/28/18</p>
 <ul>
 <li>Fix host</li>
 </ul>
-<h4>1.4.7</h4>
+<h4 id="147"><a class="anchor" href="#147">#</a>1.4.7</h4>
 <p>Release date: 8/28/18</p>
 <ul>
 <li>Make dataset version <code>-p</code> argument actually optinal</li>
@@ -660,22 +608,22 @@ to be converted to use that.</li>
 <li>Show kernel version number after pushing</li>
 <li>Respect <code>code_file</code> value in kernel metadata when pulling kernels</li>
 </ul>
-<h4>1.4.6</h4>
+<h4 id="146"><a class="anchor" href="#146">#</a>1.4.6</h4>
 <p>Release date: 8/7/18</p>
 <ul>
 <li>Allow setting config values through environmental variables</li>
 </ul>
-<h4>1.4.5</h4>
+<h4 id="145"><a class="anchor" href="#145">#</a>1.4.5</h4>
 <p>Release date: 8/1/18</p>
 <ul>
 <li>Add error if dataset metadata repeats files</li>
 </ul>
-<h4>1.4.4</h4>
+<h4 id="144"><a class="anchor" href="#144">#</a>1.4.4</h4>
 <p>Release date: 7/30/18</p>
 <ul>
 <li>Fix issue with reading kernel metadata</li>
 </ul>
-<h4>1.4.3</h4>
+<h4 id="143"><a class="anchor" href="#143">#</a>1.4.3</h4>
 <p>Release date: 7/30/18</p>
 <ul>
 <li>Add more competitions list options</li>
@@ -691,7 +639,7 @@ to be converted to use that.</li>
 <li>Stop requiring <code>-c</code>, <code>-d</code>, and <code>-k</code> arguments</li>
 <li>Don&#39;t require <code>resources</code> field in dataset metadata</li>
 </ul>
-<h4>1.4.2</h4>
+<h4 id="142"><a class="anchor" href="#142">#</a>1.4.2</h4>
 <p>Release date: 7/20/18</p>
 <ul>
 <li>Validate dataset slug and title length before uploading</li>
@@ -700,12 +648,12 @@ to be converted to use that.</li>
 <li>Validate all specified files in a dataset exist prior to uploading</li>
 <li>Make ApiExceptions (slightly) less ugly</li>
 </ul>
-<h4>1.4.1</h4>
+<h4 id="141"><a class="anchor" href="#141">#</a>1.4.1</h4>
 <p>Release date: 7/20/18</p>
 <ul>
 <li>Add python 3.7 compatibility</li>
 </ul>
-<h4>1.4.0</h4>
+<h4 id="140"><a class="anchor" href="#140">#</a>1.4.0</h4>
 <p>Release date: 7/19/18</p>
 <ul>
 <li>Add kernels support
@@ -715,34 +663,34 @@ to be converted to use that.</li>
 ** Download kernel output
 ** Get latest kernel run status</li>
 </ul>
-<h4>1.3.12</h4>
+<h4 id="1312"><a class="anchor" href="#1312">#</a>1.3.12</h4>
 <p>Release date: 6/25/18</p>
 <ul>
 <li>Allow setting a <code>&#39;KAGGLE_CONFIG_DIR&#39;</code> environmental token</li>
 <li>Return metadata file after creating</li>
 <li>Alert users that dataset creation takes time</li>
 </ul>
-<h4>1.3.11.1</h4>
+<h4 id="13111"><a class="anchor" href="#13111">#</a>1.3.11.1</h4>
 <ul>
 <li>Fix other invalid tags check</li>
 </ul>
-<h4>1.3.11</h4>
+<h4 id="1311"><a class="anchor" href="#1311">#</a>1.3.11</h4>
 <p>Release date: 6/12/18</p>
 <ul>
 <li>Improve version check</li>
 <li>Fix invalid tags check</li>
 </ul>
-<h4>1.3.10</h4>
+<h4 id="1310"><a class="anchor" href="#1310">#</a>1.3.10</h4>
 <p>Release date: 6/10/18</p>
 <ul>
 <li>Restrict urllib3&#39;s version due to requests dependency problem</li>
 </ul>
-<h4>1.3.9.1</h4>
+<h4 id="1391"><a class="anchor" href="#1391">#</a>1.3.9.1</h4>
 <p>Release date: 6/9/18</p>
 <ul>
 <li>Fix bug with competitions submissions.</li>
 </ul>
-<h4>1.3.9</h4>
+<h4 id="139"><a class="anchor" href="#139">#</a>1.3.9</h4>
 <p>Release date: 6/8/18</p>
 <ul>
 <li>Improve error message for closed competitions</li>
@@ -755,12 +703,12 @@ to be converted to use that.</li>
 <li>Add command for downloading competitions leaderboard</li>
 <li>Add command for viewing the top of the leaderboard</li>
 </ul>
-<h4>1.3.8</h4>
+<h4 id="138"><a class="anchor" href="#138">#</a>1.3.8</h4>
 <p>Release date: 5/18/18</p>
 <ul>
 <li>Add option to delete all previous dataset versions</li>
 </ul>
-<h4>1.3.7</h4>
+<h4 id="137"><a class="anchor" href="#137">#</a>1.3.7</h4>
 <p>Release date: 5/18/18</p>
 <ul>
 <li>Add aliases for subcommands (ex. <code>kaggle c</code> is the same thing as <code>kaggle competitions</code>)</li>
@@ -768,7 +716,7 @@ to be converted to use that.</li>
 <li>Show full download path for files</li>
 <li>Remove file size limitation from uploads</li>
 </ul>
-<h4>1.3.6</h4>
+<h4 id="136"><a class="anchor" href="#136">#</a>1.3.6</h4>
 <p>Release date: 5/7/18</p>
 <ul>
 <li>Give the option to add tags to datasets.<ul>
@@ -776,63 +724,59 @@ to be converted to use that.</li>
 </ul>
 </li>
 </ul>
-<h4>1.3.5</h4>
+<h4 id="135"><a class="anchor" href="#135">#</a>1.3.5</h4>
 <p>Release date: 5/4/18</p>
 <ul>
 <li>Fix schema declaration in dataset resources</li>
 </ul>
-<h4>1.3.4</h4>
+<h4 id="134"><a class="anchor" href="#134">#</a>1.3.4</h4>
 <p>Release date: 4/30/18</p>
 <ul>
 <li>Rename <code>columns</code> to <code>fields</code></li>
 </ul>
-<h4>1.3.3</h4>
+<h4 id="133"><a class="anchor" href="#133">#</a>1.3.3</h4>
 <p>Release date: 4/26/18</p>
 <ul>
 <li>Fix UnicodeEncodeError for certain datasets</li>
 <li>Include Swagger yaml and config files</li>
 </ul>
-<h4>1.3.2.1</h4>
+<h4 id="1321"><a class="anchor" href="#1321">#</a>1.3.2.1</h4>
 <p>Release date: 4/24/18</p>
 <ul>
 <li>Fix bug with column metadata</li>
 </ul>
-<h4>1.3.2</h4>
+<h4 id="132"><a class="anchor" href="#132">#</a>1.3.2</h4>
 <p>Release date: 4/24/18</p>
 <ul>
 <li>Give the option to specify a schema for uploaded datasets</li>
 <li>Give the option to set the dataset description during updates</li>
 </ul>
-<h4>1.3.1</h4>
+<h4 id="131"><a class="anchor" href="#131">#</a>1.3.1</h4>
 <p>Release date: 4/19/18</p>
 <ul>
 <li>Give the option to set dataset file descriptions</li>
 <li>Give the option to not convert tabular datasets to csv</li>
 </ul>
-<h4>1.3.0</h4>
+<h4 id="130"><a class="anchor" href="#130">#</a>1.3.0</h4>
 <p>Release date: 4/18/18</p>
 <ul>
 <li>Give the option to set the dataset description during creation</li>
 </ul>
-<h4>1.2.1</h4>
+<h4 id="121"><a class="anchor" href="#121">#</a>1.2.1</h4>
 <p>Release date: 4/17/18</p>
 <ul>
 <li><a href="https://github.com/Kaggle/kaggle-api/issues/5">Issue #5</a> -  Reformat code for consistency and to align with <a href="https://google.github.io/styleguide/pyguide.html">Google&#39;s python coding style</a>.  Most of the changes are cosmetic, but most cases of <code>camelCasing</code> other than class names have been changed to <code>snake_case</code>.  This is a breaking change for anyone directly using the python code rather than simply using the command line.</li>
 </ul>
-
-          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
-        </article>
-        
+</article>
+        <nav class="toc"><div class="toc-title">On this page</div><ul><li class="l3"><a href="#next">#Next</a></li><li class="l3"><a href="#224">#2.2.4</a></li><li class="l3"><a href="#223">#2.2.3</a></li><li class="l3"><a href="#222">#2.2.2</a></li><li class="l3"><a href="#221">#2.2.1</a></li><li class="l3"><a href="#220">#2.2.0</a></li><li class="l3"><a href="#212">#2.1.2</a></li><li class="l3"><a href="#211">#2.1.1</a></li><li class="l3"><a href="#210">#2.1.0</a></li><li class="l3"><a href="#202">#2.0.2</a></li><li class="l3"><a href="#201">#2.0.1</a></li><li class="l3"><a href="#200">#2.0.0</a></li><li class="l3"><a href="#184">#1.8.4</a></li><li class="l3"><a href="#183">#1.8.3</a></li><li class="l3"><a href="#182">#1.8.2</a></li><li class="l3"><a href="#181">#1.8.1</a></li><li class="l3"><a href="#180">#1.8.0</a></li><li class="l3"><a href="#1750-not-released">#1.7.5.0 (not released)</a></li><li class="l3"><a href="#1742">#1.7.4.2</a></li><li class="l3"><a href="#1741">#1.7.4.1</a></li><li class="l3"><a href="#174">#1.7.4</a></li><li class="l3"><a href="#173">#1.7.3</a></li><li class="l3"><a href="#173b2">#1.7.3b2</a></li><li class="l3"><a href="#173b1">#1.7.3b1</a></li><li class="l3"><a href="#173b0">#1.7.3b0</a></li><li class="l3"><a href="#1617">#1.6.17</a></li><li class="l3"><a href="#1616">#1.6.16</a></li><li class="l3"><a href="#1615">#1.6.15</a></li><li class="l3"><a href="#1614">#1.6.14</a></li><li class="l3"><a href="#1613">#1.6.13</a></li><li class="l3"><a href="#1612">#1.6.12</a></li><li class="l3"><a href="#1611">#1.6.11</a></li><li class="l3"><a href="#1610">#1.6.10</a></li><li class="l3"><a href="#169">#1.6.9</a></li><li class="l3"><a href="#168">#1.6.8</a></li><li class="l3"><a href="#167">#1.6.7</a></li><li class="l3"><a href="#166">#1.6.6</a></li><li class="l3"><a href="#165">#1.6.5</a></li><li class="l3"><a href="#164">#1.6.4</a></li><li class="l3"><a href="#163">#1.6.3</a></li><li class="l3"><a href="#162">#1.6.2</a></li><li class="l3"><a href="#161">#1.6.1</a></li><li class="l3"><a href="#160">#1.6.0</a></li><li class="l3"><a href="#1512">#1.5.12</a></li><li class="l3"><a href="#1511">#1.5.11</a></li><li class="l3"><a href="#1510">#1.5.10</a></li><li class="l3"><a href="#159">#1.5.9</a></li><li class="l3"><a href="#158">#1.5.8</a></li></ul></nav>
       </div>
-    </main>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="/kaggle-docs/platform/tpu.html"><span class="dir">← Previous</span><span class="title">Tensor Processing Units (TPUs)</span></a><a class="next" href="/kaggle-docs/cli/intro.html"><span class="dir">Next →</span><span class="title">Kaggle CLI</span></a></nav>
+      <footer class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</footer>
+    </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-  <script src="/kaggle-docs/assets/site.js"></script>
-  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
   <button type="button" class="to-top" id="toTop" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
-
   <div class="kbd-help" id="kbdHelp" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
   <div class="kbd-panel">
     <h3>Keyboard shortcuts</h3>
@@ -844,5 +788,7 @@ to be converted to use that.</li>
     </div>
   </div>
 </div>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
 </body>
 </html>

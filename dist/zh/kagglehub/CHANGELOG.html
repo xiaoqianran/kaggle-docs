@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="平台文档、CLI/API 参考、Agent Skills 与 KaggleHub — 来自官方来源抓取。" />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#08090c" />
   <title>变更日志 · Kaggle 文档</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github-dark.min.css" />
   <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
   <link rel="alternate" hreflang="en" href="/kaggle-docs/kagglehub/CHANGELOG.html" />
   <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" />
@@ -25,8 +26,8 @@
         <span class="brand-text">Kaggle 文档</span>
         <span class="brand-v">镜像</span>
       </a>
-      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
-      <div class="lang-switch" role="navigation" aria-label="Language">
+      <nav class="chips" id="trackChips" aria-label="Tracks"><button type="button" class="chip" data-jump-track="platform">Platform Docs</button><button type="button" class="chip" data-jump-track="cli">CLI &amp; API</button><button type="button" class="chip" data-jump-track="skills">Agent Skills</button><button type="button" class="chip active" data-jump-track="kagglehub">KaggleHub</button></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
         <a class="lang-btn" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-lang-set="en" hreflang="en">EN</a>
         <a class="lang-btn active" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
       </div>
@@ -37,188 +38,135 @@
     <aside class="sidebar" id="sidebar">
       <div class="side-head">
         <div class="search-wrap">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
           <input class="search" id="search" type="search" placeholder="搜索文档…" autocomplete="off" />
           <span class="search-kbd" aria-hidden="true">/</span>
         </div>
-        <div class="side-label">学习路径 · 文档</div>
+        <p class="side-label">学习路径 · 文档</p>
       </div>
-      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="home" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+      <nav class="nav" id="nav" data-active-rel="kagglehub/CHANGELOG.md" aria-label="Docs"><section class="track" data-track="home" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="home" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Home</span><span class="track-count">1</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Home" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/index.html" data-rel="index.md" data-search="Kaggle 文档镜像"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="platform" data-open="1" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="platform" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/index.html" data-out="index.md" data-search="kaggle 文档镜像 home home" data-track="home"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li></ul>
+</div></div></div></section>
+<section class="track" data-track="platform" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="platform" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Platform Docs</span><span class="track-count">11</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Platform" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-rel="platform/getting-started.md" data-search="Kaggle 入门"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-rel="platform/packages.md" data-search="Kaggle 包"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-rel="platform/api.md" data-search="公共API"><span class="num">4</span><span class="leaf-title">公共API</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-rel="platform/models.md" data-search="型号"><span class="num">5</span><span class="leaf-title">型号</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-rel="platform/benchmarks.md" data-search="基准测试"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-rel="platform/tpu.md" data-search="张量处理单元 (TPU)"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-rel="platform/datasets.md" data-search="数据集"><span class="num">8</span><span class="leaf-title">数据集</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-rel="platform/competitions.md" data-search="比赛"><span class="num">9</span><span class="leaf-title">比赛</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-rel="platform/notebooks.md" data-search="笔记本"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-rel="platform/organizations.md" data-search="组织"><span class="num">11</span><span class="leaf-title">组织</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md" data-search="高效 GPU 使用技巧"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="cli" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="cli" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-out="platform/getting-started.md" data-search="kaggle 入门 platform docs platform" data-track="platform"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-out="platform/packages.md" data-search="kaggle 包 platform docs platform" data-track="platform"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-out="platform/api.md" data-search="公共api platform docs platform" data-track="platform"><span class="num">4</span><span class="leaf-title">公共API</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-out="platform/models.md" data-search="型号 platform docs platform" data-track="platform"><span class="num">5</span><span class="leaf-title">型号</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-out="platform/benchmarks.md" data-search="基准测试 platform docs platform" data-track="platform"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-out="platform/tpu.md" data-search="张量处理单元 (tpu) platform docs platform" data-track="platform"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-out="platform/datasets.md" data-search="数据集 platform docs platform" data-track="platform"><span class="num">8</span><span class="leaf-title">数据集</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-out="platform/competitions.md" data-search="比赛 platform docs platform" data-track="platform"><span class="num">9</span><span class="leaf-title">比赛</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-out="platform/notebooks.md" data-search="笔记本 platform docs platform" data-track="platform"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-out="platform/organizations.md" data-search="组织 platform docs platform" data-track="platform"><span class="num">11</span><span class="leaf-title">组织</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-out="platform/efficient-gpu-usage.md" data-search="高效 gpu 使用技巧 platform docs platform" data-track="platform"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li></ul>
+</div></div></div></section>
+<section class="track" data-track="cli" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="cli" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">CLI &amp; API</span><span class="track-count">20</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Getting started" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/cli/changelog.html" data-rel="cli/changelog.md" data-search="Changelog"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-rel="cli/intro.md" data-search="Kaggle CLI"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/tutorials.html" data-rel="cli/tutorials.md" data-search="Kaggle CLI 教程"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-rel="cli/README.md" data-search="Kaggle CLI 文档"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-rel="cli/output_format.md" data-search="Kaggle CLI 输出格式文档"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-rel="cli/configuration.md" data-search="Kaggle CLI 配置"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-rel="cli/search.md" data-search="搜索命令"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="Commands" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels.html" data-rel="cli/kernels.md" data-search="内核命令"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-rel="cli/benchmarks.md" data-search="基准测试命令"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md" data-search="教程：模拟比赛"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-rel="cli/datasets.md" data-search="数据集命令"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md" data-search="模型变体版本命令"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-rel="cli/model_variations.md" data-search="模型变化命令"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-rel="cli/models.md" data-search="模型命令"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-rel="cli/competitions.md" data-search="竞赛命令"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-rel="cli/forums.md" data-search="论坛命令"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/competition_creation.html" data-rel="cli/competition_creation.md" data-search="通过 CLI 举办竞赛"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="Metadata schemas" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md" data-search="Datasets Metadata"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md" data-search="Kernels Metadata"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-rel="cli/models_metadata.md" data-search="Models Metadata"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="skills" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="skills" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="group" data-group="Getting started" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/cli/changelog.html" data-out="cli/changelog.md" data-search="changelog cli &amp; api getting started" data-track="cli"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-out="cli/intro.md" data-search="kaggle cli cli &amp; api getting started" data-track="cli"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/tutorials.html" data-out="cli/tutorials.md" data-search="kaggle cli 教程 cli &amp; api getting started" data-track="cli"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-out="cli/README.md" data-search="kaggle cli 文档 cli &amp; api getting started" data-track="cli"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-out="cli/output_format.md" data-search="kaggle cli 输出格式文档 cli &amp; api getting started" data-track="cli"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-out="cli/configuration.md" data-search="kaggle cli 配置 cli &amp; api getting started" data-track="cli"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-out="cli/search.md" data-search="搜索命令 cli &amp; api getting started" data-track="cli"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="Commands" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/cli/kernels.html" data-out="cli/kernels.md" data-search="内核命令 cli &amp; api commands" data-track="cli"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-out="cli/benchmarks.md" data-search="基准测试命令 cli &amp; api commands" data-track="cli"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-out="cli/simulation_competitions.md" data-search="教程：模拟比赛 cli &amp; api commands" data-track="cli"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-out="cli/datasets.md" data-search="数据集命令 cli &amp; api commands" data-track="cli"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-out="cli/model_variations_versions.md" data-search="模型变体版本命令 cli &amp; api commands" data-track="cli"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-out="cli/model_variations.md" data-search="模型变化命令 cli &amp; api commands" data-track="cli"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-out="cli/models.md" data-search="模型命令 cli &amp; api commands" data-track="cli"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-out="cli/competitions.md" data-search="竞赛命令 cli &amp; api commands" data-track="cli"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-out="cli/forums.md" data-search="论坛命令 cli &amp; api commands" data-track="cli"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/competition_creation.html" data-out="cli/competition_creation.md" data-search="通过 cli 举办竞赛 cli &amp; api commands" data-track="cli"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="Metadata schemas" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-out="cli/datasets_metadata.md" data-search="datasets metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-out="cli/kernels_metadata.md" data-search="kernels metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-out="cli/models_metadata.md" data-search="models metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li></ul>
+</div></div></div>
+</div></div></div></section>
+<section class="track" data-track="skills" data-open="0">
+<button type="button" class="track-btn" data-track-toggle="skills" aria-expanded="false"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Agent Skills</span><span class="track-count">14</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Overview" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-rel="skills/SKILL.md" data-search="Kaggle CLI"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="References" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md" data-search="Kaggle 基准 CLI 参考"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-rel="skills/references/kernels.md" data-search="内核 CLI 参考"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-rel="skills/references/model_variations.md" data-search="型号变体 CLI 参考"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md" data-search="型号变体版本 CLI 参考"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-rel="skills/references/search.md" data-search="搜索 CLI 参考"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-rel="skills/references/datasets.md" data-search="数据集 CLI 参考"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-rel="skills/references/files.md" data-search="文件 CLI 参考"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-rel="skills/references/models.md" data-search="模型 CLI 参考"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/competitions.html" data-rel="skills/references/competitions.md" data-search="竞赛 CLI 参考"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-rel="skills/references/forums.md" data-search="论坛 CLI 参考"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-rel="skills/references/auth.md" data-search="身份验证 CLI 参考"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-rel="skills/references/configuration.md" data-search="配置 CLI 参考"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-rel="skills/references/quota.md" data-search="配额 CLI 参考"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="kagglehub" data-open="1" data-active="1">
-<button type="button" class="track-btn" data-track-toggle="kagglehub" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="group" data-group="Overview" data-open="0">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-out="skills/SKILL.md" data-search="kaggle cli agent skills overview" data-track="skills"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="References" data-open="0">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-out="skills/references/benchmarks.md" data-search="kaggle 基准 cli 参考 agent skills references" data-track="skills"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-out="skills/references/kernels.md" data-search="内核 cli 参考 agent skills references" data-track="skills"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-out="skills/references/model_variations.md" data-search="型号变体 cli 参考 agent skills references" data-track="skills"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-out="skills/references/model_variations_versions.md" data-search="型号变体版本 cli 参考 agent skills references" data-track="skills"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-out="skills/references/search.md" data-search="搜索 cli 参考 agent skills references" data-track="skills"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-out="skills/references/datasets.md" data-search="数据集 cli 参考 agent skills references" data-track="skills"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-out="skills/references/files.md" data-search="文件 cli 参考 agent skills references" data-track="skills"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-out="skills/references/models.md" data-search="模型 cli 参考 agent skills references" data-track="skills"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/competitions.html" data-out="skills/references/competitions.md" data-search="竞赛 cli 参考 agent skills references" data-track="skills"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-out="skills/references/forums.md" data-search="论坛 cli 参考 agent skills references" data-track="skills"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-out="skills/references/auth.md" data-search="身份验证 cli 参考 agent skills references" data-track="skills"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-out="skills/references/configuration.md" data-search="配置 cli 参考 agent skills references" data-track="skills"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-out="skills/references/quota.md" data-search="配额 cli 参考 agent skills references" data-track="skills"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li></ul>
+</div></div></div>
+</div></div></div></section>
+<section class="track" data-track="kagglehub" data-open="1" data-active="1">
+<button type="button" class="track-btn" data-track-toggle="kagglehub" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">KaggleHub</span><span class="track-count">3</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Library" data-open="1" data-active="1">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-rel="kagglehub/intro.md" data-search="Download the latest version."><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md" data-search="为 kagglehub 做出贡献"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li>
-<li><a class="leaf active" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md" data-search="变更日志"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li>
-</ul></div></div></div>
-</div></div></div></div></nav>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-out="kagglehub/intro.md" data-search="download the latest version. kagglehub library" data-track="kagglehub"><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-out="kagglehub/CONTRIBUTING.md" data-search="为 kagglehub 做出贡献 kagglehub library" data-track="kagglehub"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li><li><a class="leaf active" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-out="kagglehub/CHANGELOG.md" data-search="变更日志 kagglehub library" data-track="kagglehub"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li></ul>
+</div></div></div></section></nav>
       <div class="side-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
     </aside>
     <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
-    <main class="main" id="main">
+    <div class="main" id="main">
+      <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/kagglehub/CHANGELOG.html">查看英文</a></div>
+      <div class="crumb"><a href="/kaggle-docs/zh/index.html">首页</a><span class="sep">/</span><span class="pill">KaggleHub</span><span class="sep">/</span><span class="current">变更日志</span></div>
       <div class="content-wrap">
-        <article class="content prose">
-          <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/kagglehub/CHANGELOG.html">查看英文</a></div>
-          <h1>变更日志</h1>
-<h2>下一个版本</h2>
+        <article class="content prose"><h1 id="变更日志"><a class="anchor" href="#变更日志">#</a>变更日志</h1>
+<h2 id="下一个版本"><a class="anchor" href="#下一个版本">#</a>下一个版本</h2>
 <ul>
 <li>修复了 Windows 上未从服务器端 zip 包装器中提取单个文件下载的问题，这使得原始 zip 存档缓存在请求的文件名下，而不是预期的文件下。 (<a href="https://github.com/Kaggle/kagglehub/issues/252">#252</a>)</li>
 <li>支持通过<code>dataset_download(path=...)</code>下载一个数据集目录，包括文件嵌套和缓存复用。 (<a href="https://github.com/Kaggle/kagglehub/pull/306">#306</a>)</li>
 </ul>
-<h2>v1.0.2（2026 年 6 月 9 日）</h2>
+<h2 id="v1022026-年-6-月-9-日"><a class="anchor" href="#v1022026-年-6-月-9-日">#</a>v1.0.2（2026 年 6 月 9 日）</h2>
 <ul>
 <li>对 tar 文件使用安全提取过滤器以防止提取漏洞。 (<a href="https://github.com/Kaggle/kagglehub/pull/303">#303</a>)</li>
 </ul>
-<h2>v1.0.1（2026 年 4 月 28 日）</h2>
+<h2 id="v1012026-年-4-月-28-日"><a class="anchor" href="#v1012026-年-4-月-28-日">#</a>v1.0.1（2026 年 4 月 28 日）</h2>
 <ul>
 <li>修复返回的详细页面 URL。 (<a href="https://github.com/Kaggle/kagglehub/pull/295">#295</a>)</li>
 <li>更新 API 令牌页面 URL。 (<a href="https://github.com/Kaggle/kagglehub/pull/294">#294</a>)</li>
 </ul>
-<h2>v1.0.0（2026 年 2 月 11 日）</h2>
+<h2 id="v1002026-年-2-月-11-日"><a class="anchor" href="#v1002026-年-2-月-11-日">#</a>v1.0.0（2026 年 2 月 11 日）</h2>
 <ul>
 <li>正式发布</li>
 </ul>
-<h2>v0.4.3（2026 年 2 月 6 日）</h2>
+<h2 id="v0432026-年-2-月-6-日"><a class="anchor" href="#v0432026-年-2-月-6-日">#</a>v0.4.3（2026 年 2 月 6 日）</h2>
 <ul>
 <li><code>dataset_download</code>、<code>model_download</code>、<code>notebook_output_download</code>、<code>competition_download</code>添加<code>output_dir</code>参数，可直接下载到自定义目录。 （<a href="https://github.com/Kaggle/kagglehub/pull/283">#283</a>、<a href="https://github.com/Kaggle/kagglehub/pull/284">#284</a>、<a href="https://github.com/Kaggle/kagglehub/pull/285">#285</a>）</li>
 </ul>
-<h2>v0.4.2（2026 年 1 月 29 日）</h2>
+<h2 id="v0422026-年-1-月-29-日"><a class="anchor" href="#v0422026-年-1-月-29-日">#</a>v0.4.2（2026 年 1 月 29 日）</h2>
 <ul>
 <li>重新添加 <code>set_kaggle_credentials</code> 方法，以避免根据设置旧凭据对库造成破坏。 (<a href="https://github.com/Kaggle/kagglehub/pull/281">#281</a>)</li>
 </ul>
-<h2>v0.4.1（2026 年 1 月 20 日）</h2>
+<h2 id="v0412026-年-1-月-20-日"><a class="anchor" href="#v0412026-年-1-月-20-日">#</a>v0.4.1（2026 年 1 月 20 日）</h2>
 <ul>
 <li>使用新的 API 令牌进行 <code>kagglehub.login()</code> 和 Colab 秘密身份验证。 (<a href="https://github.com/Kaggle/kagglehub/pull/279">#279</a>)</li>
 </ul>
-<h2>v0.4.0（2026 年 1 月 7 日）* 恢复版本检查逻辑。 (<a href="https://github.com/Kaggle/kagglehub/pull/272">#272</a>)</h2>
+<h2 id="v0402026-年-1-月-7-日-恢复版本检查逻辑-272"><a class="anchor" href="#v0402026-年-1-月-7-日-恢复版本检查逻辑-272">#</a>v0.4.0（2026 年 1 月 7 日）* 恢复版本检查逻辑。 (<a href="https://github.com/Kaggle/kagglehub/pull/272">#272</a>)</h2>
 <ul>
 <li>记录新的身份验证技术。 (<a href="https://github.com/Kaggle/kagglehub/pull/270">#270</a>)</li>
 <li>使用<code>kagglesdk</code>代替自定义HTTP实现。 (<a href="https://github.com/Kaggle/kagglehub/pull/268">#268</a>)</li>
 <li>放弃对 Python 3.9 的支持。现在所需的最低 Python 版本是 3.10。 (<a href="https://github.com/Kaggle/kagglehub/pull/260">#260</a>)</li>
 </ul>
-<h2>v0.3.13（2025 年 8 月 25 日）</h2>
+<h2 id="v03132025-年-8-月-25-日"><a class="anchor" href="#v03132025-年-8-月-25-日">#</a>v0.3.13（2025 年 8 月 25 日）</h2>
 <ul>
 <li>解决创建包含目录的数据集的问题。 (<a href="https://github.com/Kaggle/kagglehub/pull/255">#255</a>)</li>
 <li>增强弃用警告的错误消息，使其更加清晰。 (<a href="https://github.com/Kaggle/kagglehub/pull/249">#249</a>)</li>
 <li>修复 Kaggle 包中与多线程相关的错误。 (<a href="https://github.com/Kaggle/kagglehub/pull/248">#248</a>)</li>
 <li>改进 Colab 缓存的日志消息，以获得更好的用户体验。 (<a href="https://github.com/Kaggle/kagglehub/pull/243">#243</a>)</li>
 </ul>
-<h2>v0.3.12（2025 年 4 月 23 日）</h2>
+<h2 id="v03122025-年-4-月-23-日"><a class="anchor" href="#v03122025-年-4-月-23-日">#</a>v0.3.12（2025 年 4 月 23 日）</h2>
 <ul>
 <li>修复 <code>model_signing</code> <code>1.0.0</code> 版本 (<a href="https://github.com/Kaggle/kagglehub/pull/239">#239</a>) 的重大更改</li>
 <li>添加<code>KaggleDatasetAdapter.POLARS</code>支持<code>dataset_load</code>（<a href="https://github.com/Kaggle/kagglehub/pull/238">#238</a>）</li>
 <li>将 kwargs 验证添加到<code>dataset_load</code> (<a href="https://github.com/Kaggle/kagglehub/pull/241">#241</a>)</li>
 </ul>
-<h2>v0.3.11（2025 年 4 月 1 日）</h2>
+<h2 id="v03112025-年-4-月-1-日"><a class="anchor" href="#v03112025-年-4-月-1-日">#</a>v0.3.11（2025 年 4 月 1 日）</h2>
 <ul>
 <li>添加 <code>torchtune</code> 作为用户代理 (<a href="https://github.com/Kaggle/kagglehub/pull/237">#237</a>)</li>
 </ul>
-<h2>v0.3.10（2025 年 2 月 25 日）</h2>
+<h2 id="v03102025-年-2-月-25-日"><a class="anchor" href="#v03102025-年-2-月-25-日">#</a>v0.3.10（2025 年 2 月 25 日）</h2>
 <ul>
 <li>修复Colab环境检测逻辑(<a href="https://github.com/Kaggle/kagglehub/pull/230">#230</a>)</li>
 </ul>
-<h2>v0.3.9（2025 年 2 月 18 日）</h2>
+<h2 id="v0392025-年-2-月-18-日"><a class="anchor" href="#v0392025-年-2-月-18-日">#</a>v0.3.9（2025 年 2 月 18 日）</h2>
 <ul>
 <li>将load_datset重命名为dataset_load (<a href="https://github.com/Kaggle/kagglehub/pull/228">#228</a>)</li>
 <li>支持<a href="https://www.kaggle.com/discussions/product-announcements/564941">Kaggle Packages</a> (<a href="https://github.com/Kaggle/kagglehub/pull/196">#196</a>)</li>
 </ul>
-<h2>v0.3.8（2025 年 2 月 13 日）</h2>
+<h2 id="v0382025-年-2-月-13-日"><a class="anchor" href="#v0382025-年-2-月-13-日">#</a>v0.3.8（2025 年 2 月 13 日）</h2>
 <ul>
 <li>由于依赖性问题，将签名移至可选功能 (<a href="https://github.com/Kaggle/kagglehub/pull/225">#225</a>)</li>
 </ul>
-<h2>v0.3.7（2025 年 1 月 31 日）* 下载时将数据加载器添加到用户代理(<a href="https://github.com/Kaggle/kagglehub/pull/215">#215</a>)</h2>
+<h2 id="v0372025-年-1-月-31-日-下载时将数据加载器添加到用户代理215"><a class="anchor" href="#v0372025-年-1-月-31-日-下载时将数据加载器添加到用户代理215">#</a>v0.3.7（2025 年 1 月 31 日）* 下载时将数据加载器添加到用户代理(<a href="https://github.com/Kaggle/kagglehub/pull/215">#215</a>)</h2>
 <ul>
 <li>签署模型并发布到sigstore (<a href="https://github.com/Kaggle/kagglehub/pull/211">#211</a>)</li>
 <li>在笔记本缓存目录中使用版本号（<a href="https://github.com/Kaggle/kagglehub/pull/212">#212</a>）</li>
@@ -226,47 +174,47 @@
 <li>添加对实用脚本的支持 (<a href="https://github.com/Kaggle/kagglehub/pull/207">#207</a>)</li>
 <li>修复<code>README</code> (<a href="https://github.com/Kaggle/kagglehub/pull/202">#202</a>) 中的<code>load_dataset</code>错字</li>
 </ul>
-<h2>v0.3.6（2024 年 12 月 19 日）</h2>
+<h2 id="v0362024-年-12-月-19-日"><a class="anchor" href="#v0362024-年-12-月-19-日">#</a>v0.3.6（2024 年 12 月 19 日）</h2>
 <ul>
 <li>添加 <code>kagglehub.load_dataset(...)</code> (<a href="https://github.com/Kaggle/kagglehub/pull/192">#192</a>, <a href="https://github.com/Kaggle/kagglehub/pull/197">#197</a>)</li>
 <li>修复自动压缩数据集下载（<a href="https://github.com/Kaggle/kagglehub/pull/194">#194</a>、<a href="https://github.com/Kaggle/kagglehub/pull/195">#195</a>）
 *更新<code>docker-hatch</code>和文档(<a href="https://github.com/Kaggle/kagglehub/pull/193">#193</a>)</li>
 </ul>
-<h2>v0.3.5（2024 年 12 月 10 日）</h2>
+<h2 id="v0352024-年-12-月-10-日"><a class="anchor" href="#v0352024-年-12-月-10-日">#</a>v0.3.5（2024 年 12 月 10 日）</h2>
 <ul>
 <li>包括服务器端错误（如果存在）(<a href="https://github.com/Kaggle/kagglehub/pull/183">#183</a>)</li>
 <li>默认情况下选择退出文件记录 (<a href="https://github.com/Kaggle/kagglehub/pull/190">#190</a>)</li>
 <li>改进版本升级警告(<a href="https://github.com/Kaggle/kagglehub/pull/188">#188</a>)</li>
 <li>添加<code>kagglehub.notebook_output_download(...)</code>，目前仅支持HTTP解析器。 (<a href="https://github.com/Kaggle/kagglehub/pull/184">#184</a>)</li>
 </ul>
-<h2>v0.3.4（2024 年 11 月 8 日）</h2>
+<h2 id="v0342024-年-11-月-8-日"><a class="anchor" href="#v0342024-年-11-月-8-日">#</a>v0.3.4（2024 年 11 月 8 日）</h2>
 <ul>
 <li>添加一个简单的 Colab 数据集缓存解析器 (<a href="https://github.com/Kaggle/kagglehub/pull/177">#177</a>)</li>
 <li>添加 <code>keras_hub</code> 作为用户代理 (<a href="https://github.com/Kaggle/kagglehub/pull/176">#176</a>)</li>
 </ul>
-<h2>v0.3.3（2024 年 10 月 17 日）</h2>
+<h2 id="v0332024-年-10-月-17-日"><a class="anchor" href="#v0332024-年-10-月-17-日">#</a>v0.3.3（2024 年 10 月 17 日）</h2>
 <ul>
 <li>在 <code>kaggle.login(...)</code> (<a href="https://github.com/Kaggle/kagglehub/pull/173">#173</a>) 提示时隐藏终端中的 API 密钥</li>
 <li>在 Kaggle 笔记本环境中使用 <code>force_download</code> 时减少日志垃圾邮件 (<a href="https://github.com/Kaggle/kagglehub/pull/172">#172</a>)</li>
 </ul>
-<h2>v0.3.2（2024 年 10 月 15 日）* 如果设置了身份验证环境变量但为空，则回退到下一个身份验证机制 (<a href="https://github.com/Kaggle/kagglehub/pull/168">#168</a>)</h2>
+<h2 id="v0322024-年-10-月-15-日-如果设置了身份验证环境变量但为空则回退到下一个身份验证机制-168"><a class="anchor" href="#v0322024-年-10-月-15-日-如果设置了身份验证环境变量但为空则回退到下一个身份验证机制-168">#</a>v0.3.2（2024 年 10 月 15 日）* 如果设置了身份验证环境变量但为空，则回退到下一个身份验证机制 (<a href="https://github.com/Kaggle/kagglehub/pull/168">#168</a>)</h2>
 <ul>
 <li><code>kaggle.whoami()</code> 在 Kaggle Notebook 环境中返回正确的值 (<a href="https://github.com/Kaggle/kagglehub/pull/166">#166</a>)</li>
 <li>使用 Colab 秘密时<code>kaggle.whoami()</code>返回正确的值（<a href="https://github.com/Kaggle/kagglehub/pull/165">#165</a>）</li>
 </ul>
-<h2>v0.3.1（2024 年 10 月 1 日）</h2>
+<h2 id="v0312024-年-10-月-1-日"><a class="anchor" href="#v0312024-年-10-月-1-日">#</a>v0.3.1（2024 年 10 月 1 日）</h2>
 <ul>
 <li>附上Kaggle笔记本环境下的比赛（<a href="https://github.com/Kaggle/kagglehub/pull/161">#161</a>）</li>
 <li>使用<code>kagglehub.competition_download(...)</code> (<a href="https://github.com/Kaggle/kagglehub/pull/158">#158</a>) 下载比赛</li>
 <li>通过 Colab 密钥启用授权 (<a href="https://github.com/Kaggle/kagglehub/pull/157">#157</a>)</li>
 </ul>
-<h2>v0.3.0（2024 年 9 月 4 日）</h2>
+<h2 id="v0302024-年-9-月-4-日"><a class="anchor" href="#v0302024-年-9-月-4-日">#</a>v0.3.0（2024 年 9 月 4 日）</h2>
 <ul>
 <li>集成 Keras 指标 (<a href="https://github.com/Kaggle/kagglehub/pull/152">#152</a>)</li>
 <li>增强日志消息 (<a href="https://github.com/Kaggle/kagglehub/pull/151">#151</a>)</li>
 <li>升级Python版本支持至3.9及以上(<a href="https://github.com/Kaggle/kagglehub/pull/154">#154</a>)</li>
 </ul>
-<h2>v0.2.9（2024 年 7 月 31 日）</h2>
+<h2 id="v0292024-年-7-月-31-日"><a class="anchor" href="#v0292024-年-7-月-31-日">#</a>v0.2.9（2024 年 7 月 31 日）</h2>
 <ul>
 <li>通过忽略模式改进上传 (<a href="https://github.com/Kaggle/kagglehub/pull/147">#147</a>)</li>
 <li>上传空文件(<a href="https://github.com/Kaggle/kagglehub/pull/145">#145</a>)</li>
@@ -274,16 +222,16 @@
 <li>使用<code>kagglehub.dataset_upload(...)</code>（<a href="https://github.com/Kaggle/kagglehub/pull/149">#149</a>）上传数据集</li>
 <li>使用<code>kagglehub.dataset_download(...)</code> (<a href="https://github.com/Kaggle/kagglehub/pull/131">#131</a>) 下载数据集</li>
 </ul>
-<h2>v0.2.8（2024 年 7 月 16 日）</h2>
+<h2 id="v0282024-年-7-月-16-日"><a class="anchor" href="#v0282024-年-7-月-16-日">#</a>v0.2.8（2024 年 7 月 16 日）</h2>
 <ul>
 <li>添加了对 Kaggle 笔记本中隐式令牌身份验证的支持 (<a href="https://github.com/Kaggle/kagglehub/pull/141">#141</a>)</li>
 <li>改进 Kaggle 和 Colab 环境中缓存模型的日志记录 (<a href="https://github.com/Kaggle/kagglehub/pull/142">#142</a>)</li>
 </ul>
-<h2>v0.2.7（2024 年 7 月 1 日）</h2>
+<h2 id="v0272024-年-7-月-1-日"><a class="anchor" href="#v0272024-年-7-月-1-日">#</a>v0.2.7（2024 年 7 月 1 日）</h2>
 <ul>
 <li>修复模型下载错误</li>
 </ul>
-<h2>v0.2.6（2024 年 6 月 10 日）</h2>
+<h2 id="v0262024-年-6-月-10-日"><a class="anchor" href="#v0262024-年-6-月-10-日">#</a>v0.2.6（2024 年 6 月 10 日）</h2>
 <ul>
 <li><p>添加对 <code>.zip</code> 存档 (<a href="https://github.com/Kaggle/kagglehub/pull/135">#135</a>) 的支持</p>
 </li>
@@ -298,40 +246,40 @@
 <li><p>迁移所有测试以使用 Flask (<a href="https://github.com/Kaggle/kagglehub/pull/111">#111</a>)</p>
 </li>
 </ul>
-<h2>v0.2.4（2024 年 4 月 26 日）</h2>
+<h2 id="v0242024-年-4-月-26-日"><a class="anchor" href="#v0242024-年-4-月-26-日">#</a>v0.2.4（2024 年 4 月 26 日）</h2>
 <ul>
 <li>当模型实例存在但尚未准备好版本时创建新版本(<a href="https://github.com/Kaggle/kagglehub/pull/108">#108</a>)</li>
 <li>删除上传时的压缩(<a href="https://github.com/Kaggle/kagglehub/pull/105">#105</a>)</li>
 </ul>
-<h2>v0.2.3（2024 年 4 月 16 日）</h2>
+<h2 id="v0232024-年-4-月-16-日"><a class="anchor" href="#v0232024-年-4-月-16-日">#</a>v0.2.3（2024 年 4 月 16 日）</h2>
 <ul>
 <li>提高上传速度(<a href="https://github.com/Kaggle/kagglehub/pull/100">#100</a>)</li>
 </ul>
-<h2>v0.2.2（2024 年 3 月 27 日）</h2>
+<h2 id="v0222024-年-3-月-27-日"><a class="anchor" href="#v0222024-年-3-月-27-日">#</a>v0.2.2（2024 年 3 月 27 日）</h2>
 <ul>
 <li>添加对单个文件上传的支持(<a href="https://github.com/Kaggle/kagglehub/pull/97">#97</a>)</li>
 </ul>
-<h2>v0.2.1（2024 年 3 月 21 日）</h2>
+<h2 id="v0212024-年-3-月-21-日"><a class="anchor" href="#v0212024-年-3-月-21-日">#</a>v0.2.1（2024 年 3 月 21 日）</h2>
 <ul>
 <li>添加目录上传支持(<a href="https://github.com/Kaggle/kagglehub/pull/93">#82</a>)</li>
 </ul>
-<h2>v0.2.0（2024 年 2 月 28 日）</h2>
+<h2 id="v0202024-年-2-月-28-日"><a class="anchor" href="#v0202024-年-2-月-28-日">#</a>v0.2.0（2024 年 2 月 28 日）</h2>
 <ul>
 <li>在post函数中添加raise_for_status() (<a href="https://github.com/Kaggle/kagglehub/pull/89">#82</a>)</li>
 <li>使用 ArtifactRegistry 来获取辅助图像 (<a href="https://github.com/Kaggle/kagglehub/pull/87">#83</a>)</li>
 </ul>
-<h2>v0.1.9（2023 年 2 月 5 日）</h2>
+<h2 id="v0192023-年-2-月-5-日"><a class="anchor" href="#v0192023-年-2-月-5-日">#</a>v0.1.9（2023 年 2 月 5 日）</h2>
 <ul>
 <li>修复检测新版本时的消息（<a href="https://github.com/Kaggle/kagglehub/pull/82">#82</a>）</li>
 <li>错误链接到模型详细信息页面（Colab 解析器）(<a href="https://github.com/Kaggle/kagglehub/pull/83">#83</a>)</li>
 </ul>
-<h2>v0.1.8（2024 年 1 月 31 日）</h2>
+<h2 id="v0182024-年-1-月-31-日"><a class="anchor" href="#v0182024-年-1-月-31-日">#</a>v0.1.8（2024 年 1 月 31 日）</h2>
 <ul>
 <li>在错误消息中包含模型详细信息页面的 URL (<a href="https://github.com/Kaggle/kagglehub/pull/80">#80</a>)</li>
 <li>如果在这些环境上运行，请将 Kaggle/Colab 添加到用户代理 (<a href="https://github.com/Kaggle/kagglehub/pull/78">#78</a>)</li>
 <li>改进 Colab 解析器的日志记录 (<a href="https://github.com/Kaggle/kagglehub/pull/77">#77</a>)</li>
 </ul>
-<h2>v0.1.7（2024 年 1 月 29 日）</h2>
+<h2 id="v0172024-年-1-月-29-日"><a class="anchor" href="#v0172024-年-1-月-29-日">#</a>v0.1.7（2024 年 1 月 29 日）</h2>
 <ul>
 <li><p>修复 <code>model_upload</code> 与嵌套目录 (<a href="https://github.com/Kaggle/kagglehub/pull/75">#75</a>)</p>
 </li>
@@ -346,7 +294,7 @@
 <li><p>添加断点续传(<a href="https://github.com/Kaggle/kagglehub/pull/55">#55</a>)</p>
 </li>
 </ul>
-<h2>v0.1.5（2024 年 1 月 8 日）</h2>
+<h2 id="v0152024-年-1-月-8-日"><a class="anchor" href="#v0152024-年-1-月-8-日">#</a>v0.1.5（2024 年 1 月 8 日）</h2>
 <ul>
 <li>防止某些环境下日志信息被打印两次(<a href="https://github.com/Kaggle/kagglehub/pull/57">#57</a>)</li>
 <li>添加 Colab 模型解析器 (<a href="https://github.com/Kaggle/kagglehub/pull/53">#53</a>)</li>
@@ -354,24 +302,24 @@
 <li>将 <code>kagglehub</code> 用户代理添加到 Kaggle API V1 调用 (<a href="https://github.com/Kaggle/kagglehub/pull/50">#50</a>)</li>
 <li>为<code>kagglehub.model_download()</code>添加<code>force_download</code>选项（<a href="https://github.com/Kaggle/kagglehub/pull/44">#44</a>）</li>
 </ul>
-<h2>v0.1.4（2023 年 12 月 11 日）</h2>
+<h2 id="v0142023-年-12-月-11-日"><a class="anchor" href="#v0142023-年-12-月-11-日">#</a>v0.1.4（2023 年 12 月 11 日）</h2>
 <ul>
 <li>改进<code>KaggleCacheResolver</code> (<a href="https://github.com/Kaggle/kagglehub/pull/40">#40</a>) 的错误消息</li>
 </ul>
-<h2>v0.1.3（2023 年 12 月 5 日）</h2>
+<h2 id="v0132023-年-12-月-5-日"><a class="anchor" href="#v0132023-年-12-月-5-日">#</a>v0.1.3（2023 年 12 月 5 日）</h2>
 <ul>
 <li>改进 Kaggle API 调用的错误消息 (<a href="https://github.com/Kaggle/kagglehub/pull/38">#38</a>)</li>
 <li>文件下载后执行完整性检查(<a href="https://github.com/Kaggle/kagglehub/pull/37">#37</a>)</li>
 </ul>
-<h2>v0.1.2（2023 年 11 月 30 日）</h2>
+<h2 id="v0122023-年-11-月-30-日"><a class="anchor" href="#v0122023-年-11-月-30-日">#</a>v0.1.2（2023 年 11 月 30 日）</h2>
 <ul>
 <li>修复笔记本环境检测逻辑(<a href="https://github.com/Kaggle/kagglehub/pull/36">#36</a>)</li>
 </ul>
-<h2>v0.1.1（2023 年 11 月 30 日）</h2>
+<h2 id="v0112023-年-11-月-30-日"><a class="anchor" href="#v0112023-年-11-月-30-日">#</a>v0.1.1（2023 年 11 月 30 日）</h2>
 <ul>
 <li>修复了登录凭据验证（<a href="https://github.com/Kaggle/kagglehub/pull/33">#33</a>、<a href="https://github.com/Kaggle/kagglehub/pull/34">#34</a>）</li>
 </ul>
-<h2>v0.1.0（2023 年 11 月 29 日）</h2>
+<h2 id="v0102023-年-11-月-29-日"><a class="anchor" href="#v0102023-年-11-月-29-日">#</a>v0.1.0（2023 年 11 月 29 日）</h2>
 <ul>
 <li><p>在禁用网络的 Kaggle 笔记本环境中附加模型 (<a href="https://github.com/Kaggle/kagglehub/pull/27">#27</a>)</p>
 </li>
@@ -390,24 +338,20 @@
 <li><p>通过HTTP下载公共模型并存储在本地缓存中（<a href="https://github.com/Kaggle/kagglehub/pull/8">#8</a>，<a href="https://github.com/Kaggle/kagglehub/pull/12">#12</a>）</p>
 </li>
 </ul>
-<h2>v0.0.1a0（2023 年 10 月 5 日）</h2>
+<h2 id="v001a02023-年-10-月-5-日"><a class="anchor" href="#v001a02023-年-10-月-5-日">#</a>v0.0.1a0（2023 年 10 月 5 日）</h2>
 <ul>
 <li>kagglehub 库的骨架 (<a href="https://github.com/Kaggle/kagglehub/pull/1">#1</a>)</li>
 </ul>
-
-          <p class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
-        </article>
-        
+</article>
+        <nav class="toc"><div class="toc-title">On this page</div><ul><li class="l2"><a href="#下一个版本">#下一个版本</a></li><li class="l2"><a href="#v1022026-年-6-月-9-日">#v1.0.2（2026 年 6 月 9 日）</a></li><li class="l2"><a href="#v1012026-年-4-月-28-日">#v1.0.1（2026 年 4 月 28 日）</a></li><li class="l2"><a href="#v1002026-年-2-月-11-日">#v1.0.0（2026 年 2 月 11 日）</a></li><li class="l2"><a href="#v0432026-年-2-月-6-日">#v0.4.3（2026 年 2 月 6 日）</a></li><li class="l2"><a href="#v0422026-年-1-月-29-日">#v0.4.2（2026 年 1 月 29 日）</a></li><li class="l2"><a href="#v0412026-年-1-月-20-日">#v0.4.1（2026 年 1 月 20 日）</a></li><li class="l2"><a href="#v0402026-年-1-月-7-日-恢复版本检查逻辑-272">#v0.4.0（2026 年 1 月 7 日）* 恢复版本检查逻辑。 (#272)</a></li><li class="l2"><a href="#v03132025-年-8-月-25-日">#v0.3.13（2025 年 8 月 25 日）</a></li><li class="l2"><a href="#v03122025-年-4-月-23-日">#v0.3.12（2025 年 4 月 23 日）</a></li><li class="l2"><a href="#v03112025-年-4-月-1-日">#v0.3.11（2025 年 4 月 1 日）</a></li><li class="l2"><a href="#v03102025-年-2-月-25-日">#v0.3.10（2025 年 2 月 25 日）</a></li><li class="l2"><a href="#v0392025-年-2-月-18-日">#v0.3.9（2025 年 2 月 18 日）</a></li><li class="l2"><a href="#v0382025-年-2-月-13-日">#v0.3.8（2025 年 2 月 13 日）</a></li><li class="l2"><a href="#v0372025-年-1-月-31-日-下载时将数据加载器添加到用户代理215">#v0.3.7（2025 年 1 月 31 日）* 下载时将数据加载器添加到用户代理(#215)</a></li><li class="l2"><a href="#v0362024-年-12-月-19-日">#v0.3.6（2024 年 12 月 19 日）</a></li><li class="l2"><a href="#v0352024-年-12-月-10-日">#v0.3.5（2024 年 12 月 10 日）</a></li><li class="l2"><a href="#v0342024-年-11-月-8-日">#v0.3.4（2024 年 11 月 8 日）</a></li><li class="l2"><a href="#v0332024-年-10-月-17-日">#v0.3.3（2024 年 10 月 17 日）</a></li><li class="l2"><a href="#v0322024-年-10-月-15-日-如果设置了身份验证环境变量但为空则回退到下一个身份验证机制-168">#v0.3.2（2024 年 10 月 15 日）* 如果设置了身份验证环境变量但为空，则回退到下一个身份验证机制 (#168)</a></li><li class="l2"><a href="#v0312024-年-10-月-1-日">#v0.3.1（2024 年 10 月 1 日）</a></li><li class="l2"><a href="#v0302024-年-9-月-4-日">#v0.3.0（2024 年 9 月 4 日）</a></li><li class="l2"><a href="#v0292024-年-7-月-31-日">#v0.2.9（2024 年 7 月 31 日）</a></li><li class="l2"><a href="#v0282024-年-7-月-16-日">#v0.2.8（2024 年 7 月 16 日）</a></li><li class="l2"><a href="#v0272024-年-7-月-1-日">#v0.2.7（2024 年 7 月 1 日）</a></li><li class="l2"><a href="#v0262024-年-6-月-10-日">#v0.2.6（2024 年 6 月 10 日）</a></li><li class="l2"><a href="#v0242024-年-4-月-26-日">#v0.2.4（2024 年 4 月 26 日）</a></li><li class="l2"><a href="#v0232024-年-4-月-16-日">#v0.2.3（2024 年 4 月 16 日）</a></li><li class="l2"><a href="#v0222024-年-3-月-27-日">#v0.2.2（2024 年 3 月 27 日）</a></li><li class="l2"><a href="#v0212024-年-3-月-21-日">#v0.2.1（2024 年 3 月 21 日）</a></li><li class="l2"><a href="#v0202024-年-2-月-28-日">#v0.2.0（2024 年 2 月 28 日）</a></li><li class="l2"><a href="#v0192023-年-2-月-5-日">#v0.1.9（2023 年 2 月 5 日）</a></li><li class="l2"><a href="#v0182024-年-1-月-31-日">#v0.1.8（2024 年 1 月 31 日）</a></li><li class="l2"><a href="#v0172024-年-1-月-29-日">#v0.1.7（2024 年 1 月 29 日）</a></li><li class="l2"><a href="#v0152024-年-1-月-8-日">#v0.1.5（2024 年 1 月 8 日）</a></li><li class="l2"><a href="#v0142023-年-12-月-11-日">#v0.1.4（2023 年 12 月 11 日）</a></li><li class="l2"><a href="#v0132023-年-12-月-5-日">#v0.1.3（2023 年 12 月 5 日）</a></li><li class="l2"><a href="#v0122023-年-11-月-30-日">#v0.1.2（2023 年 11 月 30 日）</a></li><li class="l2"><a href="#v0112023-年-11-月-30-日">#v0.1.1（2023 年 11 月 30 日）</a></li><li class="l2"><a href="#v0102023-年-11-月-29-日">#v0.1.0（2023 年 11 月 29 日）</a></li><li class="l2"><a href="#v001a02023-年-10-月-5-日">#v0.0.1a0（2023 年 10 月 5 日）</a></li></ul></nav>
       </div>
-    </main>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html"><span class="dir">← 上一篇</span><span class="title">为 kagglehub 做出贡献</span></a><div class="empty"></div></nav>
+      <footer class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</footer>
+    </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-  <script src="/kaggle-docs/assets/site.js"></script>
-  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
   <button type="button" class="to-top" id="toTop" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
-
   <div class="kbd-help" id="kbdHelp" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
   <div class="kbd-panel">
     <h3>Keyboard shortcuts</h3>
@@ -419,5 +363,7 @@
     </div>
   </div>
 </div>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
 </body>
 </html>

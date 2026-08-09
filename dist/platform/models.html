@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Platform docs, CLI/API reference, Agent Skills, and KaggleHub — scraped from official sources." />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#08090c" />
   <title>Models · Kaggle Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github-dark.min.css" />
   <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
   <link rel="alternate" hreflang="en" href="/kaggle-docs/platform/models.html" />
   <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/platform/models.html" />
@@ -25,8 +26,8 @@
         <span class="brand-text">Kaggle Docs</span>
         <span class="brand-v">mirror</span>
       </a>
-      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
-      <div class="lang-switch" role="navigation" aria-label="Language">
+      <nav class="chips" id="trackChips" aria-label="Tracks"><button type="button" class="chip active" data-jump-track="platform">Platform Docs</button><button type="button" class="chip" data-jump-track="cli">CLI &amp; API</button><button type="button" class="chip" data-jump-track="skills">Agent Skills</button><button type="button" class="chip" data-jump-track="kagglehub">KaggleHub</button></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
         <a class="lang-btn active" href="/kaggle-docs/platform/models.html" data-lang-set="en" hreflang="en">EN</a>
         <a class="lang-btn" href="/kaggle-docs/zh/platform/models.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
       </div>
@@ -37,132 +38,79 @@
     <aside class="sidebar" id="sidebar">
       <div class="side-head">
         <div class="search-wrap">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
           <input class="search" id="search" type="search" placeholder="Search docs…" autocomplete="off" />
           <span class="search-kbd" aria-hidden="true">/</span>
         </div>
-        <div class="side-label">Learning path · docs</div>
+        <p class="side-label">Learning path · docs</p>
       </div>
-      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="home" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+      <nav class="nav" id="nav" data-active-rel="platform/models.md" aria-label="Docs"><section class="track" data-track="home" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="home" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Home</span><span class="track-count">1</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Home" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/index.html" data-rel="index.md" data-search="Kaggle documentation mirror"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="platform" data-open="1" data-active="1">
-<button type="button" class="track-btn" data-track-toggle="platform" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/index.html" data-out="index.md" data-search="kaggle documentation mirror home home" data-track="home"><span class="num">1</span><span class="leaf-title">Kaggle documentation mirror</span></a></li></ul>
+</div></div></div></section>
+<section class="track" data-track="platform" data-open="1" data-active="1">
+<button type="button" class="track-btn" data-track-toggle="platform" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Platform Docs</span><span class="track-count">11</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Platform" data-open="1" data-active="1">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-rel="platform/benchmarks.md" data-search="Benchmarks"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-rel="platform/competitions.md" data-search="Competitions"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-rel="platform/datasets.md" data-search="Datasets"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md" data-search="Efficient GPU Usage Tips"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-rel="platform/getting-started.md" data-search="Getting Started on Kaggle"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-rel="platform/packages.md" data-search="Kaggle Packages"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li>
-<li><a class="leaf active" href="/kaggle-docs/platform/models.html" data-rel="platform/models.md" data-search="Models"><span class="num">8</span><span class="leaf-title">Models</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-rel="platform/notebooks.md" data-search="Notebooks"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-rel="platform/organizations.md" data-search="Organizations"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/api.html" data-rel="platform/api.md" data-search="Public API"><span class="num">11</span><span class="leaf-title">Public API</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-rel="platform/tpu.md" data-search="Tensor Processing Units (TPUs)"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="cli" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="cli" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/platform/benchmarks.html" data-out="platform/benchmarks.md" data-search="benchmarks platform docs platform" data-track="platform"><span class="num">2</span><span class="leaf-title">Benchmarks</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/competitions.html" data-out="platform/competitions.md" data-search="competitions platform docs platform" data-track="platform"><span class="num">3</span><span class="leaf-title">Competitions</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/datasets.html" data-out="platform/datasets.md" data-search="datasets platform docs platform" data-track="platform"><span class="num">4</span><span class="leaf-title">Datasets</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/efficient-gpu-usage.html" data-out="platform/efficient-gpu-usage.md" data-search="efficient gpu usage tips platform docs platform" data-track="platform"><span class="num">5</span><span class="leaf-title">Efficient GPU Usage Tips</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/getting-started.html" data-out="platform/getting-started.md" data-search="getting started on kaggle platform docs platform" data-track="platform"><span class="num">6</span><span class="leaf-title">Getting Started on Kaggle</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/packages.html" data-out="platform/packages.md" data-search="kaggle packages platform docs platform" data-track="platform"><span class="num">7</span><span class="leaf-title">Kaggle Packages</span></a></li><li><a class="leaf active" href="/kaggle-docs/platform/models.html" data-out="platform/models.md" data-search="models platform docs platform" data-track="platform"><span class="num">8</span><span class="leaf-title">Models</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/notebooks.html" data-out="platform/notebooks.md" data-search="notebooks platform docs platform" data-track="platform"><span class="num">9</span><span class="leaf-title">Notebooks</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/organizations.html" data-out="platform/organizations.md" data-search="organizations platform docs platform" data-track="platform"><span class="num">10</span><span class="leaf-title">Organizations</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/api.html" data-out="platform/api.md" data-search="public api platform docs platform" data-track="platform"><span class="num">11</span><span class="leaf-title">Public API</span></a></li><li><a class="leaf" href="/kaggle-docs/platform/tpu.html" data-out="platform/tpu.md" data-search="tensor processing units (tpus) platform docs platform" data-track="platform"><span class="num">12</span><span class="leaf-title">Tensor Processing Units (TPUs)</span></a></li></ul>
+</div></div></div></section>
+<section class="track" data-track="cli" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="cli" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">CLI &amp; API</span><span class="track-count">20</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Getting started" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-rel="cli/changelog.md" data-search="Changelog"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-rel="cli/intro.md" data-search="Kaggle CLI"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-rel="cli/configuration.md" data-search="Kaggle CLI Configuration"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/README.html" data-rel="cli/README.md" data-search="Kaggle CLI Documentation"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-rel="cli/output_format.md" data-search="Kaggle CLI Output Formatting Documentation"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-rel="cli/tutorials.md" data-search="Kaggle CLI Tutorials"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/search.html" data-rel="cli/search.md" data-search="Search Command"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="Commands" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-rel="cli/benchmarks.md" data-search="Benchmarks Commands"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-rel="cli/competitions.md" data-search="Competitions Commands"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-rel="cli/datasets.md" data-search="Datasets Commands"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-rel="cli/forums.md" data-search="Forums Commands"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-rel="cli/competition_creation.md" data-search="Hosting a Competition from the CLI"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-rel="cli/kernels.md" data-search="Kernels Commands"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-rel="cli/model_variations.md" data-search="Model Variation Commands"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md" data-search="Model Variation Versions Commands"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/models.html" data-rel="cli/models.md" data-search="Models Commands"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md" data-search="Tutorial: Simulation Competitions"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="Metadata schemas" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md" data-search="Datasets Metadata"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md" data-search="Kernels Metadata"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-rel="cli/models_metadata.md" data-search="Models Metadata"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="skills" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="skills" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="group" data-group="Getting started" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/cli/changelog.html" data-out="cli/changelog.md" data-search="changelog cli &amp; api getting started" data-track="cli"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/intro.html" data-out="cli/intro.md" data-search="kaggle cli cli &amp; api getting started" data-track="cli"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/configuration.html" data-out="cli/configuration.md" data-search="kaggle cli configuration cli &amp; api getting started" data-track="cli"><span class="num">15</span><span class="leaf-title">Kaggle CLI Configuration</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/README.html" data-out="cli/README.md" data-search="kaggle cli documentation cli &amp; api getting started" data-track="cli"><span class="num">16</span><span class="leaf-title">Kaggle CLI Documentation</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/output_format.html" data-out="cli/output_format.md" data-search="kaggle cli output formatting documentation cli &amp; api getting started" data-track="cli"><span class="num">17</span><span class="leaf-title">Kaggle CLI Output Formatting Documentation</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/tutorials.html" data-out="cli/tutorials.md" data-search="kaggle cli tutorials cli &amp; api getting started" data-track="cli"><span class="num">18</span><span class="leaf-title">Kaggle CLI Tutorials</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/search.html" data-out="cli/search.md" data-search="search command cli &amp; api getting started" data-track="cli"><span class="num">19</span><span class="leaf-title">Search Command</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="Commands" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/cli/benchmarks.html" data-out="cli/benchmarks.md" data-search="benchmarks commands cli &amp; api commands" data-track="cli"><span class="num">20</span><span class="leaf-title">Benchmarks Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/competitions.html" data-out="cli/competitions.md" data-search="competitions commands cli &amp; api commands" data-track="cli"><span class="num">21</span><span class="leaf-title">Competitions Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/datasets.html" data-out="cli/datasets.md" data-search="datasets commands cli &amp; api commands" data-track="cli"><span class="num">22</span><span class="leaf-title">Datasets Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/forums.html" data-out="cli/forums.md" data-search="forums commands cli &amp; api commands" data-track="cli"><span class="num">23</span><span class="leaf-title">Forums Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/competition_creation.html" data-out="cli/competition_creation.md" data-search="hosting a competition from the cli cli &amp; api commands" data-track="cli"><span class="num">24</span><span class="leaf-title">Hosting a Competition from the CLI</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/kernels.html" data-out="cli/kernels.md" data-search="kernels commands cli &amp; api commands" data-track="cli"><span class="num">25</span><span class="leaf-title">Kernels Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/model_variations.html" data-out="cli/model_variations.md" data-search="model variation commands cli &amp; api commands" data-track="cli"><span class="num">26</span><span class="leaf-title">Model Variation Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/model_variations_versions.html" data-out="cli/model_variations_versions.md" data-search="model variation versions commands cli &amp; api commands" data-track="cli"><span class="num">27</span><span class="leaf-title">Model Variation Versions Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/models.html" data-out="cli/models.md" data-search="models commands cli &amp; api commands" data-track="cli"><span class="num">28</span><span class="leaf-title">Models Commands</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/simulation_competitions.html" data-out="cli/simulation_competitions.md" data-search="tutorial: simulation competitions cli &amp; api commands" data-track="cli"><span class="num">29</span><span class="leaf-title">Tutorial: Simulation Competitions</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="Metadata schemas" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/cli/datasets_metadata.html" data-out="cli/datasets_metadata.md" data-search="datasets metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/kernels_metadata.html" data-out="cli/kernels_metadata.md" data-search="kernels metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li><li><a class="leaf" href="/kaggle-docs/cli/models_metadata.html" data-out="cli/models_metadata.md" data-search="models metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li></ul>
+</div></div></div>
+</div></div></div></section>
+<section class="track" data-track="skills" data-open="0">
+<button type="button" class="track-btn" data-track-toggle="skills" aria-expanded="false"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Agent Skills</span><span class="track-count">14</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Overview" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-rel="skills/SKILL.md" data-search="Kaggle CLI"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="References" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-rel="skills/references/auth.md" data-search="Authentication CLI Reference"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-rel="skills/references/competitions.md" data-search="Competitions CLI Reference"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-rel="skills/references/configuration.md" data-search="Configuration CLI Reference"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-rel="skills/references/datasets.md" data-search="Datasets CLI Reference"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-rel="skills/references/files.md" data-search="Files CLI Reference"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-rel="skills/references/forums.md" data-search="Forums CLI Reference"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md" data-search="Kaggle Benchmarks CLI Reference"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-rel="skills/references/kernels.md" data-search="Kernels CLI Reference"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md" data-search="Model Variation Versions CLI Reference"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-rel="skills/references/model_variations.md" data-search="Model Variations CLI Reference"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-rel="skills/references/models.md" data-search="Models CLI Reference"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-rel="skills/references/quota.md" data-search="Quota CLI Reference"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-rel="skills/references/search.md" data-search="Search CLI Reference"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="kagglehub" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="kagglehub" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="group" data-group="Overview" data-open="0">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/skills/SKILL.html" data-out="skills/SKILL.md" data-search="kaggle cli agent skills overview" data-track="skills"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="References" data-open="0">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/skills/references/auth.html" data-out="skills/references/auth.md" data-search="authentication cli reference agent skills references" data-track="skills"><span class="num">34</span><span class="leaf-title">Authentication CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/competitions.html" data-out="skills/references/competitions.md" data-search="competitions cli reference agent skills references" data-track="skills"><span class="num">35</span><span class="leaf-title">Competitions CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/configuration.html" data-out="skills/references/configuration.md" data-search="configuration cli reference agent skills references" data-track="skills"><span class="num">36</span><span class="leaf-title">Configuration CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/datasets.html" data-out="skills/references/datasets.md" data-search="datasets cli reference agent skills references" data-track="skills"><span class="num">37</span><span class="leaf-title">Datasets CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/files.html" data-out="skills/references/files.md" data-search="files cli reference agent skills references" data-track="skills"><span class="num">38</span><span class="leaf-title">Files CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/forums.html" data-out="skills/references/forums.md" data-search="forums cli reference agent skills references" data-track="skills"><span class="num">39</span><span class="leaf-title">Forums CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/benchmarks.html" data-out="skills/references/benchmarks.md" data-search="kaggle benchmarks cli reference agent skills references" data-track="skills"><span class="num">40</span><span class="leaf-title">Kaggle Benchmarks CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/kernels.html" data-out="skills/references/kernels.md" data-search="kernels cli reference agent skills references" data-track="skills"><span class="num">41</span><span class="leaf-title">Kernels CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/model_variations_versions.html" data-out="skills/references/model_variations_versions.md" data-search="model variation versions cli reference agent skills references" data-track="skills"><span class="num">42</span><span class="leaf-title">Model Variation Versions CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/model_variations.html" data-out="skills/references/model_variations.md" data-search="model variations cli reference agent skills references" data-track="skills"><span class="num">43</span><span class="leaf-title">Model Variations CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/models.html" data-out="skills/references/models.md" data-search="models cli reference agent skills references" data-track="skills"><span class="num">44</span><span class="leaf-title">Models CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/quota.html" data-out="skills/references/quota.md" data-search="quota cli reference agent skills references" data-track="skills"><span class="num">45</span><span class="leaf-title">Quota CLI Reference</span></a></li><li><a class="leaf" href="/kaggle-docs/skills/references/search.html" data-out="skills/references/search.md" data-search="search cli reference agent skills references" data-track="skills"><span class="num">46</span><span class="leaf-title">Search CLI Reference</span></a></li></ul>
+</div></div></div>
+</div></div></div></section>
+<section class="track" data-track="kagglehub" data-open="0">
+<button type="button" class="track-btn" data-track-toggle="kagglehub" aria-expanded="false"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">KaggleHub</span><span class="track-count">3</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Library" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md" data-search="Changelog"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md" data-search="Contributing to kagglehub"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-rel="kagglehub/intro.md" data-search="kagglehub"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li>
-</ul></div></div></div>
-</div></div></div></div></nav>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/kagglehub/CHANGELOG.html" data-out="kagglehub/CHANGELOG.md" data-search="changelog kagglehub library" data-track="kagglehub"><span class="num">47</span><span class="leaf-title">Changelog</span></a></li><li><a class="leaf" href="/kaggle-docs/kagglehub/CONTRIBUTING.html" data-out="kagglehub/CONTRIBUTING.md" data-search="contributing to kagglehub kagglehub library" data-track="kagglehub"><span class="num">48</span><span class="leaf-title">Contributing to kagglehub</span></a></li><li><a class="leaf" href="/kaggle-docs/kagglehub/intro.html" data-out="kagglehub/intro.md" data-search="kagglehub kagglehub library" data-track="kagglehub"><span class="num">49</span><span class="leaf-title">kagglehub</span></a></li></ul>
+</div></div></div></section></nav>
       <div class="side-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
     </aside>
     <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
-    <main class="main" id="main">
+    <div class="main" id="main">
+      
+      <div class="crumb"><a href="/kaggle-docs/index.html">Home</a><span class="sep">/</span><span class="pill">Platform Docs</span><span class="sep">/</span><span class="current">Models</span></div>
       <div class="content-wrap">
-        <article class="content prose">
-          
-          <h1>Models</h1>
+        <article class="content prose"><h1 id="models"><a class="anchor" href="#models">#</a>Models</h1>
 <hr>
 <!--What is Kaggle Models?-->
 
-<h3>What is Kaggle Models</h3>
+<h3 id="what-is-kaggle-models"><a class="anchor" href="#what-is-kaggle-models">#</a>What is Kaggle Models</h3>
 <p><a href="https://www.kaggle.com/models">Kaggle Models</a> provides a way to discover, use, and share models for machine learning and generative AI applications. Kaggle Models is a repository of pre-trained models that are deeply integrated with Kaggle&#39;s platform, making them easy to use in Kaggle Competitions and Notebooks. Like Datasets, Kaggle Models organize community activity that enrich models&#39; usefulness: every model page will contain discussions, public notebooks, and usage statistics like downloads and upvotes that make models more useful.</p>
-<h4>Where do Models come from?</h4>
+<h4 id="where-do-models-come-from"><a class="anchor" href="#where-do-models-come-from">#</a>Where do Models come from?</h4>
 <p>Kaggle Models come from a variety of sources including partners that we collaborate with on releases like Meta&#39;s Llama 2 and Alibaba&#39;s Qwen, integrations with modeling libraries like Keras, <a href="https://www.kaggle.com/blog/kaggle-hugging-face-integration">integrations with Hugging Face Hub</a>, and the community of millions of Kagglers sharing fine-tuned variants and other innovations.</p>
 <hr>
 <!--Finding a Model-->
 
-<h3>Finding Kaggle Models</h3>
+<h3 id="finding-kaggle-models"><a class="anchor" href="#finding-kaggle-models">#</a>Finding Kaggle Models</h3>
 <p>You can find Kaggle Models by using the <a href="https://www.kaggle.com/models">Models landing page</a>. There are a number of filters and sorts plus free text search. For instances you can search by:</p>
 <ul>
 <li>Filtering by Organization, Community, or Hugging Face models</li>
@@ -175,7 +123,7 @@
 </ul>
 <p>You may also want to peruse the &quot;Models&quot; tab on competitions to see what models are performing well or are otherwise popular for tasks relevant to your use case. Competitors commonly share which models they&#39;re using in public notebooks and in discussion write-ups. When you fork a notebook that has a model from Kaggle Models attached to it, your copy will also have the same model attached.</p>
 <p>Finally, you can also search for models from within the notebook editor. Use the &quot;Add Models&quot; component in the right-hand pane of the editor to search and attach models to your notebooks. This works similarly to Datasets.</p>
-<h4>Understanding the model detail page</h4>
+<h4 id="understanding-the-model-detail-page"><a class="anchor" href="#understanding-the-model-detail-page">#</a>Understanding the model detail page</h4>
 <p>When you click on a model you will be taken to the &quot;detail page&quot; for that model. For example, this is the detail page for a <a href="https://www.kaggle.com/models/google/bert">BERT model</a>. The model detail page contains an overview tab with a Model Card (metadata and information about how the model was trained, what its acceptable use cases are, any limitations, etc.), a framework and variation explorer, and a usage dashboard. There are tabs for notebooks and discussions. If a model is useful, you can upvote it.</p>
 <p>Beyond the overall metadata, a model detail page also organizes all variations and frameworks for a given model. For example:</p>
 <ul>
@@ -183,7 +131,7 @@
 <li><strong>Frameworks</strong>: The same model with different ML library compatibility, e.g., TensorFlow, PyTorch, etc.</li>
 </ul>
 <p>You can view and use the specific framework and variation that you want by selecting it in the file explorer on the overview page beneath the Model Card. From here, you can use click &quot;New Notebook&quot; to attach it to a new notebook to start using the model.</p>
-<h3>Using Kaggle Models</h3>
+<h3 id="using-kaggle-models"><a class="anchor" href="#using-kaggle-models">#</a>Using Kaggle Models</h3>
 <p>There&#39;s two broad ways that Kaggle Models are useful: on Kaggle and outside of Kaggle (e.g., in production applications or using non-Kaggle tools like Colab, etc.).</p>
 <p><strong>On Kaggle</strong></p>
 <p>Currently, Kaggle Models are very useful within the context of Competitions, specifically for use within Notebooks. Start by either forking a notebook that has a model attached (you can view the attached models on the &quot;Input&quot; tab of any notebook), creating a new notebook on a model, or adding a model to a new notebook from the right-hand pane of the editor.</p>
@@ -193,11 +141,11 @@
 <p>Many developers will need to download models in code outside of Kaggle. There are a few different methods: via the <a href="https://github.com/Kaggle/kagglehub">kagglehub Python library</a>, via our <a href="https://github.com/Kaggle/kaggle-cli">Kaggle CLI</a>, or by calling the API directly.</p>
 <p>Before providing instructions for each of these methods, it&#39;s helpful to know that you will need to know how to authenticate in order to access certain models like <a href="https://www.kaggle.com/models/google/gemma">Gemma</a> that require Kaggle credentials in order to confirm that user consent to the custom license has been verified. <a href="https://www.kaggle.com/settings">Obtain credentials</a> from the “Settings” page when logged-in to Kaggle and clicking on the &quot;Generate New Token&quot; button under the &quot;API&quot; section.</p>
 <p>The examples below allow you to download the <code>2b</code> PyTorch variation for the <a href="https://www.kaggle.com/models/google/gemma">google/gemma</a> model. If a model doesn&#39;t have a restricted license like Gemma, you&#39;ll be able to skip the <code>kagglehub.login()</code> steps in the examples below.</p>
-<h4>Method 1. Via the kagglehub Python library</h4>
+<h4 id="method-1-via-the-kagglehub-python-library"><a class="anchor" href="#method-1-via-the-kagglehub-python-library">#</a>Method 1. Via the kagglehub Python library</h4>
 <p>See <a href="https://github.com/Kaggle/kagglehub?tab=readme-ov-file#download-model">kagglehub model download documentation</a>.</p>
-<h4>Method 2. Via the Kaggle CLI</h4>
+<h4 id="method-2-via-the-kaggle-cli"><a class="anchor" href="#method-2-via-the-kaggle-cli">#</a>Method 2. Via the Kaggle CLI</h4>
 <p>See <a href="https://github.com/Kaggle/kagglehub?tab=readme-ov-file#download-model">Kaggle CLI model download documentation</a>.</p>
-<h4>Method 3. Calling the API directly</h4>
+<h4 id="method-3-calling-the-api-directly"><a class="anchor" href="#method-3-calling-the-api-directly">#</a>Method 3. Calling the API directly</h4>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code># Authenticate with credentials
 export KAGGLE_USERNAME=xyz
 export kaggle-key=REDACTED
@@ -211,13 +159,13 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 <hr>
 <!--Publishing a Model-->
 
-<h3>Creating a Model</h3>
+<h3 id="creating-a-model"><a class="anchor" href="#creating-a-model">#</a>Creating a Model</h3>
 <p>There are a few ways to publish a model on Kaggle Models including exclusively via the UI. We recommend using a combination of <code>kagglehub</code>, our Python client library, to manage artifact creation and uploads and the UI to manage documentation and collaborative features. And, if you want to use a Hugging Face model on Kaggle, you simply need to create a notebook that uses the model, e.g., in Transformers, and a model page on Kaggle will be created automatically for you.</p>
-<h4>Uploading using kagglehub Python client library (preferred)</h4>
+<h4 id="uploading-using-kagglehub-python-client-library-preferred"><a class="anchor" href="#uploading-using-kagglehub-python-client-library-preferred">#</a>Uploading using kagglehub Python client library (preferred)</h4>
 <p>See <a href="https://github.com/Kaggle/kagglehub?tab=readme-ov-file#upload-model">kagglehub model upload documentation</a>.</p>
-<h4>Uploading using the Kaggle CLI</h4>
+<h4 id="uploading-using-the-kaggle-cli"><a class="anchor" href="#uploading-using-the-kaggle-cli">#</a>Uploading using the Kaggle CLI</h4>
 <p>See <a href="https://github.com/Kaggle/kaggle-cli/blob/main/docs/tutorials.md#tutorial-create-a-model-variation">Kaggle CLI model creation tutorial</a>.</p>
-<h4>Upload via the UI</h4>
+<h4 id="upload-via-the-ui"><a class="anchor" href="#upload-via-the-ui">#</a>Upload via the UI</h4>
 <ol>
 <li>Go to: <a href="https://www.kaggle.com/models?new=true">https://www.kaggle.com/models?new=true</a> and follow the steps including setting “Creating As” to the Organization Profile you want to publish under</li>
 <li>To add new Variations once your model is initially created:<ol>
@@ -239,7 +187,7 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 </ol>
 </li>
 </ol>
-<h4>Create via Hugging Face Integration</h4>
+<h4 id="create-via-hugging-face-integration"><a class="anchor" href="#create-via-hugging-face-integration">#</a>Create via Hugging Face Integration</h4>
 <p>If you have published a model on Hugging Face Hub, you can create a page for it on Kaggle easily by simply using your model in a Kaggle Notebook.</p>
 <ol>
 <li>Navigate to your model page on Hugging Face</li>
@@ -251,7 +199,7 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 <li>Optionally click &quot;Share&quot; to make your notebook public</li>
 </ol>
 <p>Once you complete these steps, a page for your model will be automatically created. Any public notebooks using the model will show up in the &quot;Code&quot; tab on the model page.</p>
-<h4>Documenting models</h4>
+<h4 id="documenting-models"><a class="anchor" href="#documenting-models">#</a>Documenting models</h4>
 <p>Documenting your model is easiest to do via the UI.</p>
 <ol>
 <li>When viewing your model page, you will see a section at the top called “Pending Actions”.</li>
@@ -269,7 +217,7 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 <li>You can now promote your model!</li>
 <li>You’ll be automatically subscribed to email and site notifications when any discussion topics are created</li>
 </ol>
-<h4>Importing Model Versions</h4>
+<h4 id="importing-model-versions"><a class="anchor" href="#importing-model-versions">#</a>Importing Model Versions</h4>
 <p>This tool allows you to copy model versions from one model to another. You can import versions from any public model or private models where you have collaborator access.</p>
 <ol>
 <li>Navigate to your target model&#39;s page on Kaggle<ol>
@@ -335,7 +283,7 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 <li>The version count shows how many items you&#39;ve selected</li>
 <li>All imported versions maintain their original framework and variation slugs</li>
 </ul>
-<h3>How to name your model and variations</h3>
+<h3 id="how-to-name-your-model-and-variations"><a class="anchor" href="#how-to-name-your-model-and-variations">#</a>How to name your model and variations</h3>
 <p>A handle is represented as</p>
 <h6>owner_slug/model_slug/framework/variation_slug/version_number</h6>
 <p>The breakdown is as follows:</p>
@@ -346,7 +294,7 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 <li><strong>variation_slug:</strong> Details about this specific version of your model.</li>
 <li><strong>version_number:</strong> A numeric identifier for tracking model changes.</li>
 </ul>
-<h4>Model vs. Variation: Uniqueness</h4>
+<h4 id="model-vs-variation-uniqueness"><a class="anchor" href="#model-vs-variation-uniqueness">#</a>Model vs. Variation: Uniqueness</h4>
 <p>A variation is used to add finer level details about a model. A variation should capture the intricacies and nuances of a model.
     They highlight specific changes or features. Examples include:</p>
 <ul>
@@ -359,9 +307,9 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 <li><strong>Language:</strong> If your model is language-specific (e.g., &quot;en&quot; for English)</li>
 <li><strong>Hardware:</strong> Optimized for GPU, CPU, TPU, etc.</li>
 </ul>
-<h4>Version vs. Variation: Snapshots in Time</h4>
+<h4 id="version-vs-variation-snapshots-in-time"><a class="anchor" href="#version-vs-variation-snapshots-in-time">#</a>Version vs. Variation: Snapshots in Time</h4>
 <p>Versions are like checkpoints. They represent a model at a specific point in training, usually with all other factors (the variation details) held constant.</p>
-<h4>Questions to Guide Your Variation Naming:</h4>
+<h4 id="questions-to-guide-your-variation-naming"><a class="anchor" href="#questions-to-guide-your-variation-naming">#</a>Questions to Guide Your Variation Naming:</h4>
 <ol>
 <li>How large is your model (number of parameters)? ex: 100m, 2b, 27b, etc..</li>
 <li>What task does it perform? ex: image generation, text, chat</li>
@@ -371,14 +319,14 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 <li>Is it optimized for a specific language or hardware? ex: gpu, cpu, tpu</li>
 <li>Did you apply any quantization or other optimizations?</li>
 </ol>
-<h4>General Guidelines for Naming Success:</h4>
+<h4 id="general-guidelines-for-naming-success"><a class="anchor" href="#general-guidelines-for-naming-success">#</a>General Guidelines for Naming Success:</h4>
 <ul>
 <li><strong>Keep it Simple:</strong> Use clear, concise names.</li>
 <li><strong>Be Descriptive:</strong> Use the questions above to guide you.</li>
 <li><strong>Default to Model Name:</strong> If unsure, use the model name as the variation too.</li>
 <li><strong>Version for Checkpoints:</strong> Use the version number to track training progress.</li>
 </ul>
-<h4>Real-World Examples</h4>
+<h4 id="real-world-examples"><a class="anchor" href="#real-world-examples">#</a>Real-World Examples</h4>
 <table>
 <thead>
 <tr>
@@ -407,23 +355,19 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
 <td>128 x 128 image generation</td>
 </tr>
 </tbody></table>
-<h3>Accessing Gated Models</h3>
+<h3 id="accessing-gated-models"><a class="anchor" href="#accessing-gated-models">#</a>Accessing Gated Models</h3>
 <p>A gated model on Kaggle requires users to agree to a specific agreement and potentially provide information before they can access it. This agreement can include terms of use, privacy policy links, and a form for collecting user data.</p>
 <p>When accessing a gated model, users will be prompted to input information based on the access agreement. A banner will display the user&#39;s current access status (e.g., requiring a consent, pending, accepted, rejected). Only users with &quot;accepted&quot; status can proceed to use the model.</p>
-
-          <p class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
-        </article>
-        
+</article>
+        <nav class="toc"><div class="toc-title">On this page</div><ul><li class="l3"><a href="#what-is-kaggle-models">#What is Kaggle Models</a></li><li class="l3"><a href="#finding-kaggle-models">#Finding Kaggle Models</a></li><li class="l3"><a href="#using-kaggle-models">#Using Kaggle Models</a></li><li class="l3"><a href="#creating-a-model">#Creating a Model</a></li><li class="l3"><a href="#how-to-name-your-model-and-variations">#How to name your model and variations</a></li><li class="l3"><a href="#accessing-gated-models">#Accessing Gated Models</a></li></ul></nav>
       </div>
-    </main>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="/kaggle-docs/platform/packages.html"><span class="dir">← Previous</span><span class="title">Kaggle Packages</span></a><a class="next" href="/kaggle-docs/platform/notebooks.html"><span class="dir">Next →</span><span class="title">Notebooks</span></a></nav>
+      <footer class="page-foot">Unofficial mirror · sources: kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</footer>
+    </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-  <script src="/kaggle-docs/assets/site.js"></script>
-  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
   <button type="button" class="to-top" id="toTop" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
-
   <div class="kbd-help" id="kbdHelp" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
   <div class="kbd-panel">
     <h3>Keyboard shortcuts</h3>
@@ -435,5 +379,7 @@ wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --u
     </div>
   </div>
 </div>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
 </body>
 </html>

@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="平台文档、CLI/API 参考、Agent Skills 与 KaggleHub — 来自官方来源抓取。" />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#08090c" />
   <title>竞赛 CLI 参考 · Kaggle 文档</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github-dark.min.css" />
   <link rel="stylesheet" href="/kaggle-docs/assets/site.css" />
   <link rel="alternate" hreflang="en" href="/kaggle-docs/skills/references/competitions.html" />
   <link rel="alternate" hreflang="zh-CN" href="/kaggle-docs/zh/skills/references/competitions.html" />
@@ -25,8 +26,8 @@
         <span class="brand-text">Kaggle 文档</span>
         <span class="brand-v">镜像</span>
       </a>
-      <nav class="chips" id="trackChips" aria-label="Tracks"></nav>
-      <div class="lang-switch" role="navigation" aria-label="Language">
+      <nav class="chips" id="trackChips" aria-label="Tracks"><button type="button" class="chip" data-jump-track="platform">Platform Docs</button><button type="button" class="chip" data-jump-track="cli">CLI &amp; API</button><button type="button" class="chip active" data-jump-track="skills">Agent Skills</button><button type="button" class="chip" data-jump-track="kagglehub">KaggleHub</button></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
         <a class="lang-btn" href="/kaggle-docs/skills/references/competitions.html" data-lang-set="en" hreflang="en">EN</a>
         <a class="lang-btn active" href="/kaggle-docs/zh/skills/references/competitions.html" data-lang-set="zh" hreflang="zh-CN">中文</a>
       </div>
@@ -37,125 +38,72 @@
     <aside class="sidebar" id="sidebar">
       <div class="side-head">
         <div class="search-wrap">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
           <input class="search" id="search" type="search" placeholder="搜索文档…" autocomplete="off" />
           <span class="search-kbd" aria-hidden="true">/</span>
         </div>
-        <div class="side-label">学习路径 · 文档</div>
+        <p class="side-label">学习路径 · 文档</p>
       </div>
-      <nav class="nav" id="nav"><div class="track" data-track="home" data-open="1" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="home" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">· Home</span><span class="track-count">1</span></button>
+      <nav class="nav" id="nav" data-active-rel="skills/references/competitions.md" aria-label="Docs"><section class="track" data-track="home" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="home" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Home</span><span class="track-count">1</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Home" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Home</span><span class="group-count">1</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/index.html" data-rel="index.md" data-search="Kaggle 文档镜像"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="platform" data-open="1" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="platform" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">① Platform Docs</span><span class="track-count">11</span></button>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/index.html" data-out="index.md" data-search="kaggle 文档镜像 home home" data-track="home"><span class="num">1</span><span class="leaf-title">Kaggle 文档镜像</span></a></li></ul>
+</div></div></div></section>
+<section class="track" data-track="platform" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="platform" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Platform Docs</span><span class="track-count">11</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Platform" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Platform</span><span class="group-count">11</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-rel="platform/getting-started.md" data-search="Kaggle 入门"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-rel="platform/packages.md" data-search="Kaggle 包"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-rel="platform/api.md" data-search="公共API"><span class="num">4</span><span class="leaf-title">公共API</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-rel="platform/models.md" data-search="型号"><span class="num">5</span><span class="leaf-title">型号</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-rel="platform/benchmarks.md" data-search="基准测试"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-rel="platform/tpu.md" data-search="张量处理单元 (TPU)"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-rel="platform/datasets.md" data-search="数据集"><span class="num">8</span><span class="leaf-title">数据集</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-rel="platform/competitions.md" data-search="比赛"><span class="num">9</span><span class="leaf-title">比赛</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-rel="platform/notebooks.md" data-search="笔记本"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-rel="platform/organizations.md" data-search="组织"><span class="num">11</span><span class="leaf-title">组织</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-rel="platform/efficient-gpu-usage.md" data-search="高效 GPU 使用技巧"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="cli" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="cli" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">② CLI &amp; API</span><span class="track-count">20</span></button>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/platform/getting-started.html" data-out="platform/getting-started.md" data-search="kaggle 入门 platform docs platform" data-track="platform"><span class="num">2</span><span class="leaf-title">Kaggle 入门</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/packages.html" data-out="platform/packages.md" data-search="kaggle 包 platform docs platform" data-track="platform"><span class="num">3</span><span class="leaf-title">Kaggle 包</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/api.html" data-out="platform/api.md" data-search="公共api platform docs platform" data-track="platform"><span class="num">4</span><span class="leaf-title">公共API</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/models.html" data-out="platform/models.md" data-search="型号 platform docs platform" data-track="platform"><span class="num">5</span><span class="leaf-title">型号</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/benchmarks.html" data-out="platform/benchmarks.md" data-search="基准测试 platform docs platform" data-track="platform"><span class="num">6</span><span class="leaf-title">基准测试</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/tpu.html" data-out="platform/tpu.md" data-search="张量处理单元 (tpu) platform docs platform" data-track="platform"><span class="num">7</span><span class="leaf-title">张量处理单元 (TPU)</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/datasets.html" data-out="platform/datasets.md" data-search="数据集 platform docs platform" data-track="platform"><span class="num">8</span><span class="leaf-title">数据集</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/competitions.html" data-out="platform/competitions.md" data-search="比赛 platform docs platform" data-track="platform"><span class="num">9</span><span class="leaf-title">比赛</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/notebooks.html" data-out="platform/notebooks.md" data-search="笔记本 platform docs platform" data-track="platform"><span class="num">10</span><span class="leaf-title">笔记本</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/organizations.html" data-out="platform/organizations.md" data-search="组织 platform docs platform" data-track="platform"><span class="num">11</span><span class="leaf-title">组织</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/platform/efficient-gpu-usage.html" data-out="platform/efficient-gpu-usage.md" data-search="高效 gpu 使用技巧 platform docs platform" data-track="platform"><span class="num">12</span><span class="leaf-title">高效 GPU 使用技巧</span></a></li></ul>
+</div></div></div></section>
+<section class="track" data-track="cli" data-open="1">
+<button type="button" class="track-btn" data-track-toggle="cli" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">CLI &amp; API</span><span class="track-count">20</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Getting started" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/cli/changelog.html" data-rel="cli/changelog.md" data-search="Changelog"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-rel="cli/intro.md" data-search="Kaggle CLI"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/tutorials.html" data-rel="cli/tutorials.md" data-search="Kaggle CLI 教程"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-rel="cli/README.md" data-search="Kaggle CLI 文档"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-rel="cli/output_format.md" data-search="Kaggle CLI 输出格式文档"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-rel="cli/configuration.md" data-search="Kaggle CLI 配置"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-rel="cli/search.md" data-search="搜索命令"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="Commands" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels.html" data-rel="cli/kernels.md" data-search="内核命令"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-rel="cli/benchmarks.md" data-search="基准测试命令"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-rel="cli/simulation_competitions.md" data-search="教程：模拟比赛"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-rel="cli/datasets.md" data-search="数据集命令"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-rel="cli/model_variations_versions.md" data-search="模型变体版本命令"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-rel="cli/model_variations.md" data-search="模型变化命令"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-rel="cli/models.md" data-search="模型命令"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-rel="cli/competitions.md" data-search="竞赛命令"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-rel="cli/forums.md" data-search="论坛命令"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/competition_creation.html" data-rel="cli/competition_creation.md" data-search="通过 CLI 举办竞赛"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="Metadata schemas" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-rel="cli/datasets_metadata.md" data-search="Datasets Metadata"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-rel="cli/kernels_metadata.md" data-search="Kernels Metadata"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-rel="cli/models_metadata.md" data-search="Models Metadata"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="skills" data-open="1" data-active="1">
-<button type="button" class="track-btn" data-track-toggle="skills" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">③ Agent Skills</span><span class="track-count">14</span></button>
+<div class="group" data-group="Getting started" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Getting started</span><span class="group-count">7</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/cli/changelog.html" data-out="cli/changelog.md" data-search="changelog cli &amp; api getting started" data-track="cli"><span class="num">13</span><span class="leaf-title">Changelog</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/intro.html" data-out="cli/intro.md" data-search="kaggle cli cli &amp; api getting started" data-track="cli"><span class="num">14</span><span class="leaf-title">Kaggle CLI</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/tutorials.html" data-out="cli/tutorials.md" data-search="kaggle cli 教程 cli &amp; api getting started" data-track="cli"><span class="num">15</span><span class="leaf-title">Kaggle CLI 教程</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/README.html" data-out="cli/README.md" data-search="kaggle cli 文档 cli &amp; api getting started" data-track="cli"><span class="num">16</span><span class="leaf-title">Kaggle CLI 文档</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/output_format.html" data-out="cli/output_format.md" data-search="kaggle cli 输出格式文档 cli &amp; api getting started" data-track="cli"><span class="num">17</span><span class="leaf-title">Kaggle CLI 输出格式文档</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/configuration.html" data-out="cli/configuration.md" data-search="kaggle cli 配置 cli &amp; api getting started" data-track="cli"><span class="num">18</span><span class="leaf-title">Kaggle CLI 配置</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/search.html" data-out="cli/search.md" data-search="搜索命令 cli &amp; api getting started" data-track="cli"><span class="num">19</span><span class="leaf-title">搜索命令</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="Commands" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Commands</span><span class="group-count">10</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/cli/kernels.html" data-out="cli/kernels.md" data-search="内核命令 cli &amp; api commands" data-track="cli"><span class="num">20</span><span class="leaf-title">内核命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/benchmarks.html" data-out="cli/benchmarks.md" data-search="基准测试命令 cli &amp; api commands" data-track="cli"><span class="num">21</span><span class="leaf-title">基准测试命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/simulation_competitions.html" data-out="cli/simulation_competitions.md" data-search="教程：模拟比赛 cli &amp; api commands" data-track="cli"><span class="num">22</span><span class="leaf-title">教程：模拟比赛</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/datasets.html" data-out="cli/datasets.md" data-search="数据集命令 cli &amp; api commands" data-track="cli"><span class="num">23</span><span class="leaf-title">数据集命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations_versions.html" data-out="cli/model_variations_versions.md" data-search="模型变体版本命令 cli &amp; api commands" data-track="cli"><span class="num">24</span><span class="leaf-title">模型变体版本命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/model_variations.html" data-out="cli/model_variations.md" data-search="模型变化命令 cli &amp; api commands" data-track="cli"><span class="num">25</span><span class="leaf-title">模型变化命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/models.html" data-out="cli/models.md" data-search="模型命令 cli &amp; api commands" data-track="cli"><span class="num">26</span><span class="leaf-title">模型命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/competitions.html" data-out="cli/competitions.md" data-search="竞赛命令 cli &amp; api commands" data-track="cli"><span class="num">27</span><span class="leaf-title">竞赛命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/forums.html" data-out="cli/forums.md" data-search="论坛命令 cli &amp; api commands" data-track="cli"><span class="num">28</span><span class="leaf-title">论坛命令</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/competition_creation.html" data-out="cli/competition_creation.md" data-search="通过 cli 举办竞赛 cli &amp; api commands" data-track="cli"><span class="num">29</span><span class="leaf-title">通过 CLI 举办竞赛</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="Metadata schemas" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Metadata schemas</span><span class="group-count">3</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/cli/datasets_metadata.html" data-out="cli/datasets_metadata.md" data-search="datasets metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">30</span><span class="leaf-title">Datasets Metadata</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/kernels_metadata.html" data-out="cli/kernels_metadata.md" data-search="kernels metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">31</span><span class="leaf-title">Kernels Metadata</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/cli/models_metadata.html" data-out="cli/models_metadata.md" data-search="models metadata cli &amp; api metadata schemas" data-track="cli"><span class="num">32</span><span class="leaf-title">Models Metadata</span></a></li></ul>
+</div></div></div>
+</div></div></div></section>
+<section class="track" data-track="skills" data-open="1" data-active="1">
+<button type="button" class="track-btn" data-track-toggle="skills" aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">Agent Skills</span><span class="track-count">14</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Overview" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-rel="skills/SKILL.md" data-search="Kaggle CLI"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li>
-</ul></div></div></div>
-<div class="group" data-group="References" data-open="1" data-active="1">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-rel="skills/references/benchmarks.md" data-search="Kaggle 基准 CLI 参考"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-rel="skills/references/kernels.md" data-search="内核 CLI 参考"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-rel="skills/references/model_variations.md" data-search="型号变体 CLI 参考"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-rel="skills/references/model_variations_versions.md" data-search="型号变体版本 CLI 参考"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-rel="skills/references/search.md" data-search="搜索 CLI 参考"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-rel="skills/references/datasets.md" data-search="数据集 CLI 参考"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-rel="skills/references/files.md" data-search="文件 CLI 参考"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-rel="skills/references/models.md" data-search="模型 CLI 参考"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li>
-<li><a class="leaf active" href="/kaggle-docs/zh/skills/references/competitions.html" data-rel="skills/references/competitions.md" data-search="竞赛 CLI 参考"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-rel="skills/references/forums.md" data-search="论坛 CLI 参考"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-rel="skills/references/auth.md" data-search="身份验证 CLI 参考"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-rel="skills/references/configuration.md" data-search="配置 CLI 参考"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-rel="skills/references/quota.md" data-search="配额 CLI 参考"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li>
-</ul></div></div></div>
-</div></div></div></div>
-<div class="track" data-track="kagglehub" data-open="0" data-active="0">
-<button type="button" class="track-btn" data-track-toggle="kagglehub" aria-expanded="false"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">④ KaggleHub</span><span class="track-count">3</span></button>
+<div class="group" data-group="Overview" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Overview</span><span class="group-count">1</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/skills/SKILL.html" data-out="skills/SKILL.md" data-search="kaggle cli agent skills overview" data-track="skills"><span class="num">33</span><span class="leaf-title">Kaggle CLI</span></a></li></ul>
+</div></div></div>
+<div class="group" data-group="References" data-open="1">
+<button type="button" class="group-btn" data-group-toggle aria-expanded="true"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">References</span><span class="group-count">13</span></button>
+<div class="group-panel"><div class="group-panel-inner">
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/skills/references/benchmarks.html" data-out="skills/references/benchmarks.md" data-search="kaggle 基准 cli 参考 agent skills references" data-track="skills"><span class="num">34</span><span class="leaf-title">Kaggle 基准 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/kernels.html" data-out="skills/references/kernels.md" data-search="内核 cli 参考 agent skills references" data-track="skills"><span class="num">35</span><span class="leaf-title">内核 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations.html" data-out="skills/references/model_variations.md" data-search="型号变体 cli 参考 agent skills references" data-track="skills"><span class="num">36</span><span class="leaf-title">型号变体 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/model_variations_versions.html" data-out="skills/references/model_variations_versions.md" data-search="型号变体版本 cli 参考 agent skills references" data-track="skills"><span class="num">37</span><span class="leaf-title">型号变体版本 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/search.html" data-out="skills/references/search.md" data-search="搜索 cli 参考 agent skills references" data-track="skills"><span class="num">38</span><span class="leaf-title">搜索 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/datasets.html" data-out="skills/references/datasets.md" data-search="数据集 cli 参考 agent skills references" data-track="skills"><span class="num">39</span><span class="leaf-title">数据集 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/files.html" data-out="skills/references/files.md" data-search="文件 cli 参考 agent skills references" data-track="skills"><span class="num">40</span><span class="leaf-title">文件 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/models.html" data-out="skills/references/models.md" data-search="模型 cli 参考 agent skills references" data-track="skills"><span class="num">41</span><span class="leaf-title">模型 CLI 参考</span></a></li><li><a class="leaf active" href="/kaggle-docs/zh/skills/references/competitions.html" data-out="skills/references/competitions.md" data-search="竞赛 cli 参考 agent skills references" data-track="skills"><span class="num">42</span><span class="leaf-title">竞赛 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/forums.html" data-out="skills/references/forums.md" data-search="论坛 cli 参考 agent skills references" data-track="skills"><span class="num">43</span><span class="leaf-title">论坛 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/auth.html" data-out="skills/references/auth.md" data-search="身份验证 cli 参考 agent skills references" data-track="skills"><span class="num">44</span><span class="leaf-title">身份验证 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/configuration.html" data-out="skills/references/configuration.md" data-search="配置 cli 参考 agent skills references" data-track="skills"><span class="num">45</span><span class="leaf-title">配置 CLI 参考</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/skills/references/quota.html" data-out="skills/references/quota.md" data-search="配额 cli 参考 agent skills references" data-track="skills"><span class="num">46</span><span class="leaf-title">配额 CLI 参考</span></a></li></ul>
+</div></div></div>
+</div></div></div></section>
+<section class="track" data-track="kagglehub" data-open="0">
+<button type="button" class="track-btn" data-track-toggle="kagglehub" aria-expanded="false"><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="track-label">KaggleHub</span><span class="track-count">3</span></button>
 <div class="track-panel"><div class="track-panel-inner"><div class="track-body">
-<div class="group" data-group="Library" data-open="1" data-active="0">
-<button type="button" class="group-btn" aria-expanded="true"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span><span class="group-name">Library</span><span class="group-count">3</span></button>
-<div class="group-panel"><div class="group-panel-inner"><ul class="leaf-list">
-<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-rel="kagglehub/intro.md" data-search="Download the latest version."><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-rel="kagglehub/CONTRIBUTING.md" data-search="为 kagglehub 做出贡献"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li>
-<li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-rel="kagglehub/CHANGELOG.md" data-search="变更日志"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li>
-</ul></div></div></div>
-</div></div></div></div></nav>
+<ul class="leaf-list"><li><a class="leaf" href="/kaggle-docs/zh/kagglehub/intro.html" data-out="kagglehub/intro.md" data-search="download the latest version. kagglehub library" data-track="kagglehub"><span class="num">47</span><span class="leaf-title">Download the latest version.</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CONTRIBUTING.html" data-out="kagglehub/CONTRIBUTING.md" data-search="为 kagglehub 做出贡献 kagglehub library" data-track="kagglehub"><span class="num">48</span><span class="leaf-title">为 kagglehub 做出贡献</span></a></li><li><a class="leaf" href="/kaggle-docs/zh/kagglehub/CHANGELOG.html" data-out="kagglehub/CHANGELOG.md" data-search="变更日志 kagglehub library" data-track="kagglehub"><span class="num">49</span><span class="leaf-title">变更日志</span></a></li></ul>
+</div></div></div></section></nav>
       <div class="side-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</div>
     </aside>
     <button type="button" class="backdrop" id="backdrop" aria-label="Close menu"></button>
-    <main class="main" id="main">
+    <div class="main" id="main">
+      <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/skills/references/competitions.html">查看英文</a></div>
+      <div class="crumb"><a href="/kaggle-docs/zh/index.html">首页</a><span class="sep">/</span><span class="pill">Agent Skills</span><span class="sep">/</span><span>References</span><span class="sep">/</span><span class="current">竞赛 CLI 参考</span></div>
       <div class="content-wrap">
-        <article class="content prose">
-          <div class="mt-banner">本页由英文官方文档机器翻译生成，API 名称与代码请以英文原文为准。 <a href="/kaggle-docs/skills/references/competitions.html">查看英文</a></div>
-          <h1>竞赛 CLI 参考</h1>
+        <article class="content prose"><h1 id="竞赛-cli-参考"><a class="anchor" href="#竞赛-cli-参考">#</a>竞赛 CLI 参考</h1>
 <p>使用<code>kaggle competitions</code>或别名<code>kaggle c</code>发现竞争、检查
 并下载竞赛文件，提交预测或代码内核输出，检查
 提交内容和排行榜，并浏览竞赛讨论主题。</p>
-<h2>先决条件</h2>
+<h2 id="先决条件"><a class="anchor" href="#先决条件">#</a>先决条件</h2>
 <ul>
 <li>安装了 <code>kaggle</code> 软件包的 Python 3.11+。</li>
 <li>大多数命令的 Kaggle 凭据。某些文件列表/下载流程可能会
@@ -164,7 +112,7 @@
 </ul>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle config set -n competition -v titanic
 </code></pre></div>
-<h2>命令层次结构</h2>
+<h2 id="命令层次结构"><a class="anchor" href="#命令层次结构">#</a>命令层次结构</h2>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-text">kaggle competitions (alias: kaggle c)
 ├── list
 ├── files
@@ -183,7 +131,7 @@
 │   └── show
 └── topic-messages
 </code></pre></div>
-<h2><code>kaggle competitions list</code></h2>
+<h2 id="kaggle-competitions-list"><a class="anchor" href="#kaggle-competitions-list">#</a><code>kaggle competitions list</code></h2>
 <p>列出可用的比赛。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions list [options]
@@ -234,7 +182,7 @@ kaggle competitions files [COMPETITION] [options]
 kaggle c files titanic --page-size 3 -v -q
 </code></pre></div>
 <p><strong>用途：</strong> 下载前检查可用文件。</p>
-<h2><code>kaggle competitions download</code></h2>
+<h2 id="kaggle-competitions-download"><a class="anchor" href="#kaggle-competitions-download">#</a><code>kaggle competitions download</code></h2>
 <p>下载一份或全部比赛数据文件。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions download [COMPETITION] [options]
@@ -253,7 +201,7 @@ kaggle competitions download titanic -f train.csv -p data
 kaggle c download -w -o -q
 </code></pre></div>
 <p><strong>目的：</strong> 检索比赛数据以进行本地训练或分析。</p>
-<h2><code>kaggle competitions submit</code></h2>
+<h2 id="kaggle-competitions-submit"><a class="anchor" href="#kaggle-competitions-submit">#</a><code>kaggle competitions submit</code></h2>
 <p>从本地文件或内核输出文件创建竞赛提交。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submit [COMPETITION] -m &lt;MESSAGE&gt; [options]
@@ -277,7 +225,7 @@ kaggle competitions submit titanic -f submission.csv -m &quot;CI run&quot; --wai
 <p><strong>注意：</strong> 成功时，命令会打印 <code>Submission ref: &lt;ref&gt;</code>；与它一起使用
 <code>kaggle competitions submission &lt;ref&gt;</code>。 <code>--sandbox</code> 用于比赛
 主机/管理员。代码竞赛提交使用<code>-k</code>、<code>-f</code>和可选的<code>-v</code>。</p>
-<h2><code>kaggle competitions submission</code></h2>
+<h2 id="kaggle-competitions-submission"><a class="anchor" href="#kaggle-competitions-submission">#</a><code>kaggle competitions submission</code></h2>
 <p>按数字参考显示单个提交的状态和分数。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submission &lt;SUBMISSION_REF&gt;
@@ -307,7 +255,7 @@ kaggle competitions submissions [COMPETITION] [options]
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions submissions titanic -v
 </code></pre></div>
 <p><strong>目的：</strong> 查看提交状态和分数。</p>
-<h2><code>kaggle competitions leaderboard</code></h2>
+<h2 id="kaggle-competitions-leaderboard"><a class="anchor" href="#kaggle-competitions-leaderboard">#</a><code>kaggle competitions leaderboard</code></h2>
 <p>查看或下载比赛排行榜数据。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions leaderboard [COMPETITION] [options]
@@ -327,7 +275,7 @@ kaggle competitions submissions [COMPETITION] [options]
 kaggle c leaderboard titanic --download -p leaderboards
 </code></pre></div>
 <p><strong>目的：</strong> 查看比赛排行榜的排名数据。</p>
-<h2><code>kaggle competitions team-submissions</code></h2>
+<h2 id="kaggle-competitions-team-submissions"><a class="anchor" href="#kaggle-competitions-team-submissions">#</a><code>kaggle competitions team-submissions</code></h2>
 <p>列出团队的公开提交内容。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions team-submissions &lt;TEAM_ID&gt; [options]
@@ -346,7 +294,7 @@ kaggle c leaderboard titanic --download -p leaderboards
 </code></pre></div>
 <p><strong>目的：</strong> 对于模拟比赛，列出所有活跃的公众提交内容；
 对于常规比赛，列出团队提交的公共排行榜。## 模拟竞赛命令</p>
-<h3><code>kaggle competitions episodes</code></h3>
+<h3 id="kaggle-competitions-episodes"><a class="anchor" href="#kaggle-competitions-episodes">#</a><code>kaggle competitions episodes</code></h3>
 <p>列出模拟比赛中提交的剧集。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions episodes &lt;SUBMISSION_ID&gt; [options]
@@ -365,7 +313,7 @@ kaggle c leaderboard titanic --download -p leaderboards
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions episodes 12345678
 </code></pre></div>
 <p><strong>目的：</strong> 检查与提交相关的模拟比赛片段。</p>
-<h3><code>kaggle competitions replay</code></h3>
+<h3 id="kaggle-competitions-replay"><a class="anchor" href="#kaggle-competitions-replay">#</a><code>kaggle competitions replay</code></h3>
 <p>下载模拟剧集的重播。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions replay &lt;EPISODE_ID&gt; [options]
@@ -383,7 +331,7 @@ kaggle c leaderboard titanic --download -p leaderboards
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions replay 987654 -p replays
 </code></pre></div>
 <p><strong>目的：</strong> 下载重播工件以供本地审核。</p>
-<h3><code>kaggle competitions logs</code></h3>
+<h3 id="kaggle-competitions-logs"><a class="anchor" href="#kaggle-competitions-logs">#</a><code>kaggle competitions logs</code></h3>
 <p>下载模拟事件中特定代理的日志。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions logs &lt;EPISODE_ID&gt; &lt;AGENT_INDEX&gt; [options]
@@ -402,7 +350,7 @@ kaggle c leaderboard titanic --download -p leaderboards
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions logs 987654 0 -p logs
 </code></pre></div>
 <p><strong>用途：</strong> 下载每个代理的事件日志以进行调试。</p>
-<h2><code>kaggle competitions pages</code></h2>
+<h2 id="kaggle-competitions-pages"><a class="anchor" href="#kaggle-competitions-pages">#</a><code>kaggle competitions pages</code></h2>
 <p>列出竞赛的页面。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions pages [COMPETITION] [options]
@@ -419,8 +367,8 @@ kaggle c leaderboard titanic --download -p leaderboards
 kaggle competitions pages titanic --page-name rules --content
 </code></pre></div>
 <p><strong>用途：</strong> 检查竞赛页面元数据或检索页面内容。</p>
-<h2>竞赛讨论命令</h2>
-<h3><code>kaggle competitions topics list</code></h3>
+<h2 id="竞赛讨论命令"><a class="anchor" href="#竞赛讨论命令">#</a>竞赛讨论命令</h2>
+<h3 id="kaggle-competitions-topics-list"><a class="anchor" href="#kaggle-competitions-topics-list">#</a><code>kaggle competitions topics list</code></h3>
 <p>列出竞赛的讨论主题。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions topics list [COMPETITION] [options]
@@ -444,7 +392,7 @@ kaggle competitions topics list titanic --sort-by recent -p 2
 <p><strong>目的：</strong> 在打开特定主题之前浏览竞赛讨论。</p>
 <p><code>kaggle competitions topics</code> 没有 <code>list</code> 可作为快捷方式
 列出主题。</p>
-<h3><code>kaggle competitions topics show</code></h3>
+<h3 id="kaggle-competitions-topics-show"><a class="anchor" href="#kaggle-competitions-topics-show">#</a><code>kaggle competitions topics show</code></h3>
 <p>以树形形式显示主题和评论。</p>
 <p><strong>用途：</strong></p>
 <div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">bash</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-bash">kaggle competitions topics show &lt;TOPIC_REF&gt; [TOPIC_ID] [options]
@@ -495,20 +443,16 @@ kaggle competitions topic-messages titanic 12345 --sort-by old -n 50
 </code></pre></div>
 <p><strong>目的：</strong> 使用已弃用的隐藏别名列出竞赛评论
 当旧的工作流程仍然调用<code>topic-messages</code>时的主题。</p>
-
-          <p class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</p>
-        </article>
-        
+</article>
+        <nav class="toc"><div class="toc-title">On this page</div><ul><li class="l2"><a href="#先决条件">#先决条件</a></li><li class="l2"><a href="#命令层次结构">#命令层次结构</a></li><li class="l2"><a href="#kaggle-competitions-list">#kaggle competitions list</a></li><li class="l2"><a href="#kaggle-competitions-download">#kaggle competitions download</a></li><li class="l2"><a href="#kaggle-competitions-submit">#kaggle competitions submit</a></li><li class="l2"><a href="#kaggle-competitions-submission">#kaggle competitions submission</a></li><li class="l2"><a href="#kaggle-competitions-leaderboard">#kaggle competitions leaderboard</a></li><li class="l2"><a href="#kaggle-competitions-team-submissions">#kaggle competitions team-submissions</a></li><li class="l3"><a href="#kaggle-competitions-episodes">#kaggle competitions episodes</a></li><li class="l3"><a href="#kaggle-competitions-replay">#kaggle competitions replay</a></li><li class="l3"><a href="#kaggle-competitions-logs">#kaggle competitions logs</a></li><li class="l2"><a href="#kaggle-competitions-pages">#kaggle competitions pages</a></li><li class="l2"><a href="#竞赛讨论命令">#竞赛讨论命令</a></li><li class="l3"><a href="#kaggle-competitions-topics-list">#kaggle competitions topics list</a></li><li class="l3"><a href="#kaggle-competitions-topics-show">#kaggle competitions topics show</a></li></ul></nav>
       </div>
-    </main>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="/kaggle-docs/zh/skills/references/models.html"><span class="dir">← 上一篇</span><span class="title">模型 CLI 参考</span></a><a class="next" href="/kaggle-docs/zh/skills/references/forums.html"><span class="dir">下一篇 →</span><span class="title">论坛 CLI 参考</span></a></nav>
+      <footer class="page-foot">非官方镜像 · 来源：kaggle.com/docs + Kaggle/kaggle-cli + Kaggle/kagglehub</footer>
+    </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-  <script src="/kaggle-docs/assets/site.js"></script>
-  <script>document.querySelectorAll("pre code").forEach((el)=>window.hljs&&hljs.highlightElement(el));</script>
   <button type="button" class="to-top" id="toTop" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
-
   <div class="kbd-help" id="kbdHelp" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
   <div class="kbd-panel">
     <h3>Keyboard shortcuts</h3>
@@ -520,5 +464,7 @@ kaggle competitions topic-messages titanic 12345 --sort-by old -n 50
     </div>
   </div>
 </div>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+  <script src="/kaggle-docs/assets/site.js"></script>
 </body>
 </html>
