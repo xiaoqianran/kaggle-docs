@@ -1,91 +1,20 @@
-# Kaggle Docs
+# Kaggle
 
-> Unofficial mirror of Kaggle platform docs, CLI/API, Agent Skills, and KaggleHub.
+Kaggle is an online community for data scientists, machine learning practitioners, and AI developers. Users can find and publish datasets, build models in a web-based data science environment, and enter competitions to solve data science challenges.
 
 Important notes:
 
-- This is an unofficial documentation mirror for LLM / agent ingestion ([llmstxt.org](https://llmstxt.org/)).
-- Prefer the [official docs](https://www.kaggle.com/docs) as the source of truth.
-- Mirror site: https://xiaoqianran.github.io/kaggle-docs/
-- Full corpus: https://xiaoqianran.github.io/kaggle-docs/llms-full.txt
-- Index JSON: https://xiaoqianran.github.io/kaggle-docs/meta/list.json (if present)
-- Source repo: https://github.com/xiaoqianran/kaggle-docs
-- Pages in this index: 48
+* Kaggle is more than just competitions; it also provides a vast collection of datasets, a cloud-based environment for data science called Notebooks, hubs for Models and Benchmarks, and a variety of courses.  
+* The platform is gamified, with users able to earn performance-based rankings from Novice to Grandmaster.
 
-## Platform Docs
+## **Docs**
 
-- [Benchmarks](https://xiaoqianran.github.io/kaggle-docs/platform/benchmarks.html)
-- [Competitions](https://xiaoqianran.github.io/kaggle-docs/platform/competitions.html)
-- [Datasets](https://xiaoqianran.github.io/kaggle-docs/platform/datasets.html)
-- [Efficient GPU Usage Tips](https://xiaoqianran.github.io/kaggle-docs/platform/efficient-gpu-usage.html)
-- [Getting Started on Kaggle](https://xiaoqianran.github.io/kaggle-docs/platform/getting-started.html)
-- [Kaggle Packages](https://xiaoqianran.github.io/kaggle-docs/platform/packages.html)
-- [Models](https://xiaoqianran.github.io/kaggle-docs/platform/models.html)
-- [Notebooks](https://xiaoqianran.github.io/kaggle-docs/platform/notebooks.html)
-- [Organizations](https://xiaoqianran.github.io/kaggle-docs/platform/organizations.html)
-- [Public API](https://xiaoqianran.github.io/kaggle-docs/platform/api.html)
-- [Tensor Processing Units (TPUs)](https://xiaoqianran.github.io/kaggle-docs/platform/tpu.html)
-
-## CLI & API
-
-### Getting started
-
-- [Changelog](https://xiaoqianran.github.io/kaggle-docs/cli/changelog.html)
-- [Kaggle CLI](https://xiaoqianran.github.io/kaggle-docs/cli/intro.html)
-- [Kaggle CLI Configuration](https://xiaoqianran.github.io/kaggle-docs/cli/configuration.html)
-- [Kaggle CLI Documentation](https://xiaoqianran.github.io/kaggle-docs/cli/README.html)
-- [Kaggle CLI Output Formatting Documentation](https://xiaoqianran.github.io/kaggle-docs/cli/output_format.html)
-- [Kaggle CLI Tutorials](https://xiaoqianran.github.io/kaggle-docs/cli/tutorials.html)
-- [Search Command](https://xiaoqianran.github.io/kaggle-docs/cli/search.html)
-
-### Commands
-
-- [Benchmarks Commands](https://xiaoqianran.github.io/kaggle-docs/cli/benchmarks.html)
-- [Competitions Commands](https://xiaoqianran.github.io/kaggle-docs/cli/competitions.html)
-- [Datasets Commands](https://xiaoqianran.github.io/kaggle-docs/cli/datasets.html)
-- [Forums Commands](https://xiaoqianran.github.io/kaggle-docs/cli/forums.html)
-- [Hosting a Competition from the CLI](https://xiaoqianran.github.io/kaggle-docs/cli/competition_creation.html)
-- [Kernels Commands](https://xiaoqianran.github.io/kaggle-docs/cli/kernels.html)
-- [Model Variation Commands](https://xiaoqianran.github.io/kaggle-docs/cli/model_variations.html)
-- [Model Variation Versions Commands](https://xiaoqianran.github.io/kaggle-docs/cli/model_variations_versions.html)
-- [Models Commands](https://xiaoqianran.github.io/kaggle-docs/cli/models.html)
-- [Tutorial: Simulation Competitions](https://xiaoqianran.github.io/kaggle-docs/cli/simulation_competitions.html)
-
-### Metadata schemas
-
-- [Datasets Metadata](https://xiaoqianran.github.io/kaggle-docs/cli/datasets_metadata.html)
-- [Kernels Metadata](https://xiaoqianran.github.io/kaggle-docs/cli/kernels_metadata.html)
-- [Models Metadata](https://xiaoqianran.github.io/kaggle-docs/cli/models_metadata.html)
-
-## Agent Skills
-
-### Overview
-
-- [Kaggle CLI](https://xiaoqianran.github.io/kaggle-docs/skills/SKILL.html)
-
-### References
-
-- [Authentication CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/auth.html)
-- [Competitions CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/competitions.html)
-- [Configuration CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/configuration.html)
-- [Datasets CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/datasets.html)
-- [Files CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/files.html)
-- [Forums CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/forums.html)
-- [Kaggle Benchmarks CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/benchmarks.html)
-- [Kernels CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/kernels.html)
-- [Model Variation Versions CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/model_variations_versions.html)
-- [Model Variations CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/model_variations.html)
-- [Models CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/models.html)
-- [Quota CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/quota.html)
-- [Search CLI Reference](https://xiaoqianran.github.io/kaggle-docs/skills/references/search.html)
-
-## KaggleHub
-
-- [Changelog](https://xiaoqianran.github.io/kaggle-docs/kagglehub/CHANGELOG.html)
-- [Contributing to kagglehub](https://xiaoqianran.github.io/kaggle-docs/kagglehub/CONTRIBUTING.html)
-- [kagglehub](https://xiaoqianran.github.io/kaggle-docs/kagglehub/intro.html)
-
-## Optional
-
-- [Full documentation corpus (llms-full.txt)](https://xiaoqianran.github.io/kaggle-docs/llms-full.txt)
-- [This index (llms.txt)](https://xiaoqianran.github.io/kaggle-docs/llms.txt)
+* [**Getting Started on Kaggle**](https://www.kaggle.com/docs/getting-started): This guide provides a step-by-step approach for beginners to navigate the platform, from choosing a programming language to entering your first competition.  
+* [**Kaggle Competitions**](https://www.kaggle.com/competitions): An overview of the different types of competitions available on Kaggle, including "Getting Started" Competitions perfect for new users.  
+* [**Kaggle Datasets**](https://www.kaggle.com/datasets): Find, download, and utilize the thousands of public datasets available on the platform for your projects.  
+* [**Kaggle Notebooks**](https://www.kaggle.com/code): Kaggle's cloud-based coding environment, which allows you to run code without any local setup.  
+* [**Kaggle Learn**](https://www.kaggle.com/learn): A collection of free, hands-on courses covering topics from Python and machine learning basics to advanced techniques like deep learning and SQL.  
+* [**Kaggle Models**](https://www.kaggle.com/models): A repository of pre-trained models that are easy to discover, use, and integrate into Kaggle Notebooks and Competitions.  
+* [**Kaggle Benchmarks**](https://www.kaggle.com/benchmarks): A collection of open, rigorous benchmarks and model leaderboards from top AI labs and researchers.
+* [**Kaggle API**](https://github.com/Kaggle/kaggle-api): The official command-line tool for interacting with Kaggle competitions, datasets, and notebooks programmatically.
+* [**KaggleHub**](https://github.com/Kaggle/kagglehub): A Python library that provides a simple API to access Kaggle resources like models and datasets from anywhere.
