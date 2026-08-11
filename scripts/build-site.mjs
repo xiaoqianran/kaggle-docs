@@ -3,8 +3,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { marked } from "marked";
 import { normalizeMdxMarkdown } from "./mdx-normalize.mjs";
+import { renderMarkdown, extractToc, tocHtml } from "./marked-renderer.mjs";
+import { createLinkRewriter } from "./link-rewrite.mjs";
 import { createParadigm } from "./paradigm-page.mjs";
 import { writeLlmsArtifacts } from "./generate-llms.mjs";
 
@@ -64,6 +65,12 @@ function humanize(slug) {
 function relToHtml(rel) { return rel.replace(/\.md$/, ".html"); }
 
 const P = createParadigm({ htmlEscape, asset, CHEV_SVG, relToHtml });
+
+const rewriteLinks = createLinkRewriter({
+  asset,
+  hosts: ["https://www.kaggle.com", "https://kaggle.com"],
+  rootPrefixes: ["/docs/", "/api/"],
+});
 
 function buildNav(files, locale) {
   const byTrack = new Map(TRACK_META.map((t) => [t.id, { ...t, groups: [] }]));
@@ -127,50 +134,9 @@ function buildNav(files, locale) {
   return tracks;
 }
 
-function enhanceCode(html) {
-  return html
-    .replace(
-      /<pre><code class="language-([^"]*)">([\s\S]*?)<\/code><\/pre>/g,
-      (_, lang, code) =>
-        `<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">${htmlEscape(lang || "text")}</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code class="language-${htmlEscape(lang)}">${code}</code></pre></div>`,
-    )
-    .replace(
-      /<pre><code>([\s\S]*?)<\/code><\/pre>/g,
-      (_, code) =>
-        `<div class="code-block"><div class="code-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="lang">text</span><button type="button" class="copy-btn" data-copy>Copy</button></div><pre><code>${code}</code></pre></div>`,
-    );
-}
+// enhanceCode/tocFromHtml replaced by marked-renderer.mjs
 
-function tocFromHtml(html) {
-  const items = [];
-  const re = /<h([23])\s+id="([^"]+)"[^>]*>([\s\S]*?)<\/h\1>/g;
-  let m;
-  while ((m = re.exec(html))) {
-    const text = m[3].replace(/<[^>]+>/g, "").trim();
-    if (text) items.push({ level: Number(m[1]), id: m[2], text });
-  }
-  if (items.length < 1) return "";
-  return `<nav class="toc"><div class="toc-title">On this page</div><ul>${items
-    .map(
-      (it) =>
-        `<li class="l${it.level}"><a href="#${htmlEscape(it.id)}">${htmlEscape(it.text)}</a></li>`,
-    )
-    .join("")}</ul></nav>`;
-}
-
-function postProcessHtml(html, fromRel, locale) {
-  return html.replace(/href="([^"]+\.md)(#[^"]*)?"/g, (full, href, hash = "") => {
-    if (/^https?:\/\//i.test(href) || href.startsWith("#")) return full;
-    const dir = path.posix.dirname(fromRel.replace(/\\/g, "/"));
-    let target = href.replace(/^\.\//, "");
-    if (target.startsWith("../") || !target.startsWith("/")) {
-      target = path.posix.normalize(path.posix.join(dir === "." ? "" : dir, target));
-    }
-    target = target.replace(/^\/+/, "");
-    const out = pageHref(target.endsWith(".md") ? target : target + ".md", locale);
-    return `href="${out}${hash || ""}"`;
-  });
-}
+// postProcessHtml → link-rewrite.mjs
 
 function loadPages(rootDir) {
   const files = walk(rootDir);
@@ -312,12 +278,10 @@ function buildLocale(locale, pages, navTracks) {
         llmsFullHref: asset("llms-full.txt"),
       });
     } else {
-      marked.setOptions({ gfm: true, breaks: false });
-      body = marked.parse(normalizeMdxMarkdown(page.md));
-      body = P.addHeadingIds(body);
-      body = enhanceCode(body);
-      body = postProcessHtml(body, page.rel, locale);
-      toc = tocFromHtml(body);
+      const norm = normalizeMdxMarkdown(page.md);
+      body = renderMarkdown(norm, ui);
+      body = rewriteLinks(body, page.rel, locale);
+      toc = tocHtml(extractToc(norm), ui);
     }
     const meta = P.findActiveMeta(navTracks, page.rel);
     meta.title = title;
