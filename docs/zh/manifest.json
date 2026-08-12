@@ -5,16 +5,16 @@
       "translatedAt": "2026-08-08T18:57:12.937Z"
     },
     "cli/competition_creation.md": {
-      "hash": "601861b94296d43e0d37a76136da30b7adc97431",
-      "translatedAt": "2026-08-08T18:57:18.842Z"
+      "hash": "2a5f8c3a76d0c8a509e2bc55fbc76e07f037da8c",
+      "translatedAt": "2026-08-12T08:07:51.752Z"
     },
     "cli/benchmarks.md": {
       "hash": "633bc07166448633c5fccc5d369e6ac704cd59d5",
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "6622705224b574726a78c8523774dbe7c616a528",
-      "translatedAt": "2026-08-08T18:57:19.988Z"
+      "hash": "d5a9ade5cb773983196216f169333cbb7310a769",
+      "translatedAt": "2026-08-12T08:07:54.136Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-08-11T08:01:02.165Z",
+  "updatedAt": "2026-08-12T08:07:54.136Z",
   "stats": {
-    "translated": 0,
-    "skipped": 49,
+    "translated": 2,
+    "skipped": 47,
     "failed": 0,
     "total": 49
   }

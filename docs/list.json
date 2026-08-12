@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-11T08:01:02.106Z",
+  "fetchedAt": "2026-08-12T08:07:40.086Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -102,7 +102,7 @@
     },
     {
       "rel": "cli/changelog.md",
-      "bytes": 21451,
+      "bytes": 21744,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/CHANGELOG.md",
       "track": "CLI & API"
@@ -123,7 +123,7 @@
     },
     {
       "rel": "cli/competition_creation.md",
-      "bytes": 22645,
+      "bytes": 23794,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/competition_creation.md",
       "track": "CLI & API"

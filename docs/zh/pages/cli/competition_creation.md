@@ -5,16 +5,17 @@
 本页记录了在 kaggle-cli 中为新版本添加的面向主机的命令
 公共竞赛创建 API 端点（kagglesdk 0.1.31+）：
 
-- [⟦T32⟧](#kaggle-competitions-init)
-- [⟦T33⟧](#kaggle-competitions-create)
-- [⟦T34⟧](#kaggle-competitions-pages-create)
-- [⟦T35⟧](#kaggle-competitions-hosts)
-- [⟦T36⟧](#kaggle-competitions-settings-get)
-- [⟦T37⟧](#kaggle-competitions-settings-update)
-- [⟦T38⟧](#kaggle-competitions-data-update)
-- [⟦T39⟧](#kaggle-competitions-solution-create)
-- [⟦T40⟧](#kaggle-competitions-solution-status)
-- [⟦T41⟧](#kaggle-competitions-launch)
+- [⟦T34⟧](#kaggle-competitions-init)
+- [⟦T35⟧](#kaggle-competitions-create)
+- [⟦T36⟧](#kaggle-competitions-pages-create)
+- [⟦T37⟧](#kaggle-competitions-hosts)
+- [⟦T38⟧](#kaggle-competitions-host-add)
+- [⟦T39⟧](#kaggle-competitions-settings-get)
+- [⟦T40⟧](#kaggle-competitions-settings-update)
+- [⟦T41⟧](#kaggle-competitions-data-update)
+- [⟦T42⟧](#kaggle-competitions-solution-create)
+- [⟦T43⟧](#kaggle-competitions-solution-status)
+- [⟦T44⟧](#kaggle-competitions-launch)
 
 所有这些命令都需要经过身份验证的会话
 （`kaggle config set username/password` 或 API 令牌）。
@@ -109,7 +110,7 @@ kaggle competitions init ./my-comp
 
 从 `competition-metadata.json` 创建一个新的竞赛。比赛是
 在未启动（暂存）状态下创建 - 使用
-[⟦T51⟧](#kaggle-competitions-launch) 发布。
+[⟦T54⟧](#kaggle-competitions-launch) 发布。
 
 **用途：**
 
@@ -143,10 +144,10 @@ kaggle competitions create -p ./my-comp
 
 |领域|类型 |笔记|
 |---|---|---|
-| `title` |字符串 |显示比赛页面上显示的标题。 |
-| `slug` |字符串 |网址段；小写字母、连字符必须在站点范围内唯一，并且不能全部是数字或连字符。 |
-| `briefDescription` |字符串 |标题下的一行副标题。 |
-| `privacy` |字符串 | `PUBLIC`、`LIMITED`、`PRIVATE` 之一。 |
+| `title` |字符串|显示比赛页面上显示的标题。 |
+| `slug` |字符串|网址段；小写字母、连字符必须在站点范围内唯一，并且不能全部是数字或连字符。 |
+| `briefDescription` |字符串|标题下的一行副标题。 |
+| `privacy` |字符串| `PUBLIC`、`LIMITED`、`PRIVATE` 之一。 |
 
 **选修的：**|领域|类型 |笔记|
 |---|---|---|
@@ -191,7 +192,7 @@ kaggle competitions pages create <competition> --page-name <page-name> -f <path>
 
 **参数：**
 
-- `<competition>`：比赛子弹。
+- `<competition>`：比赛中的子弹。
 
 **选项：**- `--page-name <page-name>`（必填）：页面名称（例如`description`、`rules`、
   `evaluation`、`data-description`、`prizes`）。常规名称有
@@ -221,13 +222,13 @@ kaggle competitions pages update my-comp --page-name rules --publish
 每个页面作为单个记录存在； `--publish` / `--unpublish` 切换其
 可见性，而不是创建单独的草稿和实时副本。换新的
 稍后内容，使用
-[⟦T110⟧](#kaggle-competitions-pages-update) — 一个
+[⟦T113⟧](#kaggle-competitions-pages-update) — 一个
 相同页面名称的第二个`create`将被拒绝。
 
 您可以使用 `kaggle competitions pages` 列出和检查现有页面
 （或显式的`kaggle competitions pages list`），用以下命令修改一个
-[⟦T114⟧](#kaggle-competitions-pages-update)，或
-用 [⟦T115⟧](#kaggle-competitions-pages-delete) 删除一个。
+[⟦T117⟧](#kaggle-competitions-pages-update)，或
+用 [⟦T118⟧](#kaggle-competitions-pages-delete) 删除一个。
 
 ---
 
@@ -245,7 +246,7 @@ kaggle competitions pages update <competition> --page-name <current-name> \
 
 **参数：**
 
-- `<competition>`：比赛蛞蝓。
+- `<competition>`：比赛子弹。
 
 **选项：**
 
@@ -283,7 +284,7 @@ kaggle competitions pages update my-comp --page-name evaluation \
 ## `kaggle competitions pages delete`
 
 从您主办的竞赛中删除页面。提示确认，除非
-`-y/--yes` 已通过（匹配现有的 `kaggle datasets delete` /
+`-y/--yes` 通过（与现有的 `kaggle datasets delete` /
 `kaggle kernels delete` 模式）。
 
 **用途：**
@@ -294,7 +295,7 @@ kaggle competitions pages delete <competition> --page-name <name> [-y]
 
 **参数：**
 
-- `<competition>`：比赛子弹。
+- `<competition>`：比赛鼻涕虫。
 
 **选项：**- `--page-name <name>`（必填）：要删除的页面的名称。
 - `-y, --yes`（可选）：跳过确认提示 — 对于脚本很有用。
@@ -331,7 +332,7 @@ kaggle competitions hosts <competition> [-v | --format json]
 
 **参数：**
 
-- `<competition>`：比赛子弹。
+- `<competition>`：比赛鼻涕虫。
 
 **示例：**
 
@@ -350,12 +351,53 @@ kaggle competitions hosts my-comp --format json
 
 ---
 
+## `kaggle competitions host-add`
+
+向其他 Kaggle 用户授予您主办的竞赛的主持人访问权限。主办方可以
+编辑设置、上传数据并启动比赛，因此您需要
+进行更改前确认。
+
+**用途：**
+
+```bash
+kaggle competitions host-add <competition> -u <user> [-y]
+```
+
+**参数：**
+
+- `<competition>`：比赛子弹。
+
+**选项：**- `-u, --user <USER>`：用户的 Kaggle 用户名（URL slug，例如`kerneler`）
+  添加为主机。必需的。
+- `-y, --yes`：跳过确认提示。
+- `-q, --quiet`：抑制“使用竞争”消息。
+
+**示例：**
+
+```bash
+# Prompts for confirmation before granting access.
+kaggle competitions host-add my-comp -u alice
+
+# Skip the prompt (for scripts).
+kaggle competitions host-add my-comp -u alice -y
+```
+
+使用`kaggle competitions hosts my-comp`验证结果。
+
+> **注意：** 该命令被命名为 `host-add` 而不是 `hosts add`，因为
+> `hosts` 将竞争作为位置参数，而 argparse 不能
+> 区分竞争 slug 和子命令名称。
+
+---
+
 ## `kaggle competitions settings get`
 
 显示您主办的比赛的统一设置 blob — 同一组
 “设置”选项卡在 Web UI 中公开的字段，涵盖一般信息，
 访问和团队、关键日期、提交和排行榜行为、代码
-竞争参数和主持人归因。默认情况下，输出按 UI 部分分组，并隐藏其左侧的字段
+竞争参数和主持人归因。
+
+默认情况下，输出按 UI 部分分组，并隐藏其左侧的字段
 输入默认值（未设置字符串、`false`布尔值、零整数）。通过`--json`
 原始 blob（驼峰式键，匹配更新负载格式）。
 
@@ -381,9 +423,7 @@ kaggle competitions settings get my-comp --json > settings.json
 
 ---
 
-## `kaggle competitions settings update`
-
-对比赛设置进行部分更新。您编写 JSON 或
+## `kaggle competitions settings update`对比赛设置进行部分更新。您编写 JSON 或
 仅包含您要更改的字段的 YAML 文件； CLI 构建
 服务器端 FieldMask 来自文件中存在的密钥，因此未指定
 字段被保留。
@@ -403,7 +443,7 @@ kaggle competitions settings update <competition> -f <path> [--json]
 
 **参数：**
 
-- `<competition>`：比赛鼻涕虫。
+- `<competition>`：比赛子弹。
 
 **选项：**
 
@@ -421,7 +461,9 @@ kaggle competitions settings update <competition> -f <path> [--json]
 ```json
 // disable-leaderboard.json
 { "has_leaderboard": false }
-``````bash
+```
+
+```bash
 kaggle competitions settings update my-comp -f ./disable-leaderboard.json
 ```
 
@@ -436,7 +478,7 @@ kaggle competitions settings update my-comp -f ./disable-leaderboard.json
 kaggle competitions settings update my-comp -f ./deadline.json
 ```
 
-突破代码竞争运行时间上限并设置竞争和团队合并
+突破代码竞赛运行时间上限并设置竞赛和团队合并
 截止日期（YAML，混合类型）：
 
 ```yaml
@@ -452,20 +494,18 @@ rules_required: true
 kaggle competitions settings update my-comp -f ./tune.yaml
 ```
 
-**键入注释：**
-
-- 布尔值 → JSON `true`/`false`（或 YAML 等效项）。
+**键入注释：**- 布尔值 → JSON `true`/`false`（或 YAML 等效项）。
 - 数字字段→普通数字（`240`，`1.5`）。
 - 日期时间字段 → ISO-8601 字符串（`"2027-01-01T00:00:00Z"` 或带有
   显式偏移）。
 - 枚举字段 (`host_segment`, `publicly_cloneable`) → 枚举成员名称
-  作为字符串；全名 (`"HOST_SEGMENT_FEATURED"`) 或缩写
-  后缀（`"FEATURED"`）有效。
+  作为字符串；全名 (`"HOST_SEGMENT_FEATURED"`) 或简称
+  后缀 (`"FEATURED"`) 有效。
 
 **常见错误：**
 
 - `Unknown competition setting: '<name>'` — 字段名称不在
-  `CompetitionSettings`。检查 `settings get --json` 以获得确切的密钥。
+  `CompetitionSettings`。检查 `settings get --json` 以获得确切的按键。
 - `Field '<name>' expects a bool, got str` — 文件有一个字符串，其中
   需要布尔值（例如 `"true"` 而不是 `true`）。
 - `not a valid HostSegment. Allowed: ...` — 您传递的枚举值不是
@@ -478,7 +518,7 @@ kaggle competitions settings update my-comp -f ./tune.yaml
 
 ## `kaggle competitions launch`
 
-发起您主办的竞赛。没有`--at`，比赛开始
+发起您主办的比赛。没有`--at`，比赛开始
 立即。通过 `--at`，后端安排给定 UTC 的启动
 瞬间。
 
@@ -488,17 +528,17 @@ kaggle competitions settings update my-comp -f ./tune.yaml
 kaggle competitions launch <competition> [--at <ISO-8601 UTC>]
 ```
 
-**参数：**- `<competition>`：比赛鼻涕虫。
+**参数：**
+
+- `<competition>`：比赛子弹。
 
 **选项：**
 
 - `--at <iso>`：安排在未来的 UTC 时间启动。接受 ISO-8601
-  （例如 `2027-01-01T00:00:00Z` 或 `2027-01-01T00:00:00+00:00`）。比赛
+  （例如`2027-01-01T00:00:00Z`或`2027-01-01T00:00:00+00:00`）。比赛
   如果省略则立即启动。
 
-**示例：**
-
-```bash
+**示例：**```bash
 # Launch right now.
 kaggle competitions launch my-comp
 
@@ -574,7 +614,7 @@ Zarr，因为参与者可以流式传输各个块。如果你愿意
 `.tar` 并将该文件传递给`-p`。
 
 该命令打印公共 URL 以及新的 `databundle_id` 和
-`databundle_version_id` 成功。
+`databundle_version_id`成功。
 
 ---
 
@@ -584,7 +624,7 @@ Zarr，因为参与者可以流式传输各个块。如果你愿意
 后端对提交进行评分的依据是什么 - 示例中每行一行
 提交，具有相同的柱形。上传后，后台运行
 预处理/采样；民意调查
-[⟦T208⟧](#kaggle-competitions-solution-status)
+[⟦T221⟧](#kaggle-competitions-solution-status)
 直到`ready`才开始提交。
 
 文件通过标准 blob 上传管道上传，然后生成结果
