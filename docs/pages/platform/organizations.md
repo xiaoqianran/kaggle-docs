@@ -1,8 +1,6 @@
 # Organizations
 
-* * *
-
-<!--Overview-->
+***
 
 ### Overview
 
@@ -10,9 +8,7 @@ Anyone can create an organization profile on Kaggle. Organization profiles allow
 
 Before creating an organization, it's helpful to understand how organization profiles work.
 
-* * *
-
-<!--How do organization profiles work-->
+***
 
 ### How do organization profiles work
 
@@ -32,9 +28,7 @@ For research labs, whether part of a university or industry corporation, organiz
 
 For professors, we recommend using a [Kaggle group](/groups) to make it easier to see and manage datasets, notebooks and models you share in your classes.
 
-* * *
-
-<!--Creating a new organization profile-->
+***
 
 ### Creating a new organization profile
 
@@ -69,9 +63,7 @@ If you have questions about the review process or you would like to appeal a rev
 
 Once your organization has been approved, you'll receive an email and/or site notification. You and other members of the organization can now create organization-owned datasets, models, or competitions including making them public. Anyone can also see your organization's profile page.
 
-* * *
-
-<!--Organization member permissions-->
+***
 
 ### Organization member permissions
 
@@ -91,9 +83,7 @@ Members will not be able to add new members to an organization unless the organi
 
 Organization admins have the same abilities and permissions as organization members. In addition, they can add and remove members, transfer ownership of the organization to another member, and edit information about the organization (logo, tagline, description, etc.).
 
-* * *
-
-<!--How to create content as an organization-->
+***
 
 ### How to create content as an organization
 
@@ -117,9 +107,7 @@ When a dataset or model is created under an organization profile, other members 
 
 You can transfer ownership of resources you own to any Organization of which you are a member. Only the owner of the resource can transfer ownership. To transfer ownership, navigate to the resource's detail page and select the "Settings" tab. Scroll down to the "Sharing" section and click "Transfer Ownership", select the Organization you're transferring the resource to and click "Done". Transferring ownership to an organization is not reversible.
 
-* * *
-
-<!--How to create content as an organization-->
+***
 
 ### Model Gating for Organizations
 
@@ -139,5 +127,5 @@ The base URL for the HTTP endpoints below is [https://www.kaggle.com](https://ww
 
 | Method | URL | Description | Parameters |
 | --- | --- | --- | --- |
-| GET | /api/v1/models/{owner\_slug}/{model\_slug}/user-consents | This endpoint retrieves a list of user consents for a specific gated model under the current agreement, with filtering options by review status and expiration of user request data. | <ul><br><li><em>owner_slug</em> (in path, required): The model owner slug.</li><br><li><em>model_slug</em> (in path, required): The model slug, e.g., my_gated_model.</li><br><li><em>review_status</em>=&lt;null|pending|accepted|rejected&gt;: Filter by review status. Default all (null).</li><br><li><em>is_user_request_data_expired</em>=&lt;null|true|false&gt;: Filter by user request data expiration status. Default all (null).</li><br><li><em>next_page_token</em>: Token for retrieving the next page in paginated results.</li><br></ul> |
-| POST | /api/v1/models/{owner\_slug}/{model\_slug}/user-consents/review | This endpoint reviews user consent. It requires user\_name and review\_status. Publishers can add notes. | <ul><br><li><em>owner_slug</em> (in path, required): The model owner slug, this is usually your organization name.</li><br><li><em>model_slug</em> (in path, required): The model slug, e.g., my_gated_model.</li><br><li><em>user_name</em> (required): The user to whom the review decision is made. These are usually returned in the response of the List API above.</li><br><li><em>review_status</em> (required)=&lt;pending|accepted|rejected&gt;: The decision on the status of the review.</li><br><li><em>publisher_notes</em>: optional notes.</li><br></ul> |
+| GET | /api/v1/models/{owner\_slug}/{model\_slug}/user-consents | This endpoint retrieves a list of user consents for a specific gated model under the current agreement, with filtering options by review status and expiration of user request data. | <ul><li><em>owner_slug</em> (in path, required): The model owner slug.</li><li><em>model_slug</em> (in path, required): The model slug, e.g., my_gated_model.</li><li><em>review_status</em>=&lt;null\|pending\|accepted\|rejected&gt;: Filter by review status. Default all (null).</li><li><em>is_user_request_data_expired</em>=&lt;null\|true\|false&gt;: Filter by user request data expiration status. Default all (null).</li><li><em>next_page_token</em>: Token for retrieving the next page in paginated results.</li></ul> |
+| POST | /api/v1/models/{owner\_slug}/{model\_slug}/user-consents/review | This endpoint reviews user consent. It requires user\_name and review\_status. Publishers can add notes. | <ul><li><em>owner_slug</em> (in path, required): The model owner slug, this is usually your organization name.</li><li><em>model_slug</em> (in path, required): The model slug, e.g., my_gated_model.</li><li><em>user_name</em> (required): The user to whom the review decision is made. These are usually returned in the response of the List API above.</li><li><em>review_status</em> (required)=&lt;pending\|accepted\|rejected&gt;: The decision on the status of the review.</li><li><em>publisher_notes</em>: optional notes.</li></ul> |

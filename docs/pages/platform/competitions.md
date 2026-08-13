@@ -2,9 +2,7 @@
 
 Kaggle Competitions are designed to provide challenges for competitors at all different stages of their machine learning careers. As a result, they are very diverse, with a range of broad types.
 
-* * *
-
-<!--Prediction Competitions-->
+***
 
 ### Prediction Competitions
 
@@ -107,9 +105,7 @@ Examples of Leakage:
 
 Kaggle may address leakage by relaunching a competition or generating a new test set.
 
-* * *
-
-<!--Hackathon Competitions-->
+***
 
 ### Hackathon Competitions
 
@@ -187,9 +183,7 @@ Submissions are made private until the end of a Hackathon, at which point all su
 
 Note, it may take a number of weeks for judges to complete review of submissions, especially when competition participation is high. Judges are also rarely able to provide individualized feedback or scores to all participants.
 
-* * *
-
-<!--Simulation Competitions-->
+***
 
 ### Simulation Competitions
 
@@ -212,9 +206,7 @@ Every agent submitted will continue to play episodes beyond the submission deadl
 
 The goal of this process is to accurately rank competition participants by repeatedly pairing their automated submissions against opponents of similar skill levels using a dynamic rating system. By simulating numerous matches and refining statistical estimates of performance, the system ensures the final leaderboard reflects the true skill of each user's best-performing agent.
 
-* * *
-
-<!--General Resources and Info-->
+***
 
 ### Resources for Getting Started
 

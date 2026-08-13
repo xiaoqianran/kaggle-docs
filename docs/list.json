@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-12T08:07:40.086Z",
+  "fetchedAt": "2026-08-13T08:09:17.657Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -32,63 +32,63 @@
     },
     {
       "rel": "platform/benchmarks.md",
-      "bytes": 7921,
+      "bytes": 7894,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/benchmarks.md",
       "track": "Platform Docs"
     },
     {
       "rel": "platform/competitions.md",
-      "bytes": 17600,
+      "bytes": 17462,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/competitions.md",
       "track": "Platform Docs"
     },
     {
       "rel": "platform/datasets.md",
-      "bytes": 28717,
+      "bytes": 28331,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/datasets.md",
       "track": "Platform Docs"
     },
     {
       "rel": "platform/efficient-gpu-usage.md",
-      "bytes": 2315,
+      "bytes": 2310,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/efficient-gpu-usage.md",
       "track": "Platform Docs"
     },
     {
       "rel": "platform/models.md",
-      "bytes": 15383,
+      "bytes": 15197,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/models.md",
       "track": "Platform Docs"
     },
     {
       "rel": "platform/notebooks.md",
-      "bytes": 40027,
+      "bytes": 39713,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/notebooks.md",
       "track": "Platform Docs"
     },
     {
       "rel": "platform/organizations.md",
-      "bytes": 11061,
+      "bytes": 10767,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/organizations.md",
       "track": "Platform Docs"
     },
     {
       "rel": "platform/packages.md",
-      "bytes": 19824,
+      "bytes": 19720,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/packages.md",
       "track": "Platform Docs"
     },
     {
       "rel": "platform/tpu.md",
-      "bytes": 18512,
+      "bytes": 17148,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/tpu.md",
       "track": "Platform Docs"

@@ -1,8 +1,6 @@
 # Models
 
-* * *
-
-<!--What is Kaggle Models?-->
+***
 
 ### What is Kaggle Models
 
@@ -12,9 +10,7 @@
 
 Kaggle Models come from a variety of sources including partners that we collaborate with on releases like Meta's Llama 2 and Alibaba's Qwen, integrations with modeling libraries like Keras, [integrations with Hugging Face Hub](https://www.kaggle.com/blog/kaggle-hugging-face-integration), and the community of millions of Kagglers sharing fine-tuned variants and other innovations.
 
-* * *
-
-<!--Finding a Model-->
+***
 
 ### Finding Kaggle Models
 
@@ -73,19 +69,19 @@ See [Kaggle CLI model download documentation](https://github.com/Kaggle/kagglehu
 
 #### Method 3. Calling the API directly
 
-    # Authenticate with credentials
-    export KAGGLE_USERNAME=xyz
-    export kaggle-key=REDACTED
-    
-    # With Curl
-    curl -L -o ~/Downloads/model.tar.gz  https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download -u $KAGGLE_USERNAME:$KAGGLE_KEY
-    
-    # Download specific version (here version 1)
-    wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --user=$KAGGLE_USERNAME --password=$KAGGLE_KEY --auth-no-challenge
+```
+# Authenticate with credentials
+export KAGGLE_USERNAME=xyz
+export kaggle-key=REDACTED
 
-* * *
+# With Curl
+curl -L -o ~/Downloads/model.tar.gz  https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download -u $KAGGLE_USERNAME:$KAGGLE_KEY
 
-<!--Publishing a Model-->
+# Download specific version (here version 1)
+wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --user=$KAGGLE_USERNAME --password=$KAGGLE_KEY --auth-no-challenge
+```
+
+***
 
 ### Creating a Model
 
@@ -103,19 +99,19 @@ See [Kaggle CLI model creation tutorial](https://github.com/Kaggle/kaggle-cli/bl
 
 1. Go to: [https://www.kaggle.com/models?new=true](https://www.kaggle.com/models?new=true) and follow the steps including setting “Creating As” to the Organization Profile you want to publish under
 2. To add new Variations once your model is initially created:
-    1. Scroll down to the "Model Variations" section.
-    2. Click on the "New Variation" button to open the "Add/Edit" Variations modal.
-    3. Select the ML framework for which you want to update weights / assets for.
-    4. Click on the "Add new variation" button
-    5. Select the weight / assets files to upload
-    6. Enter the variation slug
-        1. For example, `7b`
-        2. Select a license
-    7. Click on the "Create" button and wait until your instance has been fully processed.
-    8. Click on "Go to model detail page".
-    9. In the "Model Variations" section, you should see your variation in the drop-down.
-    10. If you select it, confirm that you have all the files you were expecting under the "File Explorer" section.
-    11. To upload a new version for an existing variation. Use the "New Version" button.
+   1. Scroll down to the "Model Variations" section.
+   2. Click on the "New Variation" button to open the "Add/Edit" Variations modal.
+   3. Select the ML framework for which you want to update weights / assets for.
+   4. Click on the "Add new variation" button
+   5. Select the weight / assets files to upload
+   6. Enter the variation slug
+      1. For example, `7b`
+      2. Select a license
+   7. Click on the "Create" button and wait until your instance has been fully processed.
+   8. Click on "Go to model detail page".
+   9. In the "Model Variations" section, you should see your variation in the drop-down.
+   10. If you select it, confirm that you have all the files you were expecting under the "File Explorer" section.
+   11. To upload a new version for an existing variation. Use the "New Version" button.
 
 #### Create via Hugging Face Integration
 
@@ -137,12 +133,12 @@ Documenting your model is easiest to do via the UI.
 
 1. When viewing your model page, you will see a section at the top called “Pending Actions”.
 2. Follow each of these steps to complete your model’s documentation:
-    1. Add a description (model card)
-    2. Add model instance descriptions including example code
-    3. Add a subtitle
-    4. Add tags
-    5. Specify provenance and other metadata
-    6. Publish a notebook (we recommend making it public after your model is made public)
+   1. Add a description (model card)
+   2. Add model instance descriptions including example code
+   3. Add a subtitle
+   4. Add tags
+   5. Specify provenance and other metadata
+   6. Publish a notebook (we recommend making it public after your model is made public)
 3. Once your model is made public, you can also optionally generate a DOI from the “Metadata” section of your model.
 4. Once you’re done, you can make your model public from the “Settings” tab on the model page.
 5. You can now promote your model!
@@ -153,38 +149,38 @@ Documenting your model is easiest to do via the UI.
 This tool allows you to copy model versions from one model to another. You can import versions from any public model or private models where you have collaborator access.
 
 1. Navigate to your target model's page on Kaggle
-    1. Click the "︙" button in the top right
-    2. Select "Import Versions" from the dropdown menu
+   1. Click the "︙" button in the top right
+   2. Select "Import Versions" from the dropdown menu
 2. Select Source Model:
-    1. Click the "Select Model" button
-    2. Browse or search for the model you want to import versions from
-        1. You can only select models you own or have collaborator access to
-        2. The current model will be disabled to prevent self-copying
-    3. Click on your chosen model to select it
+   1. Click the "Select Model" button
+   2. Browse or search for the model you want to import versions from
+      1. You can only select models you own or have collaborator access to
+      2. The current model will be disabled to prevent self-copying
+   3. Click on your chosen model to select it
 3. Select Versions:
-    1. Once you've selected a source model, you'll see all available versions
-    2. Use the search bar to filter versions by name
-    3. Use the framework chips to filter by specific frameworks (PyTorch, TensorFlow, etc.)
-    4. Select versions by checking the boxes in the leftmost column
-        1. You can select multiple versions at once
-    5. Click "Next" to proceed to confirmation
+   1. Once you've selected a source model, you'll see all available versions
+   2. Use the search bar to filter versions by name
+   3. Use the framework chips to filter by specific frameworks (PyTorch, TensorFlow, etc.)
+   4. Select versions by checking the boxes in the leftmost column
+      1. You can select multiple versions at once
+   5. Click "Next" to proceed to confirmation
 4. Confirm and Import:
-    1. Review the versions you selected
-        1. Each row shows the full path of what will be copied
-        2. Source path → Target path is displayed
-    2. Important notes:
-        1. If importing from a private model to a public model, versions will become public permanently
-        2. This action cannot be undone
-    3. Click "Import" to begin the copy process
+   1. Review the versions you selected
+      1. Each row shows the full path of what will be copied
+      2. Source path → Target path is displayed
+   2. Important notes:
+      1. If importing from a private model to a public model, versions will become public permanently
+      2. This action cannot be undone
+   3. Click "Import" to begin the copy process
 5. After Import:
-    1. A progress indicator will show while versions are being copied
-    2. For successful imports:
-        1. You'll see a success message
-        2. Click "Go to Model" to view your imported versions
-    3. If any versions fail to import:
-        1. Error messages will explain what went wrong
-        2. You can retry failed imports by clicking "Try again"
-        3. Successfully copied versions will not be duplicated on retry
+   1. A progress indicator will show while versions are being copied
+   2. For successful imports:
+      1. You'll see a success message
+      2. Click "Go to Model" to view your imported versions
+   3. If any versions fail to import:
+      1. Error messages will explain what went wrong
+      2. You can retry failed imports by clicking "Try again"
+      3. Successfully copied versions will not be duplicated on retry
 
 ##### Tips for Importing
 
@@ -200,17 +196,16 @@ A handle is represented as
 ###### owner\_slug/model\_slug/framework/variation\_slug/version\_number
 
 The breakdown is as follows:
-    
+
 - **owner\_slug:** Your organization or username.
 - **model\_slug:** The name of your model family (e.g., "llama").
 - **framework:** The model framework used (e.g., "pytorch").
 - **variation\_slug:** Details about this specific version of your model.
 - **version\_number:** A numeric identifier for tracking model changes.
 
-#### Model vs. Variation: Uniqueness 
+#### Model vs. Variation: Uniqueness
 
-A variation is used to add finer level details about a model. A variation should capture the intricacies and nuances of a model.
-    They highlight specific changes or features. Examples include:
+A variation is used to add finer level details about a model. A variation should capture the intricacies and nuances of a model. They highlight specific changes or features. Examples include:
 
 - **Model Size:** Number of parameters (e.g., 7 billion)
 - **Optimization:** Quantization (e.g., int4), model distillation

@@ -2,9 +2,7 @@
 
 # 型号
 
-** **
-
-<!--What is Kaggle Models?-->
+***
 
 ### 什么是 Kaggle 模型
 
@@ -14,9 +12,7 @@
 
 Kaggle 模型来自多种来源，包括我们在 Meta 的 Llama 2 和阿里巴巴的 Qwen 等版本上合作的合作伙伴、与 Keras、[integrations with Hugging Face Hub](https://www.kaggle.com/blog/kaggle-hugging-face-integration) 等建模库的集成，以及数百万 Kaggler 社区共享微调变体和其他创新。
 
-** **
-
-<!--Finding a Model-->
+***
 
 ### 寻找 Kaggle 模型
 
@@ -55,7 +51,7 @@ Kaggle 模型来自多种来源，包括我们在 Meta 的 Llama 2 和阿里巴�
 
 许多开发人员需要在 Kaggle 之外下载代码中的模型。有几种不同的方法：通过[kagglehub Python library](https://github.com/Kaggle/kagglehub)，通过我们的[Kaggle CLI](https://github.com/Kaggle/kaggle-cli)，或者直接调用API。在提供每种方法的说明之前，了解您需要了解如何进行身份验证才能访问某些模型（例如 [Gemma](https://www.kaggle.com/models/google/gemma)）会很有帮助，这些模型需要 Kaggle 凭据来确认用户对自定义许可证的同意已得到验证。 [Obtain credentials](https://www.kaggle.com/settings) 登录 Kaggle 后，从“设置”页面单击“API”部分下的“生成新令牌”按钮。
 
-下面的示例允许您下载 [google/gemma](https://www.kaggle.com/models/google/gemma) 模型的 `2b` PyTorch 变体。如果模型没有像 Gemma 这样的受限许可证，您将能够跳过下面示例中的 `kagglehub.login()` 步骤。
+下面的示例允许您下载 [google/gemma](https://www.kaggle.com/models/google/gemma) 模型的 `2b` PyTorch 变体。如果模型没有像 Gemma 这样的受限许可证，您将可以跳过下面示例中的 `kagglehub.login()` 步骤。
 
 #### 方法 1. 通过 kagglehub Python 库
 
@@ -65,23 +61,23 @@ Kaggle 模型来自多种来源，包括我们在 Meta 的 Llama 2 和阿里巴�
 
 参见[Kaggle CLI model download documentation](https://github.com/Kaggle/kagglehub?tab=readme-ov-file#download-model)。
 
-#### 方式三、直接调用API# 使用凭据进行身份验证
-    导出 KAGGLE_USERNAME=xyz
-    导出 kaggle-key=已编辑
-    
-    # 带有卷曲
-    卷曲 -L -o ~/Downloads/model.tar.gz https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download -u $KAGGLE_USERNAME:$KAGGLE_KEY
-    
-    # 下载特定版本（这里是版本1）
-    wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --user=$KAGGLE_USERNAME --password=$KAGGLE_KEY --auth-no-challenge
+#### 方式三、直接调用API
 
-** **
+```
+# Authenticate with credentials
+export KAGGLE_USERNAME=xyz
+export kaggle-key=REDACTED
 
-<!--Publishing a Model-->
+# With Curl
+curl -L -o ~/Downloads/model.tar.gz  https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download -u $KAGGLE_USERNAME:$KAGGLE_KEY
 
-### 创建模型
+# Download specific version (here version 1)
+wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --user=$KAGGLE_USERNAME --password=$KAGGLE_KEY --auth-no-challenge
+```
 
-有几种方法可以在 Kaggle Models 上发布模型，包括仅通过 UI。我们建议结合使用 `kagglehub`（我们的 Python 客户端库）来管理工件创建和上传，以及使用 UI 来管理文档和协作功能。而且，如果您想在 Kaggle 上使用 Hugging Face 模型，您只需创建一个使用该模型的笔记本（例如在 Transformers 中），Kaggle 上就会自动为您创建一个模型页面。
+***
+
+### 创建模型有几种方法可以在 Kaggle Models 上发布模型，包括仅通过 UI。我们建议结合使用 `kagglehub`（我们的 Python 客户端库）来管理工件创建和上传，以及使用 UI 来管理文档和协作功能。而且，如果您想在 Kaggle 上使用 Hugging Face 模型，您只需创建一个使用该模型的笔记本（例如在 Transformers 中），Kaggle 上就会自动为您创建一个模型页面。
 
 #### 使用kagglehub Python客户端库上传（首选）
 
@@ -93,23 +89,23 @@ Kaggle 模型来自多种来源，包括我们在 Meta 的 Llama 2 和阿里巴�
 
 #### 通过 UI 上传1. 前往：[https://www.kaggle.com/models?new=true](https://www.kaggle.com/models?new=true)，然后按照步骤进行操作，包括将“创建为”设置为您要在其下发布的组织资料
 2. 最初创建模型后添加新变体：
-    1. 向下滚动到“模型变体”部分。
-    2. 单击“新变体”按钮打开“添加/编辑”变体模式。
-    3. 选择您要更新权重/资产的 ML 框架。
-    4. 单击“添加新变体”按钮
-    5. 选择要上传的权重/资产文件
-    6. 输入变体段
-        1. 例如`7b`
-        2. 选择许可证
-    7. 单击“创建”按钮并等待您的实例完全处理完毕。
-    8. 单击“转到型号详细信息页面”。
-    9. 在“模型变体”部分，您应该在下拉列表中看到您的变体。
-    10. 如果选择它，请确认您在“文件资源管理器”部分中拥有所需的所有文件。
-    11. 上传现有变体的新版本。使用“新版本”按钮。
+   1. 向下滚动到“模型变体”部分。
+   2. 单击“新变体”按钮打开“添加/编辑”变体模式。
+   3. 选择您要更新权重/资产的 ML 框架。
+   4. 单击“添加新变体”按钮
+   5. 选择要上传的权重/资产文件
+   6. 输入变体段
+      1. 例如`7b`
+      2. 选择许可证
+   7. 单击“创建”按钮并等待您的实例完全处理完毕。
+   8. 单击“转到型号详细信息页面”。
+   9. 在“模型变体”部分，您应该在下拉列表中看到您的变体。
+   10. 如果选择它，请确认您在“文件资源管理器”部分下拥有所需的所有文件。
+   11. 上传现有变体的新版本。使用“新版本”按钮。
 
-#### 通过拥抱脸部集成创建如果您已在 Hugging Face Hub 上发布了模型，则只需在 Kaggle Notebook 中使用您的模型即可轻松在 Kaggle 上为其创建页面。
+#### 通过拥抱脸部集成创建
 
-1. 导航至 Hugging Face 上的模特页面
+如果您已在 Hugging Face Hub 上发布了模型，则只需在 Kaggle Notebook 中使用您的模型即可轻松在 Kaggle 上为其创建页面。1. 导航至 Hugging Face 上的模特页面
 2. 单击页面标题中的“使用此模型”
 3. 从下拉列表中选择“Kaggle”以创建 Kaggle Notebook
 4. 如果您尚未登录，系统将提示您登录
@@ -123,12 +119,12 @@ Kaggle 模型来自多种来源，包括我们在 Meta 的 Llama 2 和阿里巴�
 
 通过 UI 来记录模型是最简单的。1. 查看模型页面时，您将在顶部看到一个名为“待处理操作”的部分。
 2. 按照以下每个步骤完成模型的文档：
-    1.添加描述（型号卡）
-    2. 添加模型实例描述，包括示例代码
-    3.添加字幕
-    4.添加标签
-    5. 指定出处和其他元数据
-    6. 发布笔记本（我们建议在模型公开后将其公开）
+   1.添加描述（型号卡）
+   2. 添加模型实例描述，包括示例代码
+   3.添加字幕
+   4.添加标签
+   5. 指定出处和其他元数据
+   6. 发布笔记本（我们建议在模型公开后将其公开）
 3. 模型公开后，您还可以选择从模型的“元数据”部分生成 DOI。
 4. 完成后，您可以从模型页面的“设置”选项卡公开您的模型。
 5. 您现在可以推广您的模型了！
@@ -137,37 +133,37 @@ Kaggle 模型来自多种来源，包括我们在 Meta 的 Llama 2 和阿里巴�
 #### 导入模型版本
 
 该工具允许您将模型版本从一个模型复制到另一个模型。您可以从您具有协作者访问权限的任何公共模型或私有模型导入版本。1. 导航到 Kaggle 上的目标模型页面
-    1. 点击右上角“︙”按钮
-    2. 从下拉菜单中选择“导入版本”
+   1. 点击右上角“︙”按钮
+   2. 从下拉菜单中选择“导入版本”
 2. 选择源型号：
-    1. 点击“选择型号”按钮
-    2. 浏览或搜索要从中导入版本的模型
-        1. 您只能选择您拥有或协作者有权访问的模型
-        2.当前型号将被禁用，防止自我复制
-    3. 单击您选择的型号以选择它
+   1. 点击“选择型号”按钮
+   2. 浏览或搜索要从中导入版本的模型
+      1. 您只能选择您拥有或协作者有权访问的模型
+      2.当前型号将被禁用，防止自我复制
+   3. 单击您选择的型号以选择它
 3. 选择版本：
-    1. 选择源模型后，您将看到所有可用版本
-    2. 使用搜索栏按名称过滤版本
-    3.使用框架芯片按特定框架（PyTorch、TensorFlow等）进行过滤
-    4. 通过选中最左列中的框来选择版本
-        1. 可以一次选择多个版本
-    5. 点击“下一步”继续确认
+   1. 选择源模型后，您将看到所有可用版本
+   2. 使用搜索栏按名称过滤版本
+   3.使用框架芯片按特定框架（PyTorch、TensorFlow等）进行过滤
+   4. 通过选中最左列中的框来选择版本
+      1. 可以一次选择多个版本
+   5. 点击“下一步”继续确认
 4.确认并导入：
-    1. 检查您选择的版本
-        1. 每行显示将要复制的内容的完整路径
-        2. 源路径→显示目标路径
-    2. 重要提示：
-        1. 如果从私有模型导入到公共模型，版本将永久公开2. 此操作无法撤消
-    3. 单击“导入”开始复制过程
+   1. 检查您选择的版本
+      1. 每行显示将要复制的内容的完整路径
+      2. 源路径→显示目标路径
+   2. 重要提示：
+      1. 如果从私有模型导入到公共模型，版本将永久公开2. 此操作无法撤消
+   3. 单击“导入”开始复制过程
 5. 导入后：
-    1. 复制版本时会显示进度指示器
-    2. 导入成功：
-        1.您将看到一条成功消息
-        2. 单击“转到模型”查看您导入的版本
-    3. 如果有版本导入失败：
-        1. 错误消息会解释发生了什么问题
-        2. 您可以通过单击“重试”来重试失败的导入
-        3. 复制成功的版本重试时不会重复
+   1. 复制版本时会显示进度指示器
+   2. 导入成功：
+      1.您将看到一条成功消息
+      2. 单击“转到模型”查看您导入的版本
+   3. 如果有版本导入失败：
+      1. 错误消息会解释发生了什么问题
+      2. 您可以通过单击“重试”来重试失败的导入
+      3. 复制成功的版本重试时不会重复
 
 ##### 导入提示
 
@@ -180,18 +176,17 @@ Kaggle 模型来自多种来源，包括我们在 Meta 的 Llama 2 和阿里巴�
 
 句柄表示为
 
-###### 所有者\_slug/模型\_slug/框架/变体\_slug/版本\_number详细情况如下：
-    
-- **owner\_slug:** 您的组织或用户名。
+###### 所有者\_slug/模型\_slug/框架/变体\_slug/版本\_number
+
+详细情况如下：- **owner\_slug:** 您的组织或用户名。
 - **model\_slug：** 您的模型系列的名称（例如“llama”）。
 - **框架：** 使用的模型框架（例如“pytorch”）。
 - **variation\_slug：** 有关模型的此特定版本的详细信息。
 - **version\_number：** 用于跟踪模型更改的数字标识符。
 
-#### 模型与变体：独特性 
+#### 模型与变体：独特性
 
-变体用于添加有关模型的更精细的细节。变体应该捕捉模型的复杂性和细微差别。
-    它们突出显示特定的变化或功能。示例包括：
+变体用于添加有关模型的更精细的细节。变体应该捕捉模型的复杂性和细微差别。它们突出显示特定的变化或功能。示例包括：
 
 - **模型大小：** 参数数量（例如 70 亿）
 - **优化：**量化（例如int4）、模型蒸馏

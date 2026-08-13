@@ -1,6 +1,6 @@
 # Benchmarks
 
-* * *
+***
 
 ### Overview
 
@@ -14,7 +14,7 @@ Kaggle seeks to be the home of a diverse ecosystem of high quality benchmarks as
 
 Both are technically identical, with the only difference being that Research Benchmarks tend to require a lot more compute. If you're a researcher who wants to host your benchmarks with us, email kaggle-benchmarks@google.com to discuss how you can get a higher quota.
 
-* * *
+***
 
 ### Creating Tasks and Benchmarks
 
@@ -28,11 +28,18 @@ First, some key concepts about Kaggle Benchmarks:
 📺 **Video Guide**: [How to create a task](https://www.youtube.com/watch?v=brIF5xGPkcM)
 
 - 1. Go to [Kaggle Benchmarks](https://www.kaggle.com/benchmarks) and click "Create task"
-![Create a task](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/create_task_new.png)- 2. Create a new task - you can either write the code from scratch or prompt an AI to generate the code for you
-    - ⚠️ Access Requirements: Please ensure your account is phone-verified to access resources such as LLM API quotas. Furthermore, accounts registered after December 15, 2025, must complete additional identity verification to execute task notebooks.
-![Generate a task](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/generate_task.png)![Generate a task](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/generate_task2.png)- 3. Once the task notebook has been created, you can make edits to it. Once it's done, you can run it in the notebook or "Save Task", which will create a Task Detail page
-![Task notebook](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/task_notebook.png)- 4. The Task Detail page is where you can add a description, new models to be evaluated, compare outputs across different models, and even share it with others
-![Task detail page](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/task_detail_page.png)
+
+  ![Create a task](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/create_task_new.png)
+- 2. Create a new task - you can either write the code from scratch or prompt an AI to generate the code for you
+  - ⚠️ Access Requirements: Please ensure your account is phone-verified to access resources such as LLM API quotas. Furthermore, accounts registered after December 15, 2025, must complete additional identity verification to execute task notebooks.
+
+  ![Generate a task](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/generate_task.png) ![Generate a task](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/generate_task2.png)
+- 3. Once the task notebook has been created, you can make edits to it. Once it's done, you can run it in the notebook or "Save Task", which will create a Task Detail page
+
+  ![Task notebook](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/task_notebook.png)
+- 4. The Task Detail page is where you can add a description, new models to be evaluated, compare outputs across different models, and even share it with others
+
+  ![Task detail page](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/task_detail_page.png)
 
 To get started creating your first task, check out the [Getting Started Notebook](https://www.kaggle.com/code/nicholaskanggoog/kaggle-benchmarks-getting-started-notebook?scriptVersionId=290215074).
 
@@ -43,13 +50,22 @@ Remember that a benchmark is simply multiple tasks put together into a collectio
 📺 **Video Guide**: [How to create a benchmark](https://www.youtube.com/watch?v=V5tkw8zZJJc)
 
 - 1. Go to [Kaggle Benchmarks](https://www.kaggle.com/benchmarks) and click "Create benchmark"
-![Create a benchmark](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-creation.png)- 2. Fill in the information in the panel. You can always change names and descriptions later!
-![Generate a benchmark](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-gen.png)- 3. You should be brought to the Benchmark Detail page, where you will need to add tasks to your benchmark. You can add your own tasks or public tasks that others have created.
-![Add tasks](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-add-task.png)- 4. Next, you will need to add a list of models that you want to display on the benchmark page.
-![Add models](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-add-model2.png)- 5. Once that's done, you will see your completed Benchmark detail page. You can edit, share, and add new models and tasks!
-![Benchmark detail page](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-final.png)
 
-* * *
+  ![Create a benchmark](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-creation.png)
+- 2. Fill in the information in the panel. You can always change names and descriptions later!
+
+  ![Generate a benchmark](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-gen.png)
+- 3. You should be brought to the Benchmark Detail page, where you will need to add tasks to your benchmark. You can add your own tasks or public tasks that others have created.
+
+  ![Add tasks](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-add-task.png)
+- 4. Next, you will need to add a list of models that you want to display on the benchmark page.
+
+  ![Add models](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-add-model2.png)
+- 5. Once that's done, you will see your completed Benchmark detail page. You can edit, share, and add new models and tasks!
+
+  ![Benchmark detail page](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/benchmark%20creation/benchmark-final.png)
+
+***
 
 ### Downloading Benchmark Leaderboards
 
@@ -64,22 +80,24 @@ Both actions open a download popup that provides methods to retrieve the data.
 
 The popup provides a cURL command to download the leaderboard data as a JSON object. If the Benchmark is not public, you will need to authenticate using your Kaggle credentials.
 
-    # Unauthenticated example
-    curl -L -o ~/Downloads/open-benchmarks_scicode_leaderboard.json \
-      https://www.kaggle.com/api/v1/benchmarks/open-benchmarks/scicode/leaderboard
-    
-    # Authenticated example
-    # Export your Kaggle username and API key
-    # export KAGGLE_USERNAME=
-    # export kaggle-key=REDACTED -L -u $KAGGLE_USERNAME:$KAGGLE_KEY \
-      -o ~/Downloads/myusername_my-benchmark_leaderboard.json \
-      https://www.kaggle.com/api/v1/benchmarks/myusername/my-benchmark/leaderboard
+```
+# Unauthenticated example
+curl -L -o ~/Downloads/open-benchmarks_scicode_leaderboard.json \
+  https://www.kaggle.com/api/v1/benchmarks/open-benchmarks/scicode/leaderboard
+
+# Authenticated example
+# Export your Kaggle username and API key
+# export KAGGLE_USERNAME=
+# export kaggle-key=REDACTED -L -u $KAGGLE_USERNAME:$KAGGLE_KEY \
+  -o ~/Downloads/myusername_my-benchmark_leaderboard.json \
+  https://www.kaggle.com/api/v1/benchmarks/myusername/my-benchmark/leaderboard
+```
 
 #### Download as CSV
 
 At the bottom of the download popup, you can click "Download leaderboard as csv" to directly download the data as a CSV file.
 
-* * *
+***
 
 ### Models
 
@@ -87,9 +105,11 @@ At the bottom of the download popup, you can click "Download leaderboard as csv"
 
 We continue to update the list of available models in Community Benchmarks as new models are released and old models are deprecated. We currently do not support some models (e.g. OpenAI models), but are working on growing our list over time. To query the current list of supported models, run the following command in the task notebook:
 
-    import kaggle_benchmarks as kbench
-    # returns the current list of available models to test against
-    list(kbench.llms.keys())
+```
+import kaggle_benchmarks as kbench
+# returns the current list of available models to test against
+list(kbench.llms.keys())
+```
 
 ![Query list of available models](https://storage.googleapis.com/kaggle-media/cms/page-images/kaggle-benchmarks/available_models/query_models.png)
 
@@ -97,12 +117,12 @@ We continue to update the list of available models in Community Benchmarks as ne
 
 Model selection within Research Benchmarks is determined by the specific evaluation and the researchers involved. Consequently, these may include supplemental models not currently supported in Community Benchmarks.
 
-* * *
+***
 
 ### Learning resources
 
-- [Getting started notebook](https://www.kaggle.com/code/nicholaskanggoog/kaggle-benchmarks-getting-started-notebook?scriptVersionId=290215074)
+[Getting started notebook](https://www.kaggle.com/code/nicholaskanggoog/kaggle-benchmarks-getting-started-notebook?scriptVersionId=290215074)
 
-- [Kaggle Benchmarks GitHub repo](https://github.com/Kaggle/kaggle-benchmarks)
+[Kaggle Benchmarks GitHub repo](https://github.com/Kaggle/kaggle-benchmarks)
 
-- [Kaggle Community Benchmarks NotebookLM](https://notebooklm.google.com/notebook/56661d72-a74b-48cc-a2d0-08a6f7a595e8)
+[Kaggle Community Benchmarks NotebookLM](https://notebooklm.google.com/notebook/56661d72-a74b-48cc-a2d0-08a6f7a595e8)

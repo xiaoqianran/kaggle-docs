@@ -2,9 +2,7 @@
 
 # 笔记本
 
-** **
-
-<!--Types of Notebooks-->
+***
 
 ### 笔记本的类型
 
@@ -28,9 +26,7 @@ Kaggle 上有多种不同类型的笔记本。
 
 RMarkdown 编辑器与用于基本 R 或 Python 脚本的编辑器相同，只是它使用特殊的 RMarkdown 语法。要开始编辑 RMarkdown 脚本，请创建一个新笔记本，将`File > Editor Type`下的文件类型更改为“脚本”，然后更改`File > Language`下的语言
 
-** **
-
-<!--Searching for Notebooks-->
+***
 
 ### 搜索笔记本
 
@@ -52,7 +48,7 @@ Notebooks 中的最新、最精彩的内容已在 Kaggle 上的多个不同位�
 
 访问笔记本的一种更结构化的方式是[the Notebook listing](https://www.kaggle.com/notebooks)，可以从主菜单栏中的“笔记本”选项卡进行访问。
 
-默认情况下，笔记本列表按“[Hotness](https://www.kaggle.com/notebooks?sortBy=hotness&amp;group=everyone&amp;pageSize=20)”排序。 “热度”顾名思义：一种衡量平台上笔记本有趣程度的方法。在热门度方面得分较高的笔记本，因此在此列表中排名靠前，通常要么是最近编写的在点赞和观看次数等方面得分较高的笔记本，要么是长期以来在平台上一直受欢迎的“历史上”伟大笔记本。
+默认情况下，笔记本列表按“[Hotness](https://www.kaggle.com/notebooks?sortBy=hotness&group=everyone&pageSize=20)”排序。 “热度”顾名思义：一种衡量平台上笔记本有趣程度的方法。在热门度方面得分较高的笔记本，因此在此列表中排名靠前，通常要么是最近编写的在点赞和观看次数等方面得分较高的笔记本，要么是长期以来在平台上一直受欢迎的“历史上”伟大笔记本。
 
 其他排序方法是
 
@@ -80,14 +76,14 @@ Kaggle 上的数据可通过数据集或我们的竞赛获得。两者都在“�
 
 标签页面包括一个部分，列出了带有给定标签的最受欢迎的页面，这使得它们成为按内容搜索笔记本的好方法。
 
-** **
-
-<!--Using the Notebook Editor-->
+***
 
 ### 使用笔记本编辑器Kaggle 笔记本可以通过笔记本编辑器创建和编辑。在较大的屏幕上，Notebook 编辑器由三个部分组成：
 
 - 编辑窗口
+
 - 一个控制台
+
 - 设置窗口
 
 Notebook 编辑器允许您编写和执行传统脚本（适用于批量执行的纯代码文件或 Rmarkdown 脚本）和 Notebook（适用于交互式代码和 Markdown 编辑器，适用于叙述分析、可视化和共享工作）。
@@ -108,17 +104,15 @@ Notebook 编辑器允许您编写和执行传统脚本（适用于批量执行�
 
 ＃＃＃＃ 设置在展开的编辑器中，“设置”窗格占据屏幕的右侧。在紧凑编辑器（隐藏设置窗格的位置）中，它折叠成“编辑器”选项卡上方的选项卡。无论哪种情况，“设置”窗格都包含以下主要选项卡：
 
-- **输入**：添加和删除附加到笔记本的数据源。请参阅下面的“添加数据源”部分中的更多信息。
+- **输入**：添加和删除附加到笔记本的数据源。请参阅下面的[Adding Data Sources](#adding-data-sources)部分了解更多信息。
 - **输出**：查看笔记本创建的输出文件。
 - **目录**：查看并导航笔记本的标题。
-- **会话选项**：配置笔记本的运行方式，包括语言、互联网、加速器和 Docker 映像设置。  请参阅下面的笔记本环境部分中的更多信息。
-- **计划选项**：笔记本可以配置为自动运行。  请参阅下面的[Scheduling Notebooks](scheduling-notebooks)部分了解更多信息。
+- **会话选项**：配置笔记本的运行方式，包括语言、互联网、加速器和 Docker 映像设置。请参阅下面的[The Notebook Environment](#the-notebooks-environment)部分了解更多信息。
+- **计划选项**：笔记本可以配置为自动运行。请参阅下面的[Scheduling Notebooks](scheduling-notebooks)部分了解更多信息。
 
 其他部分也可能可用，具体取决于笔记本电脑的配置。
 
-** **
-
-<!--Adding Data Sources-->
+***
 
 ### 添加数据源使用 Notebooks 作为数据科学工作台的优点之一是，您可以轻松地从数千个公开可用的数据源中添加数据源，甚至上传您自己的数据源。您还可以使用另一个笔记本的输出文件作为数据源。您可以将多个数据源添加到笔记本环境中，从而将它们连接在一起并产生新的见解。
 
@@ -152,9 +146,7 @@ Notebook 最多 20 GB 的输出可以保存到磁盘 /kaggle/working 中。该�
 
 由 Jeremy Howard 编写的“[Minimal LSTM + NB-SVM baseline ensemble](https://www.kaggle.com/code/minimal-lstm-nb-svm-baseline-ensemble/notebook)”是使用此功能的出色笔记本的一个示例。单击“输入”选项卡可以查看他使用的数据源。
 
-** **
-
-<!--Collaborating on Notebooks-->
+***
 
 ### 在笔记本上进行协作笔记本协作是一项强大的功能。它允许多个用户共同拥有和编辑笔记本。例如，您可以与竞赛团队成员一起迭代模型或与同学协作完成数据科学项目。
 
@@ -174,9 +166,7 @@ Notebook 最多 20 GB 的输出可以保存到磁盘 /kaggle/working 中。该�
 
 要了解有关如何协作使用数据集的更多信息，请阅读更多内容 [here.](https://www.kaggle.com/docs/datasets#collaborating-on-datasets)
 
-** **
-
-<!--The Notebook Environment-->
+***
 
 ### 笔记本环境
 
@@ -232,13 +222,11 @@ Notebooks 不仅仅是一个代码编辑器。它是一个版本化的计算环�
 
 要添加 TPU，请从笔记本编辑器导航到“设置”窗格，然后单击“加速器”> TPU v3-8 选项。如果您不需要在队列中等待访问支持 TPU 的计算机，您的会话将重新启动，这可能需要几分钟到几分钟的时间。
 
-** **
-
-<!--Connecting Kaggle Notebooks to Google Cloud Services-->
+***
 
 ### 将 Kaggle 笔记本连接到 Google 云服务**其中一些服务会向附加的 GCP 帐户收取费用。在您开始在笔记本电脑中使用以下每种产品之前，请查看它们的定价。**
 
-Kaggle 目前已与 Google Cloud Storage、BigQuery 和 AutoML 产品集成。  要启用这些集成，请单击笔记本编辑器中的“附加组件”菜单，然后选择“Google 云服务”。  进入“Google 云服务”页面后，您需要将您的帐户附加到笔记本，并且需要选择要启用的集成。  启用这些集成后，您将获得一个代码片段，可以将其复制并粘贴到您的笔记本中。
+Kaggle 目前已与 Google Cloud Storage、BigQuery 和 AutoML 产品集成。要启用这些集成，请单击笔记本编辑器中的“附加组件”菜单，然后选择“Google 云服务”。进入“Google 云服务”页面后，您需要将您的帐户附加到笔记本，并且需要选择要启用的集成。启用这些集成后，您将获得一个代码片段，可以将其复制并粘贴到您的笔记本中。
 
 此代码片段的每一行都对应于不同的 Google Cloud 服务集成，其中 `PROJECT_ID` 应该是现有的 Google Cloud 项目。根据 AutoML 文档（下面链接），AutoML 目前要求 GCS 存储桶的位置 (`COMPUTE_REGION`) 必须是 `us-central1`。
 
@@ -253,7 +241,7 @@ Kaggle 目前已与 Google Cloud Storage、BigQuery 和 AutoML 产品集成。  
 `#在这里设置你自己的项目id
 PROJECT_ID = '您的 Google 云项目'
 从 google.cloud 导入 bigquery
-bigquery_client = bigquery.Client(项目=PROJECT_ID)`  
+bigquery_client = bigquery.Client(项目=PROJECT_ID)`
 
 有关使用集成的更深入的演练，请参阅以下笔记本：
 
@@ -264,12 +252,12 @@ bigquery_client = bigquery.Client(项目=PROJECT_ID)`
 
 - **[GCS Documentation](https://cloud.google.com/storage/docs/)**
 
-Google Cloud Storage 允许在全球范围内随时存储和检索数据。用户可以将存储空间用于任何类型的数据，并且只需为已使用的存储空间付费（每月每 GB）。Google Cloud Storage 是一项付费服务​​，需要 [billing-enabled](https://cloud.google.com/billing/docs/how-to/modify-project) GCP 帐户。在尝试集成到 Kaggle Notebooks 之前，您应该仔细检查 GCS 的价格，因为它很容易产生费用。
+Google Cloud Storage 允许在全球范围内随时存储和检索数据。用户可以将存储空间用于任何类型的数据，并且只需为已使用的存储空间付费（每月每GB）。Google Cloud Storage 是一项付费服务​​，需要 [billing-enabled](https://cloud.google.com/billing/docs/how-to/modify-project) GCP 帐户。在尝试集成到 Kaggle Notebooks 之前，您应该仔细检查 GCS 的价格，因为它很容易产生费用。
 
 `#在这里设置你自己的项目id
 PROJECT_ID = '您的 Google 云项目'
 从 google.cloud 导入存储
-storage_client = storage.Client(项目=PROJECT_ID)`  
+storage_client = storage.Client(项目=PROJECT_ID)`
 
 有关使用集成的更深入的演练，请参阅以下笔记本：
 
@@ -285,12 +273,12 @@ Google AutoML 是一项付费服务​​，需要 [billing-enabled](https://clo
 
 - [AutoML Tables Pricing](https://cloud.google.com/automl-tables/pricing)
 - [AutoML Vision Pricing](https://cloud.google.com/vision/automl/pricing)
-- [AutoML Natural Language Pricing](https://cloud.google.com/natural-language/automl/pricing)`# 在这里设置你自己的项目id和计算区域
+- [AutoML Natural Language Pricing](https://cloud.google.com/natural-language/automl/pricing)``# 在这里设置你自己的项目 id 和计算区域
 PROJECT_ID = '您的 Google 云项目'
 COMPUTE_REGION = 'us-central1' # 必须是 `us-central1` 才能使用 AutoML（请参阅文档）
 从 google.cloud 导入 automl_v1beta1 作为 automl
 automl_client = automl.AutoMlClient()
-项目位置 = automl_client.location_path(PROJECT_ID, COMPUTE_REGION)`  
+项目位置 = automl_client.location_path(PROJECT_ID, COMPUTE_REGION)``
 
 有关使用集成的更深入的演练，请参阅以下笔记本：
 
@@ -304,9 +292,7 @@ automl_client = automl.AutoMlClient()
 
 有关如何将 Kaggle Notebooks 导出到 Google Cloud AI Notebooks 的更详细说明，请查看此处的公告帖子：- [\[功能发布\]升级到 Google Cloud 上的笔记本以获得更多计算能力！](https://www.kaggle.com/product-feedback/159602)
 
-** **
-
-<!-- Scheduling Notebooks -->
+***
 
 ### 安排笔记本
 
@@ -315,23 +301,19 @@ automl_client = automl.AutoMlClient()
 - 基于时间（频率）：将笔记本设置为每天、每周或每月运行。
 - 数据集更新：只要笔记本使用的数据集发生变化，就运行笔记本。即使数据多次更改，这种情况每天最多发生一次。
 
-可以在编辑器或查看器中安排笔记本。  在笔记本编辑器的右侧“设置”菜单下，找到名为“安排笔记本运行”的部分。  在该部分中，上述每个配置都有相应的选项。  笔记本查看器的“设置”选项卡中也提供了相同的选项。
+可以在编辑器或查看器中安排笔记本。在笔记本编辑器的右侧“设置”菜单下，找到名为“安排笔记本运行”的部分。在该部分中，上述每个配置都有相应的选项。笔记本查看器的“设置”选项卡中也提供了相同的选项。
 
-请注意，您可以安排的笔记本数量是有限制的。  请参阅“活动事件”窗格以获取所有已安排笔记本的列表。
+请注意，您可以安排的笔记本数量是有限制的。请参阅“活动事件”窗格以获取所有已安排笔记本的列表。
 
-** **
-
-<!--Kaggle Jupyter Server-->
+***
 
 ### [实验] Kaggle Jupyter 服务器
 
-笔记本工作负载在支持 *Kaggle Jupyter Server* 上执行，
-  有时称为*会话*。*Kaggle Jupyter 服务器* 针对访问 Kaggle 支持硬件上的 Kaggle 资源（例如大型数据集、模型和竞赛数据）进行了高度优化。虽然 Kaggle Notebooks 是在 Kaggle 上执行工作负载的主要方式，但用户还可以从 Colab 或 VS Code 等各种笔记本编辑器连接到 *Kaggle Jupyter Server*。通过将 Colab 或 VS Code 连接到 *Kaggle Jupyter Server*，用户可以在这些环境中利用这些优化。
+笔记本工作负载在支持 *Kaggle Jupyter Server* 上执行，有时称为 *Session*。*Kaggle Jupyter 服务器* 针对访问 Kaggle 支持硬件上的 Kaggle 资源（例如大型数据集、模型和竞赛数据）进行了高度优化。虽然 Kaggle Notebooks 是在 Kaggle 上执行工作负载的主要方式，但用户还可以从 Colab 或 VS Code 等各种笔记本编辑器连接到 *Kaggle Jupyter Server*。通过将 Colab 或 VS Code 连接到 *Kaggle Jupyter Server*，用户可以在这些环境中利用这些优化。
 
 我们不断致力于与外部笔记本环境的更深入集成。我们欢迎您的反馈和建议来帮助我们改进。如果您有任何意见或需要帮助，请在 Kaggle [Product Feedback](https://www.kaggle.com/discussions/product-feedback) 论坛中创建帖子。
 
-#### 
-  在 Colab 中打开笔记本并自动连接到 Kaggle Jupyter 服务器
+#### 在 Colab 中打开笔记本并自动连接到 Kaggle Jupyter 服务器
 
 在 Kaggle Notebook 编辑器中，**运行 > Kaggle Jupyter Server** 菜单项会打开一个标题为 *Kaggle Jupyter Server* 的侧面板。
 
@@ -341,30 +323,28 @@ automl_client = automl.AutoMlClient()
 
 新打开的 Colab 选项卡中的笔记本不会自动保存。为了避免丢失您的工作，请务必备份您的 Colab 笔记本 - 例如，使用 Colab 的 **文件 > 在云端硬盘中保存副本** 菜单选项。**如果您的 Kaggle Jupyter 服务器关闭** - 例如，由于不活动 - **那么您连接的 Colab 编辑器将默默地从该支持会话断开**。下一节将展示如何将这些断开连接的会话重新连接到新的 *Kaggle Jupyter Server*。
 
-#### 
-  将现有 Colab 笔记本重新连接到您的 *Kaggle Jupyter 服务器*
+#### 将现有 Colab 笔记本重新连接到您的 *Kaggle Jupyter 服务器*
 
 *Kaggle Jupyter Server* 面板提供“手动连接”部分。此部分显示“Colab 兼容 URL”，用户可以将其复制到剪贴板。要将现有 Colab 笔记本重新连接到 Kaggle：
 
 1. 首先启动 *Kaggle Jupyter Server* 会话，
 2. 从 *Kaggle Jupyter Server* 面板复制“Colab 兼容 URL”，
-3. 在 Colab 笔记本中导航至
-    **重新连接 > 连接到本地运行时**，
-![...](/static/images/docs/notebooks/colab-connect-to-local-runtime.png)4。将复制的 URL 粘贴到提供的文本字段中，然后单击“连接”按钮。
-![...](/static/images/docs/notebooks/colab-backend-url.png)
+3. 在 Colab 笔记本中导航至 **重新连接 > 连接到本地运行时**，
+
+   ![...](/static/images/docs/notebooks/colab-connect-to-local-runtime.png)
+4. 将复制的 URL 粘贴到提供的文本字段中，然后单击“连接”按钮。
+
+   ![...](/static/images/docs/notebooks/colab-backend-url.png)
 
 此过程将 Colab 笔记本连接到 *Kaggle Jupyter 服务器*。单击 [here](https://research.google.com/colaboratory/local-runtimes.html) 了解有关 Colab 本地运行时功能的更多信息。
 
-用户可以使用这些相同的步骤将任何现有的 Colab 笔记本连接到 Kaggle Jupyter 服务器，即使该 Colab 笔记本从未从 Kaggle 打开。#### 
-  从 VS Code 或 Jupyter `/tree` 连接
+用户可以使用这些相同的步骤将任何现有的 Colab 笔记本连接到 Kaggle Jupyter 服务器，即使该 Colab 笔记本从未从 Kaggle 打开。#### 从 VS Code 或 Jupyter 连接 `/tree`
 
 “手动连接”部分还提供了“VS Code 兼容 URL”。用户可以利用此 URL 将 VS Code 支持的 .ipynb 编辑器连接到 Kaggle 后端。请参阅 VSCode 的文档 *[Connect to Jupyter Server](https://code.visualstudio.com/docs/datascience/jupyter-notebooks#_connect-to-a-remote-jupyter-server)* 了解更多信息。
 
 用户还可以将“Colab兼容URL”粘贴到浏览器的地址栏中，直接访问Jupyter服务器的`/tree`界面。
 
-** **
-
-<!--Technical Specifications-->
+***
 
 ### 技术规格
 
@@ -373,56 +353,75 @@ Kaggle Notebooks 在远程计算环境中运行。我们提供硬件——您只
 在撰写本文时，每个 Notebook 编辑会话都提供以下资源：
 
 - CPU 和 GPU 笔记本会话的执行时间为 12 小时，TPU 笔记本会话的执行时间为 9 小时
+
 - 20 GB 自动保存磁盘空间 (/kaggle/working)
+
 - 额外的暂存器磁盘空间（/kaggle/working 之外）不会保存在当前会话之外
 
 中央处理器规格
 
 - 4个CPU核心
+
 - 30 GB 内存
 
 P100 GPU 规格
 
 - 1 个 Nvidia Tesla P100 GPU
+
 - 4个CPU核心
+
 - 29 GB 内存
 
 T4 x2 GPU 规格
 
 - 2 个 Nvidia Tesla T4 GPU
+
 - 4个CPU核心
+
 - 29 GB 内存
 
 TPU 1VM 规格- 96个CPU核心
+
 - 330 GB 内存
 
-注意：CPU 平台（例如 Intel Skylake、Broadwell、AMD）在常规笔记本运行期间可能会有所不同，但是提交的内容
-运行（用于代码竞赛或批量重新运行提交时）始终在 Intel Skylake CPU 上运行。
+注意：CPU 平台（例如 Intel Skylake、Broadwell、AMD）在常规笔记本运行期间可能会有所不同，但提交运行（用于代码竞赛或批量重新运行提交时）始终在 Intel Skylake CPU 上运行。
 
 中央处理器规格
 
 编辑笔记本时，您将有 20 分钟的空闲时间进行交互式会话。如果代码在这段时间内没有被修改或执行，当前的交互会话将结束。如果发生这种情况，您将需要再次单击“编辑”按钮才能继续编辑。如果要运行需要更长时间的计算，可以通过选择“保存版本”菜单中的“保存并运行全部”选项，从上到下保存笔记本的版本（见下文）。
 
 一旦您对笔记本的内容感到满意，您可以单击“保存版本”来保存更改。从那里您将有两个创建新版本的选项：- **快速保存** 跳过从上到下的笔记本执行，只拍摄笔记本的快照，与编辑器中显示的完全一样。当您仍在积极尝试时，这是一个获取多个版本的绝佳选择。 Quick Save 是 Kaggle 上保存工作的一种全新方式。
+
 - **保存并运行全部** 创建一个具有完全干净状态的新会话，并从上到下运行您的笔记本。这非常适合重大里程碑或当您想要分享您的工作时，因为它让您（以及阅读您笔记本的其他人）确信您的笔记本可以重复运行。为了成功保存，整个Notebook必须在12小时内执行（TPU笔记本为9小时）。保存并运行全部与您之前在 Kaggle 上使用过的“提交”行为相同。
 
 ### [实验] 使用 Colab Pro 提高 GPU 计算能力
 
-我们正在推出一项实验性功能，让您可以在 Kaggle 上获得额外的 GPU 时间
-    如果您是 Colab Pro 客户。这是一个限时促销，我们希望它能够修改并升级为 Kaggle 上可持续的、长期的按比例付费功能。
+我们正在推出一项实验性功能，如果您是 Colab Pro 客户，您可以在 Kaggle 上获得额外的 GPU 时间。这是一个限时促销，我们希望它能够修改并升级为 Kaggle 上可持续的、长期的按比例付费功能。
 
 **它是如何运作的**- 您可以通过`File`菜单并单击`Link to Colab`选项在笔记本编辑器中链接您的Colab帐户。之前链接过其帐户的用户将自动注册参加此促销活动。
+
 - Colab Pro 和 Pro+ 用户将在 Kaggle 上分别获得**每周 15 小时和 30 小时的额外 GPU 小时**。要享受此优惠，您需要通过将您的 Kaggle 帐户与有效的 Colab Pro 帐户**链接**来验证您的 Colab 订阅。
+
 - 这些额外的 GPU 时间不会消耗您的 Colab 计算单元。
+
 - 您将使用您习惯的相同 Kaggle 硬件（CPU、T4、P100、TPUv3-8）。
+
 - 一旦帐户被验证为具有有效的 Colab 订阅，您将获得额外的 GPU 时间，并且您可以在 Kaggle 帐户设置中的配额中看到它们。
+
 - 您可以随时通过设置页面取消链接您的 Colab 帐户。
 
-**法律条款**- Kaggle 保留随时自行决定终止或暂停促销活动的权利，无论是否发出通知。促销活动的结束日期可能不会公开宣布，并且可能会在没有事先警告的情况下发生。
-- Kaggle 保留随时修改所提供的额外 GPU 小时数或促销条款的权利，恕不另行通知。
+**法律条款**
+
+- Kaggle 保留随时自行决定终止或暂停促销活动的权利，无论是否发出通知。促销活动的结束日期可能不会公开宣布，并且可能会在没有事先警告的情况下发生。- Kaggle 保留随时修改所提供的额外 GPU 小时数或促销条款的权利，恕不另行通知。
+
 - Kaggle 对因促销活动终止或修改而造成的任何损失或不便不承担任何责任。
+
 - 此促销仅限每位 Colab Pro 订阅者使用一个链接的 Kaggle 帐户。
+
 - 如果 Kaggle 用户取消其 Colab Pro 帐户，Kaggle 可能会终止其链接的 Kaggle 帐户的额外 GPU 小时数。
+
 - 额外的 GPU 时间不可转让，也不能兑换现金或任何其他商品或服务。
+
 - Kaggle GPU 资源的使用须遵守 Kaggle 的使用条款和其他适用政策。滥用或误用 GPU 资源可能会导致您的 Kaggle 帐户被暂停或终止。
+
 - Kaggle 保留取消任何违反这些条款或参与与促销相关的欺诈或滥用活动的用户资格的权利。

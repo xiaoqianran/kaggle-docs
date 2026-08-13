@@ -4,9 +4,7 @@
 
 Kaggle 竞赛旨在为参赛者在机器学习职业生涯的各个不同阶段提供挑战。因此，它们非常多样化，类型广泛。
 
-** **
-
-<!--Prediction Competitions-->
+***
 
 ### 预测比赛
 
@@ -25,7 +23,7 @@ Kaggle 竞赛旨在为参赛者在机器学习职业生涯的各个不同阶段�
 - [Google Landmark Retrieval Challenge](https://www.kaggle.com/c/landmark-retrieval-challenge) – 给定一张图像，在数据集中找到所有相同的地标。
 - [Right Whale Recognition](https://www.kaggle.com/c/noaa-right-whale-recognition) – 在航空照片中识别濒临灭绝的露脊鲸。
 
-##### 代码竞赛
+##### Code Competitions
 
 在这些比赛中，所有提交的内容都必须在 Kaggle Notebook 内进行。您无法直接上传预测。
 
@@ -40,7 +38,7 @@ Kaggle 竞赛旨在为参赛者在机器学习职业生涯的各个不同阶段�
 - **计算限制：** 限制（RAM、CPU 等）在编辑器中可见。
 - **获胜者：** 通常通过在截止日期后在私人测试集上重新运行笔记本来确定。
 
-示例包括：
+Examples Include:
 
 - [The Konwinski Prize](https://www.kaggle.com/competitions/konwinski-prize) – 100 万美元的 AI 可以解决 90% 的新 GitHub 问题。
 - [Detect AI Generated Text](https://www.kaggle.com/competitions/llm-detect-ai-generated-text) - 识别哪篇文章是由大型语言模型编写的。
@@ -101,9 +99,7 @@ Kaggle 竞赛旨在为参赛者在机器学习职业生涯的各个不同阶段�
 
 Kaggle 可以通过重新启动竞赛或生成新的测试集来解决泄漏问题。
 
-** **
-
-<!--Hackathon Competitions-->
+***
 
 ### 黑客马拉松比赛
 
@@ -113,8 +109,8 @@ Kaggle 黑客马拉松是一种竞赛形式，您可能会被要求执行各种�
 
 示例包括：
 
-- [Gemma 3n Impact Challenge](https://www.kaggle.com/competitions/google-gemma-3n-hackathon/overview) - 使用最新的 Gemma 模型打造您最好的产品，打造更美好的世界。
-- [OpenAI to Z Challenge](https://www.kaggle.com/c/openai-to-z-challenge) - 使用 OpenAI o3/o4 mini 和 GPT 4.1 模型来帮助识别可能隐藏的考古遗址。
+- [Gemma 3n Impact Challenge](https://www.kaggle.com/competitions/google-gemma-3n-hackathon/overview) - 使用最新的 Gemma 模型为更美好的世界打造最好的产品。
+- [OpenAI to Z Challenge](https://www.kaggle.com/c/openai-to-z-challenge) - 使用 OpenAI o3/o4 mini 和 GPT 4.1 模型帮助识别可能隐藏的考古遗址。
 - [Vibe Code with Gemini 3 Pro in AI Studio](https://www.kaggle.com/competitions/gemini-3/overview) - 与 Gemini 3 一起构建并争夺 500,000 美元的积分。
 - [NFL Big Data Bowl](https://www.kaggle.com/competitions/nfl-big-data-bowl-2026-analytics) - 了解球在空中时的球员动作。
 
@@ -122,7 +118,7 @@ Kaggle 黑客马拉松是一种竞赛形式，您可能会被要求执行各种�
 
 每场黑客马拉松还可能要求您附上笔记本、链接或其他内容以供评委考虑。详细内容请参见具体评价标准。
 
-##### 如何创建文章Kaggle Writeup 可作为您的项目报告。这应该包括标题、副标题和对您提交的内容的详细分析。您必须为您的写作选择一个曲目才能提交。赛道是主办方定义的特定类别或问题领域（例如“可视化赛道”与“创新赛道”），可能有不同的评估标准或奖项。请务必检查竞赛评估页面，看看您是否可以提交多个赛道，或者是否必须只选择一个
+##### 如何创建文章Kaggle Writeup 可作为您的项目报告。这应包括标题、副标题以及对您提交的内容的详细分析。您必须为您的写作选择一个曲目才能提交。赛道是主办方定义的特定类别或问题领域（例如“可视化赛道”与“创新赛道”），可能有不同的评估标准或奖项。请务必检查竞赛评估页面，看看您是否可以提交多个赛道，或者是否必须只选择一个
 
 要创建新的Writeup，请单击竞赛页面中的“New Writeup”按钮。保存写作后，您应该在右上角看到“提交”按钮。
 
@@ -154,7 +150,7 @@ Kaggle上的所有内容都是用[Markdown](https://github.com/showdownjs/showdo
 
 |标准|可能的积分 |
 | --- | --- |
-|准确性：视频提供准确的信息并利用当前的最佳实践。 | 0-10分 |
+|准确性：视频提供准确的信息并利用当前的最佳实践。 | 0-10分|
 |信息量：视频讨论了快速工程及其对项目的重要性等主题。 | 0-10分 |
 |教学价值：该视频对于 Gemini API 用户来说是宝贵的学习资源。 | 0-10分 |
 |娱乐和制作质量：视频赏心悦目，制作质量专业。 | 0-10分 |
@@ -169,9 +165,7 @@ Kaggle上的所有内容都是用[Markdown](https://github.com/showdownjs/showdo
 
 请注意，评委可能需要几周的时间才能完成对提交材料的审核，尤其是在比赛参与度很高的情况下。评委也很少能够向所有参与者提供个性化的反馈或分数。
 
-** **
-
-<!--Simulation Competitions-->
+***
 
 ### 模拟比赛模拟不是针对静态数据集进行预测，而是托管动态环境。您提交的代理是在游戏或模拟环境中与其他参与者的代理竞争的代理。环境规则概述了比赛的条款，提交的作品将与技术水平相似的对手进行匹配，玩多个回合以建立排行榜。
 
@@ -190,9 +184,7 @@ Kaggle上的所有内容都是用[Markdown](https://github.com/showdownjs/showdo
 
 此过程的目标是通过使用动态评级系统将自动提交的内容与具有相似技能水平的对手重复配对，来准确地对竞赛参与者进行排名。通过模拟大量比赛并完善性能统计估计，系统确保最终排行榜反映每个用户表现最好的代理的真实技能。
 
-** **
-
-<!--General Resources and Info-->### 入门资源
+***### 入门资源
 
 - **学习：** [Kaggle Learn](https://www.kaggle.com/learn/overview) 用于实践曲目。
 - **视频：** [What Kaggle has learned](https://www.youtube.com/watch?v=oYNKc_u9Os8) 和 [How to (almost) win at Kaggle](https://www.youtube.com/watch?v=JyEm3m7AzkE)。

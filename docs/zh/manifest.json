@@ -101,36 +101,36 @@
       "translatedAt": "2026-08-08T18:57:33.051Z"
     },
     "platform/benchmarks.md": {
-      "hash": "0fcc152952734111896ea5756bb92a64366d5f09",
-      "translatedAt": "2026-08-08T18:57:33.977Z"
+      "hash": "5896f5375fdf79283e708b18aaec3d87f5df5eaa",
+      "translatedAt": "2026-08-13T08:09:19.770Z"
     },
     "platform/efficient-gpu-usage.md": {
-      "hash": "13500c39c3777211001b435b18780f1ec6fa17a8",
-      "translatedAt": "2026-08-08T18:57:35.333Z"
+      "hash": "6417a4b820477d75ee6ef0589c158a782b2203a7",
+      "translatedAt": "2026-08-13T08:09:26.542Z"
     },
     "platform/getting-started.md": {
       "hash": "4d2795b38ff8948213bf46659e010f8acb85669f",
       "translatedAt": "2026-08-08T18:57:35.715Z"
     },
     "platform/competitions.md": {
-      "hash": "66221be22efef3c6625bf764f57e4f2ca0684d3f",
-      "translatedAt": "2026-08-08T18:57:39.310Z"
+      "hash": "ffc2043bd44a7a0cd7f0ae9faf725729e68d00bd",
+      "translatedAt": "2026-08-13T08:09:24.987Z"
     },
     "platform/models.md": {
-      "hash": "1499c2a7b182a9f02cbe1db4f96f81f96874ce6c",
-      "translatedAt": "2026-08-08T18:57:42.559Z"
+      "hash": "d91d0255c849ccc2fb242a6ea8f6be32112f2f0a",
+      "translatedAt": "2026-08-13T08:09:32.593Z"
     },
     "platform/datasets.md": {
-      "hash": "c76d5aa1a7a5a72c8660efdcafd0ed6f4f7a81b2",
-      "translatedAt": "2026-08-08T18:57:43.332Z"
+      "hash": "1525bb90b15e856854487bf5535ee0f50a14f4e3",
+      "translatedAt": "2026-08-13T08:09:30.905Z"
     },
     "platform/organizations.md": {
-      "hash": "4713733f42b31ae8d1546c8ef2837842b5659546",
-      "translatedAt": "2026-08-08T18:57:47.475Z"
+      "hash": "9364eb6f1956b3bd79ab2cf7e8676a1a28a78004",
+      "translatedAt": "2026-08-13T08:09:36.728Z"
     },
     "platform/packages.md": {
-      "hash": "a1dc6800959f76bcccb73df06e23dcbf244ca746",
-      "translatedAt": "2026-08-08T18:57:51.021Z"
+      "hash": "22c03e7f390a86114bf755584d3fe7d1287e544b",
+      "translatedAt": "2026-08-13T08:09:46.265Z"
     },
     "skills/SKILL.md": {
       "hash": "b1776a6111514c682576e6530ce0e0a63558cc16",
@@ -141,12 +141,12 @@
       "translatedAt": "2026-08-08T18:57:53.420Z"
     },
     "platform/notebooks.md": {
-      "hash": "99438d0d5a52bc2cccf12f661f6f393927f387eb",
-      "translatedAt": "2026-08-08T18:57:54.239Z"
+      "hash": "7d9972adc4a964f8fab35b456e1dd726291c7b7c",
+      "translatedAt": "2026-08-13T08:09:47.799Z"
     },
     "platform/tpu.md": {
-      "hash": "474b22e1a2fa3886292790945bdaea2ebf5c318a",
-      "translatedAt": "2026-08-08T18:57:54.267Z"
+      "hash": "a30844e1117523275590a1ed8bd94c974865d000",
+      "translatedAt": "2026-08-13T08:09:51.099Z"
     },
     "skills/references/configuration.md": {
       "hash": "20c431770e68c64f61f9f14aad59bd29b42a4632",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-08-12T08:07:54.136Z",
+  "updatedAt": "2026-08-13T08:09:51.100Z",
   "stats": {
-    "translated": 2,
-    "skipped": 47,
+    "translated": 9,
+    "skipped": 40,
     "failed": 0,
     "total": 49
   }
