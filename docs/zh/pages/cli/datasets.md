@@ -25,7 +25,7 @@ kaggle datasets list [options]
 * `-m, --mine`：仅显示您的数据集。
 * `--user <USER>`：按特定用户或组织过滤。
 * `-p, --page <PAGE>`：结果页码（默认值：1）。
-* `-v, --csv`：以CSV格式打印结果。
+* `-v, --csv`：以 CSV 格式打印结果。
 * `--max-size <BYTES>`：最大数据集大小（以字节为单位）。
 * `--min-size <BYTES>`：最小数据集大小（以字节为单位）。
 
@@ -73,7 +73,7 @@ kaggle datasets files <DATASET> [options]
 
 **示例：**
 
-列出数据集 `kerneler/brazilian-bird-observation-metadata-from-wikiaves` 的前 7 个文件：
+列出数据集`kerneler/brazilian-bird-observation-metadata-from-wikiaves`的前 7 个文件：
 
 ```bash
 kaggle datasets files kerneler/brazilian-bird-observation-metadata-from-wikiaves --page-size=7
@@ -99,20 +99,20 @@ kaggle datasets download <DATASET> [options]
 
 **选项：**
 
-* `-f, --file <FILE_NAME>`：要下载的特定文件（如果不指定则下载全部）。
+* `-f, --file <FILE_NAME>`：要下载的特定文件（如果不指定则下载全部）。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在下载路径下。
 * `-p, --path <PATH>`：下载文件的文件夹（默认为当前目录）。
 * `-w, --wp`：下载文件到当前工作路径。
 * `--unzip`：解压下载的文件（之后删除.zip 文件）。
 * `-o, --force`：强制下载，覆盖现有文件。
 * `-q, --quiet`：抑制详细输出。
 
-**示例：**
-
-1. 下载数据集`willianoliveiragibin/pixar-films`的所有文件：
+**示例：**1. 下载数据集`willianoliveiragibin/pixar-films`的所有文件：
 
     ```bash
     kaggle datasets download -d willianoliveiragibin/pixar-films
-    ```2. 下载数据集`goefft/public-datasets-with-file-types-and-columns`，解压到`tmp`文件夹中，必要时覆盖，并抑制输出：
+    ```
+
+2. 下载数据集`goefft/public-datasets-with-file-types-and-columns`，解压到`tmp`文件夹中，必要时覆盖，并抑制输出：
 
     ```bash
     kaggle datasets download goefft/public-datasets-with-file-types-and-columns -p tmp --unzip -o -q
@@ -122,6 +122,12 @@ kaggle datasets download <DATASET> [options]
 
     ```bash
     kaggle datasets download goefft/public-datasets-with-file-types-and-columns -f dataset_results.csv -w -q -o
+    ```
+
+4. 下载数据集内文件夹中的文件。文件写入`data/WICAgencies2014ytd/Food_Costs.csv`：
+
+    ```bash
+    kaggle datasets download jpmiller/publicassistance -f WICAgencies2014ytd/Food_Costs.csv -p data
     ```
 
 **目的：**

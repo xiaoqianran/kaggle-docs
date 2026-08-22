@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-21T07:33:33.914Z",
+  "fetchedAt": "2026-08-22T07:21:53.194Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -102,7 +102,7 @@
     },
     {
       "rel": "cli/changelog.md",
-      "bytes": 21744,
+      "bytes": 21920,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/CHANGELOG.md",
       "track": "CLI & API"
@@ -130,7 +130,7 @@
     },
     {
       "rel": "cli/competitions.md",
-      "bytes": 12890,
+      "bytes": 13259,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/competitions.md",
       "track": "CLI & API"
@@ -144,7 +144,7 @@
     },
     {
       "rel": "cli/datasets.md",
-      "bytes": 11311,
+      "bytes": 11656,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/datasets.md",
       "track": "CLI & API"
@@ -256,7 +256,7 @@
     },
     {
       "rel": "skills/references/competitions.md",
-      "bytes": 11537,
+      "bytes": 11734,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/competitions.md",
       "track": "Agent Skills"
@@ -270,7 +270,7 @@
     },
     {
       "rel": "skills/references/datasets.md",
-      "bytes": 7720,
+      "bytes": 7902,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/datasets.md",
       "track": "Agent Skills"

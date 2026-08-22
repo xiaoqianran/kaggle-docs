@@ -105,7 +105,7 @@ kaggle datasets download [DATASET] [options]
 
 **选项：**
 
-- `-f, --file <NAME>`：下载一个文件。省略时下载所有文件。
+- `-f, --file <NAME>`：下载一个文件。省略时下载所有文件。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在 `--path` 下。
 - `-p, --path <PATH>`：下载目录。
 - `-w, --wp`：下载到当前工作路径。
 - `--unzip`：解压下载的存档并删除zip。
@@ -117,13 +117,14 @@ kaggle datasets download [DATASET] [options]
 ```bash
 kaggle datasets download kaggle/titanic
 kaggle d download kaggle/titanic -f train.csv -p data --unzip
+kaggle datasets download jpmiller/publicassistance -f WICAgencies2014ytd/Food_Costs.csv -p data
 ```
 
 **用途：** 检索本地工作的数据集文件。
 
 ## `kaggle datasets init`
 
-创建一个启动器`dataset-metadata.json`。
+创建一个启动器 `dataset-metadata.json`。
 
 **用途：**
 
@@ -165,9 +166,9 @@ kaggle datasets create [options]
 
 ```bash
 kaggle datasets create -p my-dataset -u -q -t -r skip
-```
+```**目的：**上传本地文件和元数据以创建 Kaggle 数据集。
 
-**目的：**上传本地文件和元数据以创建 Kaggle 数据集。## `kaggle datasets version`
+## `kaggle datasets version`
 
 创建现有数据集的新版本。
 
@@ -247,9 +248,7 @@ kaggle d status owner/dataset --format json
 
 ## `kaggle datasets delete`
 
-删除数据集。
-
-**用途：**
+删除数据集。**用途：**
 
 ```bash
 kaggle datasets delete <DATASET> [options]
@@ -263,7 +262,9 @@ kaggle datasets delete <DATASET> [options]
 
 ```bash
 kaggle datasets delete owner/dataset -y
-```**目的：** 从 Kaggle 中删除数据集。
+```
+
+**目的：** 从 Kaggle 中删除数据集。
 
 ## 数据集讨论命令
 
@@ -299,7 +300,7 @@ kaggle datasets topics list zillow/zecon --sort-by recent --page-size 50
 
 **目的：** 在打开特定主题之前浏览数据集讨论。
 
-`kaggle datasets topics` 不带 `list` 可作为列出的快捷方式
+`kaggle datasets topics` 没有 `list` 可作为列出的快捷方式
 主题。
 
 ### `kaggle datasets topics show`

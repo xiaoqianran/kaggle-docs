@@ -13,20 +13,20 @@
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "d5a9ade5cb773983196216f169333cbb7310a769",
-      "translatedAt": "2026-08-12T08:07:54.136Z"
+      "hash": "d0a1ed810be10a5821fa0518846edfacd11261dc",
+      "translatedAt": "2026-08-22T07:22:01.060Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
       "translatedAt": "2026-08-08T18:57:20.502Z"
     },
     "cli/competitions.md": {
-      "hash": "a7afdbd7bd5d9447844faac1cc00936bb3631274",
-      "translatedAt": "2026-08-08T18:57:22.334Z"
+      "hash": "09616436e9497cd8c329cca5e9475e18cbeb0e16",
+      "translatedAt": "2026-08-22T07:21:58.254Z"
     },
     "cli/datasets.md": {
-      "hash": "17236ce3187b376dd7fb006694955ab4f0083e08",
-      "translatedAt": "2026-08-08T18:57:22.795Z"
+      "hash": "d4abd335910739beef7cd2f073f0ba52ae3badae",
+      "translatedAt": "2026-08-22T07:22:01.581Z"
     },
     "cli/forums.md": {
       "hash": "d401f5fe61c99a0e4be9100d27e43bbe62db99d0",
@@ -153,12 +153,12 @@
       "translatedAt": "2026-08-08T18:57:54.913Z"
     },
     "skills/references/datasets.md": {
-      "hash": "d547039b64194e0cec20235cc8cf36d6724483fa",
-      "translatedAt": "2026-08-08T18:57:56.958Z"
+      "hash": "e9f6a4f3cf54b22067dc9e85275cc2300e1d561f",
+      "translatedAt": "2026-08-22T07:22:03.872Z"
     },
     "skills/references/competitions.md": {
-      "hash": "91426d793597cb674b18445a20a3f3ad8b787503",
-      "translatedAt": "2026-08-08T18:57:56.960Z"
+      "hash": "e5d3e970ed20046094b4ba99d8774d198efb9839",
+      "translatedAt": "2026-08-22T07:22:03.955Z"
     },
     "skills/references/files.md": {
       "hash": "95f9e1ba9b1e79dd03e031c68c747b2d909e7989",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-08-21T07:33:33.955Z",
+  "updatedAt": "2026-08-22T07:22:03.955Z",
   "stats": {
-    "translated": 0,
-    "skipped": 49,
+    "translated": 5,
+    "skipped": 44,
     "failed": 0,
     "total": 49
   }

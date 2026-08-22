@@ -116,7 +116,7 @@ kaggle competitions download [COMPETITION] [options]
 
 **选项：**
 
-- `-f, --file <NAME>`：下载一个文件。省略时下载所有文件。
+- `-f, --file <NAME>`：下载一个文件。省略时下载所有文件。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在 `--path` 下。
 - `-p, --path <PATH>`：下载目录。
 - `-w, --wp`：下载到当前工作路径。
 - `-o, --force`：即使本地文件看起来是最新的，也强制下载。
@@ -127,6 +127,7 @@ kaggle competitions download [COMPETITION] [options]
 ```bash
 kaggle competitions download titanic
 kaggle competitions download titanic -f train.csv -p data
+kaggle competitions download rsna-intracranial-aneurysm-detection -f kaggle_evaluation/rsna_gateway.py -p data
 kaggle c download -w -o -q
 ```
 
@@ -161,7 +162,7 @@ kaggle competitions submit titanic -f submission.csv -m "CI run" --wait 600
 
 **目的：** 向竞赛提交预测或代码内核输出。
 
-**注意：** 成功时，命令会打印 `Submission ref: <ref>`；与它一起使用
+**注意：** 成功时，该命令将打印 `Submission ref: <ref>`；与它一起使用
 `kaggle competitions submission <ref>`。 `--sandbox` 用于比赛
 主机/管理员。代码竞赛提交使用`-k`、`-f`和可选的`-v`。
 
@@ -259,10 +260,10 @@ kaggle competitions team-submissions <TEAM_ID> [options]
 
 ```bash
 kaggle competitions team-submissions 12345
-```
+```**目的：** 对于模拟比赛，列出所有活跃的公众提交内容；
+对于常规比赛，列出团队提交的公共排行榜。
 
-**目的：** 对于模拟比赛，列出所有活跃的公众提交内容；
-对于常规比赛，列出团队提交的公共排行榜。## 模拟竞赛命令
+## 模拟竞赛命令
 
 ### `kaggle competitions episodes`
 
@@ -347,9 +348,7 @@ kaggle competitions logs 987654 0 -p logs
 
 **用途：** 下载每个代理的事件日志以进行调试。
 
-## `kaggle competitions pages`
-
-列出竞赛的页面。
+## `kaggle competitions pages`列出竞赛的页面。
 
 **用途：**
 
@@ -357,7 +356,9 @@ kaggle competitions logs 987654 0 -p logs
 kaggle competitions pages [COMPETITION] [options]
 ```
 
-**选项：**- `-v, --csv`：打印 CSV。
+**选项：**
+
+- `-v, --csv`：打印 CSV。
 - `-q, --quiet`：抑制额外输出。
 - `--content`：显示整页内容。
 - `--page-name <NAME>`：过滤到特定页面，如`description`，
@@ -424,9 +425,7 @@ kaggle competitions topics show <TOPIC_REF> [TOPIC_ID] [options]
   使用双参数形式时的实体引用。
 - `[TOPIC_ID]`：二参数形式的可选主题 ID。
 
-**选项：**
-
-- `--page-size <SIZE>`：返回的评论数。
+**选项：**- `--page-size <SIZE>`：返回的评论数。
 - `--page-token <TOKEN>`：页面令牌。
 - `-v, --csv`：打印 CSV。
 - `-q, --quiet`：抑制额外输出。
@@ -436,7 +435,9 @@ kaggle competitions topics show <TOPIC_REF> [TOPIC_ID] [options]
 ```bash
 kaggle competitions topics show titanic/12345
 kaggle competitions topics show titanic 12345
-```**目的：** 阅读竞赛讨论主题及其评论。
+```
+
+**目的：** 阅读竞赛讨论主题及其评论。
 
 ### `kaggle competitions topic-messages`
 
@@ -450,7 +451,7 @@ kaggle competitions topic-messages [COMPETITION] <TOPIC_ID> [options]
 
 **参数：**
 
-- `[COMPETITION]`：比赛子弹。如果省略，则默认竞争来自
+- `[COMPETITION]`：竞赛子弹。如果省略，则默认竞争来自
   可以使用配置。
 - `<TOPIC_ID>`：讨论主题 ID。
 
@@ -469,4 +470,4 @@ kaggle competitions topic-messages titanic 12345 --sort-by old -n 50
 ```
 
 **目的：** 使用已弃用的隐藏别名列出竞赛评论
-当旧的工作流程仍然调用`topic-messages`时的主题。
+当旧的工作流程仍然调用 `topic-messages` 时的主题。
