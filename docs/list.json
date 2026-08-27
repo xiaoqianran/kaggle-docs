@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-26T07:35:36.882Z",
+  "fetchedAt": "2026-08-27T17:56:48.139Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -25,7 +25,7 @@
     },
     {
       "rel": "platform/api.md",
-      "bytes": 1816,
+      "bytes": 18614,
       "source": "kaggle.com",
       "url": "https://www.kaggle.com/docs/api.md",
       "track": "Platform Docs"
