@@ -32,7 +32,7 @@ The API supports:
 - **Token Introspection** (RFC 7662) for validating tokens
 - **OAuth 2.0 Discovery** via well-known endpoints
 
-#### Quick Start
+#### OAuth 2.0
 
 For public clients (CLI tools, desktop apps, etc.), the typical flow is:
 
@@ -44,7 +44,7 @@ For public clients (CLI tools, desktop apps, etc.), the typical flow is:
 6. Use access tokens to call Kaggle APIs
 7. Refresh tokens when access tokens expire
 
-#### Discovery Endpoints
+##### Discovery Endpoints
 
 Retrieve OAuth 2.0 server metadata including supported endpoints, grant types, and scopes:
 
@@ -58,7 +58,7 @@ Retrieve metadata about the protected resource (Kaggle API):
 GET https://www.kaggle.com/.well-known/oauth-protected-resource
 ```
 
-#### Client ID Types
+##### Client ID Types
 
 Kaggle supports two types of OAuth clients:
 
@@ -69,7 +69,7 @@ Kaggle supports two types of OAuth clients:
 
 To register a new OAuth client, contact the Kaggle team.
 
-#### Request Body Encoding
+##### Request Body Encoding
 
 The OAuth 2.0 token, refresh, and introspection endpoints all accept request bodies in either of two encodings:
 
@@ -78,9 +78,9 @@ The OAuth 2.0 token, refresh, and introspection endpoints all accept request bod
 
 The two encodings are interchangeable; pick whichever matches the rest of your HTTP stack. Each example below shows the form-urlencoded variant first and the equivalent JSON variant immediately after.
 
-#### Authorization Flow
+##### Authorization Flow
 
-##### Step 1: Generate PKCE Challenge
+###### Step 1: Generate PKCE Challenge
 
 Before starting the authorization flow, generate a PKCE code verifier and challenge. This step is required for public clients and should be skipped by organization clients.
 
@@ -98,7 +98,7 @@ code_challenge = base64.urlsafe_b64encode(
 ).decode().rstrip('=')
 ```
 
-##### Step 2: Start Authorization Flow
+###### Step 2: Start Authorization Flow
 
 Redirect the user to the authorization endpoint:
 
@@ -121,11 +121,11 @@ GET https://www.kaggle.com/api/v1/oauth2/authorize
 
 *\*Required for public clients. Must not be sent by organization clients.*
 
-##### Step 3: User Authorization
+###### Step 3: User Authorization
 
 The user is redirected to Kaggle's consent screen where they log in (if needed), review the requested permissions, optionally restrict the scopes, and approve or deny the request.
 
-##### Step 4: Receive Authorization Code
+###### Step 4: Receive Authorization Code
 
 After approval, Kaggle redirects back to your `redirect_uri` with the authorization code:
 
@@ -135,7 +135,7 @@ http://localhost:8080/callback?code=<authorization_code>&state=xyzABC12345678901
 
 **Important:** Verify that the `state` parameter matches what you sent to prevent CSRF attacks.
 
-##### Step 5: Exchange Code for Tokens
+###### Step 5: Exchange Code for Tokens
 
 Exchange the authorization code for access and refresh tokens:
 
@@ -156,14 +156,14 @@ As described in [Request Body Encoding](#oauth-request-encoding), the same reque
 | `client_id` | No | Your client ID |
 | `redirect_uri` | No | The redirect URI used in the authorization request |
 
-##### Client Authentication
+###### Client Authentication
 
 How you authenticate the token exchange request depends on your client type:
 
 - **Public clients** do not require any authentication header. The `code_verifier` (PKCE) proves the caller is the same party that initiated the authorization flow.
 - **Organization clients** must authenticate the request using the organization owner's Kaggle API credentials via HTTP Basic authentication. The organization owner's username and [API key](/settings) should be included in an `Authorization` header. Organization clients must **not** send a `code_verifier`.
 
-##### Public Client Example (form-urlencoded)
+###### Public Client Example (form-urlencoded)
 
 ```
 curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
@@ -173,7 +173,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   -d "code_verifier=dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
 ```
 
-##### Public Client Example (JSON)
+###### Public Client Example (JSON)
 
 ```
 curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
@@ -185,7 +185,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   }'
 ```
 
-##### Organization Client Example (form-urlencoded)
+###### Organization Client Example (form-urlencoded)
 
 ```
 curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
@@ -195,7 +195,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   -d "code=<authorization_code>"
 ```
 
-##### Organization Client Example (JSON)
+###### Organization Client Example (JSON)
 
 ```
 curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
@@ -221,9 +221,9 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
 }
 ```
 
-#### Token Management
+##### Token Management
 
-##### Refresh Access Token
+###### Refresh Access Token
 
 Access tokens expire after 3 hours. Use the refresh token to obtain new access tokens. Refresh token requests do not require client authentication for either client type.
 
@@ -244,14 +244,14 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   -d '{"grant_type": "refresh_token", "refresh_token": "KGRT_..."}'
 ```
 
-##### Token Introspection (RFC 7662)
+###### Token Introspection (RFC 7662)
 
 Validate and inspect tokens:
 
 ###### Form-urlencoded
 
 ```
-curl -X POST https://www.kaggle.com/api/v1/oauth2/introspect \
+curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "token=<access_token_or_refresh_token>"
 ```
@@ -284,7 +284,7 @@ For an expired, revoked, or otherwise invalid token:
 }
 ```
 
-#### Scopes
+##### Scopes
 
 Scopes control what permissions your application has when acting on behalf of the user. Scopes follow the format: `<permission-or-role>:<resource-id-or-*>`
 
@@ -321,7 +321,7 @@ Request multiple scopes by separating them with spaces: `datasets.get:* models.g
 
 A complete reference of every permission and role accepted by the OAuth provider is provided in the [Appendix: Full Scope Reference](#oauth-scopes-appendix) at the end of this document.
 
-#### Using Access Tokens
+##### Using Access Tokens
 
 Include the access token in API requests using the `Authorization` header:
 
@@ -330,7 +330,7 @@ curl https://www.kaggle.com/api/v1/datasets/list \
   -H "Authorization: Bearer KGAT_..."
 ```
 
-#### Error Handling
+##### Error Handling
 
 **Authorization Errors** are returned as query parameters on the redirect URI:
 
@@ -349,7 +349,7 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 | `invalid_grant` | Invalid, expired, or revoked authorization code |
 | `invalid_client` | Unknown client ID |
 
-#### Security Considerations
+##### Security Considerations
 
 - **Always use HTTPS** for non-localhost redirect URIs
 - **Validate the state parameter** to prevent CSRF attacks
@@ -359,13 +359,13 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 - **Access tokens expire** after 3 hours - use refresh tokens to obtain new ones
 - **Organization clients must authenticate token exchange requests** using the organization owner's [API credentials](/settings) via HTTP Basic authentication. Keep these credentials secure on your server - never expose them in client-side code.
 
-#### Appendix: Scope Reference
+##### Appendix: Scope Reference
 
 The tables below cover the high-level CRUD permissions and roles that most applications will need across Kaggle's primary resource types: datasets, models, kernels (notebooks), competitions, forums, and benchmarks, plus site-wide roles. Additional fine-grained permissions exist (e.g. for voting, tagging, IAM policy management, sub-resource versions); contact the Kaggle team if your application needs a permission not listed here.
 
 Note: granting a scope only entitles the bearer to act on resources the underlying user already has access to. Site-wide administrative scopes (e.g., `resources.admin`) cannot elevate a user beyond their existing IAM permissions.
 
-##### Permissions
+###### Permissions
 
 **Datasets**
 
@@ -428,7 +428,7 @@ Note: granting a scope only entitles the bearer to act on resources the underlyi
 | `benchmarks.update` | Update existing benchmarks |
 | `benchmarks.delete` | Delete benchmarks |
 
-##### Roles
+###### Roles
 
 Roles bundle related permissions. `viewer` grants read access, `editor` grants read and write access, and `admin` grants full management access (including delete and IAM changes).
 
