@@ -89,8 +89,8 @@
       "translatedAt": "2026-08-08T18:57:30.813Z"
     },
     "platform/api.md": {
-      "hash": "1d61ec400a28e10cd27ca710842bdf2f392c2728",
-      "translatedAt": "2026-08-27T17:57:05.550Z"
+      "hash": "b2ea8da134cb39dca42b40c9c6ee3b82e34d0802",
+      "translatedAt": "2026-08-29T12:51:47.461Z"
     },
     "cli/tutorials.md": {
       "hash": "b843e0de3ba78c5e2faee897344edfc73aad6321",
@@ -197,11 +197,11 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-08-28T19:07:03.064Z",
+  "updatedAt": "2026-08-29T12:51:47.462Z",
   "stats": {
-    "translated": 0,
+    "translated": 1,
     "skipped": 48,
-    "failed": 1,
+    "failed": 0,
     "total": 49
   }
 }

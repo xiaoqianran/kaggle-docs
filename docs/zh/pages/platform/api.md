@@ -30,7 +30,7 @@ Kaggle 根据您的用例支持多种身份验证方法：
 - **令牌内省**（RFC 7662）用于验证令牌
 - **OAuth 2.0 发现** 通过众所周知的端点
 
-#### 快速入门
+#### OAuth 2.0
 
 对于公共客户端（CLI 工具、桌面应用程序等），典型流程是：
 
@@ -42,7 +42,7 @@ Kaggle 根据您的用例支持多种身份验证方法：
 6. 使用访问令牌调用 Kaggle API
 7. 访问令牌过期时刷新令牌
 
-#### 发现端点
+##### 发现端点
 
 检索 OAuth 2.0 服务器元数据，包括支持的端点、授权类型和范围：
 
@@ -54,27 +54,27 @@ GET https://www.kaggle.com/.well-known/oauth-authorization-server
 GET https://www.kaggle.com/.well-known/oauth-protected-resource
 ```
 
-#### 客户端 ID 类型
+##### 客户端 ID 类型
 
 Kaggle 支持两种类型的 OAuth 客户端：
 
 |类型 |客户 ID 格式 |需要 PKCE |令牌交换验证 |重定向 URI |
-| --- | --- | --- | --- | --- |
+| ---| ---| ---| ---| ---|
 |公共客户| `<client-name>`（例如，`gemini-cli`）|是的 |无（PKCE 提供安全性）|仅限本地主机 |
 |组织客户| `org:<organization-slug>` |没有 | HTTP Basic 与组织所有者的 [API key](/settings) |允许的 HTTPS URL |
 
 要注册新的 OAuth 客户端，请联系 Kaggle 团队。
 
-#### 请求主体编码
+##### 请求主体编码
 
 OAuth 2.0 令牌、刷新和自省端点都接受以下两种编码之一的请求正文：
 
 - **`application/x-www-form-urlencoded`** — RFC 6749 §4.1.3 / §3.2 强制要求的编码，几乎每个现成的 OAuth 客户端库默认使用该编码。如有疑问，请使用此功能；本文档中的示例使用它。
 - **`application/json`** — 也为喜欢发送 JSON 的客户提供便利而接受。正文必须是一个 JSON 对象，其顶级键与为每个端点列出的参数名称匹配。两种编码可以互换；选择与 HTTP 堆栈的其余部分匹配的那个。下面的每个示例首先显示表单 urlencoded 变体，然后立即显示等效的 JSON 变体。
 
-#### 授权流程
+##### 授权流程
 
-##### 第 1 步：生成 PKCE 挑战
+###### 第 1 步：生成 PKCE 挑战
 
 在开始授权流程之前，生成 PKCE 代码验证程序和质询。公共客户端需要执行此步骤，组织客户端应跳过此步骤。
 
@@ -92,7 +92,7 @@ code_challenge = base64.urlsafe_b64encode(
 ).decode().rstrip('=')
 ```
 
-##### 第 2 步：启动授权流程
+###### 步骤 2：启动授权流程
 
 将用户重定向到授权端点：
 
@@ -102,8 +102,8 @@ GET https://www.kaggle.com/api/v1/oauth2/authorize
 
 **查询参数：**
 
-|参数|必填|描述 |
-| --- | --- | --- |
+|参数|必填 |描述 |
+| ---| ---| ---|
 | `client_id` |是的 |您的注册客户ID |
 | `redirect_uri` |是的 |必须与注册的重定向 URI 匹配 |
 | `scope` |是的 |以空格分隔的范围列表 |
@@ -115,9 +115,9 @@ GET https://www.kaggle.com/api/v1/oauth2/authorize
 
 *\*公共客户需要。不得由组织客户发送。*
 
-##### 步骤 3：用户授权用户将被重定向到 Kaggle 的同意屏幕，他们可以在其中登录（如果需要）、查看请求的权限、选择性地限制范围以及批准或拒绝请求。
+###### 第三步：用户授权用户将被重定向到 Kaggle 的同意屏幕，他们可以在其中登录（如果需要）、查看请求的权限、选择性地限制范围以及批准或拒绝请求。
 
-##### 步骤 4：接收授权码
+###### 步骤 4：接收授权码
 
 批准后，Kaggle 会使用授权码重定向回您的 `redirect_uri`：
 
@@ -127,7 +127,7 @@ http://localhost:8080/callback?code=<authorization_code>&state=xyzABC12345678901
 
 **重要：** 验证`state`参数是否与您发送的内容匹配，以防止 CSRF 攻击。
 
-##### 步骤 5：用代码交换令牌
+###### 步骤 5：用代码交换代币
 
 将授权代码交换为访问令牌和刷新令牌：
 
@@ -140,20 +140,20 @@ Content-Type: application/x-www-form-urlencoded
 
 **请求正文参数：**
 
-|参数|必填|描述 |
-| --- | --- | --- |
+|参数|必填 |描述 |
+| ---| ---| ---|
 | `grant_type` |是的 |必须是`"authorization_code"` |
 | `code` |是的 |回调中的授权码 |
 | `code_verifier` |仅限公共客户 |用于生成代码\_challenge的原始代码\_verifier。<br>**不得**由组织客户端发送。 |
 | `client_id` |没有 |您的客户 ID |
 | `redirect_uri` |没有 |授权请求中使用的重定向 URI |
 
-##### 客户端身份验证
+###### 客户端身份验证
 
 如何验证令牌交换请求取决于您的客户端类型：- **公共客户端**不需要任何身份验证标头。 `code_verifier` (PKCE) 证明调用者是发起授权流程的同一方。
 - **组织客户端**必须使用组织所有者的 Kaggle API 凭证通过 HTTP 基本身份验证来验证请求。组织所有者的用户名和 [API key](/settings) 应包含在 `Authorization` 标头中。组织客户端不得**发送`code_verifier`。
 
-##### 公共客户端示例（表单 urlencoded）
+###### 公共客户端示例（表单 urlencoded）
 
 ```
 curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
@@ -163,7 +163,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   -d "code_verifier=dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
 ```
 
-##### 公共客户端示例 (JSON)
+###### 公共客户端示例 (JSON)
 
 ```
 curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
@@ -175,7 +175,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   }'
 ```
 
-##### 组织客户端示例（表单 urlencoded）
+###### 组织客户端示例（表单 urlencoded）
 
 ```
 curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
@@ -185,7 +185,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   -d "code=<authorization_code>"
 ```
 
-##### 组织客户端示例 (JSON)
+###### 组织客户端示例 (JSON)
 
 ```
 curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
@@ -211,9 +211,9 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
 }
 ```
 
-#### 代币管理
+##### 代币管理
 
-##### 刷新访问令牌
+###### 刷新访问令牌
 
 访问令牌将在 3 小时后过期。使用刷新令牌获取新的访问令牌。刷新令牌请求不需要对任一客户端类型进行客户端身份验证。
 
@@ -234,14 +234,14 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   -d '{"grant_type": "refresh_token", "refresh_token": "KGRT_..."}'
 ```
 
-##### 令牌自省 (RFC 7662)
+###### 令牌自省 (RFC 7662)
 
 验证和检查令牌：
 
 ###### 表单编码
 
 ```
-curl -X POST https://www.kaggle.com/api/v1/oauth2/introspect \
+curl -X POST https://www.kaggle.com/api/v1/oauth2/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "token=<access_token_or_refresh_token>"
 ```
@@ -272,7 +272,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/introspect \
 }
 ```
 
-#### 范围
+##### 范围
 
 范围控制您的应用程序在代表用户执行操作时拥有哪些权限。范围遵循格式：`<permission-or-role>:<resource-id-or-*>`
 
@@ -282,7 +282,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/introspect \
 **通用权限：**
 
 |许可|描述 |
-| --- | --- |
+| ---| ---|
 | `datasets.get` |读取数据集元数据和文件 |
 | `datasets.update` |更新现有数据集 |
 | `models.get` |读取模型元数据和文件 |
@@ -296,7 +296,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/introspect \
 **可用角色**（捆绑相关权限）：
 
 |角色 |描述 |
-| --- | --- |
+| ---| ---|
 | `datasets.viewer` |对数据集的只读访问
 | `datasets.editor` |对数据集的读写访问
 | `models.viewer` |对模型的只读访问|
@@ -307,7 +307,7 @@ curl -X POST https://www.kaggle.com/api/v1/oauth2/introspect \
 
 本文档末尾的[Appendix: Full Scope Reference](#oauth-scopes-appendix) 中提供了 OAuth 提供商接受的每个权限和角色的完整参考。
 
-#### 使用访问令牌
+##### 使用访问令牌
 
 使用 `Authorization` 标头在 API 请求中包含访问令牌：
 
@@ -316,12 +316,12 @@ curl https://www.kaggle.com/api/v1/datasets/list \
   -H "Authorization: Bearer KGAT_..."
 ```
 
-#### 错误处理
+##### 错误处理
 
 **授权错误** 作为重定向 URI 上的查询参数返回：
 
 |错误代码 |描述 |
-| --- | --- |
+| ---| ---|
 | `invalid_request` |参数缺失或无效 |
 | `invalid_client` |未知或禁用的客户端 |
 | `invalid_scope` |此客户端不允许请求的范围 |
@@ -330,12 +330,12 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 **令牌端点错误** 返回 HTTP 状态 400 的 JSON：
 
 |错误代码 |描述 |
-| --- | --- |
+| ---| ---|
 | `invalid_request` |参数缺失或无效 |
 | `invalid_grant` |授权码无效、过期或撤销 |
 | `invalid_client` |未知的客户端 ID |
 
-#### 安全考虑- **对于非本地主机重定向 URI 始终使用 HTTPS**
+##### 安全注意事项- **对于非本地主机重定向 URI 始终使用 HTTPS**
 - **验证状态参数**以防止CSRF攻击
 - **安全地存储刷新令牌** - 它们提供长期访问
 - **使用最小范围** - 仅请求您的应用程序所需的权限
@@ -343,16 +343,16 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 - **访问令牌在 3 小时后过期** - 使用刷新令牌获取新令牌
 - **组织客户端必须使用组织所有者的 [API credentials](/settings) 通过 HTTP 基本身份验证来验证令牌交换请求**。将这些凭据安全地保存在您的服务器上 - 切勿在客户端代码中公开它们。
 
-#### 附录：范围参考
+##### 附录：范围参考
 
 下表涵盖了大多数应用程序在 Kaggle 的主要资源类型中所需的高级 CRUD 权限和角色：数据集、模型、内核（笔记本）、竞赛、论坛和基准测试，以及站点范围的角色。存在其他细粒度权限（例如投票、标记、IAM 策略管理、子资源版本）；如果您的应用程序需要此处未列出的权限，请联系 Kaggle 团队。注意：授予范围仅授权持有者对底层用户已经有权访问的资源进行操作。站点范围的管理范围（例如，`resources.admin`）无法将用户提升到超出其现有 IAM 权限的范围。
 
-##### 权限
+###### 权限
 
 **数据集**
 
 |许可|描述 |
-| --- | --- |
+| ---| ---|
 | `datasets.get` |读取数据集元数据和文件 |
 | `datasets.update` |更新现有数据集 |
 | `datasets.delete` |删除数据集 |
@@ -361,7 +361,7 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 **型号**
 
 |许可|描述 |
-| --- | --- |
+| ---| ---|
 | `models.get` |读取模型元数据和文件 |
 | `models.create` |创建新模型|
 | `models.update` |更新现有模型 |
@@ -370,7 +370,7 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 **内核（笔记本）**
 
 |许可|描述 |
-| --- | --- |
+| ---| ---|
 | `kernels.get` |阅读笔记本 |
 | `kernels.update` |创建或更新笔记本 |
 | `kernels.delete` |删除笔记本 |
@@ -379,7 +379,7 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 **比赛**
 
 |许可|描述 |
-| --- | --- |
+| ---| ---|
 | `competitions.get` |阅读竞赛元数据 |
 | `competitions.update` |更新现有竞赛 |
 | `competitions.download_data` |下载比赛数据文件 |
@@ -388,7 +388,7 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 | `submissions.get` |阅读竞赛提交材料 |
 
 **论坛**|许可|描述 |
-| --- | --- |
+| ---| ---|
 | `forum_topics.get` |阅读论坛主题 |
 | `forum_topics.create` |创建新的论坛主题 |
 | `forum_topics.update` |更新论坛主题 |
@@ -401,19 +401,19 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 **基准**
 
 |许可|描述 |
-| --- | --- |
+| ---| ---|
 | `benchmarks.get` |阅读基准元数据 |
 | `benchmarks.list` |列出基准 |
 | `benchmarks.create` |创造新标杆 |
 | `benchmarks.update` |更新现有基准 |
 | `benchmarks.delete` |删除基准 |
 
-##### 角色
+###### 角色
 
 角色捆绑相关权限。 `viewer` 授予读取访问权限，`editor` 授予读取和写入访问权限，`admin` 授予完全管理访问权限（包括删除和 IAM 更改）。
 
 **每资源角色**|角色 |描述 |
-| --- | --- |
+| ---| ---|
 | `datasets.viewer` |对数据集的只读访问
 | `datasets.editor` |对数据集的读写访问
 | `datasets.admin` |数据集全面管理 |
@@ -439,7 +439,7 @@ curl https://www.kaggle.com/api/v1/datasets/list \
 | `benchmarks.admin` |全面管理基准 |
 
 **全站范围**|角色 |描述 |
-| --- | --- |
+| ---| ---|
 | `resources.viewer` |对用户可以看到的所有资源类型进行只读访问
 | `resources.editor` |用户可以编辑的所有资源类型的读写访问权限
 | `resources.admin` |用户可以管理的所有资源类型的完全管理访问权限
