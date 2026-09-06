@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-09-05T10:58:49.211Z",
+  "fetchedAt": "2026-09-06T11:24:31.687Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
     "cli": "https://github.com/Kaggle/kaggle-cli",
     "kagglehub": "https://github.com/Kaggle/kagglehub"
   },
-  "ok": 49,
-  "failed": 0,
+  "ok": 48,
+  "failed": 1,
   "pages": [
     {
       "rel": "index.md",
@@ -112,13 +112,6 @@
       "bytes": 3539,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/README.md",
-      "track": "CLI & API"
-    },
-    {
-      "rel": "cli/benchmarks.md",
-      "bytes": 24055,
-      "source": "github:Kaggle/kaggle-cli",
-      "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/benchmarks.md",
       "track": "CLI & API"
     },
     {
@@ -353,5 +346,10 @@
       "track": "KaggleHub"
     }
   ],
-  "failures": []
+  "failures": [
+    {
+      "slug": "docs/benchmarks.md",
+      "error": "fetch failed"
+    }
+  ]
 }
