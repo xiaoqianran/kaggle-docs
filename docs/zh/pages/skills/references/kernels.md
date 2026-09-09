@@ -112,7 +112,7 @@ kaggle kernels init -p my-kernel
 
 ## `kaggle kernels push`
 
-将代码推送到内核并运行它。
+将代码推送到内核并运行它，或者在传递 `--no-run` 时保存版本而不运行。
 
 **用途：**
 
@@ -125,12 +125,14 @@ kaggle kernels push [options]
 - `-p, --path <FOLDER>`：包含文件和`kernel-metadata.json`的文件夹。
 - `-t, --timeout <SECONDS>`：限制运行时间，以 Kaggle 的最大值为界。
 - `--accelerator <ACCELERATOR>`：内核运行的加速器类型。
+- `--no-run`：保存新版本而不执行笔记本，相当于Web UI中的快速保存。
 
 **示例：**
 
 ```bash
 kaggle kernels push -p my-kernel --timeout 3600 --accelerator gpu
 kaggle kernels update -p my-kernel
+kaggle kernels push -p my-kernel --no-run
 ```
 
 **目的：**上传本地笔记本/脚本代码并创建新的内核版本。
@@ -151,9 +153,7 @@ Kaggle 图像，其 PyTorch 版本 (cu128) 省略了 Pascal (`sm_60`) 内核：
 kaggle kernels pull [KERNEL] [options]
 ```
 
-**选项：**
-
-- `-p, --path <PATH>`：下载文件夹。
+**选项：**- `-p, --path <PATH>`：下载文件夹。
 - `-w, --wp`：下载到当前工作路径。
 - `-m, --metadata`：拉取时生成元数据。
 **示例：**
@@ -164,12 +164,14 @@ kaggle kernels get owner/kernel-slug -w -m
 kaggle k pull owner/kernel-slug/3 -w -m
 ```
 
-**目的：** 从 Kaggle 检索笔记本/脚本源。
+**用途：** 从 Kaggle 检索笔记本/脚本源。
 
 **注意：** 内核参考可能包括可选版本：
 `<owner>/<kernel-name>/<version>`。
 
-## `kaggle kernels output`下载最新内核运行的输出。
+## `kaggle kernels output`
+
+下载最新内核运行的输出。
 
 **用途：**
 
@@ -234,9 +236,7 @@ kaggle kernels status owner/kernel-slug
 kaggle kernels logs [KERNEL] [options]
 ```
 
-**选项：**
-
-- `-f, --follow`：持续轮询并打印新的日志行。
+**选项：**- `-f, --follow`：持续轮询并打印新的日志行。
 - `--interval <SECONDS>`：跟随模式的轮询间隔。默认 5。
 
 **示例：**
@@ -260,7 +260,9 @@ kaggle kernels delete <KERNEL> [options]
 
 **选项：**
 
-- `-y, --yes`：跳过确认。**示例：**
+- `-y, --yes`：跳过确认。
+
+**示例：**
 
 ```bash
 kaggle kernels delete owner/kernel-slug -y

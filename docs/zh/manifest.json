@@ -13,20 +13,20 @@
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "d0a1ed810be10a5821fa0518846edfacd11261dc",
-      "translatedAt": "2026-08-22T07:22:01.060Z"
+      "hash": "e9c5168f71bd47b38eb6068ecd80216e2e1ba15c",
+      "translatedAt": "2026-09-09T12:01:10.939Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
       "translatedAt": "2026-08-08T18:57:20.502Z"
     },
     "cli/competitions.md": {
-      "hash": "09616436e9497cd8c329cca5e9475e18cbeb0e16",
-      "translatedAt": "2026-08-22T07:21:58.254Z"
+      "hash": "e530a6fa420174ec8dad1e887b54324a8bb4fbc6",
+      "translatedAt": "2026-09-09T12:01:03.647Z"
     },
     "cli/datasets.md": {
-      "hash": "d4abd335910739beef7cd2f073f0ba52ae3badae",
-      "translatedAt": "2026-08-22T07:22:01.581Z"
+      "hash": "dc164348bff03b70b139ca1186a8a9f8862bf72a",
+      "translatedAt": "2026-09-09T12:01:09.026Z"
     },
     "cli/forums.md": {
       "hash": "d401f5fe61c99a0e4be9100d27e43bbe62db99d0",
@@ -53,8 +53,8 @@
       "translatedAt": "2026-08-08T18:57:25.444Z"
     },
     "cli/kernels.md": {
-      "hash": "c78ed68fd8183966acffabffb4d846227be83e48",
-      "translatedAt": "2026-08-08T18:57:26.293Z"
+      "hash": "167527f7115362fd60715cfc852756f84f6c290e",
+      "translatedAt": "2026-09-09T12:01:16.437Z"
     },
     "cli/models_metadata.md": {
       "hash": "68440df72296385d274a63a48b5a5e00e7e6b593",
@@ -153,12 +153,12 @@
       "translatedAt": "2026-08-08T18:57:54.913Z"
     },
     "skills/references/datasets.md": {
-      "hash": "e9f6a4f3cf54b22067dc9e85275cc2300e1d561f",
-      "translatedAt": "2026-08-22T07:22:03.872Z"
+      "hash": "91e73e4512770aaf6d38ce8fe9b40c8bdb74147a",
+      "translatedAt": "2026-09-09T12:01:20.475Z"
     },
     "skills/references/competitions.md": {
-      "hash": "e5d3e970ed20046094b4ba99d8774d198efb9839",
-      "translatedAt": "2026-08-22T07:22:03.955Z"
+      "hash": "500fc7e84c9cd85d600d43460906ce64d209b082",
+      "translatedAt": "2026-09-09T12:01:17.413Z"
     },
     "skills/references/files.md": {
       "hash": "95f9e1ba9b1e79dd03e031c68c747b2d909e7989",
@@ -173,8 +173,8 @@
       "translatedAt": "2026-08-08T18:57:58.615Z"
     },
     "skills/references/kernels.md": {
-      "hash": "0caefef83e0dd14c08a88b479eeff1e6cb1cc2d0",
-      "translatedAt": "2026-08-08T18:57:59.333Z"
+      "hash": "4e73a23b581e5986cafac160d92a0e6edb057d89",
+      "translatedAt": "2026-09-09T12:01:20.476Z"
     },
     "skills/references/model_variations_versions.md": {
       "hash": "8a3f8e0c8cc40055cbf7ee4a116614861712ae6f",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-09-08T11:49:35.832Z",
+  "updatedAt": "2026-09-09T12:01:20.476Z",
   "stats": {
-    "translated": 0,
-    "skipped": 49,
+    "translated": 7,
+    "skipped": 42,
     "failed": 0,
     "total": 49
   }

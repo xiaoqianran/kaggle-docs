@@ -32,7 +32,7 @@ kaggle kernels list [options]
 
 **示例：**
 
-1. 列出您自己的标题中包含“Exercise”的内核，第 2 页，每页 5 项，采用 CSV 格式，按运行日期排序：
+1. 列出标题中包含“Exercise”的您自己的内核，第 2 页，每页 5 项，采用 CSV 格式，按运行日期排序：
 
     ```bash
     kaggle kernels list -m -s Exercise --page-size 5 -p 2 -v --sort-by dateRun
@@ -48,7 +48,7 @@ kaggle kernels list [options]
 
     ```bash
     kaggle kernels list --competition house-prices-advanced-regression-techniques --page-size 5
-    ```4. 列出与数据集 `dansbecker/home-data-for-ml-course` 关联的前 5 个内核：
+    ```4. 列出与数据集`dansbecker/home-data-for-ml-course`关联的前5个内核：
 
     ```bash
     kaggle kernels list --dataset dansbecker/home-data-for-ml-course --page-size 5
@@ -122,7 +122,7 @@ kaggle kernels init -p tests/kernel
 
 ## `kaggle kernels push`
 
-将新代码/笔记本和元数据推送到内核，然后运行内核。
+将新代码/笔记本和元数据推送到内核，然后运行内核。通过 `--no-run` 保存新版本而不运行它。
 
 **用途：**
 
@@ -135,6 +135,7 @@ kaggle kernels push -p <FOLDER_PATH> [options]
 * `--accelerator <ACCELERATOR_ID>`：运行时使用的加速器的ID名称。例如。 “NvidiaTeslaP100”（又名默认 GPU）、“NvidiaTeslaT4”、“TpuV6E8”。
 * `-p, --path <FOLDER_PATH>`：包含内核文件（例如，`.ipynb`、`.Rmd`、`.py`）和`kernel-metadata.json`文件的文件夹路径（默认为当前目录）。
 * `-t, --timeout <SECONDS>`：最大运行时间（以秒为单位）。
+* `--no-run`：保存新版本而不执行笔记本，相当于Web UI中的快速保存。版本已创建，但没有单元运行。
 
 **示例：**
 
@@ -144,11 +145,17 @@ kaggle kernels push -p <FOLDER_PATH> [options]
 kaggle kernels push -p tests/kernel
 ```
 
-**目的：**
+保存新版本而不运行它，例如仅编辑 Markdown 单元格后：
 
-此命令将本地内核文件及其元数据上传到 Kaggle。如果元数据中指定的内核存在于您的帐户下，它将被更新。否则，将创建一个新内核。上传后，Kaggle 将尝试运行内核。
+```bash
+kaggle kernels push -p tests/kernel --no-run
+```
 
-截至 2026 年 2 月可用的加速器：* NvidiaTeslaP100
+**目的：**此命令将本地内核文件及其元数据上传到 Kaggle。如果元数据中指定的内核存在于您的帐户下，它将被更新。否则，将创建一个新内核。上传后，Kaggle 将尝试运行内核。
+
+截至 2026 年 2 月可用的加速器：
+
+* NvidiaTeslaP100
 *TpuV38
 * 英伟达特斯拉T4
 * NvidiaTeslaT4Highmem
@@ -180,9 +187,7 @@ kaggle kernels pull <KERNEL> [options]
 
 * `<KERNEL>`：内核 URL 后缀（格式：`owner/kernel-slug` 或 `owner/kernel-slug/version`，例如 `$KAGGLE_DEVELOPER/exercise-as-with` 或 `$KAGGLE_DEVELOPER/exercise-as-with/2`）。
 
-**选项：**
-
-* `-p, --path <PATH>`：下载文件的文件夹（默认为当前目录）。
+**选项：*** `-p, --path <PATH>`：下载文件的文件夹（默认为当前目录）。
 * `-w, --wp`：下载文件到当前工作路径。
 * `-m, --metadata`：与内核代码一起生成`kernel-metadata.json` 文件。
 
@@ -198,7 +203,9 @@ kaggle kernels pull <KERNEL> [options]
 
     ```bash
     kaggle kernels pull --wp $KAGGLE_DEVELOPER/exercise-as-with
-    ```3. 将版本 2 的内核`$KAGGLE_DEVELOPER/exercise-as-with`拉入当前工作目录：
+    ```
+
+3. 将版本 2 的内核`$KAGGLE_DEVELOPER/exercise-as-with`拉入当前工作目录：
 
     ```bash
     kaggle kernels pull --wp $KAGGLE_DEVELOPER/exercise-as-with/2
@@ -222,9 +229,7 @@ kaggle kernels output <KERNEL> [options]
 
 * `<KERNEL>`：内核 URL 后缀（例如，`kerneler/using-google-bird-vocalization-model`）。
 
-**选项：**
-
-* `-p, --path <PATH>`：将输出文件下载到的文件夹（默认为当前目录）。
+**选项：*** `-p, --path <PATH>`：将输出文件下载到的文件夹（默认为当前目录）。
 * `-w, --wp`：下载文件到当前工作路径。
 * `-o, --force`：强制下载，覆盖现有文件。
 * `-q, --quiet`：抑制详细输出。
@@ -255,15 +260,15 @@ kaggle kernels output <kernel> --file-pattern ".*\.png$"
 
 ```bash
 kaggle kernels output <kernel> --page-token <TOKEN>
-```以较小的页面下载文件：
+```
+
+以较小的页面下载文件：
 
 ```bash
 kaggle kernels output <kernel> --page-size 50
 ```
 
-**目的：**
-
-使用此命令检索内核运行生成的文件，例如提交文件、处理的数据或可视化。默认情况下，输出下载会扫描每个可用的输出页面，因此 `--file-pattern` 可以匹配第一页以外的文件。使用`--page-size`控制每个页面请求多少个文件，当您只想从一个特定页面下载文件时使用`--page-token`。
+**目的：**使用此命令检索内核运行生成的文件，例如提交文件、处理的数据或可视化。默认情况下，输出下载会扫描每个可用的输出页面，因此 `--file-pattern` 可以匹配第一页以外的文件。使用`--page-size`控制每个页面请求多少个文件，当您只想从一个特定页面下载文件时使用`--page-token`。
 
 ## `kaggle kernels status`
 
@@ -321,7 +326,9 @@ kaggle kernels delete $KAGGLE_DEVELOPER/exercise-delete --yes
 
 此命令将从 Kaggle 中永久删除您的内核之一。谨慎使用。
 
-## `kaggle kernels topics list`列出内核的讨论主题。
+## `kaggle kernels topics list`
+
+列出内核的讨论主题。
 
 **用途：**
 
@@ -329,9 +336,7 @@ kaggle kernels delete $KAGGLE_DEVELOPER/exercise-delete --yes
 kaggle kernels topics list <KERNEL> [options]
 ```
 
-**参数：**
-
-* `<KERNEL>`：格式为 `<owner>/<kernel-slug>` 的内核引用（例如，`owner/kernel-slug`）。
+**参数：*** `<KERNEL>`：格式为 `<owner>/<kernel-slug>` 的内核引用（例如，`owner/kernel-slug`）。
 
 **选项：**
 
@@ -384,11 +389,11 @@ kaggle kernels topics show <TOPIC_REF> [options]
 kaggle kernels topics show owner/kernel-slug/12345
 ```
 
-**目的：**此命令显示完整的讨论主题及其以缩进树结构呈现的所有注释。
+**目的：**
 
-## 在内核中使用 Secret
+此命令显示完整的讨论主题及其以缩进树结构呈现的所有注释。
 
-如果您的内核需要访问敏感信息（例如 API 密钥或密码）而不在代码中公开它们，您应该使用 **Kaggle Secrets**。
+## 在内核中使用 Secret如果您的内核需要访问敏感信息（例如 API 密钥或密码）而不在代码中公开它们，您应该使用 **Kaggle Secrets**。
 
 ### 1. 在 Kaggle.com 上定义 Secret（不支持 CLI）
 1. 在 Kaggle 笔记本编辑器中打开您的笔记本。

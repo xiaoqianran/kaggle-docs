@@ -108,7 +108,7 @@ kaggle datasets download [DATASET] [options]
 - `-f, --file <NAME>`：下载一个文件。省略时下载所有文件。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在 `--path` 下。
 - `-p, --path <PATH>`：下载目录。
 - `-w, --wp`：下载到当前工作路径。
-- `--unzip`：解压下载的存档并删除zip。
+- `--unzip`：解压下载的存档并删除zip。使用 `-f`，从服务器包装大文件的 zip 存档中提取文件。
 - `-o, --force`：即使本地文件看起来是最新的，也强制下载。
 - `-q, --quiet`：抑制进度输出。
 
@@ -154,9 +154,7 @@ kaggle datasets init -p my-dataset
 kaggle datasets create [options]
 ```
 
-**选项：**
-
-- `-p, --path <FOLDER>`：包含文件和`dataset-metadata.json`的文件夹。
+**选项：**- `-p, --path <FOLDER>`：包含文件和`dataset-metadata.json`的文件夹。
 - `-u, --public`：公开创建。默认是私有的。
 - `-q, --quiet`：抑制进度输出。
 - `-t, --keep-tabular`：不要将表格文件转换为 CSV。
@@ -166,7 +164,9 @@ kaggle datasets create [options]
 
 ```bash
 kaggle datasets create -p my-dataset -u -q -t -r skip
-```**目的：**上传本地文件和元数据以创建 Kaggle 数据集。
+```
+
+**目的：**上传本地文件和元数据以创建 Kaggle 数据集。
 
 ## `kaggle datasets version`
 
@@ -226,9 +226,7 @@ kaggle datasets metadata kaggle/titanic --update -p metadata
 
 获取数据集的创建状态。
 
-**用途：**
-
-```bash
+**用法：**```bash
 kaggle datasets status [DATASET] [options]
 ```
 
@@ -248,7 +246,9 @@ kaggle d status owner/dataset --format json
 
 ## `kaggle datasets delete`
 
-删除数据集。**用途：**
+删除数据集。
+
+**用途：**
 
 ```bash
 kaggle datasets delete <DATASET> [options]
@@ -300,7 +300,7 @@ kaggle datasets topics list zillow/zecon --sort-by recent --page-size 50
 
 **目的：** 在打开特定主题之前浏览数据集讨论。
 
-`kaggle datasets topics` 没有 `list` 可作为列出的快捷方式
+`kaggle datasets topics` 不带 `list` 可用作列出的快捷方式
 主题。
 
 ### `kaggle datasets topics show`
@@ -319,9 +319,7 @@ kaggle datasets topics show <TOPIC_REF> [TOPIC_ID] [options]
   形式。
 - `[TOPIC_ID]`：二参数形式的可选主题 ID。
 
-**选项：**
-
-- `--page-size <SIZE>`：返回的评论数。
+**选项：**- `--page-size <SIZE>`：返回的评论数。
 - `--page-token <TOKEN>`：页面令牌。
 - `-v, --csv`：打印 CSV。
 - `-q, --quiet`：抑制额外输出。
@@ -335,7 +333,9 @@ kaggle datasets topics show zillow/zecon 12345
 
 **目的：** 阅读数据集讨论主题及其评论。
 
-## 错误场景及注释- 数据集句柄应为`<owner>/<dataset-slug>`。
+## 错误场景及注释
+
+- 数据集句柄应为`<owner>/<dataset-slug>`。
 - 创建/版本命令需要上传文件夹中的本地元数据。
 - 目录上传遵循`--dir-mode`； `skip` 忽略目录，`zip`
   压缩它们，然后 `tar` 上传未压缩的存档。

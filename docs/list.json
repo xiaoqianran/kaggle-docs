@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T11:49:35.775Z",
+  "fetchedAt": "2026-09-09T12:00:56.512Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -102,7 +102,7 @@
     },
     {
       "rel": "cli/changelog.md",
-      "bytes": 21920,
+      "bytes": 22403,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/CHANGELOG.md",
       "track": "CLI & API"
@@ -130,7 +130,7 @@
     },
     {
       "rel": "cli/competitions.md",
-      "bytes": 13259,
+      "bytes": 13521,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/competitions.md",
       "track": "CLI & API"
@@ -144,7 +144,7 @@
     },
     {
       "rel": "cli/datasets.md",
-      "bytes": 11656,
+      "bytes": 12031,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/datasets.md",
       "track": "CLI & API"
@@ -165,7 +165,7 @@
     },
     {
       "rel": "cli/kernels.md",
-      "bytes": 12752,
+      "bytes": 13108,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/kernels.md",
       "track": "CLI & API"
@@ -256,7 +256,7 @@
     },
     {
       "rel": "skills/references/competitions.md",
-      "bytes": 11734,
+      "bytes": 11849,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/competitions.md",
       "track": "Agent Skills"
@@ -270,7 +270,7 @@
     },
     {
       "rel": "skills/references/datasets.md",
-      "bytes": 7902,
+      "bytes": 7985,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/datasets.md",
       "track": "Agent Skills"
@@ -291,7 +291,7 @@
     },
     {
       "rel": "skills/references/kernels.md",
-      "bytes": 6180,
+      "bytes": 6393,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/kernels.md",
       "track": "Agent Skills"

@@ -37,7 +37,7 @@ kaggle datasets list [options]
     kaggle datasets list -m
     ```
 
-2. 列出 CSV 数据集，第 2 页，按上次更新排序，标题中包含“student”，大小在 13000 到 15000 字节之间：
+2. 列出第 2 页的 CSV 数据集，按上次更新时间排序，标题中包含“student”，大小在 13000 到 15000 字节之间：
 
     ```bash
     kaggle datasets list --file-type csv --page 2 --sort-by updated -s student --min-size 13000 --max-size 15000
@@ -97,16 +97,16 @@ kaggle datasets download <DATASET> [options]
 
 * `<DATASET>`：数据集 URL 后缀（例如，`willianoliveiragibin/pixar-films`）。
 
-**选项：**
-
-* `-f, --file <FILE_NAME>`：要下载的特定文件（如果不指定则下载全部）。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在下载路径下。
+**选项：*** `-f, --file <FILE_NAME>`：要下载的特定文件（如果不指定则下载全部）。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在下载路径下。
 * `-p, --path <PATH>`：下载文件的文件夹（默认为当前目录）。
 * `-w, --wp`：下载文件到当前工作路径。
-* `--unzip`：解压下载的文件（之后删除.zip 文件）。
+* `--unzip`：解压下载的文件（之后删除.zip 文件）。使用 `-f`，大文件会在同名的 zip 存档中提供，并从中提取文件。
 * `-o, --force`：强制下载，覆盖现有文件。
 * `-q, --quiet`：抑制详细输出。
 
-**示例：**1. 下载数据集`willianoliveiragibin/pixar-films`的所有文件：
+**示例：**
+
+1. 下载数据集`willianoliveiragibin/pixar-films`的所有文件：
 
     ```bash
     kaggle datasets download -d willianoliveiragibin/pixar-films
@@ -118,7 +118,7 @@ kaggle datasets download <DATASET> [options]
     kaggle datasets download goefft/public-datasets-with-file-types-and-columns -p tmp --unzip -o -q
     ```
 
-3.从`goefft/public-datasets-with-file-types-and-columns`下载特定文件`dataset_results.csv`到当前工作目录，悄悄地，强制覆盖：
+3.从`goefft/public-datasets-with-file-types-and-columns`下载特定文件`dataset_results.csv`到当前工作目录，悄悄地，并强制覆盖：
 
     ```bash
     kaggle datasets download goefft/public-datasets-with-file-types-and-columns -f dataset_results.csv -w -q -o
@@ -130,11 +130,15 @@ kaggle datasets download <DATASET> [options]
     kaggle datasets download jpmiller/publicassistance -f WICAgencies2014ytd/Food_Costs.csv -p data
     ```
 
+5. 下载一个大文件并解压。 `creditcard.csv` 用作 `creditcard.csv.zip`，因此如果没有 `--unzip`，存档就会落在磁盘上：
+
+    ```bash
+    kaggle datasets download mlg-ulb/creditcardfraud -f creditcard.csv -p data --unzip
+    ```
+
 **目的：**
 
-此命令允许您检索数据集文件以供本地使用。
-
-## `kaggle datasets init`
+此命令允许您检索数据集文件以供本地使用。## `kaggle datasets init`
 
 初始化元数据文件（`dataset-metadata.json`）以创建新数据集。参见[metadata file format](./datasets_metadata.md)。
 
@@ -170,17 +174,17 @@ kaggle datasets init -p tests/dataset
 kaggle datasets create -p <FOLDER_PATH> [options]
 ```
 
-**选项：*** `-p, --path <FOLDER_PATH>`：包含数据文件和`dataset-metadata.json` 文件的文件夹路径（默认为当前目录）。
-* `-u, --public`：公开数据集（默认为私有）。
+**选项：**
+
+* `-p, --path <FOLDER_PATH>`：包含数据文件和`dataset-metadata.json` 文件的文件夹路径（默认为当前目录）。
+* `-u, --public`：将数据集公开（默认为私有）。
 * `-q, --quiet`：抑制详细输出。
 * `-t, --keep-tabular`：不将表格文件转换为 CSV（默认为转换）。
 * `-r, --dir-mode <MODE>`：如何处理目录：`skip`（忽略）、`zip`（压缩上传）、`tar`（未压缩上传）（默认：`skip`）。
 * `--ignore-patterns <PATTERNS>`：要忽略的文件/目录模式。可以指定多次。
 
 
-**示例：**
-
-从`tests/dataset`中的文件安静地创建一个新的公共数据集，无需转换表格文件，也无需跳过子目录。 （假设`tests/dataset`中的`dataset-metadata.json`已正确编辑标题和副标题）：
+**例子：**从`tests/dataset`中的文件安静地创建一个新的公共数据集，无需转换表格文件，也无需跳过子目录。 （假设`tests/dataset`中的`dataset-metadata.json`已正确编辑标题和副标题）：
 
 ```bash
 # Example: Edit dataset-metadata.json first
@@ -204,7 +208,9 @@ kaggle datasets create -p tests/dataset --public -q -t -r skip
 kaggle datasets version -p <FOLDER_PATH> -m <VERSION_NOTES> [options]
 ```
 
-**选项：*** `-p, --path <FOLDER_PATH>`：包含更新数据文件和`dataset-metadata.json`的文件夹路径（默认为当前目录）。
+**选项：**
+
+* `-p, --path <FOLDER_PATH>`：包含更新数据文件和`dataset-metadata.json`的文件夹路径（默认为当前目录）。
 * `-m, --message <VERSION_NOTES>`：（必填）描述新版本的消息。
 * `-q, --quiet`：抑制详细输出。
 * `-t, --keep-tabular`：不要将表格文件转换为 CSV。
@@ -215,7 +221,7 @@ kaggle datasets version -p <FOLDER_PATH> -m <VERSION_NOTES> [options]
 
 **示例：**
 
-使用 `tests/dataset` 中的文件创建一个新版本的数据集，并带有版本注释“更新数据”，悄悄地保持表格格式，跳过目录并删除旧版本：
+使用 `tests/dataset` 中带有版本注释“更新数据”的文件创建数据集的新版本，安静地保留表格格式，跳过目录并删除旧版本：
 
 ```bash
 kaggle datasets version -m "Updated data" -p tests/dataset -q -t -r skip -d
@@ -225,9 +231,7 @@ kaggle datasets version -m "Updated data" -p tests/dataset -q -t -r skip -d
 
 使用此命令可使用新文件或元数据更改更新现有数据集。
 
-## `kaggle datasets metadata`
-
-下载数据集的元数据或更新本地元数据中的现有数据。
+## `kaggle datasets metadata`下载数据集的元数据或更新本地元数据中的现有数据。
 
 **用途：**
 
@@ -244,7 +248,9 @@ kaggle datasets metadata <DATASET> [options]
 * `-p, --path <PATH>`：下载/更新元数据文件的目录(`dataset-metadata.json`)。默认为当前工作目录。
 * `--update`：使用本地元数据JSON文件的内容更新现有数据集版本的元数据。 （例如从本地“推送”）
 
-**示例：**将数据集`goefft/public-datasets-with-file-types-and-columns`的元数据下载到`tests/dataset`文件夹中：
+**示例：**
+
+将数据集`goefft/public-datasets-with-file-types-and-columns`的元数据下载到`tests/dataset`文件夹中：
 
 ```bash
 kaggle datasets metadata goefft/public-datasets-with-file-types-and-columns -p tests/dataset
@@ -294,9 +300,7 @@ kaggle datasets delete <DATASET> [options]
 
 * `<DATASET>`：数据集 URL 后缀（例如，`username/dataset-slug`）。
 
-**选项：**
-
-* `-y, --yes`：自动确认删除，不提示。
+**选项：*** `-y, --yes`：自动确认删除，不提示。
 
 **示例：**
 
@@ -324,7 +328,9 @@ kaggle datasets topics list <DATASET> [options]
 
 * `<DATASET>`：格式为 `<owner>/<dataset-slug>` 的数据集引用（例如，`zillow/zecon`）。
 
-**选项：*** `--sort-by <SORT_BY>`：排序顺序。有效选项：`hot`、`top`、`new`、`recent`、`active`、`relevance`。
+**选项：**
+
+* `--sort-by <SORT_BY>`：排序顺序。有效选项：`hot`、`top`、`new`、`recent`、`active`、`relevance`。
 * `-s, --search <SEARCH_TERM>`：搜索查询以过滤主题。
 * `--page-size <PAGE_SIZE>`：每页的项目数。
 * `--page-token <PAGE_TOKEN>`：用于分页的页面标记。
@@ -358,13 +364,11 @@ kaggle datasets topics show <TOPIC_REF> [options]
 * `<TOPIC_REF>`：主题参考，可以是：
     * `<dataset>/<topic-id>`（例如，`zillow/zecon/12345` - 请注意，这支持多斜线数据集段）
     * `<dataset> <topic-id>`（两个单独的参数，其中 `<topic-id>` 作为第二个参数传递）
-    * `<topic-id>`（裸数字 ID）
-
-**选项：**
+    * `<topic-id>`（裸数字 ID）**选项：**
 
 * `--page-size <PAGE_SIZE>`：每页显示的评论数。
 * `--page-token <PAGE_TOKEN>`：评论分页的页面标记。
-* `-v, --csv`：以 CSV 格式打印结果。
+* `-v, --csv`：以CSV格式打印结果。
 * `-q, --quiet`：抑制详细输出。
 
 **示例：**

@@ -119,6 +119,7 @@ kaggle competitions download [COMPETITION] [options]
 - `-f, --file <NAME>`：下载一个文件。省略时下载所有文件。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在 `--path` 下。
 - `-p, --path <PATH>`：下载目录。
 - `-w, --wp`：下载到当前工作路径。
+- `--unzip`：解压下载的存档并删除zip。
 - `-o, --force`：即使本地文件看起来是最新的，也强制下载。
 - `-q, --quiet`：抑制进度输出。
 
@@ -126,6 +127,7 @@ kaggle competitions download [COMPETITION] [options]
 
 ```bash
 kaggle competitions download titanic
+kaggle competitions download titanic -p data --unzip
 kaggle competitions download titanic -f train.csv -p data
 kaggle competitions download rsna-intracranial-aneurysm-detection -f kaggle_evaluation/rsna_gateway.py -p data
 kaggle c download -w -o -q
@@ -406,7 +408,7 @@ kaggle competitions topics list titanic --sort-by recent -p 2
 
 **目的：** 在打开特定主题之前浏览竞赛讨论。
 
-`kaggle competitions topics` 没有 `list` 可作为快捷方式
+没有 `list` 的 `kaggle competitions topics` 可用作
 列出主题。
 
 ### `kaggle competitions topics show`
@@ -425,7 +427,7 @@ kaggle competitions topics show <TOPIC_REF> [TOPIC_ID] [options]
   使用双参数形式时的实体引用。
 - `[TOPIC_ID]`：二参数形式的可选主题 ID。
 
-**选项：**- `--page-size <SIZE>`：返回的评论数。
+**选项：**- `--page-size <SIZE>`：要返回的评论数。
 - `--page-token <TOKEN>`：页面令牌。
 - `-v, --csv`：打印 CSV。
 - `-q, --quiet`：抑制额外输出。
@@ -451,7 +453,7 @@ kaggle competitions topic-messages [COMPETITION] <TOPIC_ID> [options]
 
 **参数：**
 
-- `[COMPETITION]`：竞赛子弹。如果省略，则默认竞争来自
+- `[COMPETITION]`：比赛子弹。如果省略，则默认竞争来自
   可以使用配置。
 - `<TOPIC_ID>`：讨论主题 ID。
 
