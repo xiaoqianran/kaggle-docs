@@ -132,7 +132,7 @@ kaggle kernels push -p <FOLDER_PATH> [options]
 
 **选项：**
 
-* `--accelerator <ACCELERATOR_ID>`：运行时使用的加速器的ID名称。例如。 “NvidiaTeslaP100”（又名默认 GPU）、“NvidiaTeslaT4”、“TpuV6E8”。
+* `--accelerator <ACCELERATOR_ID>`：运行时使用的加速器的ID名称。例如。 “NvidiaTeslaT4”（又名默认 GPU）、“NvidiaL4”、“TpuV6E8”。
 * `-p, --path <FOLDER_PATH>`：包含内核文件（例如，`.ipynb`、`.Rmd`、`.py`）和`kernel-metadata.json`文件的文件夹路径（默认为当前目录）。
 * `-t, --timeout <SECONDS>`：最大运行时间（以秒为单位）。
 * `--no-run`：保存新版本而不执行笔记本，相当于Web UI中的快速保存。版本已创建，但没有单元运行。
@@ -153,25 +153,19 @@ kaggle kernels push -p tests/kernel --no-run
 
 **目的：**此命令将本地内核文件及其元数据上传到 Kaggle。如果元数据中指定的内核存在于您的帐户下，它将被更新。否则，将创建一个新内核。上传后，Kaggle 将尝试运行内核。
 
-截至 2026 年 2 月可用的加速器：
+截至 2026 年 9 月可用的加速器：
 
-* NvidiaTeslaP100
-*TpuV38
 * 英伟达特斯拉T4
 * NvidiaTeslaT4Highmem
-* Tpu1VmV38
 * NvidiaTeslaA100
 * 英伟达L4
 * TpuV5E8
 * NvidiaL4X1
-* TpuV6E8
+* TPUV6E8
 * 英伟达H100
 * NvidiaRtxPro6000
 
 其中一些仅适用于特定比赛的参与者，有些仅适用于 Kaggle 管理员。
-
-> [!警告]
-> `NvidiaTeslaP100` 不适用于默认 Kaggle 图像的 GPU 计算。其 PyTorch 版本 (cu128) 不包含 Pascal (`sm_60`) 内核，因此 `torch.cuda.is_available()` 返回 `True`，但第一个 CUDA 操作失败并显示 `cudaErrorNoKernelImageForDevice`。请使用`NvidiaTeslaT4`，或者如果您需要 P100，请安装 Pascal 兼容的火炬版本。
 
 ## `kaggle kernels pull`
 
@@ -187,7 +181,9 @@ kaggle kernels pull <KERNEL> [options]
 
 * `<KERNEL>`：内核 URL 后缀（格式：`owner/kernel-slug` 或 `owner/kernel-slug/version`，例如 `$KAGGLE_DEVELOPER/exercise-as-with` 或 `$KAGGLE_DEVELOPER/exercise-as-with/2`）。
 
-**选项：*** `-p, --path <PATH>`：下载文件的文件夹（默认为当前目录）。
+**选项：**
+
+* `-p, --path <PATH>`：下载文件的文件夹（默认为当前目录）。
 * `-w, --wp`：下载文件到当前工作路径。
 * `-m, --metadata`：与内核代码一起生成`kernel-metadata.json` 文件。
 
@@ -205,9 +201,7 @@ kaggle kernels pull <KERNEL> [options]
     kaggle kernels pull --wp $KAGGLE_DEVELOPER/exercise-as-with
     ```
 
-3. 将版本 2 的内核`$KAGGLE_DEVELOPER/exercise-as-with`拉入当前工作目录：
-
-    ```bash
+3. 将版本 2 的内核`$KAGGLE_DEVELOPER/exercise-as-with`拉入当前工作目录：```bash
     kaggle kernels pull --wp $KAGGLE_DEVELOPER/exercise-as-with/2
     ```
 
@@ -229,7 +223,9 @@ kaggle kernels output <KERNEL> [options]
 
 * `<KERNEL>`：内核 URL 后缀（例如，`kerneler/using-google-bird-vocalization-model`）。
 
-**选项：*** `-p, --path <PATH>`：将输出文件下载到的文件夹（默认为当前目录）。
+**选项：**
+
+* `-p, --path <PATH>`：将输出文件下载到的文件夹（默认为当前目录）。
 * `-w, --wp`：下载文件到当前工作路径。
 * `-o, --force`：强制下载，覆盖现有文件。
 * `-q, --quiet`：抑制详细输出。
@@ -308,7 +304,7 @@ kaggle kernels delete <KERNEL> [options]
 
 **参数：**
 
-* `<KERNEL>`：内核URL后缀（格式：`owner/kernel-slug`，例如`$KAGGLE_DEVELOPER/exercise-delete`）。
+* `<KERNEL>`：内核 URL 后缀（格式：`owner/kernel-slug`，例如`$KAGGLE_DEVELOPER/exercise-delete`）。
 
 **选项：**
 
@@ -380,7 +376,7 @@ kaggle kernels topics show <TOPIC_REF> [options]
 
 * `--page-size <PAGE_SIZE>`：每页显示的评论数。
 * `--page-token <PAGE_TOKEN>`：评论分页的页面标记。
-* `-v, --csv`：以 CSV 格式打印结果。
+* `-v, --csv`：以CSV格式打印结果。
 * `-q, --quiet`：抑制详细输出。
 
 **示例：**

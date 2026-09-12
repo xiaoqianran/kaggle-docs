@@ -13,8 +13,8 @@
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "e9c5168f71bd47b38eb6068ecd80216e2e1ba15c",
-      "translatedAt": "2026-09-09T12:01:10.939Z"
+      "hash": "cf7c29ee5bf63c94bd03704f9fea6d1ceb348689",
+      "translatedAt": "2026-09-12T11:20:36.813Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
@@ -41,8 +41,8 @@
       "translatedAt": "2026-08-08T18:57:23.955Z"
     },
     "cli/kernels_metadata.md": {
-      "hash": "de0aeca407520c958983b0b2550e98c44b53c39d",
-      "translatedAt": "2026-08-08T18:57:24.195Z"
+      "hash": "db584187d7b61dca89ae32a604b6c740e67558f8",
+      "translatedAt": "2026-09-12T11:20:29.580Z"
     },
     "cli/model_variations_versions.md": {
       "hash": "8e70e408bbf4a496f82cc27c342901d578003560",
@@ -53,8 +53,8 @@
       "translatedAt": "2026-08-08T18:57:25.444Z"
     },
     "cli/kernels.md": {
-      "hash": "167527f7115362fd60715cfc852756f84f6c290e",
-      "translatedAt": "2026-09-09T12:01:16.437Z"
+      "hash": "16baf13082d0961b207ed845bd3415d535c42df6",
+      "translatedAt": "2026-09-12T11:20:28.361Z"
     },
     "cli/models_metadata.md": {
       "hash": "68440df72296385d274a63a48b5a5e00e7e6b593",
@@ -173,8 +173,8 @@
       "translatedAt": "2026-08-08T18:57:58.615Z"
     },
     "skills/references/kernels.md": {
-      "hash": "4e73a23b581e5986cafac160d92a0e6edb057d89",
-      "translatedAt": "2026-09-09T12:01:20.476Z"
+      "hash": "07f0921f24675ea520e2867367a27a6022ad3c41",
+      "translatedAt": "2026-09-12T11:20:31.998Z"
     },
     "skills/references/model_variations_versions.md": {
       "hash": "8a3f8e0c8cc40055cbf7ee4a116614861712ae6f",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-09-11T11:53:38.015Z",
+  "updatedAt": "2026-09-12T11:20:36.813Z",
   "stats": {
-    "translated": 0,
-    "skipped": 49,
+    "translated": 4,
+    "skipped": 45,
     "failed": 0,
     "total": 49
   }

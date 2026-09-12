@@ -137,11 +137,12 @@ kaggle kernels push -p my-kernel --no-run
 
 **目的：**上传本地笔记本/脚本代码并创建新的内核版本。
 
-**注意：** `NvidiaTeslaP100` 不可用于默认情况下的 GPU 计算
-Kaggle 图像，其 PyTorch 版本 (cu128) 省略了 Pascal (`sm_60`) 内核：
-`torch.cuda.is_available()` 返回 `True`，但第一个 CUDA 操作失败
-与`cudaErrorNoKernelImageForDevice`。使用`NvidiaTeslaT4`或
-安装 Pascal 兼容的 torch 版本。
+**注意：** 当您请求停用的加速器时，CLI 会发出警告。继续推
+成功——服务器决定会话实际运行的内容。
+
+- `NvidiaTeslaP100` 在默认 GPU (`NvidiaTeslaT4`) 上运行。
+- `TpuV38` 和 `Tpu1VmV38` 在默认 TPU (`TpuV5E8`) 上运行。
+- `TpuV232`和`TpuV2256`在CPU上运行，根本没有加速器。
 
 ## `kaggle kernels pull`
 
@@ -164,7 +165,7 @@ kaggle kernels get owner/kernel-slug -w -m
 kaggle k pull owner/kernel-slug/3 -w -m
 ```
 
-**用途：** 从 Kaggle 检索笔记本/脚本源。
+**目的：** 从 Kaggle 检索笔记本/脚本源。
 
 **注意：** 内核参考可能包括可选版本：
 `<owner>/<kernel-name>/<version>`。
