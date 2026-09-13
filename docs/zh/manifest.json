@@ -13,8 +13,8 @@
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "cf7c29ee5bf63c94bd03704f9fea6d1ceb348689",
-      "translatedAt": "2026-09-12T11:20:36.813Z"
+      "hash": "0346af5e59cc22ac5399b2d51eabd38157d510c5",
+      "translatedAt": "2026-09-13T12:23:51.752Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-09-12T11:20:36.813Z",
+  "updatedAt": "2026-09-13T12:23:51.752Z",
   "stats": {
-    "translated": 4,
-    "skipped": 45,
+    "translated": 1,
+    "skipped": 48,
     "failed": 0,
     "total": 49
   }
