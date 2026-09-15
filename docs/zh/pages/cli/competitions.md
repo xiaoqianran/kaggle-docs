@@ -25,7 +25,7 @@ kaggle competitions list [options]
 * `--sort-by <SORT_BY>`：对结果进行排序。有效选项：`grouped`、`prize`、`earliestDeadline`、`latestDeadline`、`numberOfTeams`、`recentlyCreated`（默认值：`latestDeadline`）。
 * `-p, --page <PAGE>`：结果页码（默认值：1）。
 * `-s, --search <SEARCH_TERM>`：搜索词。
-* `-v, --csv`：以CSV格式打印结果。
+* `-v, --csv`：以 CSV 格式打印结果。
 * `--format`：输出格式（`csv`、`table`、`json` 或场投影）。参见[output_format.md](./output_format.md)。
 
 **输出列：**
@@ -100,7 +100,7 @@ kaggle competitions download <COMPETITION> [options]
 **选项：*** `-f, --file <FILE_NAME>`：要下载的特定文件（如果不指定则下载全部）。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在下载路径下。
 * `-p, --path <PATH>`：下载文件的文件夹（默认为当前目录）。
 * `-w, --wp`：下载文件到当前工作路径（相当于`-p .`）。
-* `--unzip`：解压下载的文件（之后删除.zip文件）。
+* `--unzip`：解压下载的文件（之后删除.zip 文件）。
 * `-o, --force`：强制下载，覆盖现有文件。
 * `-q, --quiet`：抑制详细输出。
 
@@ -144,7 +144,7 @@ kaggle competitions download <COMPETITION> [options]
 kaggle competitions submit <COMPETITION> -f <FILE_NAME> -m <MESSAGE> [options]
 ```
 
-**参数：*** `<COMPETITION>`：竞赛网址后缀（例如，`house-prices-advanced-regression-techniques`）。
+**参数：*** `<COMPETITION>`：竞赛URL后缀（例如，`house-prices-advanced-regression-techniques`）。
 * `-f, --file <FILE_NAME>`：提交文件。
 * `-m, --message <MESSAGE>`：提交消息。
 
@@ -154,10 +154,10 @@ kaggle competitions submit <COMPETITION> -f <FILE_NAME> -m <MESSAGE> [options]
 * `-v, --version <VERSION>`：要提交的内核版本（例如`2`）。
 * `-q, --quiet`：抑制详细输出。
 * `--sandbox`：将提交标记为沙盒提交（仅限竞赛主持人/管理员）。
-* `--wait [SECONDS]`：等待提交完成评分，完成后打印公开评分。可以选择以秒为单位传递超时（`0` 或无值 = 最多等待 12 小时，即笔记本电脑的最长运行时间）。如果评分失败或达到超时，则退出非零。
+* `--wait [SECONDS]`：等待提交完成评分，完成后打印公开评分。可以选择以秒为单位传递超时（`0` 或无值 = 最多等待 12 小时，即最大笔记本运行时间）。如果评分失败或达到超时，则退出非零。
 * `--poll-interval <SECONDS>`：等待时状态轮询之间的最大秒数（默认值：`60`，最小值：`5`）。轮询从 5 秒开始并自动增加。
 
-成功提交后，该命令会打印数字提交参考，例如`Submission ref: 12345678`。您可以稍后使用 [⟦T106⟧](#kaggle-competitions-submission) 查看该提交内容。
+成功提交后，该命令会打印数字提交参考，例如`Submission ref: 12345678`。您可以稍后使用 [⟦T107⟧](#kaggle-competitions-submission) 查看该提交内容。
 
 **示例：标准（非代码）竞赛：**
 
@@ -181,7 +181,7 @@ kaggle competitions submit rsna-2024-lumbar-spine-degenerative-classification -f
 kaggle competitions submit house-prices-advanced-regression-techniques -f sample_submission.csv -m "CI run" --wait 600
 ```
 
-一旦提交被评分，该命令就会退出`0`，并且如果评分失败或达到超时，该命令将退出`0`，因此它可以控制管道。
+一旦提交被评分，该命令就会退出`0`，如果评分失败或达到超时，该命令将退出`0`，因此它可以控制管道。
 
 **目的：**
 
@@ -189,7 +189,7 @@ kaggle competitions submit house-prices-advanced-regression-techniques -f sample
 
 ## `kaggle competitions submission`
 
-按数字参考显示单个提交的状态和分数（由`kaggle competitions submit`打印）。
+按数字参考显示单个提交的状态和分数（由`kaggle competitions submit`打印）。当提交未得分时，也会显示原因。
 
 **用途：**
 
@@ -218,6 +218,18 @@ Description:     Test message
 Submission Date: 2026-07-19 12:00:00
 ```
 
+未能评分的提交还报告了原因：
+
+```
+Submission Ref:  12345679
+Status:          ERROR
+Error:           Evaluation Exception: Submission must have 418 rows
+Public Score:
+Private Score:
+Description:     Test message
+Submission Date: 2026-07-19 12:00:00
+```
+
 **目的：**
 
 使用此命令检查提交是否已完成评分并读取其公共分数 - 例如，在没有 `--wait` 的情况下提交后，或通过脚本轮询结果。
@@ -232,16 +244,16 @@ Submission Date: 2026-07-19 12:00:00
 kaggle competitions submissions <COMPETITION> [options]
 ```
 
-**参数：**
-
-* `<COMPETITION>`：竞赛网址后缀（例如，`house-prices-advanced-regression-techniques`）。
+**参数：*** `<COMPETITION>`：竞赛网址后缀（例如，`house-prices-advanced-regression-techniques`）。
 
 **选项：**
 
 * `-v, --csv`：以 CSV 格式打印结果。
 * `-q, --quiet`：抑制详细输出。
 
-**例子：**以 CSV 格式安静地显示“房价高级回归技术”的提交内容：
+**示例：**
+
+以 CSV 格式安静地显示“房价高级回归技术”的提交内容：
 
 ```bash
 kaggle competitions submissions house-prices-advanced-regression-techniques -v -q
@@ -268,7 +280,7 @@ kaggle competitions submission-download <SUBMISSION_ID> [options]
 **选项：**
 
 * `-p, --path <PATH>`：将文件下载到的文件夹。默认为当前工作目录的 Kaggle 下载位置。
-* `-o, --force`：即使本地副本已存在也下载（跳过最新检查）。
+* `-o, --force`：即使本地副本已存在，也要下载（跳过最新检查）。
 * `-q, --quiet`：抑制详细输出。
 
 **示例：**
@@ -295,9 +307,9 @@ kaggle competitions leaderboard <COMPETITION> [options]
 
 **参数：**
 
-* `<COMPETITION>`：竞赛URL后缀（例如，`titanic`）。
+* `<COMPETITION>`：竞赛网址后缀（例如，`titanic`）。**选项：**
 
-**选项：*** `-s, --show`：在控制台中显示排行榜的顶部。
+* `-s, --show`：在控制台中显示排行榜的顶部。
 * `-d, --download`：将整个排行榜下载到 CSV 文件。
 * `-p, --path <PATH>`：下载排行榜的文件夹（如果使用`-d`）。
 * `-v, --csv`：以 CSV 格式打印结果（与`-s` 一起使用）。

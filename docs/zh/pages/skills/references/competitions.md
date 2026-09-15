@@ -2,7 +2,7 @@
 
 # 竞赛 CLI 参考
 
-使用`kaggle competitions`或别名`kaggle c`发现竞争、检查
+使用`kaggle competitions`或别名`kaggle c`发现竞争，检查
 并下载竞赛文件，提交预测或代码内核输出，检查
 提交内容和排行榜，并浏览竞赛讨论主题。
 
@@ -170,7 +170,7 @@ kaggle competitions submit titanic -f submission.csv -m "CI run" --wait 600
 
 ## `kaggle competitions submission`
 
-按数字参考显示单个提交的状态和分数。
+按数字参考显示单个提交的状态和分数，以及评分失败的原因。
 
 **用途：**
 
@@ -183,7 +183,8 @@ kaggle competitions submission <SUBMISSION_REF>
 ```bash
 kaggle competitions submission 12345678
 ```**目的：** 检查提交是否已完成评分并阅读其公开内容
-分数（例如，在没有 `--wait` 的情况下提交后，或从脚本进行轮询时）。
+分数（例如，在没有 `--wait` 的情况下提交后，或从脚本进行轮询时），或者
+找出失败的原因。
 
 ## `kaggle competitions submissions`
 

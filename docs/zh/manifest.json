@@ -13,16 +13,16 @@
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "0346af5e59cc22ac5399b2d51eabd38157d510c5",
-      "translatedAt": "2026-09-13T12:23:51.752Z"
+      "hash": "89cc625938ca62dde8187894d52a5980a776f316",
+      "translatedAt": "2026-09-15T12:18:03.778Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
       "translatedAt": "2026-08-08T18:57:20.502Z"
     },
     "cli/competitions.md": {
-      "hash": "e530a6fa420174ec8dad1e887b54324a8bb4fbc6",
-      "translatedAt": "2026-09-09T12:01:03.647Z"
+      "hash": "d18f21d097bcbd0e2815010389f0a05bc4c3b53d",
+      "translatedAt": "2026-09-15T12:17:59.575Z"
     },
     "cli/datasets.md": {
       "hash": "dc164348bff03b70b139ca1186a8a9f8862bf72a",
@@ -157,8 +157,8 @@
       "translatedAt": "2026-09-09T12:01:20.475Z"
     },
     "skills/references/competitions.md": {
-      "hash": "500fc7e84c9cd85d600d43460906ce64d209b082",
-      "translatedAt": "2026-09-09T12:01:17.413Z"
+      "hash": "7bb12d1c49b994c2d0c1a375bc303b6fa20fd4b3",
+      "translatedAt": "2026-09-15T12:18:03.335Z"
     },
     "skills/references/files.md": {
       "hash": "95f9e1ba9b1e79dd03e031c68c747b2d909e7989",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-09-14T13:26:17.820Z",
+  "updatedAt": "2026-09-15T12:18:03.778Z",
   "stats": {
-    "translated": 0,
-    "skipped": 49,
+    "translated": 3,
+    "skipped": 46,
     "failed": 0,
     "total": 49
   }
