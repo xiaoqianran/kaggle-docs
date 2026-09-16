@@ -5,15 +5,16 @@
 
 ### 下一步
 
+* 拒绝`kaggle datasets delete`中的数据集版本号，以防止在定位单个版本时无意中删除整个数据集
 * 显示`kaggle competitions submission <ref>`提交失败的原因，该提交已在API响应中返回但未显示
 * 尊重`kaggle kernels pull`中的`-k/--kernel`，当省略位置内核参数时，它被忽略，导致CLI回退到本地`kernel-metadata.json`并拉取不同的内核
 * 拒绝写入服务器提供的名称在请求的 `--path` 目录之外解析的 `kaggle kernels output` 文件
-* 在`kaggle kernels push`中添加`--no-run`，可以在不执行notebook的情况下保存新版本，相当于Web UI中的快速保存
-* 使用`kaggle datasets download -f`下载单个文件时，尊重`--unzip`，它从服务器包装大文件的zip存档中提取文件，并将`--unzip`添加到`kaggle competitions download`
+* 将`--no-run`添加到`kaggle kernels push`以保存新版本而不执行笔记本，相当于Web UI中的快速保存
+* 使用`kaggle datasets download -f`下载单个文件时尊重`--unzip`，它从服务器包装大文件的zip存档中提取文件，并将`--unzip`添加到`kaggle competitions download`
 * 使用`kaggle datasets download -f`或`kaggle competitions download -f`下载单个文件时保留请求的文件夹，而不是将其写入下载根目录
 * 添加 `kaggle competitions host-add <comp> -u <user>` 以向 Kaggle 用户授予比赛主持人访问权限
-* 建议针对 403/404/429/5xx API 错误采取下一步措施，将意外错误报告为错误而不是回溯（使用新的 `--debug` 标志），并在 `kaggle --help` 中列出常见示例
-* 添加`kaggle benchmarks quota`以显示模型代理（AI推理）支出配额，并将`kagglesdk`提升至`>= 0.1.37`* 单次提交添加`kaggle competitions submission-download <id>`下载已提交文件（需要`kagglesdk >= 0.1.36`）
+* 建议针对 403/404/429/5xx API 错误采取下一步措施，将意外错误报告为错误而不是回溯（使用新的 `--debug` 标志），并在 `kaggle --help` 中列出常见示例* 添加`kaggle benchmarks quota`以显示模型代理（AI推理）支出配额，并将`kagglesdk`提升至`>= 0.1.37`
+* 单次提交添加`kaggle competitions submission-download <id>`下载已提交文件（需要`kagglesdk >= 0.1.36`）
 * 在比赛设置命令中添加`deadline`（比赛截止日期）并将`kagglesdk`更改为`>= 0.1.36`
 * 当 `kaggle kernels push` 请求已停用的加速器（`NvidiaTeslaP100`、`TpuV38`、`Tpu1VmV38`、`TpuV232` 或 `TpuV2256`）时发出警告，因为服务器会在替代加速器上运行会话。从文档中删除已停用的形状
 * 跨竞赛、数据集、笔记本、模型、用户和讨论添加统一的`kaggle search`命令
@@ -28,25 +29,25 @@
 * 修复（cli）：修复数据集元数据更新中的协作者角色处理（#1138）
 * 重构分页以使用协议 (#1137)
 * 修复(cli): 重试 with_retry 中的瞬时连接错误 (#1132)
-* 添加 Kaggle Secrets 文档 (#1131)
-* 修复模型和所有者 slug 验证 (#1134)* 在上传中实现ignore_patterns（组合）（#1130）
+* 添加 Kaggle Secrets 文档 (#1131)* 修复模型和所有者 slug 验证 (#1134)
+* 在上传中实现ignore_patterns（组合）（#1130）
 * 重构解析器装置（#1118）
 * 修复（auth）：避免跳过程序导入的验证（#1117）
-* 修复(cli): 零字节上传时断点续传的起始偏移量 (#1113)
+* 修复(cli): 零字节上传时可断点续传的起始偏移量 (#1113)
 * 重构(cli)：在 dataset_status 中重用 _resolve_projection (#1116)
 * 更新支持的型号列表 (#1115)
 * 修复(cli): 处理主题显示中删除的评论 (#1114)
 * 将排行榜子命令添加到 Kaggle 基准测试中 (#1112)
 * feat(cli): 添加竞赛设置更新命令 (#1104)
 * feat(cli): 添加比赛主机列表命令 (#1107)
-* feat(cli)：添加竞赛设置获取命令(#1103)
+* feat(cli): 添加竞赛设置获取命令 (#1103)
 * feat(cli): 支持 --page-token 和 --page-size，保留 --page (#1098)
 * feat(cli)：在比赛列表输出中公开 userRank (#1094)
 * 修复(cli): 在 kernels_push 中使用 UTF-8 读取内核元数据和源文件 (#1093)
 * 修复使用无效凭据运行 kaggle 命令时崩溃的问题 (#1092)
 * feat(cli): 添加比赛数据推送命令 (#1085)
-* 修复（cli）：恢复 kernels_pull 中未知内核语言/类型的回退（#1091）
-* 修复（auth）：优先考虑 OAuth 凭据而不是匿名后备（#1089）* feat(cli): 添加竞赛页面更新命令 (#1083)
+* 修复（cli）：恢复 kernels_pull 中未知内核语言/类型的回退（#1091）* 修复（auth）：优先考虑 OAuth 凭据而不是匿名后备（#1089）
+* feat(cli): 添加竞赛页面更新命令 (#1083)
 * 修复(cli): 停止将子命令 -v 视为版本标志 (#1082)
 * 修复（cli）：honor --unzip 用于缓存数据集下载（#1086）
 * feat(cli): 添加竞赛页面删除命令 (#1084)
@@ -68,8 +69,8 @@
 
 ### 2.2.2
 
-* 澄清 LLMS_AVAILABLE 与基准文档中的完整模型集 (#1061)
-* 添加内核主题命令 (#1056)* 改进 kaggle CLI 中的基准测试任务错误消息 (#1057)
+* 澄清 LLMS_AVAILABLE 与基准文档中的完整模型集 (#1061)* 添加内核主题命令 (#1056)
+* 改进 kaggle CLI 中的基准测试任务错误消息 (#1057)
 * 修复数据集元数据列/文件描述更新和文档 (#1055)
 * 扩展 Kaggle CLI 技能参考 (#1054)
 * 使用 CLI 源标记基准令牌请求以进行分析 (#1050)
@@ -92,8 +93,8 @@
 ### 2.2.0
 
 * 添加测试运行工作流程
-* 补丁讨论代码 (#1018)
-* 修复（基准）：标准化提供者前缀和包含 @ 的模型… (#1016)* 修复（基准测试）：选择不带 -m 的模型时处理 EOF (#1013)
+* 补丁讨论代码 (#1018)* 修复（基准）：规范化提供者前缀和包含 @ 的模型… (#1016)
+* 修复（基准测试）：选择不带 -m 的模型时处理 EOF (#1013)
 * 修复（基准）：双层速率限制（#1014）
 * 改进调试的小改动 (#1008)
 * 壮举：添加用于浏览 Kaggle 讨论的论坛命令 (#993)
@@ -125,10 +126,9 @@
 * 更新 CICD CB 配置中的默认 Python 版本
 * 列一个清单（#978）
 
-### 2.0.2
-
-* 添加`kaggle benchmarks auth`命令(#976)
-* 创建 Cloud Build 脚本来运行 linter (#974)* 添加 `kaggle kernels logs` CLI 命令 (#966)
+### 2.0.2* 添加`kaggle benchmarks auth`命令(#976)
+* 创建 Cloud Build 脚本来运行 linter (#974)
+* 添加 `kaggle kernels logs` CLI 命令 (#966)
 * 修复（基准任务推送）：处理 403 (#971)
 * 修复：尊重 HTTP 429 响应上的 Retry-After 标头 (#938) (#940)
 * 将 kagglesdk 依赖版本更新为 0.1.19 (#970)
@@ -154,8 +154,8 @@
 
 ### 1.8.4
 
-* 将`kaggle-api`重命名为`kaggle-cli`
-* 允许多次验证 (#922)* 添加 --acc 来设置加速器：kaggle kernels push ... (#907)
+* 将`kaggle-api`重命名为`kaggle-cli`* 允许多次验证 (#922)
+* 添加 --acc 来设置加速器：kaggle kernels push ... (#907)
 * 添加自动重试和恢复到 download_file (#905) 谢谢katoue！
 * 恢复模型验证检查（#902）
 * 在输出下载中添加文件模式匹配 (#901) 感谢 piotr-ginal！
@@ -188,9 +188,9 @@
 * 添加推/拉的规范别名 (#787)
 * 添加镶木地板作为过滤器选项 (#786)
 * 添加变体作为实例的 alt (#784)
-* 启用（并重命名）同义词 i 和 v (#782)
+* 启用（并重命名）同义词 i 和 v (#782)### 1.7.5.0（未发布）
 
-### 1.7.5.0（未发布）* 需要 Python 3.11。
+* 需要 Python 3.11。
 * 添加内核执行类型 (#775)
 * 输出 docker_image 作为拉取元数据的一部分 (#773)
 * 允许用户在内核推送期间指定 docker_image (#774)
@@ -275,7 +275,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 
 * 没有变化；版本 1.6.13 不可用。
 
-### 13.6.1* 将 --page-size 和 --page-token CLI 选项添加到显示文件列表的所有命令。
+### 13.6.1* 将 --page-size 和 --page-token CLI 选项添加到显示文件列表的所有命令中。
 
 ### 12.6.1
 
@@ -360,7 +360,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 *标记`-y`删除模型/实例/版本而不确认
 
 #### 1.6.0a3
-发布日期：2023 年 7 月 6 日
+发布日期：23 年 7 月 6 日
 * 删除模型、实例或版本的确认
 * 合并 1.5.14 和 1.5.15 的更改
 
@@ -375,16 +375,16 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 发布日期：2023 年 6 月 29 日
 * 显示来自 API 的完整错误消息
 * 改进和修复文档
-* 修复内核数据源bug，添加模型数据源push/pull* 实现断点续传下载
-* 修复无法访问代码的bug
-* 提出一些必需的参数
-* 将enable_tpu添加到内核的push/pull中
+* 修复内核数据源bug，添加模型数据源push/pull* Implement resumable downloads
+* Fix unreachable code bug
+* Make some arguments required
+* Add enable_tpu to kernel's push/pull
 
 #### 1.6.0a2
 发布日期：2023 年 6 月 12 日
-* 添加端点以获取modelInstance
-* 简化modelInstanceVersion创建
-* 修复模型文件压缩问题
+* Add endpoint to get a modelInstance
+* Simplify the modelInstanceVersion creation
+* Fix Model files zipping
 
 #### 1.6.0a0
 发布日期：2023 年 6 月 7 日
@@ -392,7 +392,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 
 #### 1.5.13
 发布日期：2023 年 2 月 27 日
-* 添加将模型添加到内核的功能
+* Add ability to add a model to a kernel
 
 ### 12.5.1
 发布日期：21年3月12日
@@ -404,7 +404,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 
 ### 10.5.1
 发布日期：2020 年 11 月 30 日
-* 删除对 slugify 的依赖。
+* Remove dependency on slugify.
 
 ### 1.5.9
 发布日期：2020年10月21日
@@ -417,8 +417,8 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 #### 1.5.7
 发布日期：2020 年 8 月 31 日
 * 添加指定内核 docker 镜像固定类型的功能
-* 内核默认启用互联网
-* 各种比赛修复
+* Kernels have internet enabled by default
+* Various competitions fixes
 
 #### 1.5.6
 发布日期：2019 年 9 月 19 日
@@ -426,7 +426,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 
 #### 1.5.5
 发布日期：2019 年 8 月 30 日
-* 将投票计数和可用性评级添加到数据集列表中* 将最小和最大数据集大小过滤器添加到数据集列表中
+* 在数据集列表中添加投票计数和可用性评级* 将最小和最大数据集大小过滤器添加到数据集列表中
 * 向数据集元数据API添加附加信息
 * 允许更新数据集元数据
 
@@ -451,7 +451,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 #### 1.5.1
 发布日期：2018 年 12 月 5 日
 * 允许自定义 ca_cert 文件
-* 支持上传带子文件夹的数据集
+* 支持上传带有子文件夹的数据集
 * 修复kaggle.json权限警告
 
 #### 1.5.0
