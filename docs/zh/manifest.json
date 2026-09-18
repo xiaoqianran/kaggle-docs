@@ -41,8 +41,8 @@
       "translatedAt": "2026-08-08T18:57:23.955Z"
     },
     "cli/kernels_metadata.md": {
-      "hash": "db584187d7b61dca89ae32a604b6c740e67558f8",
-      "translatedAt": "2026-09-12T11:20:29.580Z"
+      "hash": "b8d97b50449e9bcba6f57793127e83b62eb29a18",
+      "translatedAt": "2026-09-18T11:56:06.629Z"
     },
     "cli/model_variations_versions.md": {
       "hash": "8e70e408bbf4a496f82cc27c342901d578003560",
@@ -53,8 +53,8 @@
       "translatedAt": "2026-08-08T18:57:25.444Z"
     },
     "cli/kernels.md": {
-      "hash": "16baf13082d0961b207ed845bd3415d535c42df6",
-      "translatedAt": "2026-09-12T11:20:28.361Z"
+      "hash": "0258b3fd48e8e360d5ae7de68dc0b905b509442d",
+      "translatedAt": "2026-09-18T11:56:15.508Z"
     },
     "cli/models_metadata.md": {
       "hash": "68440df72296385d274a63a48b5a5e00e7e6b593",
@@ -173,8 +173,8 @@
       "translatedAt": "2026-08-08T18:57:58.615Z"
     },
     "skills/references/kernels.md": {
-      "hash": "07f0921f24675ea520e2867367a27a6022ad3c41",
-      "translatedAt": "2026-09-12T11:20:31.998Z"
+      "hash": "1a7c4034b062b8d095835551baf07bdc7537d3bb",
+      "translatedAt": "2026-09-18T11:56:13.178Z"
     },
     "skills/references/model_variations_versions.md": {
       "hash": "8a3f8e0c8cc40055cbf7ee4a116614861712ae6f",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-09-17T12:16:24.564Z",
+  "updatedAt": "2026-09-18T11:56:15.508Z",
   "stats": {
-    "translated": 0,
-    "skipped": 49,
+    "translated": 3,
+    "skipped": 46,
     "failed": 0,
     "total": 49
   }

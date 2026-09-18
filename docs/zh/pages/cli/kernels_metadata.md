@@ -36,7 +36,7 @@
 * `is_private`：内核是否应该是私有的。如果未指定，将为`true`。
 * `enable_gpu`：内核是否应该在 GPU 上运行。如果未指定，将为`false`。
 * `enable_internet`：内核是否应该能够访问互联网。如果没有指定，则为`false`。
-* `machine_shape`：要使用的加速器/GPU 类型（例如，`NvidiaTeslaT4`、`NvidiaL4` 或 `TpuV5E8`）。
+* `machine_shape`：要使用的加速器/GPU 类型（例如，`NvidiaTeslaT4` 表示 GPU T4 ×2、`NvidiaL4` 或 `TpuV5E8` 表示 TPU v5e-8）。
 * `dataset_sources`：数据集源列表，指定为`"username/dataset-slug"`
 * `competition_sources`：竞赛来源列表，指定为`"competition-slug"`
 * `kernel_sources`：内核源列表，指定为`"username/kernel-slug"`

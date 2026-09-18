@@ -132,7 +132,7 @@ kaggle kernels push -p <FOLDER_PATH> [options]
 
 **选项：**
 
-* `--accelerator <ACCELERATOR_ID>`：运行时使用的加速器的ID名称。例如。 “NvidiaTeslaT4”（又名默认 GPU）、“NvidiaL4”、“TpuV6E8”。
+* `--accelerator <ACCELERATOR_ID>`：运行时使用的加速器的ID名称。例如。 “NvidiaTeslaT4”（GPU T4 ×2，默认 GPU）、“NvidiaL4”、“TpuV5E8”（TPU v5e-8）、“TpuV6E8”。
 * `-p, --path <FOLDER_PATH>`：包含内核文件（例如，`.ipynb`、`.Rmd`、`.py`）和`kernel-metadata.json`文件的文件夹路径（默认为当前目录）。
 * `-t, --timeout <SECONDS>`：最大运行时间（以秒为单位）。
 * `--no-run`：保存新版本而不执行笔记本，相当于Web UI中的快速保存。版本已创建，但没有单元运行。
@@ -155,13 +155,12 @@ kaggle kernels push -p tests/kernel --no-run
 
 截至 2026 年 9 月可用的加速器：
 
-* 英伟达特斯拉T4
-* NvidiaTeslaT4Highmem
+* NvidiaTeslaT4 (GPU T4 ×2)
 * NvidiaTeslaA100
 * 英伟达L4
-* TpuV5E8
+* TpuV5E8（TPU v5e-8）
 * NvidiaL4X1
-* TPUV6E8
+* TpuV6E8
 * 英伟达H100
 * NvidiaRtxPro6000
 

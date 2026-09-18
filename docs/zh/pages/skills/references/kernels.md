@@ -124,7 +124,7 @@ kaggle kernels push [options]
 
 - `-p, --path <FOLDER>`：包含文件和`kernel-metadata.json`的文件夹。
 - `-t, --timeout <SECONDS>`：限制运行时间，以 Kaggle 的最大值为界。
-- `--accelerator <ACCELERATOR>`：内核运行的加速器类型。
+- `--accelerator <ACCELERATOR>`：内核运行的加速器类型（例如`NvidiaTeslaT4`适用于GPU T4 ×2，`TpuV5E8`适用于TPU v5e-8）。
 - `--no-run`：保存新版本而不执行笔记本，相当于Web UI中的快速保存。
 
 **示例：**
