@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-23T12:22:19.281Z",
+  "fetchedAt": "2026-09-24T12:21:55.301Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -102,7 +102,7 @@
     },
     {
       "rel": "cli/changelog.md",
-      "bytes": 22997,
+      "bytes": 23384,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/CHANGELOG.md",
       "track": "CLI & API"
@@ -165,7 +165,7 @@
     },
     {
       "rel": "cli/kernels.md",
-      "bytes": 12715,
+      "bytes": 13168,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/kernels.md",
       "track": "CLI & API"
@@ -291,7 +291,7 @@
     },
     {
       "rel": "skills/references/kernels.md",
-      "bytes": 6477,
+      "bytes": 6562,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/skills/references/kernels.md",
       "track": "Agent Skills"

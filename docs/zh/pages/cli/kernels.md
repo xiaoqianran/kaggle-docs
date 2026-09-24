@@ -2,7 +2,7 @@
 
 # 内核命令
 
-用于与 Kaggle Kernels（笔记本和脚本）交互的命令。
+用于与 Kaggle 内核（笔记本和脚本）交互的命令。
 
 ## `kaggle kernels list`
 
@@ -20,7 +20,7 @@ kaggle kernels list [options]
 * `-p, --page <PAGE>`：结果页码（默认值：1）。
 * `--page-size <SIZE>`：每页的项目数（默认值：20）。
 * `-s, --search <SEARCH_TERM>`：搜索词。
-* `-v, --csv`：以 CSV 格式打印结果。
+* `-v, --csv`：以CSV格式打印结果。
 * `--parent <PARENT_KERNEL>`：按父内核过滤（格式：`owner/kernel-slug`）。
 * `--competition <COMPETITION_SLUG>`：按比赛过滤。
 * `--dataset <DATASET_SLUG>`：按数据集过滤（格式：`owner/dataset-slug`）。
@@ -76,7 +76,7 @@ kaggle kernels files <KERNEL> [options]
 
 **参数：**
 
-* `<KERNEL>`：内核URL后缀（格式：`owner/kernel-slug`，例如`kerneler/sqlite-global-default`）。
+* `<KERNEL>`：内核 URL 后缀（格式：`owner/kernel-slug` 或 `owner/kernel-slug/version`，例如 `kerneler/sqlite-global-default` 或 `kerneler/sqlite-global-default/2`）。
 
 **选项：**
 
@@ -220,7 +220,7 @@ kaggle kernels output <KERNEL> [options]
 
 **参数：**
 
-* `<KERNEL>`：内核 URL 后缀（例如，`kerneler/using-google-bird-vocalization-model`）。
+* `<KERNEL>`：内核 URL 后缀（格式：`owner/kernel-slug` 或 `owner/kernel-slug/version`，例如 `kerneler/using-google-bird-vocalization-model` 或 `kerneler/using-google-bird-vocalization-model/2`）。如果没有版本，则会下载最新版本的输出。
 
 **选项：**
 
@@ -255,15 +255,21 @@ kaggle kernels output <kernel> --file-pattern ".*\.png$"
 
 ```bash
 kaggle kernels output <kernel> --page-token <TOKEN>
-```
-
-以较小的页面下载文件：
+```以较小的页面下载文件：
 
 ```bash
 kaggle kernels output <kernel> --page-size 50
 ```
 
-**目的：**使用此命令检索内核运行生成的文件，例如提交文件、处理的数据或可视化。默认情况下，输出下载会扫描每个可用的输出页面，因此 `--file-pattern` 可以匹配第一页以外的文件。使用`--page-size`控制每个页面请求多少个文件，当您只想从一个特定页面下载文件时使用`--page-token`。
+下载版本 2 的输出而不是最新版本：
+
+```bash
+kaggle kernels output <kernel>/2
+```
+
+**目的：**
+
+使用此命令检索内核运行生成的文件，例如提交文件、处理的数据或可视化。默认情况下，输出下载会扫描每个可用的输出页面，因此 `--file-pattern` 可以匹配第一页以外的文件。使用`--page-size`控制每个页面请求多少个文件，当您只想从一个特定页面下载文件时使用`--page-token`。
 
 ## `kaggle kernels status`
 
@@ -277,7 +283,7 @@ kaggle kernels status <KERNEL>
 
 **参数：**
 
-* `<KERNEL>`：内核 URL 后缀（例如，`kerneler/sqlite-global-default`）。
+* `<KERNEL>`：内核 URL 后缀（格式：`owner/kernel-slug` 或 `owner/kernel-slug/version`，例如 `kerneler/sqlite-global-default` 或 `kerneler/sqlite-global-default/2`）。
 
 **示例：**
 
@@ -317,9 +323,7 @@ kaggle kernels delete <KERNEL> [options]
 kaggle kernels delete $KAGGLE_DEVELOPER/exercise-delete --yes
 ```
 
-**目的：**
-
-此命令将从 Kaggle 中永久删除您的内核之一。谨慎使用。
+**目的：**此命令将从 Kaggle 中永久删除您的内核之一。谨慎使用。
 
 ## `kaggle kernels topics list`
 
@@ -331,7 +335,9 @@ kaggle kernels delete $KAGGLE_DEVELOPER/exercise-delete --yes
 kaggle kernels topics list <KERNEL> [options]
 ```
 
-**参数：*** `<KERNEL>`：格式为 `<owner>/<kernel-slug>` 的内核引用（例如，`owner/kernel-slug`）。
+**参数：**
+
+* `<KERNEL>`：格式为 `<owner>/<kernel-slug>` 的内核引用（例如，`owner/kernel-slug`）。
 
 **选项：**
 
@@ -375,20 +381,20 @@ kaggle kernels topics show <TOPIC_REF> [options]
 
 * `--page-size <PAGE_SIZE>`：每页显示的评论数。
 * `--page-token <PAGE_TOKEN>`：评论分页的页面标记。
-* `-v, --csv`：以CSV格式打印结果。
+* `-v, --csv`：以 CSV 格式打印结果。
 * `-q, --quiet`：抑制详细输出。
 
 **示例：**
 
 ```bash
 kaggle kernels topics show owner/kernel-slug/12345
-```
-
-**目的：**
+```**目的：**
 
 此命令显示完整的讨论主题及其以缩进树结构呈现的所有注释。
 
-## 在内核中使用 Secret如果您的内核需要访问敏感信息（例如 API 密钥或密码）而不在代码中公开它们，您应该使用 **Kaggle Secrets**。
+## 在内核中使用 Secret
+
+如果您的内核需要访问敏感信息（例如 API 密钥或密码）而不在代码中公开它们，您应该使用 **Kaggle Secrets**。
 
 ### 1. 在 Kaggle.com 上定义 Secret（不支持 CLI）
 1. 在 Kaggle 笔记本编辑器中打开您的笔记本。

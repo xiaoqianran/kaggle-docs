@@ -172,7 +172,7 @@ kaggle k pull owner/kernel-slug/3 -w -m
 
 ## `kaggle kernels output`
 
-下载最新内核运行的输出。
+下载内核运行的输出，除非给出版本，否则是最新的输出。
 
 **用途：**
 
@@ -194,6 +194,7 @@ kaggle kernels output [KERNEL] [options]
 
 ```bash
 kaggle kernels output owner/kernel-slug -p output
+kaggle kernels output owner/kernel-slug/2 -p output
 kaggle k output owner/kernel-slug --file-pattern ".*\\.png$"
 ```
 
@@ -229,15 +230,15 @@ kaggle kernels status owner/kernel-slug
 
 ## `kaggle kernels logs`
 
-打印最新内核运行的执行日志。
-
-**用途：**
+打印最新内核运行的执行日志。**用途：**
 
 ```bash
 kaggle kernels logs [KERNEL] [options]
 ```
 
-**选项：**- `-f, --follow`：持续轮询并打印新的日志行。
+**选项：**
+
+- `-f, --follow`：持续轮询并打印新的日志行。
 - `--interval <SECONDS>`：跟随模式的轮询间隔。默认 5。
 
 **示例：**
