@@ -1,8 +1,8 @@
 {
   "files": {
     "cli/README.md": {
-      "hash": "679919f7eb52827ed255267acf68aaa3456593f2",
-      "translatedAt": "2026-08-08T18:57:12.937Z"
+      "hash": "d3e37a561e5866b24c3131289d6e788810de7fb7",
+      "translatedAt": "2026-10-03T12:06:55.063Z"
     },
     "cli/competition_creation.md": {
       "hash": "2a5f8c3a76d0c8a509e2bc55fbc76e07f037da8c",
@@ -197,7 +197,7 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-10-02T13:17:23.995Z",
+  "updatedAt": "2026-10-03T12:06:55.064Z",
   "stats": {
     "translated": 1,
     "skipped": 48,

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-02T13:17:04.348Z",
+  "fetchedAt": "2026-10-03T12:06:51.806Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -109,7 +109,7 @@
     },
     {
       "rel": "cli/README.md",
-      "bytes": 3539,
+      "bytes": 4239,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/README.md",
       "track": "CLI & API"
