@@ -2,10 +2,14 @@
 
 # 变更日志
 
-## 下一个版本
+## v1.0.3（2026 年 10 月 21 日）
 
+* 修复当服务器返回 `Last-Modified` 标头时 `competition_download` 与 `AttributeError` 崩溃的问题。
+* 添加 `signing` extra 中缺少的 `pyopenssl` 依赖项。
+* 要求 `certifi>=2026.10.19` 删除受损的 emSign/eMudhra 根 CA，这允许伪造的 TLS 证书拦截 Kaggle API 凭证 ([GHSA-6q48-6c7w-9gw2](https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2))。还有开发和 CI 工具中的 `pip>=26.2.2` 和 `uv>=0.13.4`。
 * 修复了 Windows 上未从服务器端 zip 包装器中提取单个文件下载的问题，这使得原始 zip 存档缓存在请求的文件名下，而不是预期的文件下。 ([#252](https://github.com/Kaggle/kagglehub/issues/252))
 * 支持通过`dataset_download(path=...)`下载一个数据集目录，包括文件嵌套和缓存复用。 ([#306](https://github.com/Kaggle/kagglehub/pull/306))
+* 并行目录上传 (#298)
 
 ## v1.0.2（2026 年 6 月 9 日）
 
@@ -24,15 +28,15 @@
 
 * `dataset_download`、`model_download`、`notebook_output_download`、`competition_download`添加`output_dir`参数，可直接下载到自定义目录。 （[#283](https://github.com/Kaggle/kagglehub/pull/283)、[#284](https://github.com/Kaggle/kagglehub/pull/284)、[#285](https://github.com/Kaggle/kagglehub/pull/285)）
 
-## v0.4.2（2026 年 1 月 29 日）
-
-* 重新添加 `set_kaggle_credentials` 方法，以避免根据设置旧凭据对库造成破坏。 ([#281](https://github.com/Kaggle/kagglehub/pull/281))
+## v0.4.2（2026 年 1 月 29 日）* 重新添加 `set_kaggle_credentials` 方法，以避免根据设置旧凭据对库造成破坏。 ([#281](https://github.com/Kaggle/kagglehub/pull/281))
 
 ## v0.4.1（2026 年 1 月 20 日）
 
 * 使用新的 API 令牌进行 `kagglehub.login()` 和 Colab 秘密身份验证。 ([#279](https://github.com/Kaggle/kagglehub/pull/279))
 
-## v0.4.0（2026 年 1 月 7 日）* 恢复版本检查逻辑。 ([#272](https://github.com/Kaggle/kagglehub/pull/272))
+## v0.4.0（2026 年 1 月 7 日）
+
+* 恢复版本检查逻辑。 ([#272](https://github.com/Kaggle/kagglehub/pull/272))
 * 记录新的身份验证技术。 ([#270](https://github.com/Kaggle/kagglehub/pull/270))
 * 使用`kagglesdk`代替自定义HTTP实现。 ([#268](https://github.com/Kaggle/kagglehub/pull/268))
 * 放弃对 Python 3.9 的支持。现在所需的最低 Python 版本是 3.10。 ([#260](https://github.com/Kaggle/kagglehub/pull/260))
@@ -58,16 +62,16 @@
 
 * 修复Colab环境检测逻辑([#230](https://github.com/Kaggle/kagglehub/pull/230))
 
-## v0.3.9（2025 年 2 月 18 日）
-
-* 将load_datset重命名为dataset_load ([#228](https://github.com/Kaggle/kagglehub/pull/228))
+## v0.3.9（2025 年 2 月 18 日）* 将load_datset重命名为dataset_load ([#228](https://github.com/Kaggle/kagglehub/pull/228))
 * 支持[Kaggle Packages](https://www.kaggle.com/discussions/product-announcements/564941) ([#196](https://github.com/Kaggle/kagglehub/pull/196))
 
 ## v0.3.8（2025 年 2 月 13 日）
 
-* 由于依赖性问题，将签名移至可选功能 ([#225](https://github.com/Kaggle/kagglehub/pull/225))
+* 由于依赖性问题，将签名移为可选功能 ([#225](https://github.com/Kaggle/kagglehub/pull/225))
 
-## v0.3.7（2025 年 1 月 31 日）* 下载时将数据加载器添加到用户代理([#215](https://github.com/Kaggle/kagglehub/pull/215))
+## v0.3.7（2025 年 1 月 31 日）
+
+* 下载时将数据加载器添加到用户代理([#215](https://github.com/Kaggle/kagglehub/pull/215))
 * 签署模型并发布到sigstore ([#211](https://github.com/Kaggle/kagglehub/pull/211))
 * 在笔记本缓存目录中使用版本号（[#212](https://github.com/Kaggle/kagglehub/pull/212)）
 * 笔记本输出下载版本控制 ([#206](https://github.com/Kaggle/kagglehub/pull/206))
@@ -78,7 +82,7 @@
 
 * 添加 `kagglehub.load_dataset(...)` ([#192](https://github.com/Kaggle/kagglehub/pull/192), [#197](https://github.com/Kaggle/kagglehub/pull/197))
 * 修复自动压缩数据集下载（[#194](https://github.com/Kaggle/kagglehub/pull/194)、[#195](https://github.com/Kaggle/kagglehub/pull/195)）
-*更新`docker-hatch`和文档([#193](https://github.com/Kaggle/kagglehub/pull/193))
+* 更新`docker-hatch`和文档([#193](https://github.com/Kaggle/kagglehub/pull/193))
 
 ## v0.3.5（2024 年 12 月 10 日）
 
@@ -117,13 +121,13 @@
 
 * 通过忽略模式改进上传 ([#147](https://github.com/Kaggle/kagglehub/pull/147))
 * 上传空文件([#145](https://github.com/Kaggle/kagglehub/pull/145))
-* 在Kaggle笔记本环境中附加数据集（[#134](https://github.com/Kaggle/kagglehub/pull/134)）
+* 在 Kaggle Notebook 环境中附加数据集 ([#134](https://github.com/Kaggle/kagglehub/pull/134))
 * 使用`kagglehub.dataset_upload(...)`（[#149](https://github.com/Kaggle/kagglehub/pull/149)）上传数据集
 * 使用`kagglehub.dataset_download(...)` ([#131](https://github.com/Kaggle/kagglehub/pull/131)) 下载数据集
 
 ## v0.2.8（2024 年 7 月 16 日）
 
-* 添加了对 Kaggle 笔记本中隐式令牌身份验证的支持 ([#141](https://github.com/Kaggle/kagglehub/pull/141))
+* 在 Kaggle 笔记本中添加了对隐式令牌身份验证的支持 ([#141](https://github.com/Kaggle/kagglehub/pull/141))
 * 改进 Kaggle 和 Colab 环境中缓存模型的日志记录 ([#142](https://github.com/Kaggle/kagglehub/pull/142))
 
 ## v0.2.7（2024 年 7 月 1 日）
@@ -142,7 +146,7 @@
 ## v0.2.4（2024 年 4 月 26 日）
 
 * 当模型实例存在但尚未准备好版本时创建新版本([#108](https://github.com/Kaggle/kagglehub/pull/108))
-* 删除上传时的压缩([#105](https://github.com/Kaggle/kagglehub/pull/105))
+* 删除上传时的压缩 ([#105](https://github.com/Kaggle/kagglehub/pull/105))
 
 ## v0.2.3（2024 年 4 月 16 日）
 
@@ -188,7 +192,7 @@
 * 添加 Colab 模型解析器 ([#53](https://github.com/Kaggle/kagglehub/pull/53))
 * 添加 `kagglehub.model_upload(...)` ([#43](https://github.com/Kaggle/kagglehub/pull/43), [#51](https://github.com/Kaggle/kagglehub/pull/51), [#52](https://github.com/Kaggle/kagglehub/pull/52))
 * 将 `kagglehub` 用户代理添加到 Kaggle API V1 调用 ([#50](https://github.com/Kaggle/kagglehub/pull/50))
-* 为`kagglehub.model_download()`添加`force_download`选项（[#44](https://github.com/Kaggle/kagglehub/pull/44)）
+* 将`force_download`选项添加到`kagglehub.model_download()`（[#44](https://github.com/Kaggle/kagglehub/pull/44)）
 
 ## v0.1.4（2023 年 12 月 11 日）
 
@@ -205,7 +209,7 @@
 
 ## v0.1.1（2023 年 11 月 30 日）
 
-* 修复了登录凭据验证（[#33](https://github.com/Kaggle/kagglehub/pull/33)、[#34](https://github.com/Kaggle/kagglehub/pull/34)）
+* 修复了登录凭证验证（[#33](https://github.com/Kaggle/kagglehub/pull/33)、[#34](https://github.com/Kaggle/kagglehub/pull/34)）
 
 ## v0.1.0（2023 年 11 月 29 日）
 
@@ -216,7 +220,7 @@
 * 支持断点续传([#17](https://github.com/Kaggle/kagglehub/pull/17))
 * 支持无版本模型句柄([#16](https://github.com/Kaggle/kagglehub/pull/16))## v0.0.1a1（2023 年 10 月 26 日）
 
-* 通过环境变量或凭据文件登录 ([#9](https://github.com/Kaggle/kagglehub/pull/9))
+* 通过环境变量或凭证文件登录 ([#9](https://github.com/Kaggle/kagglehub/pull/9))
 * 通过HTTP下载公共模型并存储在本地缓存中（[#8](https://github.com/Kaggle/kagglehub/pull/8)，[#12](https://github.com/Kaggle/kagglehub/pull/12)）
 
 ## v0.0.1a0（2023 年 10 月 5 日）

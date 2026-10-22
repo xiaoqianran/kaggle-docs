@@ -13,8 +13,8 @@
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "42583e4358bc718ab6ecf62868623baa0fa5ec10",
-      "translatedAt": "2026-10-17T11:14:49.527Z"
+      "hash": "bacf2ef8df1315ecd98c84f10af52286b7789476",
+      "translatedAt": "2026-10-22T12:35:10.830Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
@@ -85,8 +85,8 @@
       "translatedAt": "2026-08-08T18:57:29.481Z"
     },
     "kagglehub/CHANGELOG.md": {
-      "hash": "0ad0a99bde1494c100e30d7413f097fd4e9f938c",
-      "translatedAt": "2026-08-08T18:57:30.813Z"
+      "hash": "1338c3965deb42b770ae53cdc4bd01fd6ba05e43",
+      "translatedAt": "2026-10-22T12:34:59.170Z"
     },
     "platform/api.md": {
       "hash": "b2ea8da134cb39dca42b40c9c6ee3b82e34d0802",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-10-21T12:30:17.522Z",
+  "updatedAt": "2026-10-22T12:35:10.830Z",
   "stats": {
-    "translated": 0,
-    "skipped": 49,
+    "translated": 2,
+    "skipped": 47,
     "failed": 0,
     "total": 49
   }
