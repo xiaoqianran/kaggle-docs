@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-22T12:34:50.433Z",
+  "fetchedAt": "2026-10-23T12:13:49.704Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -102,7 +102,7 @@
     },
     {
       "rel": "cli/changelog.md",
-      "bytes": 26554,
+      "bytes": 26566,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/CHANGELOG.md",
       "track": "CLI & API"
@@ -165,14 +165,14 @@
     },
     {
       "rel": "cli/kernels.md",
-      "bytes": 13168,
+      "bytes": 13160,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/kernels.md",
       "track": "CLI & API"
     },
     {
       "rel": "cli/kernels_metadata.md",
-      "bytes": 2908,
+      "bytes": 2886,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/kernels_metadata.md",
       "track": "CLI & API"
@@ -228,7 +228,7 @@
     },
     {
       "rel": "cli/tutorials.md",
-      "bytes": 17318,
+      "bytes": 17311,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/tutorials.md",
       "track": "CLI & API"

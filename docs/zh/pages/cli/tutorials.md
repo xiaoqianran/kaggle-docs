@@ -109,7 +109,7 @@
     # Replace YOUR_USERNAME with your actual Kaggle username
     kaggle kernels pull YOUR_USERNAME/my-cli-test-kernel -m
     ```
-    这将下载`my-cli-test-kernel.ipynb`（或`.py`/`.Rmd`）和`kernel-metadata.json`。
+    这将下载`my-cli-test-kernel.ipynb`（或`.py`）和`kernel-metadata.json`。
 
 4. **编辑内核或元数据。**
     * 打开下载的笔记本文件（例如`my-cli-test-kernel.ipynb`）并对代码或内容进行一些更改。
@@ -120,7 +120,7 @@
 
     ```bash
     kaggle kernels push -p .
-    ```6. **在 Kaggle.com 上验证。** 刷新 [⟦T62⟧ tab in ⟦T63⟧](https://www.kaggle.com/work/code)。您应该会看到代码更改以及“基准”标签添加到内核设置中。
+    ```6. **在 Kaggle.com 上验证。** 刷新 [⟦T61⟧ tab in ⟦T62⟧](https://www.kaggle.com/work/code)。您应该会看到代码更改以及“基准”标签添加到内核设置中。
 
 ## 教程：创建模型
 
@@ -153,7 +153,7 @@
     kaggle models create -p .
     ```
 
-6. **在 Kaggle.com 上验证。** 刷新 [⟦T75⟧ tab in ⟦T76⟧](https://www.kaggle.com/work/models)。您应该看到“我很棒的 AI 模型”。## 教程：创建模型变体
+6. **在 Kaggle.com 上验证。** 刷新 [⟦T74⟧ tab in ⟦T75⟧](https://www.kaggle.com/work/models)。您应该看到“我很棒的 AI 模型”。## 教程：创建模型变体
 
 本教程展示如何在现有模型下创建变体。模型变体通常表示在特定框架（如 TensorFlow、PyTorch、JAX 等）中实现的模型，并包含实际的模型文件。
 
@@ -178,13 +178,13 @@
     * 将 `"INSERT_EXISTING_MODEL_SLUG_HERE"` 替换为您的父模型的 slug（例如 `"my-awesome-ai-model"`）。
     * 对于此变体，将 `"INSERT_INSTANCE_SLUG_HERE"` 替换为 slug（例如 `"jax-implementation"`）。
     * 将`"INSERT_FRAMEWORK_HERE"`替换为模型框架（例如，`"jax"`、`"tensorflow"`、`"pytorch"`、`"sklearn"`）。
-    * 更新`"instance_size_bytes"`（如果已知），并添加`"description"`。5. **创建模型变体。** 这会上传当前目录中的文件（例如，`flax_model.params`）以及变体元数据。
+    * 更新`"instance_size_bytes"`（如果已知），并添加`"description"`。5. **创建模型变体。** 这会上传当前目录（例如，`flax_model.params`）中的文件以及变体元数据。
 
     ```bash
     kaggle models variations create -p .
     ```
 
-6. **在 Kaggle.com 上验证。** 通过单击 [⟦T97⟧ tab on ⟦T98⟧](https://www.kaggle.com/work/models) 中的模型转到 Kaggle 上的模型页面。您应该会看到列出了一个新的“jax-implementation”变体，并且它将有一个包含 `flax_model.params` 的版本。
+6. **在 Kaggle.com 上验证。** 通过单击 [⟦T96⟧ tab on ⟦T97⟧](https://www.kaggle.com/work/models) 中的模型转到 Kaggle 上的模型页面。您应该会看到列出了一个新的“jax-implementation”变体，并且它将有一个包含 `flax_model.params` 的版本。
 
 ## 教程：创建模型变体版本
 
@@ -206,15 +206,15 @@
     ```
     *注意：`-p .`表示当前目录中的所有文件都将作为新版本的一部分上传。如果您只想上传 `flax_model_v2.params`，请确保只有它（以及任何其他 V2 文件）位于目录中并将 `-p` 指向该目录，或者小心管理您的文件。*
 
-4. **在 Kaggle.com 上验证。** 单击 [⟦T108⟧ tab on ⟦T109⟧](https://www.kaggle.com/work/models) 前往 Kaggle 上的模型变体页面（例如 `YOUR_USERNAME/my-awesome-ai-model/jax/jax-implementation`）。您应该会看到一个新版本（例如版本 2），其中列出了您的注释和新文件。
+4. **在 Kaggle.com 上验证。** 单击 [⟦T107⟧ tab on ⟦T108⟧](https://www.kaggle.com/work/models) 前往 Kaggle 上的模型变体页面（例如 `YOUR_USERNAME/my-awesome-ai-model/jax/jax-implementation`）。您应该会看到一个新版本（例如版本 2），其中列出了您的注释和新文件。
 
 ## 教程：如何提交比赛
 
-本教程将引导您完成使用 CLI 提交 Kaggle 竞赛的过程。
+本教程将引导您完成使用 CLI 向 Kaggle 竞赛提交作品的过程。
 
 1. **查找竞赛并接受规则。**
     * 首先，你需要找到一个竞争者。您可以使用`kaggle competitions list`列出正在进行的比赛。
-    * 在本教程中，我们将使用“泰坦尼克号”竞赛，这是一个常见的起点。您可以在[⟦T111⟧](https://www.kaggle.com/c/titanic)找到它。
+    * 在本教程中，我们将使用“泰坦尼克号”竞赛，这是一个常见的起点。您可以在[⟦T110⟧](https://www.kaggle.com/c/titanic)找到它。
     * **重要**：在下载数据或提交之前，您*必须*加入竞赛并接受 Kaggle 网站上的竞赛规则。导航至 kaggle.com 上的竞赛即可执行此操作。2. **创建目录并下载竞赛文件。**
     * 为您的竞赛文件创建一个新目录并导航到其中。
         ```bash
@@ -238,7 +238,7 @@
     * 让我们根据`gender_submission.csv`（根据性别预测生存率）创建一个非常简单的提交文件。对于本教程，我们将复制它并将其用作我们的提交。在真实场景中，您可以根据模型对 `test.csv` 数据的预测生成此文件。
         ```bash
         cp gender_submission.csv my_submission.csv
-        ```* 你的 `my_submission.csv` 应该看起来像这样：
+        ```* 你的`my_submission.csv`应该看起来像这样：
         ```
         PassengerId,Survived
         892,0
@@ -250,7 +250,7 @@
 4. **提交竞赛。**
     * 使用`kaggle competitions submit`命令。您需要指定：
         * 比赛ID（`titanic`）。
-        * 您提交文件的路径（`-f my_submission.csv`）。
+        * 您提交文件的路径 (`-f my_submission.csv`)。
         * 描述您提交内容的消息 (`-m "My first submission via CLI"`)。
         ```bash
         kaggle competitions submit titanic -f my_submission.csv -m "My first submission via CLI"
@@ -258,7 +258,7 @@
 
 5. **检查您的提交状态。**
     * 提交后，您将收到一条指示成功或失败的消息。
-    * 您可以在 Kaggle.com 竞赛页面的“我的提交”选项卡上查看您提交的分数和状态（例如，[⟦T127⟧](https://www.kaggle.com/c/titanic/submissions)）。
+    * 您可以在 Kaggle.com 竞赛页面的“我的提交”选项卡上查看您提交的分数和状态（例如，[⟦T126⟧](https://www.kaggle.com/c/titanic/submissions)）。
     * 您还可以通过 CLI 列出您最近提交的内容及其分数：
         ```bash
         kaggle competitions submissions -c titanic
@@ -272,7 +272,7 @@
 
 1. **寻找代码竞赛。**
 
-    * 首先，您需要找到一个可以参加的代码竞赛。您可以在[Kaggle competitions page](https://www.kaggle.com/competitions)上浏览可用的竞赛。许多特色竞赛都是代码竞赛。
+    * 首先，您需要找到要参加的代码竞赛。您可以在[Kaggle competitions page](https://www.kaggle.com/competitions)上浏览可用的竞赛。许多特色竞赛都是代码竞赛。
 
 2. **下载数据集。*** 选择比赛后，您需要下载数据集。您可以使用 `kaggle competitions download` 命令执行此操作：
     ```bash

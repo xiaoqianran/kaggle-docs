@@ -31,11 +31,11 @@
 * `id_no`：内核的数字 ID。  必须指定 `id` 或 `id_no` 之一。如果两者都是，`id_no` 将是首选。
 * `title`：内核的标题。新内核必需 - 现有内核可选。请注意，内核标题和 slugs 是相互链接的。内核 slug 的标题始终是小写的，并用破折号 (`-`) 替换空格。 
   * 如果您想重命名内核，您可以更改元数据中的标题。但是，您还需要在重命名完成后更新`id`。
-* `code_file`：内核源代码的路径。必需的。如果不是绝对路径，则应该是相对于`kernel-metadata.json`的位置。* `language`：编写内核所用的语言。有效选项为 `python`、`r` 和 `rmarkdown`。必需的。
+* `code_file`：内核源代码的路径。必需的。如果不是绝对路径，则应该是相对于`kernel-metadata.json`的位置。* `language`：内核编写的语言。有效选项是`python`。必需的。
 * `kernel_type`：内核类型。有效选项为 `script` 和 `notebook`。必需的。
 * `is_private`：内核是否应该是私有的。如果未指定，将为`true`。
 * `enable_gpu`：内核是否应该在 GPU 上运行。如果未指定，将为`false`。
-* `enable_internet`：内核是否应该能够访问互联网。如果没有指定，则为`false`。
+* `enable_internet`：内核是否应该能够访问互联网。如果未指定，将为`false`。
 * `machine_shape`：要使用的加速器/GPU 类型（例如，`NvidiaTeslaT4` 表示 GPU T4 ×2、`NvidiaL4` 或 `TpuV5E8` 表示 TPU v5e-8）。
 * `dataset_sources`：数据集源列表，指定为`"username/dataset-slug"`
 * `competition_sources`：竞赛来源列表，指定为`"competition-slug"`

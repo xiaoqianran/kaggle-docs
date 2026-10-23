@@ -13,8 +13,8 @@
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "bacf2ef8df1315ecd98c84f10af52286b7789476",
-      "translatedAt": "2026-10-22T12:35:10.830Z"
+      "hash": "233182740559de7761aa1c9ed90b9c7892e554d4",
+      "translatedAt": "2026-10-23T12:14:21.623Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
@@ -41,8 +41,8 @@
       "translatedAt": "2026-08-08T18:57:23.955Z"
     },
     "cli/kernels_metadata.md": {
-      "hash": "b8d97b50449e9bcba6f57793127e83b62eb29a18",
-      "translatedAt": "2026-09-18T11:56:06.629Z"
+      "hash": "b6f9cd1fc1c3cb5fd8af8a1d958f37766a1fa0f2",
+      "translatedAt": "2026-10-23T12:14:03.214Z"
     },
     "cli/model_variations_versions.md": {
       "hash": "8e70e408bbf4a496f82cc27c342901d578003560",
@@ -53,8 +53,8 @@
       "translatedAt": "2026-08-08T18:57:25.444Z"
     },
     "cli/kernels.md": {
-      "hash": "8cb8260e21a89c3000b5729dfb02f72f936d0aa2",
-      "translatedAt": "2026-09-24T12:22:01.008Z"
+      "hash": "2c69a27e223946737570f361407dc6b40332d1b6",
+      "translatedAt": "2026-10-23T12:13:59.997Z"
     },
     "cli/models_metadata.md": {
       "hash": "68440df72296385d274a63a48b5a5e00e7e6b593",
@@ -93,8 +93,8 @@
       "translatedAt": "2026-08-29T12:51:47.461Z"
     },
     "cli/tutorials.md": {
-      "hash": "b843e0de3ba78c5e2faee897344edfc73aad6321",
-      "translatedAt": "2026-08-08T18:57:32.423Z"
+      "hash": "6a6a26f16e5ee677001bae01e3c9a70bec20fb6a",
+      "translatedAt": "2026-10-23T12:14:18.817Z"
     },
     "kagglehub/intro.md": {
       "hash": "c2f3b0b539d228115ae1e0263d1cec197a307e54",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-10-22T12:35:10.830Z",
+  "updatedAt": "2026-10-23T12:14:21.623Z",
   "stats": {
-    "translated": 2,
-    "skipped": 47,
+    "translated": 4,
+    "skipped": 45,
     "failed": 0,
     "total": 49
   }

@@ -3,6 +3,8 @@
 变更日志
 ====
 
+### 下一步
+
 ### 2.2.5
 
 * 需要 `certifi >= 2026.10.19`，这会删除受损的 emSign/eMudhra 根 CA ([GHSA-6q48-6c7w-9gw2](https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2))。 `kaggle` 仅通过 `requests` 提取证书，没有设置最低限度，因此现有安装可以保留接受伪造的 kaggle.com 证书的证书，并将用户的 API 令牌泄露给中间人
@@ -26,7 +28,7 @@
 * 添加 `kaggle competitions host-add <comp> -u <user>` 以向 Kaggle 用户授予比赛主持人访问权限
 * 建议针对 403/404/429/5xx API 错误采取下一步措施，将意外错误报告为错误而不是回溯（使用新的 `--debug` 标志），并在 `kaggle --help` 中列出常见示例
 * 保护`kaggle models instances versions download --untar`中的焦油提取免遭路径遍历* 将可断点上传状态存储在每个用户的私有目录（`0700`）中，并在使用前验证目录所有权和权限
-* 添加`kaggle benchmarks quota`以显示模型代理（AI推理）支出配额，并将`kagglesdk`提升至`>= 0.1.37`
+* 添加`kaggle benchmarks quota`以显示模型代理（AI推理）支出配额，并将`kagglesdk`提升至`>= 0.1.38`
 * 当存档已经本地缓存时，在`kaggle models instances versions download`中荣耀`--untar`
 * 在`kaggle kernels output`中使用UTF-8写入内核日志文件以避免Windows上的`UnicodeEncodeError`
 * 更新模型实例时，从更新掩码中排除省略的 `overview` 和 `usage` 字段
@@ -59,7 +61,7 @@
 * 将排行榜子命令添加到 Kaggle 基准测试中 (#1112)
 * feat(cli): 添加竞赛设置更新命令 (#1104)
 * feat(cli): 添加比赛主机列表命令 (#1107)
-* feat(cli): 添加竞赛设置获取命令 (#1103)
+* feat(cli)：添加竞赛设置获取命令(#1103)
 * feat(cli): 支持 --page-token 和 --page-size，保留 --page (#1098)
 * feat(cli)：在比赛列表输出中公开 userRank (#1094)
 * 修复(cli): 在 kernels_push 中使用 UTF-8 读取内核元数据和源文件 (#1093)
@@ -71,7 +73,7 @@
 * 修复(cli): 停止将子命令 -v 视为版本标志 (#1082)
 * 修复（cli）：honor --unzip 用于缓存数据集下载（#1086）
 * feat(cli): 添加竞赛页面删除命令 (#1084)* feat(cli)：添加竞赛初始化和创建命令(#1080)
-* 文档(competitions)：为新主机命令添加competition_creation.md (#1081)
+* 文档(competitions)：为新的主机命令添加competition_creation.md (#1081)
 * feat(cli): 添加竞赛启动命令 (#1079)
 * feat(cli): 添加竞赛页面创建命令 (#1078)
 * 修复(cli): 取消模型删除后避免出现成功消息 (#1077)
@@ -449,7 +451,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 
 #### 1.5.5
 发布日期：2019 年 8 月 30 日
-* 在数据集列表中添加投票计数和可用性评级
+* 将投票计数和可用性评级添加到数据集列表中
 * 将最小和最大数据集大小过滤器添加到数据集列表中
 * 向数据集元数据API添加附加信息
 * 允许更新数据集元数据
@@ -625,4 +627,4 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 #### 1.2.1
 发布日期：2018 年 4 月 17 日
 
-* [Issue #5](https://github.com/Kaggle/kaggle-api/issues/5) - 重新格式化代码以保持一致性并与 [Google's python coding style](https://google.github.io/styleguide/pyguide.html) 保持一致。  大多数更改都是装饰性的，但除类名之外的大多数 `camelCasing` 情况已更改为 `snake_case`。  对于任何直接使用 python 代码而不是简单地使用命令行的人来说，这是一个重大变化。
+* [Issue #5](https://github.com/Kaggle/kaggle-api/issues/5) - 重新格式化代码以保持一致性并与 [Google's python coding style](https://google.github.io/styleguide/pyguide.html) 保持一致。  大多数更改都是装饰性的，但除类名之外的大多数情况下`camelCasing`已更改为`snake_case`。  对于任何直接使用 python 代码而不是简单地使用命令行的人来说，这是一个重大变化。
