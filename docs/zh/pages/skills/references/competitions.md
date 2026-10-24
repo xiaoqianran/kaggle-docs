@@ -2,7 +2,7 @@
 
 # 竞赛 CLI 参考
 
-使用`kaggle competitions`或别名`kaggle c`发现竞争，检查
+使用`kaggle competitions`或别名`kaggle c`发现竞争、检查
 并下载竞赛文件，提交预测或代码内核输出，检查
 提交内容和排行榜，并浏览竞赛讨论主题。
 
@@ -223,8 +223,9 @@ kaggle competitions leaderboard [COMPETITION] [options]
 
 **选项：**
 
-- `-s, --show`：显示排行榜顶部行。
-- `-d, --download`：下载完整排行榜。
+- `-s, --show`：显示排行榜顶部行。比赛结束后确定最终排名。
+- `-d, --download`：下载完整排行榜。始终是公共排行榜。
+- `--public`：返回公共排行榜而不是最终排行榜。
 - `-p, --path <PATH>`：下载目录。
 - `--page-size <SIZE>`：页面大小。
 - `--page-token <TOKEN>`：页面令牌。
@@ -236,6 +237,7 @@ kaggle competitions leaderboard [COMPETITION] [options]
 ```bash
 kaggle competitions leaderboard titanic --show
 kaggle c leaderboard titanic --download -p leaderboards
+kaggle competitions leaderboard playground-series-s6e8 --show --public
 ```
 
 **目的：** 查看比赛排行榜的排名数据。
@@ -254,16 +256,16 @@ kaggle competitions team-submissions <TEAM_ID> [options]
 
 - `<TEAM_ID>`：团队 ID。从比赛排行榜显示中查找团队 ID。
 
-**选项：**
-
-- `-v, --csv`：打印 CSV。
+**选项：**- `-v, --csv`：打印 CSV。
 - `-q, --quiet`：抑制额外输出。
 
 **示例：**
 
 ```bash
 kaggle competitions team-submissions 12345
-```**目的：** 对于模拟比赛，列出所有活跃的公众提交内容；
+```
+
+**目的：** 对于模拟比赛，列出所有活跃的公众提交内容；
 对于常规比赛，列出团队提交的公共排行榜。
 
 ## 模拟竞赛命令
@@ -347,11 +349,11 @@ kaggle competitions logs <EPISODE_ID> <AGENT_INDEX> [options]
 
 ```bash
 kaggle competitions logs 987654 0 -p logs
-```
+```**用途：** 下载每个代理的事件日志以进行调试。
 
-**用途：** 下载每个代理的事件日志以进行调试。
+## `kaggle competitions pages`
 
-## `kaggle competitions pages`列出竞赛的页面。
+列出竞赛的页面。
 
 **用途：**
 
@@ -390,7 +392,7 @@ kaggle competitions topics list [COMPETITION] [options]
 
 **参数：**
 
-- `[COMPETITION]`：比赛子弹。如果省略，则默认竞争来自
+- `[COMPETITION]`：竞赛子弹。如果省略，则默认竞争来自
   可以使用配置。
 
 **选项：**
@@ -409,7 +411,7 @@ kaggle competitions topics list titanic --sort-by recent -p 2
 
 **目的：** 在打开特定主题之前浏览竞赛讨论。
 
-没有 `list` 的 `kaggle competitions topics` 可用作
+`kaggle competitions topics` 没有 `list` 可作为快捷方式
 列出主题。
 
 ### `kaggle competitions topics show`
@@ -473,4 +475,4 @@ kaggle competitions topic-messages titanic 12345 --sort-by old -n 50
 ```
 
 **目的：** 使用已弃用的隐藏别名列出竞赛评论
-当旧的工作流程仍然调用 `topic-messages` 时的主题。
+当旧的工作流程仍然调用`topic-messages`时的主题。

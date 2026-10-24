@@ -132,7 +132,7 @@ kaggle competitions download <COMPETITION> [options]
 
 **目的：**
 
-此命令允许您将比赛所需的数据文件获取到本地计算机上。
+此命令允许您将比赛所需的数据文件下载到本地计算机上。
 
 ## `kaggle competitions submit`
 
@@ -144,20 +144,20 @@ kaggle competitions download <COMPETITION> [options]
 kaggle competitions submit <COMPETITION> -f <FILE_NAME> -m <MESSAGE> [options]
 ```
 
-**参数：*** `<COMPETITION>`：竞赛URL后缀（例如，`house-prices-advanced-regression-techniques`）。
+**参数：*** `<COMPETITION>`：竞赛网址后缀（例如，`house-prices-advanced-regression-techniques`）。
 * `-f, --file <FILE_NAME>`：提交文件。
 * `-m, --message <MESSAGE>`：提交消息。
 
 **选项：**
 
-* `-k, --kernel <KERNEL>`：要提交的内核（笔记本）的名称（用于代码竞赛）。
+* `-k, --kernel <KERNEL>`：要提交的内核（笔记本）名称（用于代码竞赛）。
 * `-v, --version <VERSION>`：要提交的内核版本（例如`2`）。
 * `-q, --quiet`：抑制详细输出。
 * `--sandbox`：将提交标记为沙盒提交（仅限竞赛主持人/管理员）。
 * `--wait [SECONDS]`：等待提交完成评分，完成后打印公开评分。可以选择以秒为单位传递超时（`0` 或无值 = 最多等待 12 小时，即最大笔记本运行时间）。如果评分失败或达到超时，则退出非零。
 * `--poll-interval <SECONDS>`：等待时状态轮询之间的最大秒数（默认值：`60`，最小值：`5`）。轮询从 5 秒开始并自动增加。
 
-成功提交后，该命令会打印数字提交参考，例如`Submission ref: 12345678`。您可以稍后使用 [⟦T107⟧](#kaggle-competitions-submission) 查看该提交内容。
+成功提交后，该命令会打印数字提交参考，例如`Submission ref: 12345678`。您可以稍后使用 [⟦T108⟧](#kaggle-competitions-submission) 查看该提交内容。
 
 **示例：标准（非代码）竞赛：**
 
@@ -280,7 +280,7 @@ kaggle competitions submission-download <SUBMISSION_ID> [options]
 **选项：**
 
 * `-p, --path <PATH>`：将文件下载到的文件夹。默认为当前工作目录的 Kaggle 下载位置。
-* `-o, --force`：即使本地副本已存在，也要下载（跳过最新检查）。
+* `-o, --force`：即使本地副本已存在也下载（跳过最新检查）。
 * `-q, --quiet`：抑制详细输出。
 
 **示例：**
@@ -309,11 +309,14 @@ kaggle competitions leaderboard <COMPETITION> [options]
 
 * `<COMPETITION>`：竞赛网址后缀（例如，`titanic`）。**选项：**
 
-* `-s, --show`：在控制台中显示排行榜的顶部。
-* `-d, --download`：将整个排行榜下载到 CSV 文件。
+* `-s, --show`：在控制台中显示排行榜的顶部。比赛结束后，这就是最终的排行榜，这是比赛页面默认显示的内容。
+* `-d, --download`：将整个排行榜下载到 CSV 文件。这始终是公共排行榜。
+* `--public`：返回公共排行榜而不是最终排行榜。只有在比赛结束后才会产生影响。
 * `-p, --path <PATH>`：下载排行榜的文件夹（如果使用`-d`）。
 * `-v, --csv`：以 CSV 格式打印结果（与`-s` 一起使用）。
 * `-q, --quiet`：抑制详细输出。
+
+在一场结束的比赛中，`--show`和`--download`返回不同的排行榜，因为一个是最终排名，另一个是公开分数。将 `--public` 传递给 `--show` 以进行同类比较。
 
 **示例：**
 
@@ -329,15 +332,19 @@ kaggle competitions leaderboard <COMPETITION> [options]
     kaggle competitions leaderboard titanic > leaderboard.txt
     ```
 
+3. 显示已结束比赛的公共排行榜：
+
+    ```bash
+    kaggle competitions leaderboard playground-series-s6e8 --show --public
+    ```
+
 **目的：**
 
 此命令可让您查看您的排名以及比赛中其他参与者的分数。
 
 ## `kaggle competitions topics list`
 
-列出竞赛的讨论主题。
-
-**用途：**
+列出竞赛的讨论主题。**用途：**
 
 ```bash
 kaggle competitions topics list [COMPETITION] [options]
@@ -349,7 +356,9 @@ kaggle competitions topics list [COMPETITION] [options]
 
 * `[COMPETITION]`：竞赛网址后缀（例如，`titanic`）。如果配置了默认竞争，则可选。
 
-**选项：*** `-s, --sort-by <SORT_BY>`：排序顺序。有效选项：`hot`、`top`、`new`、`recent`、`active`、`relevance`。
+**选项：**
+
+* `-s, --sort-by <SORT_BY>`：排序顺序。有效选项：`hot`、`top`、`new`、`recent`、`active`、`relevance`。
 * `--search <SEARCH>`：搜索查询以过滤主题。
 * `--page-size <PAGE_SIZE>`：页面上显示的项目数。默认值为 20，最大为 200。
 * `--page-token <PAGE_TOKEN>`：结果分页的页面令牌。
@@ -385,9 +394,7 @@ kaggle competitions topics show <TOPIC_REF> [options]
     * `<competition> <topic-id>`（两个单独的参数，其中 `<topic-id>` 作为第二个参数传递）
     * `<topic-id>`（裸数字 ID）
 
-**选项：**
-
-* `--page-size <PAGE_SIZE>`：每页显示的评论数。
+**选项：*** `--page-size <PAGE_SIZE>`：每页显示的评论数。
 * `--page-token <PAGE_TOKEN>`：评论分页的页面标记。
 * `-v, --csv`：以 CSV 格式打印结果。
 * `-q, --quiet`：抑制详细输出。
@@ -400,7 +407,9 @@ kaggle competitions topics show <TOPIC_REF> [options]
 kaggle competitions topics show titanic/12345
 ```
 
-**目的：**此命令显示完整的讨论主题及其以缩进树结构呈现的所有注释。
+**目的：**
+
+此命令显示完整的讨论主题及其以缩进树结构呈现的所有注释。
 
 ## `kaggle competitions topic-messages`
 

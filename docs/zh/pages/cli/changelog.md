@@ -5,39 +5,42 @@
 
 ### 下一步
 
+* 将`--public`添加到`kaggle competitions leaderboard`，这将返回`--show`的公共排行榜。一旦比赛结束，`--show`返回最终排行榜，`--download`返回公开排行榜，两者都没有说明是哪一个
+*修复当路径使用正斜杠时`kaggle datasets create/version`（和其他上传）在Windows上使用`[Errno 2] No such file or directory`失败的问题，例如来自Git Bash的`C:/data`：可恢复上传状态文件名保留`/`分隔符并指向不存在的子目录
+
 ### 2.2.5
 
 * 需要 `certifi >= 2026.10.19`，这会删除受损的 emSign/eMudhra 根 CA ([GHSA-6q48-6c7w-9gw2](https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2))。 `kaggle` 仅通过 `requests` 提取证书，没有设置最低限度，因此现有安装可以保留接受伪造的 kaggle.com 证书的证书，并将用户的 API 令牌泄露给中间人
-* 当版本包含在 `<owner>/<kernel>/<version>` 中时，拒绝 `kaggle kernels delete` 中的内核版本号，而不是失败并返回 `ValueError`
-* 从 `kaggle competitions submit` 报告 404，并在 stderr 上提供特定于竞赛的提示，为代码提交命名笔记本和版本。该检查从未匹配 404，因此用户得到了通用的 `<owner>/<slug>` 提示
-* 提交文件上传失败时，从`kaggle competitions submit`非零退出。它打印“无法提交比赛”并退出 0，因此脚本将失败的提交视为成功
+* 当版本包含在 `<owner>/<kernel>/<version>` 中时，拒绝 `kaggle kernels delete` 中的内核版本号，而不是因 `ValueError` 失败
+* 从 `kaggle competitions submit` 报告 404，并在 stderr 上提供特定于竞赛的提示，为代码提交命名笔记本和版本。该检查从未匹配 404，因此用户得到了通用的 `<owner>/<slug>` 提示* 提交文件上传失败时，从`kaggle competitions submit`非零退出。它打印“无法提交比赛”并退出 0，因此脚本将失败的提交视为成功
 * 在`kaggle quota`显示的`refreshAt`时间戳中包含UTC偏移量(`+00:00`)
-* 建议使用`pipx`或`uv`安装，并在安装文档中添加针对`externally-managed-environment`错误的故障排除指南* 通过与数据集和竞赛相同的下载路径将 `kaggle kernels output` 文件流式传输到磁盘，具有读取超时、大小检查以及在连接断开后恢复的功能。每个文件过去都会被整个读入内存，因此 512 MiB 的输出需要大约 1.2 GB 的 RAM，并且断开的连接会使命令失败并留下一个空文件
-* 尊重`kaggle kernels pull`、`output`、`status`、`files`和`logs`的`<owner>/<kernel>/<version>`版本，之前为`pull`返回403并为其他版本执行最新版本
+* 建议使用`pipx`或`uv`安装，并在安装文档中添加针对`externally-managed-environment`错误的故障排除指南
+* 通过与数据集和竞赛相同的下载路径将 `kaggle kernels output` 文件流式传输到磁盘，具有读取超时、大小检查以及在连接断开后恢复的功能。每个文件过去都会被整个读入内存，因此 512 MiB 的输出需要大约 1.2 GB 的 RAM，并且断开的连接会使命令失败并留下一个空文件
+* 尊重`<owner>/<kernel>/<version>`中的`kaggle kernels pull`、`output`、`status`、`files`和`logs`的版本，之前为`pull`返回403并为其他版本执行最新版本
 * 在`--accelerator`帮助和内核文档中澄清`NvidiaTeslaT4`映射到GPU T4 x2和`TpuV5E8`映射到TPU v5e-8
 * 拒绝`kaggle datasets delete`中的数据集版本号，以防止在定位单个版本时无意中删除整个数据集
-* 显示`kaggle competitions submission <ref>`提交失败的原因，该提交已在API响应中返回但未显示
-* 尊重`kaggle kernels pull`中的`-k/--kernel`，当省略位置内核参数时，它被忽略，导致CLI回退到本地`kernel-metadata.json`并拉取不同的内核
-* 拒绝写入服务器提供的名称在请求的 `--path` 目录之外解析的 `kaggle kernels output` 文件* 在`kaggle kernels push`中添加`--no-run`，可以在不执行notebook的情况下保存新版本，相当于Web UI中的快速保存
+* 显示`kaggle competitions submission <ref>`中提交失败的原因，该提交已在API响应中返回但未显示* 尊重`kaggle kernels pull`中的`-k/--kernel`，当省略位置内核参数时，它被忽略，导致CLI回退到本地`kernel-metadata.json`并拉取不同的内核
+* 拒绝写入服务器提供的名称在请求的 `--path` 目录之外解析的 `kaggle kernels output` 文件
+* 在`kaggle kernels push`中添加`--no-run`，可以在不执行notebook的情况下保存新版本，相当于Web UI中的快速保存
 * 使用`kaggle datasets download -f`下载单个文件时，尊重`--unzip`，它从服务器包装大文件的zip存档中提取文件，并将`--unzip`添加到`kaggle competitions download`
 * 修复代码竞赛提交中缺少 `--kernel`、`--version` 或 `--file` 时，`kaggle competitions submit` 中的误导性验证错误消息
 * 使用`kaggle datasets download -f`或`kaggle competitions download -f`下载单个文件时保留请求的文件夹，而不是将其写入下载根目录
 * 当请求的 slug 已在使用时，在 `kaggle datasets create` 错误消息中报告 `slug` 而不是 `title`
-* 防止恢复 `Range` 下载时出现 HTTP 错误，覆盖现有的部分下载文件
+* 防止恢复 `Range` 下载期间出现 HTTP 错误，覆盖现有的部分下载文件
 * 下载 `kaggle kernels output` 文件时检查 HTTP 状态，以便错误响应不会保存为输出文件
-* 添加 `kaggle competitions host-add <comp> -u <user>` 以向 Kaggle 用户授予比赛主持人访问权限
-* 建议针对 403/404/429/5xx API 错误采取下一步措施，将意外错误报告为错误而不是回溯（使用新的 `--debug` 标志），并在 `kaggle --help` 中列出常见示例
-* 保护`kaggle models instances versions download --untar`中的焦油提取免遭路径遍历* 将可断点上传状态存储在每个用户的私有目录（`0700`）中，并在使用前验证目录所有权和权限
+* 添加 `kaggle competitions host-add <comp> -u <user>` 以向 Kaggle 用户授予比赛主持人访问权限* 建议针对 403/404/429/5xx API 错误采取下一步措施，将意外错误报告为错误而不是回溯（使用新的 `--debug` 标志），并在 `kaggle --help` 中列出常见示例
+* 保护`kaggle models instances versions download --untar`中的焦油提取免遭路径遍历
+* 将可断点续传的上传状态存储在每个用户的私有目录（`0700`）中，并在使用前验证目录所有权和权限
 * 添加`kaggle benchmarks quota`以显示模型代理（AI推理）支出配额，并将`kagglesdk`提升至`>= 0.1.38`
-* 当存档已经本地缓存时，在`kaggle models instances versions download`中荣耀`--untar`
+* 当存档已经本地缓存时，在`kaggle models instances versions download`中尊重`--untar`
 * 在`kaggle kernels output`中使用UTF-8写入内核日志文件以避免Windows上的`UnicodeEncodeError`
 * 更新模型实例时，从更新掩码中排除省略的 `overview` 和 `usage` 字段
 * 单次提交添加`kaggle competitions submission-download <id>`下载已提交文件（需要`kagglesdk >= 0.1.36`）
 * 在比赛设置命令中添加`deadline`（比赛截止日期）并将`kagglesdk`更改为`>= 0.1.36`
-* 当 `kaggle kernels push` 请求已停用的加速器（`NvidiaTeslaP100`、`TpuV38`、`Tpu1VmV38`、`TpuV232` 或 `TpuV2256`）时发出警告，因为服务器会在替代加速器上运行会话。从文档中删除已停用的形状
-* 当文件上传失败时，中止数据集、模型版本和竞赛数据上传，而不是跳过失败的文件并创建部分上传
-* 使用 GitHub 警报并修复基准文档中的 `LLMS_AVAILABLE` 令牌引用
-* 跨竞赛、数据集、笔记本、模型、用户和讨论添加统一的`kaggle search`命令* 解析`kaggle auth print-access-token --expiration`中的持续时间后缀（`s`、`m`、`h`、`d`、`w`），而不是引发`TypeError`
+* 当 `kaggle kernels push` 请求已退役的加速器（`NvidiaTeslaP100`、`TpuV38`、`Tpu1VmV38`、`TpuV232` 或 `TpuV2256`）时发出警告，因为服务器会在替代加速器上运行会话。从文档中删除已停用的形状
+* 当文件上传失败时，中止数据集、模型版本和竞赛数据上传，而不是跳过失败的文件并创建部分上传* 使用 GitHub 警报并修复基准文档中的 `LLMS_AVAILABLE` 令牌引用
+* 跨竞赛、数据集、笔记本、模型、用户和讨论添加统一的`kaggle search`命令
+* 解析`kaggle auth print-access-token --expiration`中的持续时间后缀（`s`、`m`、`h`、`d`、`w`），而不是引发`TypeError`
 * `kaggle competitions submit`添加`--wait`/`--poll-interval`等待评分，添加`kaggle competitions submission <ref>`查询单次提交状态及评分
 * 对于服务器返回的没有通过/失败或数字分数的任务结果，在 `kaggle benchmarks leaderboard` 中显示 `N/A` 而不是 `Fail`，该结果被报告为失败任务
 
@@ -52,16 +55,16 @@
 * 修复(cli): 重试 with_retry 中的瞬时连接错误 (#1132)
 * 添加 Kaggle Secrets 文档 (#1131)
 * 修复模型和所有者 slug 验证 (#1134)
-* 在上传中实现ignore_patterns（组合）（#1130）
-* 重构解析器装置（#1118）
+* 在上传中实现ignore_patterns（组合）（#1130）* 重构解析器装置（#1118）
 * 修复（auth）：避免跳过程序导入的验证（#1117）
-* 修复(cli): 零字节上传时可断点续传的起始偏移量 (#1113)* 重构(cli)：在 dataset_status 中重用 _resolve_projection (#1116)
+* 修复(cli): 零字节上传时可断点续传的起始偏移量 (#1113)
+* 重构(cli)：在 dataset_status 中重用 _resolve_projection (#1116)
 * 更新支持的型号列表 (#1115)
 * 修复(cli): 处理主题显示中删除的评论 (#1114)
 * 将排行榜子命令添加到 Kaggle 基准测试中 (#1112)
 * feat(cli): 添加竞赛设置更新命令 (#1104)
 * feat(cli): 添加比赛主机列表命令 (#1107)
-* feat(cli)：添加竞赛设置获取命令(#1103)
+* feat(cli): 添加竞赛设置获取命令 (#1103)
 * feat(cli): 支持 --page-token 和 --page-size，保留 --page (#1098)
 * feat(cli)：在比赛列表输出中公开 userRank (#1094)
 * 修复(cli): 在 kernels_push 中使用 UTF-8 读取内核元数据和源文件 (#1093)
@@ -69,11 +72,11 @@
 * feat(cli): 添加比赛数据推送命令 (#1085)
 * 修复（cli）：恢复 kernels_pull 中未知内核语言/类型的回退（#1091）
 * 修复（auth）：优先考虑 OAuth 凭据而不是匿名后备（#1089）
-* feat(cli): 添加竞赛页面更新命令 (#1083)
-* 修复(cli): 停止将子命令 -v 视为版本标志 (#1082)
+* feat(cli): 添加竞赛页面更新命令 (#1083)* 修复(cli): 停止将子命令 -v 视为版本标志 (#1082)
 * 修复（cli）：honor --unzip 用于缓存数据集下载（#1086）
-* feat(cli): 添加竞赛页面删除命令 (#1084)* feat(cli)：添加竞赛初始化和创建命令(#1080)
-* 文档(competitions)：为新的主机命令添加competition_creation.md (#1081)
+* feat(cli): 添加竞赛页面删除命令 (#1084)
+* feat(cli)：添加竞赛初始化和创建命令(#1080)
+* 文档(competitions)：为新主机命令添加competition_creation.md (#1081)
 * feat(cli): 添加竞赛启动命令 (#1079)
 * feat(cli): 添加竞赛页面创建命令 (#1078)
 * 修复(cli): 取消模型删除后避免出现成功消息 (#1077)
@@ -92,10 +95,10 @@
 
 * 澄清 LLMS_AVAILABLE 与基准文档中的完整模型集 (#1061)
 * 添加内核主题命令 (#1056)
-* 改进 kaggle CLI 中的基准测试任务错误消息 (#1057)
-* 修复数据集元数据列/文件描述更新和文档 (#1055)
+* 改进 kaggle CLI 中的基准测试任务错误消息 (#1057)* 修复数据集元数据列/文件描述更新和文档 (#1055)
 * 扩展 Kaggle CLI 技能参考 (#1054)
-* 使用 CLI 源标记基准令牌请求以进行分析 (#1050)* 将 machine_shape 添加到 kernels_initialize 元数据模板和文档 (#1048)
+* 使用 CLI 源标记基准令牌请求以进行分析 (#1050)
+* 将 machine_shape 添加到 kernels_initialize 元数据模板和文档 (#1048)
 * 修复数据集、模型和基准主题列表的 403 (#1051)
 * 修复 test_benchmarks_cli.py 断言 (#1049)
 * 为内核输出文件添加分页下载 (#1046)
@@ -104,7 +107,7 @@
 ### 2.2.1
 
 * 添加`kaggle competitions team-submissions`命令(#1036)
-* 添加 `kaggle quota` GPU/TPU 加速器配额命令 (#1029)
+* 添加 `kaggle quota` 命令用于 GPU/TPU 加速器配额 (#1029)
 * 支持说明符中可选的内核版本 (#1035)
 * feat(benchmarks)：添加日志并下载源文件(#1019)
 * 修复基准 CLI 错误处理和 UX 改进（#1024、#1026、#1028、#1030、#1032、#1037、#1039）
@@ -116,10 +119,10 @@
 * 添加测试运行工作流程
 * 补丁讨论代码 (#1018)
 * 修复（基准）：标准化提供者前缀和包含 @ 的模型… (#1016)
-* 修复（基准测试）：选择不带 -m 的模型时处理 EOF (#1013)
-* 修复（基准）：双层速率限制（#1014）
+* 修复（基准测试）：选择不带 -m 的模型时处理 EOF (#1013)* 修复（基准）：双层速率限制（#1014）
 * 改进调试的小改动 (#1008)
-* 壮举：添加用于浏览 Kaggle 讨论的论坛命令 (#993)* 添加竞赛主题 CLI 命令 (#982)
+* 壮举：添加用于浏览 Kaggle 讨论的论坛命令 (#993)
+* 添加竞赛主题 CLI 命令 (#982)
 
 ### 2.1.2
 
@@ -151,16 +154,16 @@
 
 * 添加`kaggle benchmarks auth`命令(#976)
 * 创建 Cloud Build 脚本来运行 linter (#974)
-* 添加 `kaggle kernels logs` CLI 命令 (#966)
-* 修复（基准任务推送）：处理 403 (#971)
+* 添加 `kaggle kernels logs` CLI 命令 (#966)* 修复（基准任务推送）：处理 403 (#971)
 * 修复：尊重 HTTP 429 响应上的 Retry-After 标头 (#938) (#940)
 * 将 kagglesdk 依赖版本更新为 0.1.19 (#970)
-* 支持`dataset-cover-image.png`上传`datasets metadata --update` (#969)* 添加用于模拟剧集和比赛页面的 CLI 命令 (#968)
+* 支持`dataset-cover-image.png`上传`datasets metadata --update` (#969)
+* 添加用于模拟剧集和比赛页面的 CLI 命令 (#968)
 * 功能（基准）：实现 Kaggle 客户端（推送/运行功能）(#960)
 
 ### 2.0.1
 
-* 将 `--sandbox` 标志添加到 `kaggle competitions submit` 以进行沙箱提交（仅限竞赛主办方/管理员） (#932)
+* 将 `--sandbox` 标志添加到 `kaggle competitions submit` 以用于沙箱提交（仅限竞赛主持人/管理员）(#932)
 * 优化大数据集下载功能（#936，s/o katoue）
 * 修复列出内核会话输出时的 403 和空文件处理（#951，s/o 4kaws）
 * 支持通过`datasets metadata --update`更新更多类型的数据集元数据：
@@ -178,14 +181,14 @@
 
 * 将`kaggle-api`重命名为`kaggle-cli`
 * 允许多次验证 (#922)
-* 添加 --acc 来设置加速器：kaggle kernels push ... (#907)
-* 添加自动重试和恢复到 download_file (#905) 谢谢katoue！
+* 添加 --acc 来设置加速器：kaggle kernels push ... (#907)* 添加自动重试和恢复到 download_file (#905) 谢谢katoue！
 * 恢复模型验证检查（#902）
 * 在输出下载中添加文件模式匹配 (#901) 感谢 piotr-ginal！
 
 ### 1.8.3
 
-* 添加包装部门 (#883)* 添加针对服务器已知版本的版本检查 (#880)
+* 添加包装部门 (#883)
+* 添加针对服务器已知版本的版本检查 (#880)
 * 修复编辑错误(#876)
 * 使用 pypi 中的 kagglesdk (#875)
 * 修复未设置 KAGGLE_API_TOKEN 时 Kaggle 访问令牌身份验证 KeyError (#874)
@@ -215,11 +218,11 @@
 ### 1.7.5.0（未发布）
 
 * 需要 Python 3.11。
-* 添加内核执行类型 (#775)
-* 输出 docker_image 作为拉取元数据的一部分 (#773)
+* 添加内核执行类型 (#775)* 输出 docker_image 作为拉取元数据的一部分 (#773)
 * 允许用户在内核推送期间指定 docker_image (#774)
 * 添加内核版本类型以保存请求 (#771)
-* 添加删除和去片状测试 (#769)* 重命名“yes”参数并使确认一致（#765）
+* 添加删除和去片状测试 (#769)
+* 重命名“yes”参数并使确认一致（#765）
 * 修复导致双重序列化的错误 (#764)
 * 添加 Kaggle 内核删除 (#762)
 * 添加对 dataset_delete() 的测试并使脚本更加健壮 (#760)
@@ -243,13 +246,13 @@
 
 ### 1.7.4.1
 
-* 修复数据集下载问题。具有许可证的数据集无法下载。
-* 更新文档以包含代码竞赛提交。
+* 修复数据集下载问题。具有许可证的数据集无法下载。* 更新文档以包含代码竞赛提交。
 
 ### 1.7.4
 
 1.7.3 版本从未发布。版本控制中出现错误
-test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这是自 1.6.17 以来的第一个版本。
+test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
+这是自 1.6.17 以来的第一个版本。
 
 实际的变化在 1.7.3 中描述。
 
@@ -258,7 +261,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 版本控制中出现错误。我们从 1.6.17 转到 1.7.3。
 
 * 添加了提交代码竞赛的功能。一些必需的参数已变为可选的。
-* 在`kaggle kernels push`中添加了`--timeout`选项，以将运行时间限制为指定的秒数。
+* 在`kaggle kernels push`中添加了`--timeout`选项，以将运行时间限制为指定秒数。
 * 删除了招摇。使用`kaggle/api/kaggle_api.py`的项目可能会受到影响。该文件已被弃用，并将被
   已删除。它的大部分功能仍然有效，但那些涉及上传文件的功能不再工作。
   命令行工具使用更高级别的抽象来进行上传，客户端代码需要
@@ -267,16 +270,15 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 ### 1.7.3b2
 
 * 添加了提交代码竞赛的功能。一些必需的参数已变为可选的。
-* 在`kaggle kernels push`中添加了`--timeout`选项，以将运行时间限制为指定的秒数。
+* 为`kaggle kernels push`添加了`--timeout`选项，以将运行时间限制为指定秒数。
 
 ### 1.7.3b1
 
-* 修复 HTTP 请求中的转义引号问题。
-
-### 1.7.3b0
+* 修复 HTTP 请求中的转义引号问题。### 1.7.3b0
 
 * 删除招摇。对命令行工具没有用户可见的更改。然而，项目
-使用`kaggle/api/kaggle_api.py`可能会受到影响。该文件已被弃用并将被删除。它的大部分功能仍然有效，但那些涉及上传文件的功能不再工作。
+使用`kaggle/api/kaggle_api.py`可能会受到影响。该文件已被弃用并将被删除。
+它的大部分功能仍然有效，但那些涉及上传文件的功能不再工作。
 命令行工具使用更高级别的抽象来满足上传和客户端代码需求 
 转换为使用它。
 
@@ -307,11 +309,10 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 
 * 重新发布1.6.11，软件包中不再包含`src`目录。
 
-### 11.6.1
-
-* 允许未经身份验证使用“数据集下载”、“数据集文件”。
+### 11.6.1* 允许未经身份验证使用“数据集下载”、“数据集文件”。
   * 此功能仅在 2024 年 4 月 8 日之后有效。更多详细信息，请参阅：
-    <https://www.kaggle.com/discussions/product-feedback/485439>* 允许“help”和“version”用于所有命令，未经身份验证。
+    <https://www.kaggle.com/discussions/product-feedback/485439>
+* 允许“help”和“version”用于所有命令，未经身份验证。
 * 修复：“dataset download -f”可接受特定数据集版本。
 
 ### 1.6.10
@@ -366,14 +367,14 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 * 将model_instance_type和base_model_instance_id添加到ModelInstance中
 
 #### 1.6.0a6
-发布日期：2023 年 9 月 19 日
-* 在 model-instance-metadata.json 文件中包含 version_number 和 version_id
+发布日期：2023 年 9 月 19 日* 在 model-instance-metadata.json 文件中包含 version_number 和 version_id
 
 #### 1.6.0a5
 发布日期：2023 年 8 月 2 日
 * 添加Keras模型框架。
 
-####16.5.1发布日期：2023 年 7 月 17 日
+####16.5.1
+发布日期：2023 年 7 月 17 日
 * 修复数据集下载与区域设置的错误
 * 可断点续传
 * 重试一些失败的请求
@@ -408,8 +409,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 
 #### 1.6.0a2
 发布日期：2023 年 6 月 12 日
-* 添加端点以获取modelInstance
-* 简化modelInstanceVersion创建
+* 添加端点以获取modelInstance* 简化modelInstanceVersion创建
 * 修复模型文件压缩问题
 
 #### 1.6.0a0
@@ -417,7 +417,8 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 * 添加模型端点
 
 #### 1.5.13
-发布日期：2023 年 2 月 27 日* 添加将模型添加到内核的功能
+发布日期：2023 年 2 月 27 日
+* 添加将模型添加到内核的功能
 
 ### 12.5.1
 发布日期：21年3月12日
@@ -451,22 +452,22 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 
 #### 1.5.5
 发布日期：2019 年 8 月 30 日
-* 将投票计数和可用性评级添加到数据集列表中
+* 在数据集列表中添加投票计数和可用性评级
 * 将最小和最大数据集大小过滤器添加到数据集列表中
 * 向数据集元数据API添加附加信息
 * 允许更新数据集元数据
 
 #### 1.5.4
 发布日期：2019 年 5 月 28 日
-* 使内核初始化更加友好
-* 如果需要内核输出，则创建目录
+* 使内核初始化更加友好* 如果需要内核输出，则创建目录
 
 #### 1.5.3
 发布日期：2019 年 2 月 20 日
 * 凹凸urllib3版本
 
 #### 1.5.2
-发布日期：2019 年 1 月 28 日* 打印表格时不要出现编码错误
+发布日期：2019 年 1 月 28 日
+* 打印表格时不要出现编码错误
 * 捕获异常时退出并返回错误代码
 
 #### 1.5.1.1
@@ -496,14 +497,14 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 * 为数据集下载添加解压选项
 * 添加对内核标题和 slug 长度的验证
 * 如果内核标题未解析为指定的 slug，则发出警告
-* 推送后显示内核版本号
-* 拉取内核时尊重内核元数据中的`code_file`值
+* 推送后显示内核版本号* 拉取内核时尊重内核元数据中的`code_file`值
 
 #### 1.4.6
 发布日期：2018 年 8 月 7 日
 * 允许通过环境变量设置配置值
 
-#### 1.4.5发布日期：2018 年 8 月 1 日
+#### 1.4.5
+发布日期：2018 年 8 月 1 日
 * 如果数据集元数据重复文件，则添加错误
 
 #### 1.4.4
@@ -528,13 +529,13 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 #### 1.4.2
 发布日期：2018 年 7 月 20 日
 * 上传前验证数据集slug和标题长度
-* 修复数据集元数据文件检测问题
-* 清理键盘中断错误
+* 修复数据集元数据文件检测问题* 清理键盘中断错误
 * 上传之前验证数据集中所有指定的文件是否存在
 * 使 ApiExceptions（稍微）不那么难看
 
 #### 1.4.1
-发布日期：2018 年 7 月 20 日* 添加Python 3.7兼容性
+发布日期：2018 年 7 月 20 日
+* 添加Python 3.7兼容性
 
 #### 1.4.0
 发布日期：2018 年 7 月 19 日
@@ -574,13 +575,13 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 * 打印任何无效标签
 * 如果没有比赛文件可供下载则发出警告
 * 实现断点续传
-* 添加字幕元数据到数据集上传
-* 添加上传和下载进度条
+* 添加字幕元数据到数据集上传* 添加上传和下载进度条
 * 添加下载比赛排行榜命令
 * 添加查看排行榜顶部的命令
 
 #### 1.3.8
-发布日期：2018 年 5 月 18 日* 添加删除所有以前的数据集版本的选项
+发布日期：2018 年 5 月 18 日
+* 添加删除所有以前的数据集版本的选项
 
 #### 1.3.7
 发布日期：2018 年 5 月 18 日
@@ -617,14 +618,15 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。这�
 * 提供在更新期间设置数据集描述的选项
 
 #### 1.3.1
-发布日期：2018 年 4 月 19 日
-* 提供设置数据集文件描述的选项
+发布日期：2018 年 4 月 19 日* 提供设置数据集文件描述的选项
 * 提供不将表格数据集转换为 csv 的选项
 
 #### 1.3.0
-发布日期：2018 年 4 月 18 日* 提供在创建过程中设置数据集描述的选项
+发布日期：2018 年 4 月 18 日
+
+* 提供在创建过程中设置数据集描述的选项
 
 #### 1.2.1
 发布日期：2018 年 4 月 17 日
 
-* [Issue #5](https://github.com/Kaggle/kaggle-api/issues/5) - 重新格式化代码以保持一致性并与 [Google's python coding style](https://google.github.io/styleguide/pyguide.html) 保持一致。  大多数更改都是装饰性的，但除类名之外的大多数情况下`camelCasing`已更改为`snake_case`。  对于任何直接使用 python 代码而不是简单地使用命令行的人来说，这是一个重大变化。
+* [Issue #5](https://github.com/Kaggle/kaggle-api/issues/5) - 重新格式化代码以保持一致性并与 [Google's python coding style](https://google.github.io/styleguide/pyguide.html) 保持一致。  大多数更改都是装饰性的，但除类名之外的大多数 `camelCasing` 情况已更改为 `snake_case`。  对于任何直接使用 python 代码而不是简单地使用命令行的人来说，这是一个重大变化。

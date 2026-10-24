@@ -63,7 +63,7 @@ kaggle datasets files <DATASET> [options]
 
 **参数：**
 
-* `<DATASET>`：数据集 URL 后缀，格式为 `owner/dataset-name`（例如，`kerneler/brazilian-bird-observation-metadata-from-wikiaves`）。
+* `<DATASET>`：数据集 URL 后缀，格式为 `owner/dataset-name`（例如，`kerneler/brazilian-bird-observation-metadata-from-wikiaves`）。使用`owner/dataset-name/version-number`列出特定版本的文件而不是最新版本的文件。
 
 **选项：**
 
@@ -95,7 +95,7 @@ kaggle datasets download <DATASET> [options]
 
 **参数：**
 
-* `<DATASET>`：数据集 URL 后缀（例如，`willianoliveiragibin/pixar-films`）。
+* `<DATASET>`：数据集 URL 后缀，格式为 `owner/dataset-name`（例如，`willianoliveiragibin/pixar-films`）。使用`owner/dataset-name/version-number`下载特定版本而不是最新版本。
 
 **选项：*** `-f, --file <FILE_NAME>`：要下载的特定文件（如果不指定则下载全部）。文件夹内的文件（例如 `train/labels.csv`）将该文件夹保留在下载路径下。
 * `-p, --path <PATH>`：下载文件的文件夹（默认为当前目录）。
@@ -118,7 +118,7 @@ kaggle datasets download <DATASET> [options]
     kaggle datasets download goefft/public-datasets-with-file-types-and-columns -p tmp --unzip -o -q
     ```
 
-3.从`goefft/public-datasets-with-file-types-and-columns`下载特定文件`dataset_results.csv`到当前工作目录，悄悄地，并强制覆盖：
+3.从`goefft/public-datasets-with-file-types-and-columns`下载特定文件`dataset_results.csv`到当前工作目录，悄悄地，强制覆盖：
 
     ```bash
     kaggle datasets download goefft/public-datasets-with-file-types-and-columns -f dataset_results.csv -w -q -o
@@ -177,7 +177,7 @@ kaggle datasets create -p <FOLDER_PATH> [options]
 **选项：**
 
 * `-p, --path <FOLDER_PATH>`：包含数据文件和`dataset-metadata.json` 文件的文件夹路径（默认为当前目录）。
-* `-u, --public`：将数据集公开（默认为私有）。
+* `-u, --public`：公开数据集（默认为私有）。
 * `-q, --quiet`：抑制详细输出。
 * `-t, --keep-tabular`：不将表格文件转换为 CSV（默认为转换）。
 * `-r, --dir-mode <MODE>`：如何处理目录：`skip`（忽略）、`zip`（压缩上传）、`tar`（未压缩上传）（默认：`skip`）。
@@ -221,7 +221,7 @@ kaggle datasets version -p <FOLDER_PATH> -m <VERSION_NOTES> [options]
 
 **示例：**
 
-使用 `tests/dataset` 中带有版本注释“更新数据”的文件创建数据集的新版本，安静地保留表格格式，跳过目录并删除旧版本：
+使用 `tests/dataset` 中的文件创建一个新版本的数据集，并带有版本注释“更新数据”，安静地保持表格格式，跳过目录并删除旧版本：
 
 ```bash
 kaggle datasets version -m "Updated data" -p tests/dataset -q -t -r skip -d
@@ -368,7 +368,7 @@ kaggle datasets topics show <TOPIC_REF> [options]
 
 * `--page-size <PAGE_SIZE>`：每页显示的评论数。
 * `--page-token <PAGE_TOKEN>`：评论分页的页面标记。
-* `-v, --csv`：以CSV格式打印结果。
+* `-v, --csv`：以 CSV 格式打印结果。
 * `-q, --quiet`：抑制详细输出。
 
 **示例：**
