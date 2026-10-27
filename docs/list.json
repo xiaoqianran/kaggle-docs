@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-26T13:39:53.843Z",
+  "fetchedAt": "2026-10-27T12:49:14.746Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -102,7 +102,7 @@
     },
     {
       "rel": "cli/changelog.md",
-      "bytes": 27115,
+      "bytes": 27207,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/CHANGELOG.md",
       "track": "CLI & API"
