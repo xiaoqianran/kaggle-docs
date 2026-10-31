@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-10-30T13:41:54.368Z",
+  "updatedAt": "2026-10-31T13:09:36.674Z",
   "stats": {
-    "translated": 1,
-    "skipped": 48,
+    "translated": 0,
+    "skipped": 49,
     "failed": 0,
     "total": 49
   }
