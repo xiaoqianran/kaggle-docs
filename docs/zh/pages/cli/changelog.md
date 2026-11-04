@@ -5,14 +5,15 @@
 
 ### 下一步
 
-* 显示游戏竞技场排行榜`kaggle benchmarks leaderboard`中的每一列（`kaggle/game-arena`、`kaggle/chess-text`、`kaggle/poker-heads-up`、...）。他们的专栏共享一个空的任务块，因此除了最后一个之外的所有专栏都塌陷为一个，并且标题分数从`--show`和`--download`中删除
-* 在确认或 API 访问之前验证`kaggle kernels delete`中的裸块，并在未配置用户名时要求明确的所有者
+* 修复与 `python-dateutil` 4.0.0 或更高版本一起安装时，每个 `kaggle` 命令因 `ModuleNotFoundError: No module named 'six'` 失败的问题。 `kaggle.models.upload_file`在没有声明的情况下导入了`six`，仅通过`python-dateutil`获得了它，在4.0.0中删除了`six`
+* 显示游戏竞技场排行榜`kaggle benchmarks leaderboard`中的每一列（`kaggle/game-arena`，`kaggle/chess-text`，`kaggle/poker-heads-up`，...）。他们的专栏共享一个空的任务块，因此除了最后一个之外的所有专栏都塌陷为一个，并且标题分数从`--show`和`--download`中删除
+* 在确认或 API 访问之前验证`kaggle kernels delete`中的裸块，并在未配置用户名时要求显式所有者
 * 当推送从 CPU/GPU 会话中拉出的 TPU 笔记本时，清除陈旧的 CPU/GPU 图像引脚
 * 将`--public`添加到`kaggle competitions leaderboard`，这将返回`--show`的公共排行榜。一旦比赛结束，`--show`返回最终排行榜，`--download`返回公共排行榜，两者都没有说明是哪一个
 * 修复当路径使用正斜杠时，`kaggle datasets create/version`（和其他上传）在 Windows 上使用 `[Errno 2] No such file or directory` 失败的问题，例如来自 Git Bash 的 `C:/data`：可恢复上传状态文件名保留 `/` 分隔符并指向不存在的子目录
 
 ### 2.2.5* 需要 `certifi >= 2026.10.19`，这会删除受损的 emSign/eMudhra 根 CA ([GHSA-6q48-6c7w-9gw2](https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2))。 `kaggle` 仅通过 `requests` 提取证书，没有设置最低限度，因此现有安装可以保留接受伪造的 kaggle.com 证书的证书，并将用户的 API 令牌泄露给中间人
-* 当版本包含在 `<owner>/<kernel>/<version>` 中时，拒绝 `kaggle kernels delete` 中的内核版本号，而不是失败并显示 `ValueError`
+* 当版本包含在 `<owner>/<kernel>/<version>` 中时，拒绝 `kaggle kernels delete` 中的内核版本号，而不是因 `ValueError` 失败
 * 从 `kaggle competitions submit` 报告 404，并在 stderr 上提供特定于竞赛的提示，为代码提交命名笔记本和版本。该检查从未匹配 404，因此用户得到了通用的 `<owner>/<slug>` 提示
 * 提交文件上传失败时，从`kaggle competitions submit`非零退出。它打印“无法提交比赛”并退出 0，因此脚本将失败的提交视为成功
 * 在`kaggle quota`显示的`refreshAt`时间戳中包含UTC偏移量(`+00:00`)
@@ -21,25 +22,25 @@
 * 在`--accelerator`帮助和内核文档中澄清`NvidiaTeslaT4`映射到GPU T4 x2和`TpuV5E8`映射到TPU v5e-8
 * 拒绝`kaggle datasets delete`中的数据集版本号，以防止在定位单个版本时无意中删除整个数据集
 * 拒绝 `kaggle kernels delete` 中的内核版本号，包括仅包含空格的版本号，以防止在针对单个版本时无意中删除整个内核，并停止在 `kernels delete` 和 `kernels topics list` 帮助中公布版本
-* 显示`kaggle competitions submission <ref>`中提交失败的原因，该提交已在API响应中返回但未显示* 尊重`kaggle kernels pull`中的`-k/--kernel`，当省略位置内核参数时，它被忽略，导致CLI回退到本地`kernel-metadata.json`并拉取不同的内核
+* 显示`kaggle competitions submission <ref>`中提交失败的原因，该提交已在API响应中返回但未显示* 荣耀`kaggle kernels pull`中的`-k/--kernel`，当省略位置内核参数时，它被忽略，导致CLI回退到本地`kernel-metadata.json`并拉取不同的内核
 * 拒绝写入服务器提供的名称在请求的 `--path` 目录之外解析的 `kaggle kernels output` 文件
-* 在`kaggle kernels push`中添加`--no-run`，可以在不执行notebook的情况下保存新版本，相当于Web UI中的快速保存
+* 将`--no-run`添加到`kaggle kernels push`以保存新版本而不执行笔记本，相当于Web UI中的快速保存
 * 使用`kaggle datasets download -f`下载单个文件时，尊重`--unzip`，它从服务器包装大文件的zip存档中提取文件，并将`--unzip`添加到`kaggle competitions download`
 * 修复代码竞赛提交中缺少 `--kernel`、`--version` 或 `--file` 时，`kaggle competitions submit` 中的误导性验证错误消息
 * 使用`kaggle datasets download -f`或`kaggle competitions download -f`下载单个文件时保留请求的文件夹，而不是将其写入下载根目录
-* 当请求的 slug 已在使用中时，在 `kaggle datasets create` 错误消息中报告 `slug` 而不是 `title`
+* 当请求的 slug 已在使用时，在 `kaggle datasets create` 错误消息中报告 `slug` 而不是 `title`
 * 防止恢复 `Range` 下载时出现 HTTP 错误，覆盖现有的部分下载文件
 * 下载 `kaggle kernels output` 文件时检查 HTTP 状态，以便错误响应不会保存为输出文件
 * 添加 `kaggle competitions host-add <comp> -u <user>` 以向 Kaggle 用户授予比赛主持人访问权限* 建议针对 403/404/429/5xx API 错误采取下一步措施，将意外错误报告为错误而不是回溯（使用新的 `--debug` 标志），并在 `kaggle --help` 中列出常见示例
-* 防止`kaggle models instances versions download --untar`中的焦油提取防止路径遍历
-* 将可断点续传的上传状态存储在每个用户的私有目录（`0700`）中，并在使用前验证目录所有权和权限
+* 保护`kaggle models instances versions download --untar`中的焦油提取免遭路径遍历
+* 将可断点上传状态存储在每个用户的私有目录（`0700`）中，并在使用前验证目录所有权和权限
 * 添加`kaggle benchmarks quota`以显示模型代理（AI推理）支出配额，并将`kagglesdk`提升至`>= 0.1.38`
-* 当存档已经本地缓存时，在`kaggle models instances versions download`中荣耀`--untar`
+* 当存档已经本地缓存时，在`kaggle models instances versions download`中尊重`--untar`
 * 在`kaggle kernels output`中使用UTF-8写入内核日志文件以避免Windows上的`UnicodeEncodeError`
 * 更新模型实例时，从更新掩码中排除省略的 `overview` 和 `usage` 字段
 * 单次提交添加`kaggle competitions submission-download <id>`下载已提交文件（需要`kagglesdk >= 0.1.36`）
 * 在比赛设置命令中添加`deadline`（比赛截止日期）并将`kagglesdk`更改为`>= 0.1.36`
-* 当 `kaggle kernels push` 请求已停用的加速器（`NvidiaTeslaP100`、`TpuV38`、`Tpu1VmV38`、`TpuV232` 或 `TpuV2256`）时发出警告，因为服务器会在替代加速器上运行会话。从文档中删除已停用的形状
+* 当 `kaggle kernels push` 请求已退役的加速器（`NvidiaTeslaP100`、`TpuV38`、`Tpu1VmV38`、`TpuV232` 或 `TpuV2256`）时发出警告，因为服务器会在替代加速器上运行会话。从文档中删除已停用的形状
 * 当文件上传失败时，中止数据集、模型版本和竞赛数据上传，而不是跳过失败的文件并创建部分上传* 使用 GitHub 警报并修复基准文档中的 `LLMS_AVAILABLE` 令牌引用
 * 跨竞赛、数据集、笔记本、模型、用户和讨论添加统一的`kaggle search`命令
 * 解析`kaggle auth print-access-token --expiration`中的持续时间后缀（`s`、`m`、`h`、`d`、`w`），而不是引发`TypeError`
@@ -66,7 +67,7 @@
 * 将排行榜子命令添加到 Kaggle 基准测试中 (#1112)
 * feat(cli): 添加竞赛设置更新命令 (#1104)
 * feat(cli): 添加比赛主机列表命令 (#1107)
-* feat(cli): 添加竞赛设置获取命令 (#1103)
+* feat(cli)：添加竞赛设置获取命令(#1103)
 * feat(cli): 支持 --page-token 和 --page-size，保留 --page (#1098)
 * feat(cli)：在比赛列表输出中公开 userRank (#1094)
 * 修复(cli): 在 kernels_push 中使用 UTF-8 读取内核元数据和源文件 (#1093)
@@ -272,7 +273,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 ### 1.7.3b2
 
 * 添加了提交代码竞赛的功能。一些必需的参数已变为可选的。
-* 为`kaggle kernels push`添加了`--timeout`选项，以将运行时间限制为指定秒数。
+* 在`kaggle kernels push`中添加了`--timeout`选项，以将运行时间限制为指定的秒数。
 
 ### 1.7.3b1
 
@@ -454,7 +455,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 
 #### 1.5.5
 发布日期：2019 年 8 月 30 日
-* 在数据集列表中添加投票计数和可用性评级
+* 将投票计数和可用性评级添加到数据集列表中
 * 将最小和最大数据集大小过滤器添加到数据集列表中
 * 向数据集元数据API添加附加信息
 * 允许更新数据集元数据
@@ -522,7 +523,7 @@ test.pypi.org。为了保持一致性，我们决定跳过几个版本号。
 * 允许为现有数据集生成元数据
 * 修复从标题与 slugs 不匹配的数据集下载的问题
 * 使用kernel slug作为内核输出的文件名
-* 上传下载目录默认为当前工作目录
+* 上传和下载目录默认为当前工作目录
 * 如果未指定，则在下载内核或数据集数据时使用默认用户名
 * 支持数据集的扩展数据类型
 * 不再需要 `-c`、`-d` 和 `-k` 参数
