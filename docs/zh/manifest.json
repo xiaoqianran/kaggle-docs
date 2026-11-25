@@ -13,8 +13,8 @@
       "translatedAt": "2026-08-08T18:57:19.485Z"
     },
     "cli/changelog.md": {
-      "hash": "4c8b9c1b596233eb221684a82c61cc10079a1714",
-      "translatedAt": "2026-11-04T14:55:50.980Z"
+      "hash": "6a544a50ab26b2569e84b1505963b65886861923",
+      "translatedAt": "2026-11-25T17:40:37.887Z"
     },
     "cli/configuration.md": {
       "hash": "ef6045937447d00d4e41c73a894ef5dc75c10020",
@@ -33,8 +33,8 @@
       "translatedAt": "2026-08-08T18:57:23.148Z"
     },
     "cli/datasets_metadata.md": {
-      "hash": "f4aa7d61d9cb52e9027987236976e1ff8d36d7e9",
-      "translatedAt": "2026-08-08T18:57:23.433Z"
+      "hash": "d1c0ba86a31ce71a5ffe4218d52a53e0a39d29bd",
+      "translatedAt": "2026-11-25T17:40:30.118Z"
     },
     "cli/intro.md": {
       "hash": "0379909f3ccbe2ee0982e5852e3fb4b7ff6f53f2",
@@ -197,10 +197,10 @@
       "translatedAt": "2026-08-08T18:58:00.584Z"
     }
   },
-  "updatedAt": "2026-11-24T18:25:13.802Z",
+  "updatedAt": "2026-11-25T17:40:37.887Z",
   "stats": {
-    "translated": 0,
-    "skipped": 49,
+    "translated": 2,
+    "skipped": 47,
     "failed": 0,
     "total": 49
   }

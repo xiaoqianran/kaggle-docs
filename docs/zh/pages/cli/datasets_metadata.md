@@ -68,18 +68,18 @@ Kaggle API 遵循 [Data Package specification](https://frictionlessdata.io/specs
   * `description`：数据集的描述。 
   * `id`：新数据集的 URL slug，是以下各项的组合：
     1. 您的用户名或组织名称（如果您是组织的成员）。
-    2. 唯一的数据集段的长度必须在 3 到 50 个字符之间。
-  * `licenses`：必须只有一个指定许可证的条目。仅评估`name`，忽略所有其他信息。请参阅下文了解选项。* `resources`：包含正在上传的文件数组。  （注意 - 这不是必需的，如果包含，也不需要包含所有要上传的文件。）：
+    2. 唯一的数据集 slug 的长度必须在 3 到 50 个字符之间。
+  * `licenses`：必须只有一个指定许可证的条目。仅评估`name`，忽略所有其他信息。请参阅下文了解选项。* `resources`: Contains an array of files that are being uploaded.  (Note - this is not required, nor if included, does it need to include all of the files to be uploaded.):
     * `path`：文件路径。
     * `description`：文件描述。
     * `schema`：文件模式（定义如下）：
-      * `fields`：数据集中的字段数组。  请注意，这需要按顺序包含数据中的所有字段，否则它们将无法正确匹配。  更高版本的 API 将修复此错误。
+      * `fields`：数据集中的字段数组。  Please note that this needs to include ALL of the fields in the data in order or they will not be matched up correctly.  更高版本的 API 将修复此错误。
         * `name`: 字段名称
-        * `description`：字段描述（注意：为了向后兼容，也接受`title`，但首选`description`）
-        * `type`：字段类型。尽力而为的类型列表将保留在本页底部，但可能会添加此处未记录的新类型。
-  * `keywords`：包含与 Kaggle 上现有标签相对应的字符串数组。  如果指定的标签不存在，上传将继续，但不会添加该特定标签。  
-* `kaggle datasets version`（为现有数据集创建新版本）：
-  * `subtitle`：数据集的副标题，长度必须在20到80个字符之间。
+        * `description`: Field description (Note: `title` is also accepted for backward compatibility, but `description` is preferred)
+        * `type`：字段类型。 A best-effort list of types will be kept at the bottom of this page, but new types may be added that are not documented here.
+  * `keywords`: Contains an array of strings that correspond to an existing tag on Kaggle.  If a specified tag doesn't exist, the upload will continue, but that specific tag won't be added.  
+* `kaggle datasets version` (create a new version for an existing Dataset):
+  * `subtitle`: Subtitle of the dataset, must be between 20 and 80 characters in length.
   * `description`：数据集的描述。* `id`：要更新的数据集的 URL slug（见上文）。您必须是该数据集的所有者或具有编辑权限。必须指定 `id` 或 `id_no` 之一。如果两者都是，`id_no` 将是首选。
   * `id_no`：数据集的ID。必须指定 `id` 或 `id_no` 之一。您必须是该数据集的所有者或具有编辑权限。如果两者都是，`id_no` 将是首选。
   * `resources`：包含正在上传的文件数组。  （注意 - 这不是必需的，如果包含，也不需要包含所有要上传的文件。）：
@@ -202,14 +202,13 @@ https://www.apache.org/licenses/LICENSE-2.0
 * `.jpeg`
 * `.webp`
 
-图像的最小宽度为 560 像素，最小高度为 280 像素。
+图像的最小宽度必须为 560 像素，最小高度必须为 280 像素。
 
-相同的图像文件将用于两种不同的作物：
+相同的图像文件将用于两种不同的裁剪，每种裁剪都适合图像的比例的最大矩形，居中：
 
-- 标头，2:1 比例
-  - 裁剪矩形：宽度：560px，高度：280px，顶部：0，左侧：0- 对于尺寸为 560 像素 x 280 像素的图像，这将是整个矩形图像。
+- 标头，2:1 比例- 对于 2:1 图像，例如 560px x 280px 或 1600px x 800px，这将是整个图像。
+  - 对于其他比例，这将是最大的居中 2:1 矩形。对于 1000 像素 x 800 像素的图像：宽度：1000 像素，高度：500 像素，顶部：150 像素，左侧：0。
 - 缩略图，1:1 比例
-  - 裁剪矩形：宽度：280px，高度：280px，顶部：0，左侧：140px
-  - 对于尺寸为 560 像素 x 280 像素的图像，这将是一个居中的 280 像素正方形。
+  - 最大的中心正方形。对于 560 像素 x 280 像素的图像：宽度：280 像素，高度：280 像素，顶部：0，左侧：140 像素。
 
-虽然您可以上传大于 560 像素 x 280 像素的图像，但将应用上面指定的裁剪，这可能看起来不太好。这些裁剪始终可以在 kaggle.com 数据集设置页面的 UI 中进行编辑。
+如果无法从文件中读取图像尺寸，则使用 560 像素 x 280 像素图像的裁剪。这些裁剪始终可以在 kaggle.com 数据集设置页面的 UI 中进行编辑。

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-24T18:25:13.756Z",
+  "fetchedAt": "2026-11-25T17:40:22.986Z",
   "sources": {
     "llms": "https://www.kaggle.com/llms.txt",
     "platform": "https://www.kaggle.com/docs",
@@ -102,7 +102,7 @@
     },
     {
       "rel": "cli/changelog.md",
-      "bytes": 28204,
+      "bytes": 28959,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/CHANGELOG.md",
       "track": "CLI & API"
@@ -151,7 +151,7 @@
     },
     {
       "rel": "cli/datasets_metadata.md",
-      "bytes": 10415,
+      "bytes": 10493,
       "source": "github:Kaggle/kaggle-cli",
       "url": "https://raw.githubusercontent.com/Kaggle/kaggle-cli/main/docs/datasets_metadata.md",
       "track": "CLI & API"
